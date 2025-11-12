@@ -1,0 +1,136 @@
+name: Deploy CI
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.9.0"
+          registry-url: https://npm.pkg.github.com/
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps  
+
+      - name: Handle import internal shared dependency
+        run: npm install glob@^9 --legacy-peer-deps && node ./scripts/ciAddTsIgnore.mjs       
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install OSSUtil
+        run: |
+          pip install oss2
+          wget http://gosspublic.alicdn.com/ossutil/1.7.18/ossutil64
+          chmod 755 ossutil64
+
+      - name: Configure OSSUtil
+        run: |
+          ./ossutil64 config -e oss-ap-southeast-1.aliyuncs.com -i ${{ secrets.ALI_ACCESS_KEY_ID }} -k ${{ secrets.ALI_ACCESS_KEY_SECRET }}         
+          
+      - name: Download import-map.cdn.json from OSS 
+        run: ./ossutil64 cp ${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/import-map.cdn.json ./import-map.cdn.json           
+
+      - name: Extract shared module names from import-map
+        run: |
+          jq '.imports | keys | join(",")' import-map.cdn.json > shared-modules.txt
+          echo "SHARED_MODULES=$(cat shared-modules.txt)" >> $GITHUB_ENV  
+
+      - name: Build
+        run: npm run build --legacy-peer-deps
+        env:
+          SHARED_MODULES: ${{ env.SHARED_MODULES }}        
+
+      - name: Get git commit hash
+        id: git_hash
+        run: echo "GIT_COMMIT_HASH=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+
+      - name: Find main JS file
+        id: find_js_file
+        run: |
+          JS_FILE=$(find dist -type f -name "*main*.js" | head -n 1)
+          if [ -n "$JS_FILE" ]; then
+            echo "Found JS file: $JS_FILE"
+            echo "::set-output name=js_filename::$(basename $JS_FILE)"
+          else
+            echo "No JS file found containing 'main' in the filename."
+            exit 1
+          fi
+      - name: Use the JS filename
+        run: echo "The JS file produced by the build is ${{ steps.find_js_file.outputs.js_filename }}"
+
+      - name: Extract repository name
+        id: repo-name
+        run: echo "REPO_NAME=$(echo $GITHUB_REPOSITORY | sed 's/.*\///')" >> $GITHUB_ENV
+
+      - name: Use repository name
+        run: echo "This repository's name is $REPO_NAME"
+
+      - name: Upload files to OSS
+        run: |
+          ./ossutil64 cp -r dist/ "${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/$REPO_NAME/${{ env.GIT_COMMIT_HASH }}/" --meta="Cache-Control:max-age=31536000" --update
+
+      - name: Get name from package.json
+        run: |
+          PACKAGE_NAME=$(jq -r '.name' package.json)
+          echo "Package name: $PACKAGE_NAME"
+          echo "PACKAGE_NAME=$PACKAGE_NAME" >> $GITHUB_ENV    
+
+      - name: Use Package Name
+        run: |
+          echo "Using package name: $PACKAGE_NAME"          
+
+      - name: Compose NEW_URL for this build
+        run: |
+          echo "NEW_URL=https://net-static-dev.chainbasehq.com/${{ env.REPO_NAME }}/${{ env.GIT_COMMIT_HASH }}/${{ steps.find_js_file.outputs.js_filename }}" >> $GITHUB_ENV
+          echo "Will publish ${NEW_URL}"
+
+      - name: Login ACR (pull updater image)
+        uses: aliyun/acr-login@v1
+        with:
+          login-server: https://chainbase-registry.ap-southeast-1.cr.aliyuncs.com
+          region-id: ap-southeast-1
+          access-key-id: ${{ secrets.ALI_ACCESS_KEY_ID }}
+          access-key-secret: ${{ secrets.ALI_ACCESS_KEY_SECRET }}
+          instance-id: cri-a4wmsz77ru5o7hub
+   
+      - name: Update import-map.json (CAS safe)
+        run: |
+          docker run --rm \
+            -e ALI_ACCESS_KEY_ID='${{ secrets.ALI_ACCESS_KEY_ID }}' \
+            -e ALI_ACCESS_KEY_SECRET='${{ secrets.ALI_ACCESS_KEY_SECRET }}' \
+            -e OSS_ENDPOINT='https://oss-ap-southeast-1.aliyuncs.com' \
+            -e OSS_BUCKET='chainbase-micro-fe-official' \
+            -e SERVICE_NAME='${{ env.PACKAGE_NAME }}' \
+            -e NEW_URL='${{ env.NEW_URL }}' \
+            -e SAFE_PREFIXES='https://net-static-dev.chainbasehq.com/' \
+            chainbase-registry.ap-southeast-1.cr.aliyuncs.com/chainbase-online/micro-fe-imd:latest
+
+      - name: Update import-map-buildermaps.json (CAS safe)
+        run: |
+          docker run --rm \
+            -e ALI_ACCESS_KEY_ID='${{ secrets.ALI_ACCESS_KEY_ID }}' \
+            -e ALI_ACCESS_KEY_SECRET='${{ secrets.ALI_ACCESS_KEY_SECRET }}' \
+            -e OSS_ENDPOINT='https://oss-ap-southeast-1.aliyuncs.com' \
+            -e OSS_BUCKET='chainbase-micro-fe-official' \
+            -e IMPORT_MAP_KEY='import-map-buildermaps.json' \
+            -e SERVICE_NAME='${{ env.PACKAGE_NAME }}' \
+            -e NEW_URL='${{ env.NEW_URL }}' \
+            -e SAFE_PREFIXES='https://net-static-dev.chainbasehq.com/' \
+            chainbase-registry.ap-southeast-1.cr.aliyuncs.com/chainbase-online/micro-fe-imd:latest
+
+
