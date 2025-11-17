@@ -14,7 +14,15 @@ module.exports = (webpackConfigEnv, argv) => {
         argv,
     })
 
-    return mergeWithRules({ externals: 'replace' })(defaultConfig, {
+    return mergeWithRules({
+        externals: 'replace',
+        module: {
+            rules: {
+                test: 'match',
+                use: 'replace',
+            },
+        },
+    })(defaultConfig, {
         devServer: {
             client: {
                 overlay: false,
@@ -31,6 +39,21 @@ module.exports = (webpackConfigEnv, argv) => {
                             transpileOnly: true,
                         },
                     },
+                },
+                {
+                    test: /\.css$/i,
+                    use: [
+                        'style-loader',
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                importLoaders: 1,
+                            },
+                        },
+                        {
+                            loader: 'postcss-loader',
+                        },
+                    ],
                 },
             ],
         },

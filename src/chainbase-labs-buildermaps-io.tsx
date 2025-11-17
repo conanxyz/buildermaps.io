@@ -19,7 +19,7 @@ const lifecycles = singleSpaReact({
     React,
     ReactDOMClient,
     rootComponent: () => (
-            <BrowserRouter>
+            <BrowserRouter basename="/buildermaps">
                 <QueryClientProvider client={queryClient}>                
                   <Root />
                   <Toaster containerClassName="font-medium" />
@@ -40,7 +40,7 @@ const mount = (config) => {
         document.getElementById('home-placeholder').remove()
     }
 
-    document.title = 'Trench | Chainbase.com'
+    document.title = 'Buildermaps.io | Chainbase.com'
 
     return lifecycles.mount(config)
 }
