@@ -69,7 +69,7 @@ export function CategoryPage({ category, onBack }: CategoryPageProps) {
           </div>
 
           <div className="mb-6 text-center">
-            <h1 className="mb-2 text-4xl">
+            <h1 className="mb-2 text-4xl font-system-mono">
               The 2025 {category.name} Landscape
             </h1>
             <p className="text-gray-600">
@@ -96,7 +96,7 @@ export function CategoryPage({ category, onBack }: CategoryPageProps) {
         </div>
       </header>
 
-      <main className="container mx-auto px-6 py-8 font-system-mono">
+      <main className="container mx-auto px-6 py-8">
         <div className="mb-8 rounded border-l-4 border-blue-500 bg-blue-50 p-5">
           <div className="space-y-2 text-gray-800">
             <p>

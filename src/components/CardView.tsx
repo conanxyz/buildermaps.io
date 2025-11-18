@@ -31,11 +31,11 @@ export function CardView({ category }: CardViewProps) {
   });
 
   return (
-    <div className="space-y-10 font-system-mono">
+    <div className="space-y-10">
       {groups.map((group) => (
         <div key={group.title} className="space-y-5">
           <div className="border-l-4 border-blue-500 bg-blue-50/80 px-5 py-3">
-            <h3 className="text-sm text-blue-900">{group.title}</h3>
+            <h3 className="text-sm text-blue-900 font-system-mono">{group.title}</h3>
           </div>
           <div className="space-y-8">
             {group.sections.map((section) => (
@@ -77,7 +77,7 @@ function ProjectCard({
   thirdLevelName?: string;
 }) {
   return (
-    <div className="flex flex-col overflow-hidden rounded-sm border border-gray-300 bg-white transition-all hover:border-blue-400 hover:shadow-lg font-system-mono">
+    <div className="flex flex-col overflow-hidden rounded-sm border border-gray-300 bg-white transition-all hover:border-blue-400 hover:shadow-lg">
       <div className="p-4">
         <div className="mb-3 flex items-start gap-3">
           <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-sm border-2 border-gray-200 bg-white shadow-sm">

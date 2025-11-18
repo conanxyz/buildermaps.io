@@ -48,11 +48,11 @@ export function HomePage({ onCategoryClick }: HomePageProps) {
       <header className="border-b bg-white">
         <div className="container mx-auto px-6 py-6">
           <div className="mx-auto max-w-4xl text-center">
-            <h1 className="mb-3 text-4xl leading-tight">
+            <h1 className="mb-3 text-4xl leading-tight font-system-mono">
               BuilderMaps: Open-Source Crypto Ecosystem Landscape Mapping
             </h1>
 
-            <div className="flex items-center justify-center gap-6 pt-2 text-sm text-gray-600 font-system-mono">
+            <div className="flex items-center justify-center gap-6 pt-2 text-sm text-gray-600">
               <span>Last updated: {lastUpdated}</span>
               <span className="text-gray-400">|</span>
               <span>{totalProjects} projects tracked</span>
@@ -65,10 +65,10 @@ export function HomePage({ onCategoryClick }: HomePageProps) {
 
       <div className="container mx-auto max-w-5xl px-6 py-12">
         <section className="mb-16">
-          <h2 className="mb-6 border-b border-gray-200 pb-2 text-2xl">
+          <h2 className="mb-6 border-b border-gray-200 pb-2 text-2xl font-system-mono">
             Abstract
           </h2>
-          <div className="space-y-5 text-justify leading-relaxed text-gray-800 font-system-mono">
+          <div className="space-y-5 text-justify leading-relaxed text-gray-800">
             <p className="!mb-4">
               <strong>BuilderMaps</strong> is a <strong>public goods</strong> initiative dedicated to making crypto market intelligence open and accessible to everyone. 
               Its mission is to bring transparency, clarity, and shared understanding to the rapidly growing Web3 ecosystem.
@@ -89,11 +89,11 @@ export function HomePage({ onCategoryClick }: HomePageProps) {
         </section>
 
         <section>
-          <h2 className="mb-6 border-b border-gray-200 pb-2 text-2xl">
+          <h2 className="mb-6 border-b border-gray-200 pb-2 text-2xl font-system-mono">
             Ecosystem Categories
           </h2>
 
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 font-system-mono">
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {categories.map((category) => {
               const projectCount = countCategoryProjects(category);
               return (
@@ -102,7 +102,7 @@ export function HomePage({ onCategoryClick }: HomePageProps) {
                   key={category.id}
                   onClick={() => onCategoryClick(category.id)}
                 >
-                  <h3 className="mb-2 text-lg transition-colors group-hover:text-blue-600">
+                  <h3 className="mb-2 text-lg transition-colors group-hover:text-blue-600 font-system-mono">
                     {category.name}
                   </h3>
                   <p className="mb-3 text-sm text-gray-600">
@@ -119,10 +119,10 @@ export function HomePage({ onCategoryClick }: HomePageProps) {
         </section>
 
         <section className="mt-16">
-          <h2 className="mb-6 border-b border-gray-200 pb-2 text-2xl">
+          <h2 className="mb-6 border-b border-gray-200 pb-2 text-2xl font-system-mono">
             How It Works
           </h2>
-          <div className="space-y-5 text-gray-800 font-system-mono">
+          <div className="space-y-5 text-gray-800">
           <div className="space-y-5 text-gray-800">
             <div>
               <strong>1. Community-Driven Curation:</strong> Projects are submitted and verified by community contributors, ensuring comprehensive coverage of the crypto ecosystem.
@@ -141,10 +141,10 @@ export function HomePage({ onCategoryClick }: HomePageProps) {
         </section>
 
         <section className="mt-16">
-          <h2 className="mb-6 border-b border-gray-200 pb-2 text-2xl">
+          <h2 className="mb-6 border-b border-gray-200 pb-2 text-2xl font-system-mono">
             Contributing
           </h2>
-          <div className="space-y-5 text-gray-800 font-system-mono">
+          <div className="space-y-5 text-gray-800">
             <p>
               BuilderMaps.io is an <strong>open-source project</strong> and welcomes contributions from the community. You can contribute by:
             </p>

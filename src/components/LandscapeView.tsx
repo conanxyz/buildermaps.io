@@ -30,7 +30,7 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
         <div
           className={`${categoryColor.labelBg} rounded-lg border-[1.5px] ${categoryColor.border} px-8 py-2.5 shadow-lg`}
         >
-          <h2 className={`${categoryColor.text} whitespace-nowrap tracking-wide`}>
+          <h2 className={`${categoryColor.text} whitespace-nowrap tracking-wide font-system-mono`}>
             The 2025 {category.name} Landscape
           </h2>
         </div>
@@ -56,7 +56,7 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
               <div
                 className={`absolute -top-3 left-4 rounded border ${categoryColor.border} ${categoryColor.labelBg} px-3 py-0.5 shadow-sm`}
               >
-                <h3 className={`${categoryColor.text} text-sm`}>
+                <h3 className={`${categoryColor.text} text-sm font-system-mono`}>
                   {subcategory.name}
                 </h3>
               </div>

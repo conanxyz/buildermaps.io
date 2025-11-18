@@ -103,7 +103,7 @@ export function SubmitProject({ onBack }: SubmitProjectProps) {
             Back
           </Button>
           <div>
-            <h1 className="text-gray-900">Submit Project</h1>
+            <h1 className="text-gray-900 font-system-mono">Submit Project</h1>
             <p className="text-sm text-gray-600">
               Share your project with the BuilderMaps community
             </p>
@@ -114,7 +114,7 @@ export function SubmitProject({ onBack }: SubmitProjectProps) {
       <main className="mx-auto max-w-4xl px-6 py-8">
         <div className="rounded-lg border-2 border-gray-200 bg-white shadow-xl">
           <div className="border-b border-gray-200 px-6 py-5">
-            <h2 className="text-lg font-semibold">Project information</h2>
+            <h2 className="text-lg font-semibold font-system-mono">Project information</h2>
             <p className="text-sm text-gray-600">
               Fill in the details below. Submissions are reviewed before being
               added to BuilderMaps.
