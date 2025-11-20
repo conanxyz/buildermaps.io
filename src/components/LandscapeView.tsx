@@ -19,24 +19,19 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
   return (
     <div
       ref={exportRef}
-      className={`relative rounded-lg border-[1.5px] ${categoryColor.border} bg-white p-12 pt-16 shadow-lg`}
+      className={`relative rounded-lg border-[1.5px] ${categoryColor.border} bg-white p-12 shadow-lg max-[568px]:border-0 max-[568px]:w-full max-[568px]:px-3 max-[568px]:py-6`}
     >
       <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center">
-        <div className="select-none text-9xl text-gray-400/20 -rotate-12">
+        <div className="select-none text-9xl max-[568px]:text-4xl text-gray-400/20 -rotate-12">
           BuilderMaps.io
         </div>
       </div>
-      <div className="absolute -top-5 left-1/2 z-20 -translate-x-1/2">
-        <div
-          className={`${categoryColor.labelBg} rounded-lg border-[1.5px] ${categoryColor.border} px-8 py-2.5 shadow-lg`}
-        >
-          <h2 className={`${categoryColor.text} whitespace-nowrap tracking-wide font-system-mono`}>
-            The 2025 {category.name} Landscape
-          </h2>
-        </div>
-      </div>
+      
+      <h2 className={`relative z-20 mb-6 text-center text-2xl ${categoryColor.text} tracking-wide font-system-mono`}>
+        The 2025 {category.name} Landscape
+      </h2>
 
-      <div className="relative z-0 grid grid-cols-12 gap-6">
+      <div className="relative z-0 grid grid-cols-12 gap-6 max-[568px]:gap-4">
         {category.subcategories.map((subcategory, index) => {
           const hasThirdLevel =
             subcategory.subcategories && subcategory.subcategories.length > 0;
@@ -50,11 +45,11 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
           return (
             <div
               key={subcategory.name}
-              className={`relative rounded border ${categoryColor.border} ${background} px-2 pb-2 pt-5`}
-              style={{ gridColumn: `span ${colSpan}` }}
+              className={`relative rounded border ${categoryColor.border} ${background} px-2 pb-2 pt-5 max-[568px]:px-1 max-[568px]:pb-1`}
+              style={{ gridColumn: 'span 12' }}
             >
               <div
-                className={`absolute -top-3 left-4 rounded border ${categoryColor.border} ${categoryColor.labelBg} px-3 py-0.5 shadow-sm`}
+                className={`absolute -top-3 left-4 rounded border ${categoryColor.border} ${categoryColor.labelBg} px-3 py-0.5 shadow-sm max-[568px]:px-2 max-[568px]:py-0.5`}
               >
                 <h3 className={`${categoryColor.text} text-sm font-system-mono`}>
                   {subcategory.name}
@@ -105,6 +100,21 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
   );
 }
 
+function formatProjectName(name: string, maxLength: number = 20): string {
+  // Remove parenthetical content
+  let formatted = name.replace(/\s*\([^)]*\)/g, '');
+  
+  // If length exceeds maxLength, remove last word repeatedly
+  while (formatted.length > maxLength) {
+    const words = formatted.trim().split(/\s+/);
+    if (words.length <= 1) break; // Can't remove more words
+    words.pop(); // Remove last word
+    formatted = words.join(' ');
+  }
+  
+  return formatted;
+}
+
 function ProjectLogo({
   project,
   categoryName,
@@ -121,6 +131,8 @@ function ProjectLogo({
   setOpenPopoverId: (id: string | null) => void;
 }) {
   const isOpen = openPopoverId === project.id;
+  const [imageError, setImageError] = useState(false);
+  
   return (
     <Popover
       open={isOpen}
@@ -128,28 +140,32 @@ function ProjectLogo({
     >
       <PopoverTrigger asChild>
         <div
-          className="group w-fit cursor-pointer"
+          className="group h-[120px] w-[120px] max-[568px]:h-[100px] max-[568px]:w-[100px] cursor-pointer max-[568px]:cursor-default max-[568px]:pointer-events-none"
           title={`${project.name} - ${project.location}`}
         >
           <div
-            className={`inline-flex h-9 w-auto items-center justify-center px-2 py-1 transition-all ${
+            className={`flex flex-col h-full w-full items-center justify-center px-2 py-1 transition-all ${
               isOpen
                 ? "border border-blue-600 bg-blue-50/20 shadow-md"
                 : "border border-transparent hover:border-gray-300 hover:bg-gray-50"
             }`}
           >
-            <div className="flex h-full max-w-[80px] items-center justify-center overflow-hidden">
-              {project.logoUrl ? (
+            <div className="flex h-[72px] w-[72px] max-[568px]:h-[60px] max-[568px]:w-[60px] items-center justify-center overflow-hidden rounded">
+              {project.logoUrl && !imageError ? (
                 <img
                   src={project.logoUrl}
                   alt={project.name}
-                  className="max-h-full max-w-full object-contain"
+                  className="h-full w-full object-contain rounded"
+                  onError={() => setImageError(true)}
                 />
               ) : (
-                <div className="line-clamp-2 px-1 text-center text-[9px] leading-tight text-gray-900 transition-colors group-hover:text-blue-600">
-                  {project.name}
+                <div className="flex h-[72px] w-[72px] max-[568px]:h-[60px] max-[568px]:w-[60px] items-center justify-center rounded border border-gray-200 bg-gray-100">
+                  <Building2 className="h-9 w-9 max-[568px]:h-7 max-[568px]:w-7 text-gray-400" />
                 </div>
               )}
+            </div>
+            <div className="mt-1 h-[32px] max-[568px]:h-[28px] text-center text-xs font-bold leading-tight text-gray-900 transition-colors group-hover:text-blue-600 overflow-hidden w-full flex items-center justify-center">
+              {formatProjectName(project.name)}
             </div>
           </div>
         </div>
@@ -158,7 +174,7 @@ function ProjectLogo({
         side="right"
         align="start"
         sideOffset={8}
-        className="w-80 border border-gray-300 p-0 shadow-lg"
+        className="w-80 border border-gray-300 p-0 shadow-lg max-[568px]:hidden"
       >
         <ProjectCard
           project={project}
@@ -351,10 +367,10 @@ function ThirdLevelBox({
 }) {
   return (
     <div
-      className={`relative rounded border ${parentColor.border} bg-white px-2 pb-2 pt-6`}
+      className={`relative rounded border ${parentColor.border} bg-white px-2 pb-2 pt-6 max-[568px]:px-1 max-[568px]:pb-1 max-[568px]:pt-3`}
     >
       <div
-        className={`absolute -top-3 left-1/2 -translate-x-1/2 rounded border ${parentColor.border} ${parentColor.labelBg} px-3 py-1 shadow-sm`}
+        className={`absolute -top-3 left-1/2 -translate-x-1/2 rounded border ${parentColor.border} ${parentColor.labelBg} px-3 py-1 shadow-sm max-[568px]:px-2 max-[568px]:py-0.5`}
       >
         <h5 className={`${parentColor.text} whitespace-nowrap text-xs`}>
           {subcategory.name}
