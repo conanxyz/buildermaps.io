@@ -27,8 +27,8 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
         </div>
       </div>
       
-      <h2 className={`relative z-20 mb-6 text-center text-2xl ${categoryColor.text} tracking-wide font-system-mono`}>
-        The 2025 {category.name} Landscape
+      <h2 className={`relative z-20 mb-6 text-center text-4xl max-[568px]:text-3xl ${categoryColor.text} tracking-wide font-system-mono font-bold`}>
+        {category.name} Ecosystem Map
       </h2>
 
       <div className="relative z-0 grid grid-cols-12 gap-6 max-[568px]:gap-4">
@@ -79,7 +79,7 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
                   ))}
                 </div>
               ) : (
-                <div className="flex flex-wrap gap-1">
+                <div className="flex flex-wrap">
                   {subcategory.projects?.map((project) => (
                     <ProjectLogo
                       key={project.id}
@@ -140,7 +140,7 @@ function ProjectLogo({
     >
       <PopoverTrigger asChild>
         <div
-          className="group h-[120px] w-[120px] max-[568px]:h-[100px] max-[568px]:w-[100px] cursor-pointer max-[568px]:cursor-default max-[568px]:pointer-events-none"
+          className="group h-[96px] w-[96px] max-[568px]:h-[90px] max-[568px]:w-[90px] cursor-pointer max-[568px]:cursor-default max-[568px]:pointer-events-none"
           title={`${project.name} - ${project.location}`}
         >
           <div
@@ -150,7 +150,7 @@ function ProjectLogo({
                 : "border border-transparent hover:border-gray-300 hover:bg-gray-50"
             }`}
           >
-            <div className="flex h-[72px] w-[72px] max-[568px]:h-[60px] max-[568px]:w-[60px] items-center justify-center overflow-hidden rounded">
+            <div className="flex h-[56px] w-[56px] max-[568px]:h-[50px] max-[568px]:w-[50px] items-center justify-center overflow-hidden rounded">
               {project.logoUrl && !imageError ? (
                 <img
                   src={project.logoUrl}
@@ -159,12 +159,12 @@ function ProjectLogo({
                   onError={() => setImageError(true)}
                 />
               ) : (
-                <div className="flex h-[72px] w-[72px] max-[568px]:h-[60px] max-[568px]:w-[60px] items-center justify-center rounded border border-gray-200 bg-gray-100">
-                  <Building2 className="h-9 w-9 max-[568px]:h-7 max-[568px]:w-7 text-gray-400" />
+                <div className="flex h-[56px] w-[56px] max-[568px]:h-[50px] max-[568px]:w-[50px] items-center justify-center rounded border border-gray-200 bg-gray-100">
+                  <Building2 className="h-7 w-7 max-[568px]:h-6 max-[568px]:w-6 text-gray-400" />
                 </div>
               )}
             </div>
-            <div className="mt-1 h-[32px] max-[568px]:h-[28px] text-center text-xs font-bold leading-tight text-gray-900 transition-colors group-hover:text-blue-600 overflow-hidden w-full flex items-center justify-center">
+            <div className="mt-1 h-[28px] max-[568px]:h-[26px] text-center text-xs font-bold leading-tight text-gray-900 transition-colors group-hover:text-blue-600 overflow-hidden w-full flex items-center justify-center">
               {formatProjectName(project.name)}
             </div>
           </div>

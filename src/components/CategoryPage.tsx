@@ -78,11 +78,13 @@ export function CategoryPage({ category, onBack }: CategoryPageProps) {
                 className="pl-10"
               />
             </div>
-            <div className="text-sm text-gray-500">
-              Showing{" "}
-              <strong>{countCategoryProjects(filteredCategory)}</strong> of{" "}
-              {projectCount} projects across {subcategoryCount} subcategories
-            </div>
+            <Button
+              variant="outline"
+              className="gap-2"
+              onClick={() => window.open("https://github.com/chainbase-labs/buildermaps.io", "_blank", "noopener,noreferrer")}
+            >
+              Submit a project
+            </Button>
           </div>
         </div>
       </header>
@@ -130,7 +132,6 @@ export function CategoryPage({ category, onBack }: CategoryPageProps) {
           </div>
         )}
       </main>
-
     </div>
   );
 }
