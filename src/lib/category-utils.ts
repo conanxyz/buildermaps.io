@@ -5,8 +5,8 @@ export interface Project {
   name: string;
   location: string;
   description: string;
-  yearFounded?: string;
-  totalFunding?: string;
+  yearFounded?: number;
+  totalFunding?: number | string;
   homepage?: string;
   twitter?: string;
   telegram?: string;
@@ -30,23 +30,28 @@ export interface Category {
   subcategories: Subcategory[];
 }
 
+interface SectorEntry {
+  sector: string;
+  types: string[];
+}
+
 interface BuilderMapEntry {
-  sector?: string;
-  type?: string;
   name: string;
-  location?: string;
   description?: string;
-  yearFounded?: string;
-  totalFunding?: string;
-  homepage?: string;
-  twitter?: string;
-  telegram?: string;
-  discord?: string;
-  medium?: string;
-  github?: string;
-  linkedin?: string;
-  reddit?: string;
-  logoUrl?: string;
+  sectors: SectorEntry[];
+  founded?: number | null;
+  funding?: number | string | null;
+  links?: {
+    homepage?: string;
+    logo?: string;
+    twitter?: string;
+    telegram?: string;
+    discord?: string;
+    medium?: string;
+    github?: string;
+    linkedin?: string;
+    reddit?: string;
+  };
 }
 
 function slugify(value: string): string {
@@ -57,6 +62,10 @@ function slugify(value: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
+// Map to store unique projects by name to avoid duplication
+const projectMap = new Map<string, Project>();
+
+// Map to store categories and their subcategories
 const categoryAccumulator = new Map<
   string,
   {
@@ -66,53 +75,125 @@ const categoryAccumulator = new Map<
 >();
 
 (builderMaps as BuilderMapEntry[]).forEach((entry, index) => {
-  const sectorName = entry.sector?.trim() || "Uncategorized";
-  const categoryId = slugify(sectorName);
-  const subcategoryName = entry.type?.trim() || "General";
+  // Use project name as the key for consistent IDs
+  const projectId = entry.name ? slugify(entry.name) : `project-${index}`;
 
-  let record = categoryAccumulator.get(categoryId);
-  if (!record) {
-    record = {
-      category: {
-        id: categoryId,
-        name: sectorName,
-        subcategories: [],
-      },
-      subcategories: new Map(),
+  // Create or get the project
+  let project = projectMap.get(entry.name);
+  if (!project) {
+    const links = entry.links || {};
+    project = {
+      id: projectId,
+      name: entry.name,
+      location: "Unknown", // Location not in new structure
+      description: entry.description || "",
+      yearFounded: entry.founded ?? undefined,
+      totalFunding: entry.funding ?? undefined,
+      homepage: links.homepage,
+      twitter: links.twitter,
+      telegram: links.telegram,
+      discord: links.discord,
+      medium: links.medium,
+      github: links.github,
+      linkedin: links.linkedin,
+      reddit: links.reddit,
+      logoUrl: links.logo,
     };
-    categoryAccumulator.set(categoryId, record);
+    projectMap.set(entry.name, project);
   }
 
-  let subcategory = record.subcategories.get(subcategoryName);
-  if (!subcategory) {
-    subcategory = {
-      name: subcategoryName,
-      projects: [],
-    };
-    record.subcategories.set(subcategoryName, subcategory);
-    record.category.subcategories.push(subcategory);
+  // Process each sector the project belongs to
+  const sectors = entry.sectors || [];
+  if (sectors.length === 0) {
+    // Handle projects with no sectors
+    const sectorName = "Uncategorized";
+    const categoryId = slugify(sectorName);
+    const subcategoryName = "General";
+
+    let record = categoryAccumulator.get(categoryId);
+    if (!record) {
+      record = {
+        category: {
+          id: categoryId,
+          name: sectorName,
+          subcategories: [],
+        },
+        subcategories: new Map(),
+      };
+      categoryAccumulator.set(categoryId, record);
+    }
+
+    let subcategory = record.subcategories.get(subcategoryName);
+    if (!subcategory) {
+      subcategory = {
+        name: subcategoryName,
+        projects: [],
+      };
+      record.subcategories.set(subcategoryName, subcategory);
+      record.category.subcategories.push(subcategory);
+    }
+
+    // Add project reference (not duplicate)
+    if (!subcategory.projects.find((p) => p.id === project.id)) {
+      subcategory.projects.push(project);
+    }
+  } else {
+    // Process each sector
+    sectors.forEach((sectorEntry) => {
+      const sectorName = sectorEntry.sector?.trim() || "Uncategorized";
+      const categoryId = slugify(sectorName);
+
+      let record = categoryAccumulator.get(categoryId);
+      if (!record) {
+        record = {
+          category: {
+            id: categoryId,
+            name: sectorName,
+            subcategories: [],
+          },
+          subcategories: new Map(),
+        };
+        categoryAccumulator.set(categoryId, record);
+      }
+
+      // Process each type within the sector
+      const types = sectorEntry.types || [];
+      if (types.length === 0) {
+        // If no types, add to "General" subcategory
+        const subcategoryName = "General";
+        let subcategory = record.subcategories.get(subcategoryName);
+        if (!subcategory) {
+          subcategory = {
+            name: subcategoryName,
+            projects: [],
+          };
+          record.subcategories.set(subcategoryName, subcategory);
+          record.category.subcategories.push(subcategory);
+        }
+        if (!subcategory.projects.find((p) => p.id === project.id)) {
+          subcategory.projects.push(project);
+        }
+      } else {
+        // Add project to each type subcategory
+        types.forEach((typeName) => {
+          const subcategoryName = typeName.trim() || "General";
+          let subcategory = record.subcategories.get(subcategoryName);
+          if (!subcategory) {
+            subcategory = {
+              name: subcategoryName,
+              projects: [],
+            };
+            record.subcategories.set(subcategoryName, subcategory);
+            record.category.subcategories.push(subcategory);
+          }
+          // Only add if not already present (avoid duplicates)
+          if (!subcategory.projects.find((p) => p.id === project.id)) {
+            subcategory.projects.push(project);
+          }
+        });
+      }
+    });
   }
-
-  const projectIdBase = entry.name ? slugify(entry.name) : `project-${index}`;
-  const projectId = `${projectIdBase}-${index}`;
-
-  subcategory.projects.push({
-    id: projectId,
-    name: entry.name,
-    location: entry.location ?? "Unknown",
-    description: entry.description ?? "",
-    yearFounded: entry.yearFounded,
-    totalFunding: entry.totalFunding,
-    homepage: entry.homepage,
-    twitter: entry.twitter,
-    telegram: entry.telegram,
-    discord: entry.discord,
-    medium: entry.medium,
-    github: entry.github,
-    linkedin: entry.linkedin,
-    reddit: entry.reddit,
-    logoUrl: entry.logoUrl,
-  });
 });
 
 export const categories: Category[] = Array.from(categoryAccumulator.values()).map(

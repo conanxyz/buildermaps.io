@@ -14,6 +14,13 @@ export function HomePage({ onCategoryClick }: HomePageProps) {
   const lastUpdated = process.env.LAST_BUILD_TIME ?? "Unknown";
   const totalProjects = countTotalProjects(categories);
   const totalCategories = categories.length;
+  
+  // Sort categories by project count (descending)
+  const sortedCategories = [...categories].sort((a, b) => {
+    const countA = countCategoryProjects(a);
+    const countB = countCategoryProjects(b);
+    return countB - countA;
+  });
 
   return (
     <div className="min-h-screen bg-white">
@@ -94,7 +101,7 @@ export function HomePage({ onCategoryClick }: HomePageProps) {
           </h2>
 
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {categories.map((category) => {
+            {sortedCategories.map((category) => {
               const projectCount = countCategoryProjects(category);
               return (
                 <button
