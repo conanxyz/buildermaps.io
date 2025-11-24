@@ -77,20 +77,15 @@ export function HomePage({ onCategoryClick }: HomePageProps) {
           </h2>
           <div className="space-y-5 text-justify leading-relaxed text-gray-800">
             <p className="!mb-4">
-              <strong>BuilderMaps</strong> is a <strong>public goods</strong> initiative dedicated to making crypto market intelligence open and accessible to everyone. 
-              Its mission is to bring transparency, clarity, and shared understanding to the rapidly growing Web3 ecosystem.
+              <strong>BuilderMaps is a public good that maps the crypto landscape.</strong>
+              Most industry ecosystem maps come from VCs showing their portfolio or media outlets pushing their own content. Data platforms lock things behind paywalls. You see pieces, not the whole picture.
             </p>
             <p className="!mb-4">
-              Similar to how venture capital firms and research analysts conduct systematic market mapping, BuilderMaps offers 
-              detailed <strong>landscape visualizations</strong> across major categories including <strong>Stablecoins</strong>,{' '}
-              <strong>PayFi</strong>, <strong>AI&Crypto</strong>, <strong>Public Chain</strong>, <strong>Data</strong>, 
-              and emerging crypto sectors. Our goal is to create a sense of recognition and prestige for projects included in each sector, 
-              incentivizing them to support this public goods initiative through grants.
+              <strong>Initiated and sponsored by Chainbase, BuilderMaps is built as an open database.</strong> Anyone can add projects, update info, or explore what exists. All edits are tracked and verifiable. No company controls it, no one decides what gets shown.
+              Over time it becomes a shared reference for understanding how crypto is actually structured and who's building what.
             </p>
             <p className="!mb-4">
-              Currently tracking <strong>{totalProjects} projects</strong> across <strong>{totalCategories} major categories</strong>, 
-              BuilderMaps serves as a comprehensive reference for understanding the competitive landscape and participant relationships 
-              within the cryptocurrency ecosystem.
+              Currently tracking <strong>{totalProjects} projects</strong> across <strong>{totalCategories} major categories</strong>, BuilderMaps serves as a comprehensive reference for understanding the competitive landscape and participant relationships within the cryptocurrency ecosystem.
             </p>
           </div>
         </section>
