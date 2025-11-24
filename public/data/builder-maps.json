@@ -4,7 +4,7 @@
     "description": "0xGasless financial autonomy for AI agents, ERC-4337 smart wallets, paymaster service, multi-chain Avalanche/Sonic/Moonbeam/BSC/Ethereum",
     "sectors": [
       {
-        "sector": "x443",
+        "sector": "x402",
         "types": [
           "Infra & Devtools"
         ]
@@ -24,7 +24,7 @@
     "description": "Onchain automation layer for x402 payments, wallet delegations and smart contract automation via REST API",
     "sectors": [
       {
-        "sector": "x431",
+        "sector": "x402",
         "types": [
           "Infra & Devtools"
         ]
@@ -62,7 +62,7 @@
     "description": "First launchpad on Base network powered by Coinbase x402 for AI agent token launches",
     "sectors": [
       {
-        "sector": "x413",
+        "sector": "x402",
         "types": [
           "Consumer Apps"
         ]
@@ -81,7 +81,7 @@
     "description": "4Mica - Sub-second transactions across any blockchain",
     "sectors": [
       {
-        "sector": "x480",
+        "sector": "x402",
         "types": [
           "Emerging"
         ]
@@ -116,7 +116,7 @@
   },
   {
     "name": "Acctual",
-    "description": "Accept payments in USDC, USDT, EUR or USD â and get paid same day to your wallet or bank. Create crypto invoices in seconds.",
+    "description": "Accept payments in USDC, USDT, EUR or USD â__ and get paid same day to your wallet or bank. Create crypto invoices in seconds.",
     "sectors": [
       {
         "sector": "Stablecoins",
@@ -138,7 +138,7 @@
     "description": "Across Protocol optimistic cross-chain bridge, UMA oracle verification, intents-based, 60-80% lower gas costs, fast ETH/WBTC/USDC/USDT",
     "sectors": [
       {
-        "sector": "x460",
+        "sector": "x402",
         "types": [
           "Wallet & Payments"
         ]
@@ -157,7 +157,7 @@
     "description": "Privacy-focused Monero fork with mobile-friendly design, 4-min blocks, blockchain pruning, KangarooTwelve PoW, ring signatures",
     "sectors": [
       {
-        "sector": "x422",
+        "sector": "x402",
         "types": [
           "Chains & Protocols"
         ]
@@ -177,7 +177,7 @@
     "description": "AI market intelligence agent tracking 400+ KOLs with $200M+ market cap",
     "sectors": [
       {
-        "sector": "x412",
+        "sector": "x402",
         "types": [
           "Consumer Apps"
         ]
@@ -197,7 +197,7 @@
     "description": "Web3 developer platform with $10.2B valuation, $564M total funding from a16z, Lightspeed, Silver Lake, $5M Everyone Onchain Fund",
     "sectors": [
       {
-        "sector": "x453",
+        "sector": "x402",
         "types": [
           "Wallet & Payments"
         ]
@@ -236,7 +236,7 @@
     "description": "AI analytics platform for crypto/TradFi markets, $2.63M market cap, 256M max supply, Uniswap V2 trading, deflationary buyback model",
     "sectors": [
       {
-        "sector": "x439",
+        "sector": "x402",
         "types": [
           "Infra & Devtools"
         ]
@@ -256,7 +256,7 @@
     "description": "AltLayer restaked rollups protocol decentralized verification EigenLayer AVS multi-chain Ethereum/Arbitrum/Optimism $14.4M Polychain",
     "sectors": [
       {
-        "sector": "x428",
+        "sector": "x402",
         "types": [
           "Chains & Protocols"
         ]
@@ -272,10 +272,10 @@
   },
   {
     "name": "Anchorbrowser",
-    "description": "Anchor is the developer platform that turns browser automation from aÂ fragile, costly nightmare into aÂ reliable, enterprise-ready solution.",
+    "description": "Anchor is the developer platform that turns browser automation from a__fragile, costly nightmare into a__reliable, enterprise-ready solution.",
     "sectors": [
       {
-        "sector": "x406",
+        "sector": "x402",
         "types": [
           "Consumer Apps"
         ]
@@ -294,7 +294,7 @@
     "description": "Claude AI developer, $13B Series F @ $183B valuation, $5B+ run-rate revenue, 300K+ business customers, ICONIQ/Fidelity led",
     "sectors": [
       {
-        "sector": "x466",
+        "sector": "x402",
         "types": [
           "Cloud & Edge Infra"
         ]
@@ -315,7 +315,7 @@
     "description": "Apify web scraping automation platform 1800+ ready-made scrapers Web3 data integration",
     "sectors": [
       {
-        "sector": "x471",
+        "sector": "x402",
         "types": [
           "Indexing & Data"
         ]
@@ -335,7 +335,7 @@
     "description": "AR.IO permanent cloud network Arweave gateway $ARIO token decentralized storage infrastructure immutable data hosting",
     "sectors": [
       {
-        "sector": "x429",
+        "sector": "x402",
         "types": [
           "Chains & Protocols"
         ]
@@ -375,7 +375,7 @@
     "description": "Aurora Cloud EVM deployment platform on NEAR Protocol, serverless functions and cloud infrastructure for Web3 developers",
     "sectors": [
       {
-        "sector": "x465",
+        "sector": "x402",
         "types": [
           "Cloud & Edge Infra"
         ]
@@ -417,7 +417,7 @@
     "description": "Platform for decentralized applications and custom blockchain networks with high throughput and low latency",
     "sectors": [
       {
-        "sector": "x417",
+        "sector": "x402",
         "types": [
           "Chains & Protocols"
         ]
@@ -440,7 +440,7 @@
     "description": "AWS Amazon Managed Blockchain Hyperledger Fabric/Ethereum nodes crypto AI agents Amazon Bedrock Web3 infrastructure",
     "sectors": [
       {
-        "sector": "x463",
+        "sector": "x402",
         "types": [
           "Cloud & Edge Infra"
         ]
@@ -482,7 +482,7 @@
     "description": "Bankr AI crypto bot Base natural language trading BNKR token X/Farcaster social DeFi 100% revenue sharing x402 payments",
     "sectors": [
       {
-        "sector": "x438",
+        "sector": "x402",
         "types": [
           "Infra & Devtools"
         ]
@@ -501,7 +501,7 @@
     "description": "Ethereum Layer 2 by Coinbase built on OP Stack offering 10x cheaper fees with EVM compatibility",
     "sectors": [
       {
-        "sector": "x415",
+        "sector": "x402",
         "types": [
           "Chains & Protocols"
         ]
@@ -518,7 +518,7 @@
   },
   {
     "name": "Bitwave",
-    "description": "Bitwave streamlines tax, accounting, and compliance workflows for global finance teams. Track, manage, and move digital assets â with confidence and security.",
+    "description": "Bitwave streamlines tax, accounting, and compliance workflows for global finance teams. Track, manage, and move digital assets â__ with confidence and security.",
     "sectors": [
       {
         "sector": "Stablecoins",
@@ -582,7 +582,7 @@
     "description": "Bond.Credit RWA tokenization real-world asset blockchain credit markets",
     "sectors": [
       {
-        "sector": "x483",
+        "sector": "x402",
         "types": [
           "Emerging"
         ]
@@ -684,7 +684,7 @@
     "description": "Cambrian helps your agents make better autonomous DeFi decisions with fast, complete, and verifiable financial intelligence.",
     "sectors": [
       {
-        "sector": "x425",
+        "sector": "x402",
         "types": [
           "Chains & Protocols"
         ]
@@ -741,7 +741,7 @@
   },
   {
     "name": "cEUR",
-    "description": "Celo is an Ethereum L2 powering fast, low-cost payments, native stablecoins, and DeFi apps â driving real-world adoption and financial inclusion worldwide.",
+    "description": "Celo is an Ethereum L2 powering fast, low-cost payments, native stablecoins, and DeFi apps â__ driving real-world adoption and financial inclusion worldwide.",
     "sectors": [
       {
         "sector": "Stablecoins",
@@ -763,7 +763,7 @@
     "description": "AI-oriented hyperdata network transforming on-chain signals into structured verifiable AI-enabled data",
     "sectors": [
       {
-        "sector": "x467",
+        "sector": "x402",
         "types": [
           "Indexing & Data"
         ]
@@ -784,7 +784,7 @@
     "description": "Experimental blockchain exploring novel consensus mechanisms and agent-driven operations",
     "sectors": [
       {
-        "sector": "x445",
+        "sector": "x402",
         "types": [
           "Infra & Devtools"
         ]
@@ -821,7 +821,7 @@
     "description": "USDC issuer with $5-7.2B valuation, went public on NYSE June 2025",
     "sectors": [
       {
-        "sector": "x455",
+        "sector": "x402",
         "types": [
           "Wallet & Payments"
         ]
@@ -842,14 +842,9 @@
     "description": "Cloudflare Web3 gateways for IPFS and Ethereum, DNSLink support, Workers script routing, read/write access to decentralized networks",
     "sectors": [
       {
-        "sector": "x451",
+        "sector": "x402",
         "types": [
-          "Identity & Access"
-        ]
-      },
-      {
-        "sector": "x461",
-        "types": [
+          "Identity & Access",
           "Cloud & Edge Infra"
         ]
       }
@@ -868,7 +863,7 @@
     "description": "AI-driven DeFi framework powering 400K+ AI agents for financial and social automation",
     "sectors": [
       {
-        "sector": "x411",
+        "sector": "x402",
         "types": [
           "Consumer Apps"
         ]
@@ -889,7 +884,7 @@
     "description": "Public crypto exchange founded 2012, $1.8B raised pre-IPO, NASDAQ direct listing April 2021 @ $87B valuation, Y Combinator alumni",
     "sectors": [
       {
-        "sector": "x454",
+        "sector": "x402",
         "types": [
           "Wallet & Payments"
         ]
@@ -928,7 +923,7 @@
     "description": "Corbits Agentic Commerce x402 protocol ABK Labs/Nansen API-MCP integration Faremeter wallet Solana/EVM blockchain payments",
     "sectors": [
       {
-        "sector": "x437",
+        "sector": "x402",
         "types": [
           "Infra & Devtools"
         ]
@@ -947,7 +942,7 @@
     "description": "Decentralized credit score quantifying on-chain lending risk using transparent blockchain data",
     "sectors": [
       {
-        "sector": "x447",
+        "sector": "x402",
         "types": [
           "Identity & Access"
         ]
@@ -968,14 +963,9 @@
     "description": "Enterprise blockchain infrastructure enabling embedded wallets and NFT management for AI agents",
     "sectors": [
       {
-        "sector": "x435",
+        "sector": "x402",
         "types": [
-          "Infra & Devtools"
-        ]
-      },
-      {
-        "sector": "x456",
-        "types": [
+          "Infra & Devtools",
           "Wallet & Payments"
         ]
       }
@@ -1083,7 +1073,7 @@
     "description": "DarkFi L1 for anonymous engineering, privacy-first applications, crypto anarchist Amir Taaki, alpha app on Android/Linux/Windows/MacOS",
     "sectors": [
       {
-        "sector": "x444",
+        "sector": "x402",
         "types": [
           "Infra & Devtools"
         ]
@@ -1144,7 +1134,7 @@
     "description": "EigenLayer verifiable cloud platform, EigenDA 50MB/s throughput, EigenVerify ZK proofs, EigenCompute orchestration layer",
     "sectors": [
       {
-        "sector": "x424",
+        "sector": "x402",
         "types": [
           "Chains & Protocols"
         ]
@@ -1163,7 +1153,7 @@
     "description": "AI agent gateway enabling secure and efficient AI-to-AI communication on blockchain",
     "sectors": [
       {
-        "sector": "x407",
+        "sector": "x402",
         "types": [
           "Consumer Apps"
         ]
@@ -1182,7 +1172,7 @@
     "description": "Ethereum is a global, decentralized platform for money and new kinds of applications. On Ethereum, you can write code that controls money, and build applications accessible anywhere in the world.",
     "sectors": [
       {
-        "sector": "x450",
+        "sector": "x402",
         "types": [
           "Identity & Access"
         ]
@@ -1346,7 +1336,7 @@
     "description": "Firecrawl web scraping API LLM-ready data extraction, converts websites markdown/structured data, crawling automation developers AI applications",
     "sectors": [
       {
-        "sector": "x474",
+        "sector": "x402",
         "types": [
           "Indexing & Data"
         ]
@@ -1385,7 +1375,7 @@
     "description": "Build your AI agents team and trade data and insights with other agents on the marketplace",
     "sectors": [
       {
-        "sector": "x484",
+        "sector": "x402",
         "types": [
           "Emerging"
         ]
@@ -1404,7 +1394,7 @@
     "description": "Decentralized digital art and collectibles platform using blockchain for authenticity, ICO Jan 2026, IDO Feb 2026, 1M token airdrop",
     "sectors": [
       {
-        "sector": "x436",
+        "sector": "x402",
         "types": [
           "Infra & Devtools"
         ]
@@ -1486,7 +1476,7 @@
     "description": "Real-time news intelligence platform delivering structured market data to AI agents via x402 protocol",
     "sectors": [
       {
-        "sector": "x475",
+        "sector": "x402",
         "types": [
           "Indexing & Data"
         ]
@@ -1507,7 +1497,7 @@
     "description": "Google Cloud Blockchain Node Engine for Web3, fully managed node hosting, Ethereum/Aptos/Arbitrum/Solana/Hedera validator, Coinbase/Dapper Labs",
     "sectors": [
       {
-        "sector": "x464",
+        "sector": "x402",
         "types": [
           "Cloud & Edge Infra"
         ]
@@ -1549,7 +1539,7 @@
     "description": "Hedera Hashgraph enterprise blockchain, 10K+ TPS, 3-5s finality, $0.0008 tx cost, Google/IBM council governance, aBFT consensus",
     "sectors": [
       {
-        "sector": "x427",
+        "sector": "x402",
         "types": [
           "Chains & Protocols"
         ]
@@ -1589,7 +1579,7 @@
     "description": "Hyperware decentralized OS development infrastructure blockchain operating system dev tools",
     "sectors": [
       {
-        "sector": "x440",
+        "sector": "x402",
         "types": [
           "Infra & Devtools"
         ]
@@ -1609,7 +1599,7 @@
     "description": "Real-time blockchain data indexing across 127+ chains, Circle Alliance Program, distributed compute for low-latency data",
     "sectors": [
       {
-        "sector": "x472",
+        "sector": "x402",
         "types": [
           "Indexing & Data"
         ]
@@ -1647,7 +1637,7 @@
     "description": "The Distributed GPU LLM Inference Network. Route your prompts across a decentralized network of GPUs for low-latency, cost-efficient LLM inference.",
     "sectors": [
       {
-        "sector": "x478",
+        "sector": "x402",
         "types": [
           "Emerging"
         ]
@@ -1747,7 +1737,7 @@
     "description": "Kite AI payment blockchain $18M PayPal Ventures General Catalyst AIR identity stablecoin settlement Shopify/PayPal 10B KITE $151M mcap",
     "sectors": [
       {
-        "sector": "x448",
+        "sector": "x402",
         "types": [
           "Identity & Access"
         ]
@@ -1766,7 +1756,7 @@
     "description": "Bitcoin Latinum (LTNM) asset-backed PoS cryptocurrency, net-zero carbon footprint, Crypto Climate Accord signatory, Monsoon Blockchain",
     "sectors": [
       {
-        "sector": "x446",
+        "sector": "x402",
         "types": [
           "Infra & Devtools"
         ]
@@ -1806,7 +1796,7 @@
     "description": "Decentralized storage network with x402 micropayments for ANS-104 DataItems and private objects",
     "sectors": [
       {
-        "sector": "x470",
+        "sector": "x402",
         "types": [
           "Indexing & Data"
         ]
@@ -1825,7 +1815,7 @@
     "description": "Payment infrastructure enabling location-based crypto transactions and merchant solutions",
     "sectors": [
       {
-        "sector": "x481",
+        "sector": "x402",
         "types": [
           "Emerging"
         ]
@@ -1866,7 +1856,7 @@
     "description": "Layer 2 network with MNT token from BitDAO merger inheriting $785M treasury, on-chain banking infrastructure",
     "sectors": [
       {
-        "sector": "x426",
+        "sector": "x402",
         "types": [
           "Chains & Protocols"
         ]
@@ -1887,7 +1877,7 @@
     "description": "MCpay MCP Server payment layer x402 micropayments Sei blockchain sub-400ms finality agent-to-agent transactions pay-per-call",
     "sectors": [
       {
-        "sector": "x434",
+        "sector": "x402",
         "types": [
           "Infra & Devtools"
         ]
@@ -1907,7 +1897,7 @@
     "description": "Meridian Movement Labs DeFi protocol $4M seed funding decentralized finance infrastructure",
     "sectors": [
       {
-        "sector": "x433",
+        "sector": "x402",
         "types": [
           "Infra & Devtools"
         ]
@@ -1927,7 +1917,7 @@
     "description": "Mogami x402 Java SDK payment gateway facilitator machine-to-machine commerce API monetization",
     "sectors": [
       {
-        "sector": "x432",
+        "sector": "x402",
         "types": [
           "Infra & Devtools"
         ]
@@ -2065,7 +2055,7 @@
     "description": "NEAR Protocol Layer 1 blockchain for AI, Nightshade sharding, climate-neutral, low fees, AI-native apps, user-owned agents, PoS consensus",
     "sectors": [
       {
-        "sector": "x419",
+        "sector": "x402",
         "types": [
           "Chains & Protocols"
         ]
@@ -2104,7 +2094,7 @@
     "description": "Neynar Farcaster infrastructure provider, hosted hubs/APIs/webhooks, USV investment, signer management, cloud nodes for social protocol developers",
     "sectors": [
       {
-        "sector": "x476",
+        "sector": "x402",
         "types": [
           "Indexing & Data"
         ]
@@ -2123,7 +2113,7 @@
     "description": "Shared sequencer L1 with Javelin superbuilder, $1.2M pre-seed from Borderless Capital, Avalanche HyperSDK, cross-chain composability",
     "sectors": [
       {
-        "sector": "x442",
+        "sector": "x402",
         "types": [
           "Infra & Devtools"
         ]
@@ -2222,7 +2212,7 @@
     "description": "AI-powered DeFi assistant combining artificial intelligence with DeFi protocols across 11+ blockchains",
     "sectors": [
       {
-        "sector": "x408",
+        "sector": "x402",
         "types": [
           "Consumer Apps"
         ]
@@ -2263,7 +2253,7 @@
     "description": "Solana-based AI agent marketplace with PAYAI token, 1900% ATH surge, ElizaOS/libp2p/IPFS integration for agent transactions",
     "sectors": [
       {
-        "sector": "x459",
+        "sector": "x402",
         "types": [
           "Wallet & Payments"
         ]
@@ -2283,7 +2273,7 @@
     "description": "peaq L1 DePIN blockchain Nov 2024 mainnet, 50+ projects 21 industries 2M+ devices, PoAS consensus $0.00025 fees, Bosch/Mastercard partnerships",
     "sectors": [
       {
-        "sector": "x421",
+        "sector": "x402",
         "types": [
           "Chains & Protocols"
         ]
@@ -2342,7 +2332,7 @@
     "description": "Decentralized prediction market platform with pie-chart styled betting interface",
     "sectors": [
       {
-        "sector": "x452",
+        "sector": "x402",
         "types": [
           "Identity & Access"
         ]
@@ -2361,7 +2351,7 @@
     "description": "IPFS file storage and media management for Web3, Dedicated Gateways, Submarine.me token gating, NFT metadata hosting",
     "sectors": [
       {
-        "sector": "x477",
+        "sector": "x402",
         "types": [
           "Indexing & Data"
         ]
@@ -2380,7 +2370,7 @@
     "description": "Leading Ethereum scaling and infrastructure platform providing multiple solutions for building Web3 applications",
     "sectors": [
       {
-        "sector": "x416",
+        "sector": "x402",
         "types": [
           "Chains & Protocols"
         ]
@@ -2424,7 +2414,7 @@
     "description": "Polymer Labs is building an L2 interoperability protocol that provides the most secure, neutral, and open framework for deploying cross-chain applications.",
     "sectors": [
       {
-        "sector": "x441",
+        "sector": "x402",
         "types": [
           "Infra & Devtools"
         ]
@@ -2505,7 +2495,7 @@
     "description": "AI-native automation engine coordinating autonomous agents across Web2 and Web3 with 130K+ microtransactions",
     "sectors": [
       {
-        "sector": "x405",
+        "sector": "x402",
         "types": [
           "Consumer Apps"
         ]
@@ -2524,7 +2514,7 @@
     "description": "radar.fun token attention tracker Telegram/Twitter KOL calls social monitoring sentiment analysis crypto",
     "sectors": [
       {
-        "sector": "x469",
+        "sector": "x402",
         "types": [
           "Indexing & Data"
         ]
@@ -2584,7 +2574,7 @@
     "description": "Robotics project enabling devices to pay each other for maintenance via x402 machine-to-machine economy",
     "sectors": [
       {
-        "sector": "x479",
+        "sector": "x402",
         "types": [
           "Emerging"
         ]
@@ -2643,7 +2633,7 @@
     "description": "AI-Powered Shopping Assistant | The Future of Agentic Commerce",
     "sectors": [
       {
-        "sector": "x409",
+        "sector": "x402",
         "types": [
           "Consumer Apps"
         ]
@@ -2662,7 +2652,7 @@
     "description": "SKALE Network elastic blockchain for gaming/AI/DeFi, gas-free, Ethereum sidechains, 8 chains per node, instant finality, on-chain file storage",
     "sectors": [
       {
-        "sector": "x423",
+        "sector": "x402",
         "types": [
           "Chains & Protocols"
         ]
@@ -2679,10 +2669,10 @@
   },
   {
     "name": "Slesh",
-    "description": "Slesh is your AI web copilot and browsing assistant. Summarize PDFs, videos, and tabs, automate tasks, and interact with any site—all in one sidebar",
+    "description": "Slesh is your AI web copilot and browsing assistant. Summarize PDFs, videos, and tabs, automate tasks, and interact with any site__ll in one sidebar",
     "sectors": [
       {
-        "sector": "x410",
+        "sector": "x402",
         "types": [
           "Consumer Apps"
         ]
@@ -2701,14 +2691,9 @@
     "description": "Snack Money USDC micropayments X/Farcaster/GitHub social accounts instant human-AI agent transfers",
     "sectors": [
       {
-        "sector": "x404",
+        "sector": "x402",
         "types": [
-          "Consumer Apps"
-        ]
-      },
-      {
-        "sector": "x449",
-        "types": [
+          "Consumer Apps",
           "Identity & Access"
         ]
       }
@@ -2726,7 +2711,7 @@
     "description": "High-performance blockchain for payments and DeFi",
     "sectors": [
       {
-        "sector": "x418",
+        "sector": "x402",
         "types": [
           "Chains & Protocols"
         ]
@@ -2775,7 +2760,7 @@
         ]
       },
       {
-        "sector": "x458",
+        "sector": "x402",
         "types": [
           "Wallet & Payments"
         ]
@@ -2796,7 +2781,7 @@
     "description": "Next-generation L1 blockchain with high throughput and low latency powered by Move programming language from Mysten Labs",
     "sectors": [
       {
-        "sector": "x420",
+        "sector": "x402",
         "types": [
           "Chains & Protocols"
         ]
@@ -2816,7 +2801,7 @@
     "description": "Decentralized marketplace for autonomous AI agents with X402 micropayments on Base blockchain. Build, deploy, and monetize AI agents that earn 24/7.",
     "sectors": [
       {
-        "sector": "x482",
+        "sector": "x402",
         "types": [
           "Emerging"
         ]
@@ -2835,7 +2820,7 @@
     "description": "Multichain oracle protocol with permissionless design, TEE-based security, 10+ blockchains support, <100ms latency Surge streaming",
     "sectors": [
       {
-        "sector": "x468",
+        "sector": "x402",
         "types": [
           "Indexing & Data"
         ]
@@ -2873,7 +2858,7 @@
     "description": "Web3 development platform with x402 payment support across 170+ EVM chains",
     "sectors": [
       {
-        "sector": "x430",
+        "sector": "x402",
         "types": [
           "Infra & Devtools"
         ]
@@ -2893,7 +2878,7 @@
     "description": "Offer crypto tipping options across multiple blockchains with a simple markdown button. Support developers with Ethereum, Solana, and Bitcoin tips.",
     "sectors": [
       {
-        "sector": "x403",
+        "sector": "x402",
         "types": [
           "Consumer Apps"
         ]
@@ -3367,7 +3352,7 @@
     "description": "Vercel frontend cloud platform Next.js creators, edge functions global deployment, serverless infrastructure developers, Guillermo Rauch founded 2015",
     "sectors": [
       {
-        "sector": "x462",
+        "sector": "x402",
         "types": [
           "Cloud & Edge Infra"
         ]
@@ -3386,7 +3371,7 @@
     "description": "VR/AR gaming ecosystem with VIBE or DIE FPS game, blockchain-based rewards in VIBE/ETH/BNB, 267M VIBE max supply",
     "sectors": [
       {
-        "sector": "x414",
+        "sector": "x402",
         "types": [
           "Consumer Apps"
         ]
@@ -3405,7 +3390,7 @@
     "description": "Major payments network with USDC stablecoin payouts and Solana blockchain settlement",
     "sectors": [
       {
-        "sector": "x457",
+        "sector": "x402",
         "types": [
           "Wallet & Payments"
         ]
@@ -3445,7 +3430,7 @@
     "description": "Explore the x402 ecosystem. View transactions, sellers, origins and resources. Explore the future of agentic commerce.",
     "sectors": [
       {
-        "sector": "x473",
+        "sector": "x402",
         "types": [
           "Indexing & Data"
         ]
