@@ -164,10 +164,18 @@ A project can have multiple subcategories (types) within a single sector:
 1. **Fork the repository** on GitHub
 
 2. **Clone your fork** locally:
+   
+   **Option A: Using Command Line**
    ```bash
    git clone https://github.com/YOUR_USERNAME/buildermaps.io.git
    cd buildermaps.io
    ```
+   
+   **Option B: Using GitHub Desktop**
+   - Go to your fork's page on GitHub
+   - Click the green "Code" button
+   - Select "Open with GitHub Desktop"
+   - Choose a local path and click "Clone"
 
 3. **Open the JSON file**:
    ```bash
@@ -187,15 +195,30 @@ A project can have multiple subcategories (types) within a single sector:
    - Command line: `node -e "JSON.parse(require('fs').readFileSync('public/data/builder-maps.json', 'utf8'))"`
 
 6. **Commit your changes**:
+   
+   **Option A: Using Command Line**
    ```bash
    git add public/data/builder-maps.json
    git commit -m "Add [Project Name] to BuilderMaps"
    ```
+   
+   **Option B: Using GitHub Desktop**
+   - Open GitHub Desktop
+   - You should see your changes listed in the left sidebar
+   - Select `public/data/builder-maps.json` to stage it
+   - Write a commit message: "Add [Project Name] to BuilderMaps"
+   - Click "Commit to main" (or your branch name)
 
 7. **Push to your fork**:
+   
+   **Option A: Using Command Line**
    ```bash
    git push origin master
    ```
+   
+   **Option B: Using GitHub Desktop**
+   - Click the "Push origin" button in the top toolbar
+   - Or go to Repository → Push
 
 8. **Create a Pull Request** on GitHub with:
     - A clear title describing the addition
