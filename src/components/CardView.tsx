@@ -81,9 +81,9 @@ function ProjectCard({
       <div className="p-4">
         <div className="mb-3 flex items-start gap-3">
           <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-sm border-2 border-gray-200 bg-white shadow-sm">
-                {project.logoUrl ? (
+            {project.logoUrl ? (
               <img
-                    src={project.logoUrl}
+                src={project.logoUrl}
                 alt={project.name}
                 className="h-12 w-12 object-contain"
               />
@@ -95,9 +95,99 @@ function ProjectCard({
             <h4 className="mb-1.5 line-clamp-2 text-base leading-tight">
               {project.name}
             </h4>
-            <div className="flex items-center gap-1 text-xs text-gray-600">
-              <MapPin className="h-3 w-3 flex-shrink-0" />
-              <span className="truncate">{project.location}</span>
+            <div className="flex items-center gap-3">
+              {project.homepage && (
+                <a
+                  href={project.homepage}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-600 transition-colors hover:text-blue-600"
+                  title="Website"
+                >
+                  <Globe className="h-4 w-4" />
+                </a>
+              )}
+              {project.twitter && (
+                <a
+                  href={project.twitter}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-600 transition-colors hover:text-blue-600"
+                  title="Twitter"
+                >
+                  <Twitter className="h-4 w-4" />
+                </a>
+              )}
+              {project.telegram && (
+                <a
+                  href={project.telegram}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-600 transition-colors hover:text-blue-600"
+                  title="Telegram"
+                >
+                  {/* @ts-expect-error - react-icons type compatibility issue with React 17 */}
+                  <FaTelegram className="h-4 w-4" />
+                </a>
+              )}
+              {project.discord && (
+                <a
+                  href={project.discord}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-600 transition-colors hover:text-blue-600"
+                  title="Discord"
+                >
+                  {/* @ts-expect-error - react-icons type compatibility issue with React 17 */}
+                  <FaDiscord className="h-4 w-4" />
+                </a>
+              )}
+              {project.medium && (
+                <a
+                  href={project.medium}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-600 transition-colors hover:text-blue-600"
+                  title="Medium"
+                >
+                  {/* @ts-expect-error - react-icons type compatibility issue with React 17 */}
+                  <SiMedium className="h-4 w-4" />
+                </a>
+              )}
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-600 transition-colors hover:text-blue-600"
+                  title="GitHub"
+                >
+                  <Github className="h-4 w-4" />
+                </a>
+              )}
+              {project.linkedin && (
+                <a
+                  href={project.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-600 transition-colors hover:text-blue-600"
+                  title="LinkedIn"
+                >
+                  <Linkedin className="h-4 w-4" />
+                </a>
+              )}
+              {project.reddit && (
+                <a
+                  href={project.reddit}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-600 transition-colors hover:text-blue-600"
+                  title="Reddit"
+                >
+                  {/* @ts-expect-error - react-icons type compatibility issue with React 17 */}
+                  <FaReddit className="h-4 w-4" />
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -105,16 +195,16 @@ function ProjectCard({
           {project.description}
         </p>
         <div className="mb-3 grid grid-cols-2 gap-x-3 gap-y-2 text-xs">
-              {project.yearFounded && (
+          {project.yearFounded && (
             <div>
               <div className="mb-0.5 text-gray-500">Founded</div>
-                  <div className="text-gray-900">{project.yearFounded}</div>
+              <div className="text-gray-900">{project.yearFounded}</div>
             </div>
           )}
-              {project.totalFunding && project.totalFunding !== "N/A" && (
+          {project.totalFunding && project.totalFunding !== "N/A" && (
             <div>
-                  <div className="mb-0.5 text-gray-500">Total funding</div>
-                  <div className="text-gray-900">{project.totalFunding}</div>
+              <div className="mb-0.5 text-gray-500">Total funding</div>
+              <div className="text-gray-900">{project.totalFunding}</div>
             </div>
           )}
         </div>
@@ -129,100 +219,6 @@ function ProjectCard({
             <span className="inline-block rounded bg-blue-100 px-2 py-0.5 text-[10px] text-blue-700">
               {thirdLevelName}
             </span>
-          )}
-        </div>
-        <div className="flex items-center gap-3">
-              {project.homepage && (
-            <a
-                  href={project.homepage}
-              target="_blank"
-              rel="noreferrer"
-              className="text-gray-600 transition-colors hover:text-blue-600"
-              title="Website"
-            >
-              <Globe className="h-4 w-4" />
-            </a>
-          )}
-          {project.twitter && (
-            <a
-              href={project.twitter}
-              target="_blank"
-              rel="noreferrer"
-              className="text-gray-600 transition-colors hover:text-blue-600"
-              title="Twitter"
-            >
-              <Twitter className="h-4 w-4" />
-            </a>
-          )}
-          {project.telegram && (
-            <a
-              href={project.telegram}
-              target="_blank"
-              rel="noreferrer"
-              className="text-gray-600 transition-colors hover:text-blue-600"
-              title="Telegram"
-            >
-              {/* @ts-expect-error - react-icons type compatibility issue with React 17 */}
-              <FaTelegram className="h-4 w-4" />
-            </a>
-          )}
-          {project.discord && (
-            <a
-              href={project.discord}
-              target="_blank"
-              rel="noreferrer"
-              className="text-gray-600 transition-colors hover:text-blue-600"
-              title="Discord"
-            >
-              {/* @ts-expect-error - react-icons type compatibility issue with React 17 */}
-              <FaDiscord className="h-4 w-4" />
-            </a>
-          )}
-          {project.medium && (
-            <a
-              href={project.medium}
-              target="_blank"
-              rel="noreferrer"
-              className="text-gray-600 transition-colors hover:text-blue-600"
-              title="Medium"
-            >
-              {/* @ts-expect-error - react-icons type compatibility issue with React 17 */}
-              <SiMedium className="h-4 w-4" />
-            </a>
-          )}
-          {project.github && (
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noreferrer"
-              className="text-gray-600 transition-colors hover:text-blue-600"
-              title="GitHub"
-            >
-              <Github className="h-4 w-4" />
-            </a>
-          )}
-          {project.linkedin && (
-            <a
-              href={project.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              className="text-gray-600 transition-colors hover:text-blue-600"
-              title="LinkedIn"
-            >
-              <Linkedin className="h-4 w-4" />
-            </a>
-          )}
-          {project.reddit && (
-            <a
-              href={project.reddit}
-              target="_blank"
-              rel="noreferrer"
-              className="text-gray-600 transition-colors hover:text-blue-600"
-              title="Reddit"
-            >
-              {/* @ts-expect-error - react-icons type compatibility issue with React 17 */}
-              <FaReddit className="h-4 w-4" />
-            </a>
           )}
         </div>
       </div>
