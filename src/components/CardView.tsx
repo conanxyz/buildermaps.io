@@ -1,4 +1,4 @@
-import { Globe, MapPin, Github, Twitter, Linkedin } from "lucide-react";
+import { Globe, Github, Twitter, Linkedin } from "lucide-react";
 import { FaTelegram, FaDiscord, FaReddit } from "react-icons/fa";
 import { SiMedium } from "react-icons/si";
 
