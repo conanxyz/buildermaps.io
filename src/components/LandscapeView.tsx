@@ -15,12 +15,10 @@ interface LandscapeViewProps {
 export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
   const [openPopoverId, setOpenPopoverId] = useState<string | null>(null);
 
-  const categoryColor = getCategoryColor(category.id);
-
   return (
     <div
       ref={exportRef}
-      className={`relative rounded-lg border-[1.5px] ${categoryColor.border} bg-white p-12 shadow-lg max-[568px]:border-0 max-[568px]:w-full max-[568px]:px-3 max-[568px]:py-6`}
+      className="relative rounded-lg border-[1.5px] border-black bg-white p-12 shadow-lg max-[568px]:border-0 max-[568px]:w-full max-[568px]:px-3 max-[568px]:py-6"
     >
       <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center">
         <div className="select-none text-9xl max-[568px]:text-4xl text-gray-400/20 -rotate-12">
@@ -28,7 +26,7 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
         </div>
       </div>
       
-      <h2 className={`relative z-20 mb-6 text-3xl max-[568px]:text-2xl ${categoryColor.text} tracking-wide font-system-mono font-bold`}>
+      <h2 className="relative z-20 mb-6 text-3xl max-[568px]:text-2xl text-black tracking-wide linux-libertine-bold font-bold">
         {category.name} Ecosystem Map
       </h2>
 
@@ -62,12 +60,12 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
           return (
             <div
               key={subcategory.name}
-              className={`relative rounded border ${categoryColor.border} ${background} px-2 pb-2 pt-5 ${columnSpanClass} max-[968px]:col-span-12 max-[568px]:px-1 max-[568px]:pb-1`}
+              className={`relative rounded border border-black ${background} px-2 pb-2 pt-5 ${columnSpanClass} max-[968px]:col-span-12 max-[568px]:px-1 max-[568px]:pb-1`}
             >
               <div
-                className={`absolute -top-3 left-1/2 -translate-x-1/2 rounded ${categoryColor.labelBg} px-2 py-0.5 max-[568px]:py-0.5`}
+                className="absolute -top-3 left-1/2 -translate-x-1/2 rounded bg-white px-2 py-0.5 max-[568px]:py-0.5"
               >
-                <h3 className={`${categoryColor.text} text-sm font-system-mono text-center`}>
+                <h3 className="text-black text-sm linux-libertine text-center linux-libertine-bold">
                   {subcategory.name}
                 </h3>
               </div>
@@ -86,7 +84,6 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
                     <ThirdLevelBox
                       key={thirdLevel.name}
                       categoryName={category.name}
-                      parentColor={categoryColor}
                       parentSubcategoryName={subcategory.name}
                       subcategory={thirdLevel}
                       openPopoverId={openPopoverId}
@@ -369,14 +366,12 @@ function ProjectCard({
 
 function ThirdLevelBox({
   categoryName,
-  parentColor,
   parentSubcategoryName,
   subcategory,
   openPopoverId,
   setOpenPopoverId,
 }: {
   categoryName: string;
-  parentColor: ReturnType<typeof getCategoryColor>;
   parentSubcategoryName: string;
   subcategory: Subcategory;
   openPopoverId: string | null;
@@ -384,12 +379,12 @@ function ThirdLevelBox({
 }) {
   return (
     <div
-      className={`relative rounded border ${parentColor.border} bg-white px-2 pb-2 pt-6 max-[568px]:px-1 max-[568px]:pb-1 max-[568px]:pt-3`}
+      className="relative rounded border border-black bg-white px-2 pb-2 pt-6 max-[568px]:px-1 max-[568px]:pb-1 max-[568px]:pt-3"
     >
       <div
-        className={`absolute -top-3 left-1/2 -translate-x-1/2 rounded border ${parentColor.border} ${parentColor.labelBg} px-3 py-1 shadow-sm max-[568px]:px-2 max-[568px]:py-0.5`}
+        className="absolute -top-3 left-1/2 -translate-x-1/2 rounded border border-black bg-white px-3 py-1 shadow-sm max-[568px]:px-2 max-[568px]:py-0.5"
       >
-        <h5 className={`${parentColor.text} whitespace-nowrap text-xs`}>
+        <h5 className="text-black whitespace-nowrap text-xs">
           {subcategory.name}
         </h5>
       </div>

@@ -35,7 +35,7 @@ export function CardView({ category }: CardViewProps) {
       {groups.map((group) => (
         <div key={group.title} className="space-y-5">
           <div className="border-l-4 border-blue-500 bg-blue-50/80 px-5 py-3">
-            <h3 className="text-sm text-blue-900 font-system-mono">{group.title}</h3>
+            <h3 className="text-sm text-blue-900 linux-libertine">{group.title}</h3>
           </div>
           <div className="space-y-8">
             {group.sections.map((section) => (

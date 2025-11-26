@@ -55,7 +55,7 @@ export function HomePage({ onCategoryClick }: HomePageProps) {
       <header className="border-b bg-white">
         <div className="container mx-auto px-6 py-6">
           <div className="mx-auto max-w-4xl text-center">
-            <h1 className="mb-3 text-4xl leading-tight font-system-mono">
+            <h1 className="mb-3 text-4xl leading-tight linux-libertine">
               BuilderMaps: Open-Source Crypto Ecosystem Landscape Mapping
             </h1>
 
@@ -72,7 +72,7 @@ export function HomePage({ onCategoryClick }: HomePageProps) {
 
       <div className="container mx-auto max-w-5xl px-6 py-12">
         <section className="mb-16">
-          <h2 className="mb-6 border-b border-gray-200 pb-2 text-2xl font-system-mono">
+          <h2 className="mb-6 border-b border-gray-200 pb-2 text-2xl linux-libertine">
             Abstract
           </h2>
           <div className="space-y-5 text-justify leading-relaxed text-gray-800">
@@ -91,7 +91,7 @@ export function HomePage({ onCategoryClick }: HomePageProps) {
         </section>
 
         <section>
-          <h2 className="mb-6 border-b border-gray-200 pb-2 text-2xl font-system-mono">
+          <h2 className="mb-6 border-b border-gray-200 pb-2 text-2xl linux-libertine">
             Ecosystem Categories
           </h2>
 
@@ -100,17 +100,17 @@ export function HomePage({ onCategoryClick }: HomePageProps) {
               const projectCount = countCategoryProjects(category);
               return (
                 <button
-                  className="group cursor-pointer rounded-md border border-gray-300 bg-white p-6 text-left transition-all hover:border-blue-500 hover:shadow-md"
+                  className="group cursor-pointer rounded-md border border-gray-300 hover:border-black bg-white p-6 text-left"
                   key={category.id}
                   onClick={() => onCategoryClick(category.id)}
                 >
-                  <h3 className="mb-2 text-lg transition-colors group-hover:text-blue-600 font-system-mono">
+                  <h3 className="mb-2 text-lg group-hover:font-bold linux-libertine">
                     {category.name}
                   </h3>
                   <p className="mb-3 text-sm text-gray-600">
                     {projectCount} projects
                   </p>
-                  <div className="flex items-center text-sm text-blue-600 transition-transform group-hover:translate-x-1">
+                  <div className="flex items-center text-sm text-black">
                     View landscape
                     <ArrowRight className="ml-1 h-4 w-4" />
                   </div>
@@ -121,7 +121,7 @@ export function HomePage({ onCategoryClick }: HomePageProps) {
         </section>
 
         <section className="mt-16">
-          <h2 className="mb-6 border-b border-gray-200 pb-2 text-2xl font-system-mono">
+          <h2 className="mb-6 border-b border-gray-200 pb-2 text-2xl linux-libertine">
             How It Works
           </h2>
           <div className="space-y-5 text-gray-800">
@@ -143,7 +143,7 @@ export function HomePage({ onCategoryClick }: HomePageProps) {
         </section>
 
         <section className="mt-16">
-          <h2 className="mb-6 border-b border-gray-200 pb-2 text-2xl font-system-mono">
+          <h2 className="mb-6 border-b border-gray-200 pb-2 text-2xl linux-libertine">
             Contributing
           </h2>
           <div className="space-y-5 text-gray-800">

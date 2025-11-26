@@ -196,5 +196,13 @@ html {
   .font-system-mono {
     font-family: PT Mono, ui-sans-serif, system-ui, sans-serif;
   }
+
+  .linux-libertine {
+    font-family: Linux Libertine, ui-sans-serif, system-ui, sans-serif;
+  }
+
+  .linux-libertine-bold {
+    font-family: Linux Libertine Bold, ui-sans-serif, system-ui, sans-serif;
+  }  
 }
 
