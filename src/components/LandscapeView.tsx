@@ -4,6 +4,7 @@ import { FaTelegram, FaDiscord, FaReddit } from "react-icons/fa";
 import { SiMedium } from "react-icons/si";
 
 import type { Category, Project, Subcategory } from "../lib/category-utils";
+import { countSubcategoryProjects } from "../lib/category-utils";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 
 interface LandscapeViewProps {
@@ -27,12 +28,16 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
         </div>
       </div>
       
-      <h2 className={`relative z-20 mb-6 text-center text-4xl max-[568px]:text-3xl ${categoryColor.text} tracking-wide font-system-mono font-bold`}>
+      <h2 className={`relative z-20 mb-6 text-3xl max-[568px]:text-2xl ${categoryColor.text} tracking-wide font-system-mono font-bold`}>
         {category.name} Ecosystem Map
       </h2>
 
       <div className="relative z-0 grid grid-cols-12 gap-6 max-[568px]:gap-4">
-        {category.subcategories.map((subcategory, index) => {
+        {(() => {
+          const sortedSubcategories = [...category.subcategories]
+            .sort((a, b) => countSubcategoryProjects(b) - countSubcategoryProjects(a));
+          
+          return sortedSubcategories.map((subcategory, index) => {
           const hasThirdLevel =
             subcategory.subcategories && subcategory.subcategories.length > 0;
           const hasDirectProjects =
@@ -41,17 +46,28 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
           const background = hasDirectProjects
             ? "bg-white"
             : getSubcategoryStyle(index).bg;
+          
+          // Check if even child and its odd sibling have the same project count
+          const isEven = index % 2 === 0;
+          const currentCount = countSubcategoryProjects(subcategory);
+          const siblingIndex = isEven ? index + 1 : index - 1;
+          const siblingCount = siblingIndex >= 0 && siblingIndex < sortedSubcategories.length 
+            ? countSubcategoryProjects(sortedSubcategories[siblingIndex])
+            : null;
+          const hasSameCountAsSibling = siblingCount !== null && currentCount === siblingCount;
+          
+          // If they have the same count, use 50% (6 cols) for both, otherwise use 60%/40%
+          const columnSpanClass = hasSameCountAsSibling ? 'col-span-6' : (isEven ? 'col-span-7' : 'col-span-5');
 
           return (
             <div
               key={subcategory.name}
-              className={`relative rounded border ${categoryColor.border} ${background} px-2 pb-2 pt-5 max-[568px]:px-1 max-[568px]:pb-1`}
-              style={{ gridColumn: 'span 12' }}
+              className={`relative rounded border ${categoryColor.border} ${background} px-2 pb-2 pt-5 ${columnSpanClass} max-[968px]:col-span-12 max-[568px]:px-1 max-[568px]:pb-1`}
             >
               <div
-                className={`absolute -top-3 left-4 rounded border ${categoryColor.border} ${categoryColor.labelBg} px-3 py-0.5 shadow-sm max-[568px]:px-2 max-[568px]:py-0.5`}
+                className={`absolute -top-3 left-1/2 -translate-x-1/2 rounded ${categoryColor.labelBg} px-2 py-0.5 max-[568px]:py-0.5`}
               >
-                <h3 className={`${categoryColor.text} text-sm font-system-mono`}>
+                <h3 className={`${categoryColor.text} text-sm font-system-mono text-center`}>
                   {subcategory.name}
                 </h3>
               </div>
@@ -94,7 +110,8 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
               )}
             </div>
           );
-        })}
+          });
+        })()}
       </div>
     </div>
   );
