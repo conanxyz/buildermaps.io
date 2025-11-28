@@ -19,7 +19,7 @@ const lifecycles = singleSpaReact({
     React,
     ReactDOMClient,
     rootComponent: () => (
-            <BrowserRouter basename="/buildermaps">
+            <BrowserRouter basename={window.location.hostname.includes('buildermaps.io') ? "" : "/buildermaps"}>
                 <QueryClientProvider client={queryClient}>                
                   <Root />
                   <Toaster containerClassName="font-medium" />
