@@ -26,7 +26,7 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
         </div>
       </div>
       
-      <h2 className="relative z-20 mb-6 text-3xl max-[568px]:text-2xl text-black tracking-wide linux-libertine-bold font-bold">
+      <h2 className="relative z-20 mb-6 text-3xl max-[568px]:text-2xl text-black tracking-wide linux-libertine-bold font-bold text-center">
         {category.name} Ecosystem Map
       </h2>
 
