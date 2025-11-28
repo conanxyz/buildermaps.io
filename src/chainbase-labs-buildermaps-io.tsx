@@ -40,7 +40,7 @@ const mount = (config) => {
         document.getElementById('home-placeholder').remove()
     }
 
-    document.title = 'Buildermaps.io | Chainbase.com'
+    document.title = 'Buildermaps.io'
 
     return lifecycles.mount(config)
 }
