@@ -18,7 +18,7 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
   return (
     <div
       ref={exportRef}
-      className="relative rounded-lg border-[1.5px] border-black bg-white p-12 shadow-lg max-[568px]:border-0 max-[568px]:w-full max-[568px]:px-3 max-[568px]:py-6"
+      className="relative rounded-lg border-[1.5px] border-black bg-white p-12 pb-4 shadow-lg max-[568px]:border-0 max-[568px]:w-full max-[568px]:px-3 max-[568px]:py-6"
     >
       <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center">
         <div className="select-none text-9xl max-[568px]:text-4xl text-gray-400/20 -rotate-12">
@@ -110,6 +110,31 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
           });
         })()}
       </div>
+        <footer className="pt-4 g-gray-50">
+          <div className="container mx-auto">
+            <div className="grid grid-cols-3 gap-4 text-sm text-gray-600 max-[568px]:grid-cols-1 max-[568px]:gap-3 max-[568px]:text-xs">
+              <div className="text-left">
+                Date: {formatDate()}
+              </div>
+              <div className="text-center max-[568px]:text-left">
+                Source:{" "}
+                buildermaps.io
+                {" "}
+                <a
+                  href="https://x.com/ChainbaseHQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 hover:underline"
+                >
+                  @ChainbaseHQ
+                </a>
+              </div>
+              <div className="text-right max-[568px]:text-left">
+                Disclaimer: Listed ≠ endorsement. DYOR.
+              </div>
+            </div>
+          </div>
+        </footer>
     </div>
   );
 }
@@ -154,7 +179,7 @@ function ProjectLogo({
     >
       <PopoverTrigger asChild>
         <div
-          className="group h-[96px] w-[96px] max-[568px]:h-[90px] max-[568px]:w-[90px] cursor-pointer max-[568px]:cursor-default max-[568px]:pointer-events-none"
+          className="group h-[96px] w-[75px] max-[568px]:h-[90px] max-[568px]:w-[72px] cursor-pointer max-[568px]:cursor-default max-[568px]:pointer-events-none"
           title={project.name}
         >
           <div
@@ -164,21 +189,21 @@ function ProjectLogo({
                 : "border border-transparent hover:border-gray-300 hover:bg-gray-50"
             }`}
           >
-            <div className="flex h-[56px] w-[56px] max-[568px]:h-[50px] max-[568px]:w-[50px] items-center justify-center overflow-hidden rounded">
+            <div className="flex h-[56px] w-[56px] max-[568px]:h-[50px] max-[568px]:w-[50px] items-center justify-center rounded-full">
               {project.logoUrl && !imageError ? (
                 <img
                   src={project.logoUrl}
                   alt={project.name}
-                  className="h-full w-full object-contain rounded"
+                  className="h-full w-full object-contain rounded-full"
                   onError={() => setImageError(true)}
                 />
               ) : (
-                <div className="flex h-[56px] w-[56px] max-[568px]:h-[50px] max-[568px]:w-[50px] items-center justify-center rounded border border-gray-200 bg-gray-100">
+                <div className="flex h-[56px] w-[56px] max-[568px]:h-[50px] max-[568px]:w-[50px] items-center justify-center rounded-full border border-gray-200 bg-gray-100">
                   <Building2 className="h-7 w-7 max-[568px]:h-6 max-[568px]:w-6 text-gray-400" />
                 </div>
               )}
             </div>
-            <div className="mt-1 h-[28px] max-[568px]:h-[26px] text-center text-xs font-bold leading-tight text-gray-900 transition-colors group-hover:text-blue-600 overflow-hidden w-full flex items-center justify-center">
+            <div className="mt-1 h-[28px] max-[568px]:h-[26px] text-center text-xs font-bold leading-tight text-gray-900 transition-colors group-hover:text-blue-600 w-full flex items-center justify-center">
               {formatProjectName(project.name)}
             </div>
           </div>
@@ -215,12 +240,12 @@ function ProjectCard({
   return (
     <div className="space-y-3 p-4">
       <div className="flex items-start gap-3">
-        <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-sm border border-gray-200 bg-white shadow-sm">
+        <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm">
           {project.logoUrl ? (
             <img
               src={project.logoUrl}
               alt={project.name}
-              className="h-12 w-12 object-contain"
+              className="h-12 w-12 object-contain rounded-full"
             />
           ) : (
             <Building2 className="h-6 w-6 text-gray-400" />
@@ -475,3 +500,11 @@ function calculateColSpan(subcategory: Subcategory) {
   return 12;
 }
 
+function formatDate() {
+  const today = new Date();
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const month = months[today.getMonth()];
+  const day = today.getDate();
+  const year = today.getFullYear();
+  return `${month} ${day},${year}`;
+}
