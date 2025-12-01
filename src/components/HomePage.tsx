@@ -70,14 +70,14 @@ export function HomePage({ onCategoryClick }: HomePageProps) {
         </div>
       </header>
 
-      <div className="container mx-auto max-w-5xl px-6 py-12">
+      <div className="container mx-auto max-w-5xl px-5 py-12">
         <section className="mb-16">
           <h2 className="mb-6 border-b border-gray-200 pb-2 text-2xl linux-libertine-bold">
             Abstract
           </h2>
-          <div className="space-y-5 text-justify leading-relaxed text-gray-800">
+          <div className="space-y-5 leading-relaxed text-gray-800">
             <p className="!mb-4">
-              <strong>BuilderMaps is a public good that maps the crypto landscape.</strong>
+              <strong>BuilderMaps is a public good that maps the crypto landscape.</strong>{' '}
               Most industry ecosystem maps come from VCs showing their portfolio or media outlets pushing their own content. Data platforms lock things behind paywalls. You see pieces, not the whole picture.
             </p>
             <p className="!mb-4">
