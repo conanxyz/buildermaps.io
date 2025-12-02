@@ -43,6 +43,9 @@ To develop and test BuilderMaps locally:
      - **Key**: `import-map-override:@chainbase-labs/buildermaps-io`
      - **Value**: `http://localhost:8080/chainbase-labs-buildermaps-io.js`
    - Refresh the page to load your local changes
+  
+<img width="1402" height="415" alt="image" src="https://github.com/user-attachments/assets/a907fd80-6a1b-43a4-aa68-cf1cf46cc68b" />
+
 
 Now you can make changes to the codebase and see them reflected in the testnet environment by reloading the page.
 
