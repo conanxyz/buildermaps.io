@@ -18,6 +18,34 @@ We welcome contributions from the community! There are several ways to contribut
 - **Report bugs or suggest improvements**
 - **Contribute code improvements** via pull requests
 
+## Local Development
+
+To develop and test BuilderMaps locally:
+
+1. **Visit the testnet environment**: Open [https://net-static-dev.chainbasehq.com/buildermaps](https://net-static-dev.chainbasehq.com/buildermaps) in your browser
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**:
+   ```bash
+   npm start
+   ```
+   This will start a local development server at `http://localhost:8080/`
+
+4. **Configure the browser to use your local build**:
+   - Open the browser Developer Tools (F12 or right-click → Inspect)
+   - Go to the **Application** tab (Chrome) or **Storage** tab (Firefox)
+   - Navigate to **Local Storage** → `https://net-static-dev.chainbasehq.com`
+   - Add a new entry:
+     - **Key**: `import-map-override:@chainbase-labs/buildermaps-io`
+     - **Value**: `http://localhost:8080/chainbase-labs-buildermaps-io.js`
+   - Refresh the page to load your local changes
+
+Now you can make changes to the codebase and see them reflected in the testnet environment by reloading the page.
+
 ## Adding a New Project
 
 The primary way to add projects to BuilderMaps is by editing the `builder-maps.json` file. This file contains all project data in a structured format.
