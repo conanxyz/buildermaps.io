@@ -80,6 +80,10 @@ jobs:
       - name: Use repository name
         run: echo "This repository's name is $REPO_NAME"
 
+      - name: Upload public assets to prod OSS
+        run: |
+          ./ossutil64 cp -r public/ "${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/" --meta="Cache-Control:max-age=31536000" --update        
+
       - name: Upload files to OSS
         run: |
           ./ossutil64 cp -r dist/ "${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/$REPO_NAME/${{ env.GIT_COMMIT_HASH }}/" --meta="Cache-Control:max-age=31536000" --update
