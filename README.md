@@ -74,7 +74,9 @@ Each project in `builder-maps.json` follows this structure:
 - **`funding`** (number | string | null): Total funding amount (e.g., 1000000 or "Series A"). Use `null` if unknown
 - **`links`** (object): Object containing various links (all optional):
   - **`homepage`**: Main website URL
-  - **`logo`**: Direct URL to the project logo image
+  - **`logo`**: URL to the project logo image. You can use either:
+    - A local path starting with `/imgs/` (e.g., `/imgs/project-logo.jpg`) - see [Uploading Logo Images](#uploading-logo-images) below
+    - A direct external URL (e.g., `https://example.com/logo.jpg`)
   - **`twitter`**: X (Twitter) profile URL
   - **`telegram`**: Telegram channel/group URL
   - **`discord`**: Discord server invite URL
@@ -101,7 +103,7 @@ Each project in `builder-maps.json` follows this structure:
   "funding": null,
   "links": {
     "homepage": "https://example.com",
-    "logo": "https://example.com/logo.jpg",
+    "logo": "/imgs/example-project.jpg",
     "twitter": "https://x.com/example"
   }
 }
@@ -225,12 +227,47 @@ A project can have multiple subcategories (types) within a single sector:
     - A description of the project being added
     - Any relevant links or context
 
+### Uploading Logo Images
+
+To upload a project logo image:
+
+1. **Place your logo image** in the `/public/imgs/` directory:
+   ```bash
+   # Example: Save your logo as project-name.jpg in the imgs folder
+   # The file should be at: public/imgs/project-name.jpg
+   ```
+
+2. **Reference the image** in `builder-maps.json` using a path starting with `/imgs/`:
+   ```json
+   {
+     "links": {
+       "logo": "/imgs/project-name.jpg"
+     }
+   }
+   ```
+
+3. **Commit both files** together:
+   ```bash
+   git add public/imgs/project-name.jpg
+   git add public/data/builder-maps.json
+   git commit -m "Add [Project Name] with logo to BuilderMaps"
+   ```
+
+**Note**: 
+- Use common image formats (`.jpg`, `.png`, `.webp`, etc.)
+- Keep file names descriptive and lowercase (e.g., `my-project-logo.jpg`)
+- The path must start with `/imgs/` (not `/public/imgs/`)
+- Alternatively, you can use an external URL if the logo is hosted elsewhere
+
 ### Best Practices
 
 1. **Project Names**: Use the official, commonly recognized name of the project
 2. **Descriptions**: Keep descriptions concise (1-2 sentences) and factual
 3. **Sectors & Types**: Use existing sector and type names when possible. If you need a new category, mention it in your PR description
-4. **Logo URLs**: Use direct image URLs (ending in .jpg, .png, etc.) rather than HTML pages
+4. **Logo Images**: 
+   - **Preferred**: Upload logo images to `/public/imgs/` and reference them with `/imgs/filename.jpg` in the JSON
+   - **Alternative**: Use direct external image URLs (ending in .jpg, .png, etc.) rather than HTML pages
+   - Use descriptive, lowercase filenames for uploaded logos
 5. **URLs**: Always use full URLs with `https://` protocol
 6. **Funding**: Use numbers for dollar amounts (e.g., `1000000` for $1M) or strings for funding rounds (e.g., `"Series A"`)
 7. **Founded Year**: Use a 4-digit year (e.g., `2023`), or `null` if unknown
