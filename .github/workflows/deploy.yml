@@ -82,7 +82,7 @@ jobs:
 
       - name: Upload public assets to prod OSS
         run: |
-          ./ossutil64 cp -r public/ "${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/" --meta="Cache-Control:max-age=31536000" --update        
+          ./ossutil64 cp -r public/imgs/ "${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/imgs/" --meta="Cache-Control:max-age=31536000" --update        
 
       - name: Upload files to OSS
         run: |
