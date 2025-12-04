@@ -163,7 +163,7 @@
         ]
       },
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Analytics"
         ]
@@ -775,6 +775,13 @@
         "sector": "x402",
         "types": [
           "Indexing & Data"
+        ]
+      },
+      {
+        "sector": "Sui",
+        "types": [
+          "Analytics",
+          "Infra&Tools"
         ]
       }
     ],
@@ -4909,7 +4916,7 @@
     "description": "7K is a Sui-based trading aggregator that optimizes swap execution with dynamic trade routing and lower gas fees.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "DeFi"
         ]
@@ -4929,7 +4936,7 @@
     "description": "Can&#039;t stop won&#039;t stop (thinking about Sui).",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Meme"
         ]
@@ -4949,7 +4956,7 @@
     "description": "Aftermath is building an all-in-one trading and investment platform on Sui, offering fast, low-cost, and transparent access to DeFi markets.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "DeFi"
         ]
@@ -4969,7 +4976,7 @@
     "description": "Agora is creating a more inclusive financial system by making the US dollar accessible as a digital public good. Its fully collateralized digital dollar, AUSD, provides a secure, scalable, and borderless way for individuals and businesses to participate in the global economy.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "DeFi"
         ]
@@ -4992,7 +4999,7 @@
     "description": "AlphaFi is a yield aggregator on the Sui blockchain, designed to simplify and optimize DeFi returns",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "DeFi"
         ]
@@ -5012,7 +5019,7 @@
     "description": "Anima Labs is a Web3 studio_creating a permissionless hub for games, virtual worlds, and autonomous experiences on Sui.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Games"
         ]
@@ -5032,7 +5039,7 @@
     "description": "Artemis is an institutional data platform for digital assets, transforming blockchain data into actionable insights.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Analytics"
         ]
@@ -5052,7 +5059,7 @@
     "description": "Artfi is redefining fine art collecting through fractional ownership on the blockchain, making blue-chip art more accessible to investors.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Marketplace"
         ]
@@ -5072,7 +5079,7 @@
     "description": "Arttoo makes fine art investment accessible through fractional ownership, allowing collectors to invest in iconic masterpieces without auction house or gallery markups. With blockchain-powered provenance tracking, every transaction is secure and transparent.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "NFT"
         ]
@@ -5092,7 +5099,7 @@
     "description": "Decentralized full-stack AI cloud with privacy and verifiability.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "AI"
         ]
@@ -5112,7 +5119,7 @@
     "description": "Axelar is a cross-chain interoperability network that connects blockchains, enabling seamless communication for Web3 applications.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Bridge"
         ]
@@ -5132,7 +5139,7 @@
     "description": "Delivered 10M monthly active wallets &amp; 300M onchain transaction across apps, chains and more.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Games"
         ]
@@ -5152,7 +5159,7 @@
     "description": "Birdeye is a blockchain data aggregator designed for traders, providing real-time market insights and data-driven analysis tools.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Analytics"
         ]
@@ -5172,7 +5179,7 @@
     "description": "Blockberry is a multichain API platform by Staketab, providing rich, reliable, and scalable blockchain data for Web3 applications.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Analytics"
         ]
@@ -5192,7 +5199,7 @@
     "description": "BlockVision is a multi-chain API provider and real-time data portal, offering low-latency access to Nodes, Mempool, FT, NFT, and DeFi data.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Analytics"
         ]
@@ -5212,7 +5219,7 @@
     "description": "A degen fish in the waters of the Sui ocean.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Meme"
         ]
@@ -5232,7 +5239,7 @@
     "description": "Bluefin is a decentralized, orderbook-based exchange designed for both professional and first-time traders. Built on a high-performance Web3 stack with rollups, it offers leverage trading, short selling, and cross-chain liquidity with a focus on security and transparency.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "DeFi"
         ]
@@ -5252,7 +5259,7 @@
     "description": "BlueMove is a super app on the Sui blockchain, combining an NFT launchpad, marketplace, and DEX in one seamless platform.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "DeFi"
         ]
@@ -5272,7 +5279,7 @@
     "description": "Bucket Protocol is a DeFi engine on Sui, enabling users to borrow BUCK, a decentralized stablecoin, against SUI, BTC, ETH, and LSTs with low and predictable interest rates.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "DeFi"
         ]
@@ -5292,7 +5299,7 @@
     "description": "The cool, calm and collected Capy who just loves to 'Spot and Chill'",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Meme"
         ]
@@ -5312,7 +5319,7 @@
     "description": "Cetus is a DEX and concentrated liquidity protocol built on Sui and Aptos, designed to provide a flexible, high-efficiency liquidity network for DeFi users.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "DeFi"
         ]
@@ -5332,7 +5339,7 @@
     "description": "Chirp is a DePIN network and IoT ecosystem designed for real-world assets (RWA), enabling seamless communication between devices, the internet, and blockchain.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Infra&Tools"
         ]
@@ -5352,7 +5359,7 @@
     "description": "Cosmocadia is a community-driven farming game by Lucky Kat Studios, blending elements of Stardew Valley and Animal Crossing with play-and-earn mechanics.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Games"
         ]
@@ -5372,7 +5379,7 @@
     "description": "DARKTIMES is a free-to-play Web3 multiplayer Brawler Royale_Set in a Nordic-inspired dark fantasy world.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Games"
         ]
@@ -5392,7 +5399,7 @@
     "description": "Decentralized liquidity layer for builders, traders, and the broader DeFi community, exclusively on Sui.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "DeFi"
         ]
@@ -5412,7 +5419,7 @@
     "description": "DefiLlama is the go-to platform for tracking DeFi on Sui, providing open and transparent analytics on TVL, liquidity, and protocol activity.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Analytics"
         ]
@@ -5432,7 +5439,7 @@
     "description": "As part of the DeLorean Motor Company (DMC) ecosystem, DeLorean Labs is hyper-focused on innovative Web3 tech.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "NFT"
         ]
@@ -5452,7 +5459,7 @@
     "description": "DeSuiLabs is building the top competition platform on Web3, combining gamified experiences with unique, standout prizes to deliver an unparalleled user experience in the decentralized space.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Games"
         ]
@@ -5472,7 +5479,7 @@
     "description": "DoubleUp is a transparent, fair, and community-driven online betting platform on the Sui blockchain.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Launchpad"
         ]
@@ -5492,7 +5499,7 @@
     "description": "FanTV is a video streaming and sharing platform where users can watch, create, and earn rewards.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Social"
         ]
@@ -5512,7 +5519,7 @@
     "description": "Fewcha is a non-custodial wallet built for the Move ecosystem (Sui & Aptos), offering secure, self-custody for tokens, NFTs, and DeFi assets.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Wallets"
         ]
@@ -5532,7 +5539,7 @@
     "description": "Four Pillars is an institution-level blockchain research firm providing in-depth analysis on emerging trends, technologies, and narratives in crypto.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Education"
         ]
@@ -5552,7 +5559,7 @@
     "description": "FUD is the OG meme on Sui.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Meme"
         ]
@@ -5572,7 +5579,7 @@
     "description": "FUD around and find out.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "NFT"
         ]
@@ -5592,7 +5599,7 @@
     "description": "Ika is the first sub-second MPC network on Sui.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Infra&Tools"
         ]
@@ -5612,7 +5619,7 @@
     "description": "Building the foundation for truly borderless connectivity through decentralized infrastructure.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Identity"
         ]
@@ -5632,7 +5639,7 @@
     "description": "Kriya is a DeFi project building advanced infrastructure for on-chain derivatives trading.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "DeFi"
         ]
@@ -5652,7 +5659,7 @@
     "description": "Kumo is more than just a cute face, this clumsy kat bridges the gap between the digital and physical worlds.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "NFT"
         ]
@@ -5672,7 +5679,7 @@
     "description": "Be liquor, my friend. New era of meme on Sui.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Meme"
         ]
@@ -5692,7 +5699,7 @@
     "description": "Lofi The Yeti represents optimism, courage, and a collective vision, uniting the community to build a thriving, forward-thinking ecosystem on Sui.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Meme"
         ]
@@ -5712,7 +5719,7 @@
     "description": "Lucky Kat Studio is an independent game development and publishing studio based in the Netherlands, known for its mobile pixel art games with a pop-culture twist. With a gameplay-first approach, the studio is expanding into the metaverse, creating engaging and accessible experiences.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Games"
         ]
@@ -5732,7 +5739,7 @@
     "description": "Create and launch your memecoin on Sui in minutes.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Launchpad"
         ]
@@ -5752,7 +5759,7 @@
     "description": "Navi is the first native one-stop liquidity protocol on Sui, allowing users to supply liquidity, earn passive income, or borrow assets without intermediaries.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "DeFi"
         ]
@@ -5772,7 +5779,7 @@
     "description": "Nightly Connect is a permissionless, open-source wallet adapter and bridge that simplifies wallet integration for dApps.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Infra&Tools"
         ]
@@ -5792,7 +5799,7 @@
     "description": "Multichain crypto wallet, your key to the metaverse, available on 11 blockchains.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Wallets"
         ]
@@ -5812,7 +5819,7 @@
     "description": "Panzerdogs is a PvP play-and-earn tank brawler on Sui, combining fast-paced combat with NFTs and Play-to-Earn mechanics.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "NFT"
         ]
@@ -5832,7 +5839,7 @@
     "description": "Sui apps &amp; tools by juzybits",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Infra&Tools"
         ]
@@ -5852,7 +5859,7 @@
     "description": "PTB Studio is a visual composition tool for Sui PTBs, designed to help learners and developers easily build, manage, and execute PTBs.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Infra&Tools"
         ]
@@ -5872,7 +5879,7 @@
     "description": "Resurging from the ashes of a premature rug, arose the pug that doesn&#039;t quit.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Meme"
         ]
@@ -5892,7 +5899,7 @@
     "description": "Quantum Temple is a Web3-powered platform dedicated to preserving cultural heritage on the blockchain while providing regenerative funding for ancestral communities.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Social"
         ]
@@ -5912,7 +5919,7 @@
     "description": "RECRD is a Web3-powered video platform that lets creators monetize short videos and keep up to 100% of their ad revenue.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Social"
         ]
@@ -5932,7 +5939,7 @@
     "description": "Rinoco is an NFT collectible project designed to bridge Web2 and Web3, creating a world of unique, collectible creatures.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "NFT"
         ]
@@ -5949,10 +5956,10 @@
   },
   {
     "name": "Scallop",
-    "description": "Scallop is a next-generation peer-to-peer money market built for the Sui ecosystem, offering high-interest lending, low-fee borrowing, and AMM services on a unified platform.",
+    "description": "Scallop is a next-generation peer-to-peer money market built for the Sui, offering high-interest lending, low-fee borrowing, and AMM services on a unified platform.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "DeFi"
         ]
@@ -5972,7 +5979,7 @@
     "description": "Shadow is a no-code platform for launching and trading NFTs on the Sui blockchain.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "NFT"
         ]
@@ -5992,7 +5999,7 @@
     "description": "Shadow is a self-custodial Web3 wallet for DeFi and NFTs on the Sui blockchain.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Wallets"
         ]
@@ -6012,7 +6019,7 @@
     "description": "Spritz is a crypto payments superapp, enabling users to buy, spend, and pay bills with crypto__ll directly from their wallets.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Payments"
         ]
@@ -6032,7 +6039,7 @@
     "description": "Stashed is a web-based, self-custodial wallet for the Sui blockchain, allowing users to store, send, and receive assets with the ease of a web account login (e.g., Google or Twitch).",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Wallets"
         ]
@@ -6052,7 +6059,7 @@
     "description": "Studio Mirai is a venture studio developing next-generation consumer experiences on the Sui Network.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "NFT"
         ]
@@ -6072,7 +6079,7 @@
     "description": "Sui Bridge is a native cross-chain bridge connecting Sui and Ethereum, allowing secure and fast transfers of native and wrapped ETH.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Bridge"
         ]
@@ -6092,7 +6099,7 @@
     "description": "Your web3 identity for all things Sui!",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Infra&Tools"
         ]
@@ -6112,7 +6119,7 @@
     "description": "Access SUI, swap tokens, organize your NFT collections, and explore dApps, all from Sui Wallet.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Wallets"
         ]
@@ -6132,7 +6139,7 @@
     "description": "Suiet is an open-source, self-custodial wallet built for the Sui blockchain, prioritizing privacy, security, and true ownership.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Wallets"
         ]
@@ -6152,7 +6159,7 @@
     "description": "SuiFrens are principally a demonstration of Sui Move capabilities, bringing to life the composability, extensibility, and dynamism of digital assets on Sui.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Games"
         ]
@@ -6172,7 +6179,7 @@
     "description": "Suilend is an autonomous lending and borrowing platform on the Sui network, enabling trustless and permissionless access to digital asset loans.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "DeFi"
         ]
@@ -6192,7 +6199,7 @@
     "description": "SuiPlay0X1 is the first handheld gaming device designed to integrate Web3 functionality seamlessly into gaming.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Games"
         ]
@@ -6212,7 +6219,7 @@
     "description": "Suiscan is a feature-rich block explorer and analytics platform for Sui, providing detailed insights into transactions, addresses, and network activity.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Analytics"
         ]
@@ -6232,7 +6239,7 @@
     "description": "SuiVision is a comprehensive block explorer for the Sui network, providing detailed insights into transactions, accounts, objects, packages, and validators.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Analytics"
         ]
@@ -6249,10 +6256,10 @@
   },
   {
     "name": "Surf",
-    "description": "Surf Wallet is a mobile-first smart wallet for the Sui ecosystem, offering a secure and seamless way to store, transfer, and collect tokens and NFTs",
+    "description": "Surf Wallet is a mobile-first smart wallet for the Sui, offering a secure and seamless way to store, transfer, and collect tokens and NFTs",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Wallets"
         ]
@@ -6272,7 +6279,7 @@
     "description": "TradePort is the leading NFT aggregator on Sui, providing traders with advanced analytics, real-time market insights, and powerful decision-making tools",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Marketplace"
         ]
@@ -6292,7 +6299,7 @@
     "description": "Triton One is a high-performance RPC service for the Sui network, designed for speed, reliability, and scalability.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Infra&Tools"
         ]
@@ -6312,7 +6319,7 @@
     "description": "Turbos Finance is a non-custodial, hyper-efficient DEX built on Sui which offers seamless trading with best prices by aggregating liquidity from its concentrated liquidity market maker and Sui__ central limit order book.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "DeFi"
         ]
@@ -6332,7 +6339,7 @@
     "description": "Tusky is a decentralized storage platform built on Walrus, offering end-to-end encryption, powerful file management, and a seamless user experience.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Walrus"
         ]
@@ -6352,7 +6359,7 @@
     "description": "Typus Finance is a real yield infrastructure on the Sui blockchain, designed to offer superior risk-to-reward returns with minimal effort",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "DeFi"
         ]
@@ -6372,7 +6379,7 @@
     "description": "Welcome to the next generation of data storage _ secure, efficient, and decentralized.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Infra&Tools"
         ]
@@ -6392,7 +6399,7 @@
     "description": "Wormhole is a universal interoperability protocol that enables seamless value and data transfer across 14+ blockchains, including Ethereum, Sui, Solana, and Polygon.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Bridge"
         ]
@@ -6412,7 +6419,7 @@
     "description": "XOCIETY is a AAA shooter with RPG progression, combining fast-paced MMOTPS gameplay with a dynamic metaverse.",
     "sectors": [
       {
-        "sector": "sui ecosystem",
+        "sector": "Sui",
         "types": [
           "Games"
         ]
