@@ -12,11 +12,17 @@ interface HomePageProps {
 
 export function HomePage({ onCategoryClick }: HomePageProps) {
   const lastUpdated = process.env.LAST_BUILD_TIME ?? "Unknown";
-  const totalProjects = countTotalProjects(categories);
-  const totalCategories = categories.length;
+  
+  // Filter out "Uncategorized" category
+  const filteredCategories = categories.filter(
+    (category) => category.name.toLowerCase() !== 'uncategorized'
+  );
+  
+  const totalProjects = countTotalProjects(filteredCategories);
+  const totalCategories = filteredCategories.length;
   
   // Sort categories by project count (descending)
-  const sortedCategories = [...categories].sort((a, b) => {
+  const sortedCategories = [...filteredCategories].sort((a, b) => {
     const countA = countCategoryProjects(a);
     const countB = countCategoryProjects(b);
     return countB - countA;
