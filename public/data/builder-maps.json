@@ -5109,7 +5109,7 @@
     "funding": null,
     "links": {
       "logo": "/imgs/sui_ecosystem/AI/AtomaNetwork.jpg",
-      "twitter": "https://x.com/TuskyTools",
+      "twitter": "",
       "homepage": "https://fonts.gstatic.com",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
@@ -5449,7 +5449,7 @@
     "funding": null,
     "links": {
       "logo": "/imgs/sui_ecosystem/NFT/DeLoreanLabs.jpg",
-      "twitter": "https://x.com/TuskyTools",
+      "twitter": "",
       "homepage": "https://fonts.gstatic.com",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
@@ -5539,9 +5539,9 @@
     "description": "Four Pillars is an institution-level blockchain research firm providing in-depth analysis on emerging trends, technologies, and narratives in crypto.",
     "sectors": [
       {
-        "sector": "Sui",
+        "sector": "",
         "types": [
-          "Education"
+          ""
         ]
       }
     ],
@@ -5619,7 +5619,7 @@
     "description": "Building the foundation for truly borderless connectivity through decentralized infrastructure.",
     "sectors": [
       {
-        "sector": "Sui",
+        "sector": "",
         "types": [
           "Identity"
         ]
@@ -5809,7 +5809,7 @@
     "funding": null,
     "links": {
       "logo": "/imgs/sui_ecosystem/Wallets/NightlyWallet.png",
-      "twitter": "https://x.com/TuskyTools",
+      "twitter": "",
       "homepage": "https://fonts.gstatic.com",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
@@ -6019,7 +6019,7 @@
     "description": "Spritz is a crypto payments superapp, enabling users to buy, spend, and pay bills with crypto__ll directly from their wallets.",
     "sectors": [
       {
-        "sector": "Sui",
+        "sector": "",
         "types": [
           "Payments"
         ]
@@ -6109,7 +6109,7 @@
     "funding": null,
     "links": {
       "logo": "/imgs/sui_ecosystem/InfraandTools/SuiNameService.png",
-      "twitter": "https://x.com/TuskyTools",
+      "twitter": "",
       "homepage": "https://fonts.gstatic.com",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
@@ -6129,7 +6129,7 @@
     "funding": null,
     "links": {
       "logo": "/imgs/sui_ecosystem/Wallets/SuiWallet.jpg",
-      "twitter": "https://x.com/TuskyTools",
+      "twitter": "",
       "homepage": "https://fonts.gstatic.com",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
@@ -6169,7 +6169,7 @@
     "funding": null,
     "links": {
       "logo": "/imgs/sui_ecosystem/Games/SuiFrens.jpg",
-      "twitter": "https://x.com/TuskyTools",
+      "twitter": "",
       "homepage": "https://suifrens.com/",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
@@ -6339,7 +6339,7 @@
     "description": "Tusky is a decentralized storage platform built on Walrus, offering end-to-end encryption, powerful file management, and a seamless user experience.",
     "sectors": [
       {
-        "sector": "Sui",
+        "sector": "",
         "types": [
           "Walrus"
         ]
@@ -6389,7 +6389,7 @@
     "funding": null,
     "links": {
       "logo": "/imgs/sui_ecosystem/InfraandTools/Walrus.jpg",
-      "twitter": "https://x.com/TuskyTools",
+      "twitter": "",
       "homepage": "https://fonts.gstatic.com",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
