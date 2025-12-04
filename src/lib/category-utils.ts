@@ -105,38 +105,8 @@ const categoryAccumulator = new Map<
   // Process each sector the project belongs to
   const sectors = entry.sectors || [];
   if (sectors.length === 0) {
-    // Handle projects with no sectors
-    const sectorName = "Uncategorized";
-    const categoryId = slugify(sectorName);
-    const subcategoryName = "General";
-
-    let record = categoryAccumulator.get(categoryId);
-    if (!record) {
-      record = {
-        category: {
-          id: categoryId,
-          name: sectorName,
-          subcategories: [],
-        },
-        subcategories: new Map(),
-      };
-      categoryAccumulator.set(categoryId, record);
-    }
-
-    let subcategory = record.subcategories.get(subcategoryName);
-    if (!subcategory) {
-      subcategory = {
-        name: subcategoryName,
-        projects: [],
-      };
-      record.subcategories.set(subcategoryName, subcategory);
-      record.category.subcategories.push(subcategory);
-    }
-
-    // Add project reference (not duplicate)
-    if (!subcategory.projects.find((p) => p.id === project.id)) {
-      subcategory.projects.push(project);
-    }
+    // Skip projects with no sectors - do not display them
+    return;
   } else {
     // Process each sector
     sectors.forEach((sectorEntry) => {
