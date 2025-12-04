@@ -6,6 +6,7 @@ import { SiMedium } from "react-icons/si";
 import type { Category, Project, Subcategory } from "../lib/category-utils";
 import { countSubcategoryProjects } from "../lib/category-utils";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { getProductionImageUrl, getLocalhostFallback } from "../utils/image-fallback";
 
 interface LandscapeViewProps {
   category: Category;
@@ -192,10 +193,17 @@ function ProjectLogo({
             <div className="flex h-[56px] w-[56px] max-[568px]:h-[50px] max-[568px]:w-[50px] items-center justify-center rounded-full">
               {project.logoUrl && !imageError ? (
                 <img
-                  src={project.logoUrl}
+                  src={getProductionImageUrl(project.logoUrl)}
                   alt={project.name}
                   className="h-full w-full object-contain rounded-full"
-                  onError={() => setImageError(true)}
+                  onError={(e) => {
+                    const fallback = getLocalhostFallback(project.logoUrl || '');
+                    if (fallback) {
+                      (e.target as HTMLImageElement).src = fallback;
+                    } else {
+                      setImageError(true);
+                    }
+                  }}
                 />
               ) : (
                 <div className="flex h-[56px] w-[56px] max-[568px]:h-[50px] max-[568px]:w-[50px] items-center justify-center rounded-full border border-gray-200 bg-gray-100">
@@ -243,9 +251,15 @@ function ProjectCard({
         <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm">
           {project.logoUrl ? (
             <img
-              src={project.logoUrl}
+              src={getProductionImageUrl(project.logoUrl)}
               alt={project.name}
               className="h-12 w-12 object-contain rounded-full"
+              onError={(e) => {
+                const fallback = getLocalhostFallback(project.logoUrl || '');
+                if (fallback) {
+                  (e.target as HTMLImageElement).src = fallback;
+                }
+              }}
             />
           ) : (
             <Building2 className="h-6 w-6 text-gray-400" />

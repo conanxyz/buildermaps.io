@@ -3,6 +3,7 @@ import { FaTelegram, FaDiscord, FaReddit } from "react-icons/fa";
 import { SiMedium } from "react-icons/si";
 
 import type { Category, Project } from "../lib/category-utils";
+import { getProductionImageUrl, getLocalhostFallback } from "../utils/image-fallback";
 
 interface CardViewProps {
   category: Category;
@@ -83,9 +84,15 @@ function ProjectCard({
           <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-sm border-2 border-gray-200 bg-white shadow-sm">
             {project.logoUrl ? (
               <img
-                src={project.logoUrl}
+                src={getProductionImageUrl(project.logoUrl)}
                 alt={project.name}
                 className="h-12 w-12 object-contain"
+                onError={(e) => {
+                  const fallback = getLocalhostFallback(project.logoUrl || '');
+                  if (fallback) {
+                    (e.target as HTMLImageElement).src = fallback;
+                  }
+                }}
               />
             ) : (
               <div className="text-sm text-gray-400">{project.name[0]}</div>
