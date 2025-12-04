@@ -26,7 +26,7 @@ To develop and test BuilderMaps locally:
 
 2. **Install dependencies**:
    ```bash
-   npm install
+   npm install --legacy-peer-deps
    ```
 
 3. **Start the development server**:

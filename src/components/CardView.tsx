@@ -3,6 +3,7 @@ import { FaTelegram, FaDiscord, FaReddit } from "react-icons/fa";
 import { SiMedium } from "react-icons/si";
 
 import type { Category, Project } from "../lib/category-utils";
+import { sortProjects } from "../lib/category-utils";
 import { getProductionImageUrl, getLocalhostFallback } from "../utils/image-fallback";
 
 interface CardViewProps {
@@ -47,7 +48,7 @@ export function CardView({ category }: CardViewProps) {
                   </div>
                 )}
                 <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                  {section.projects.map((project) => (
+                  {sortProjects(section.projects).map((project) => (
                     <ProjectCard
                       key={project.id}
                       project={project}

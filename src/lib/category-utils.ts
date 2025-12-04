@@ -231,3 +231,21 @@ export function countTotalProjects(categories: Category[]): number {
   );
 }
 
+/**
+ * Sorts projects so that projects starting with numbers are placed at the end
+ */
+export function sortProjects(projects: Project[]): Project[] {
+  return [...projects].sort((a, b) => {
+    const aStartsWithNumber = /^\d/.test(a.name.trim());
+    const bStartsWithNumber = /^\d/.test(b.name.trim());
+    
+    // If both start with numbers or both don't, sort alphabetically
+    if (aStartsWithNumber === bStartsWithNumber) {
+      return a.name.localeCompare(b.name, undefined, { sensitivity: 'base' });
+    }
+    
+    // If only one starts with a number, put it at the end
+    return aStartsWithNumber ? 1 : -1;
+  });
+}
+

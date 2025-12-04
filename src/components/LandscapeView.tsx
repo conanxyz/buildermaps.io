@@ -4,7 +4,7 @@ import { FaTelegram, FaDiscord, FaReddit } from "react-icons/fa";
 import { SiMedium } from "react-icons/si";
 
 import type { Category, Project, Subcategory } from "../lib/category-utils";
-import { countSubcategoryProjects } from "../lib/category-utils";
+import { countSubcategoryProjects, sortProjects } from "../lib/category-utils";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { getProductionImageUrl, getLocalhostFallback } from "../utils/image-fallback";
 
@@ -94,7 +94,7 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
                 </div>
               ) : (
                 <div className="flex flex-wrap">
-                  {subcategory.projects?.map((project) => (
+                  {sortProjects(subcategory.projects || []).map((project) => (
                     <ProjectLogo
                       key={project.id}
                       project={project}
@@ -424,7 +424,7 @@ function ThirdLevelBox({
         </h5>
       </div>
       <div className="flex flex-wrap gap-1">
-        {subcategory.projects.map((project) => (
+        {sortProjects(subcategory.projects).map((project) => (
           <ProjectLogo
             key={project.id}
             project={project}
