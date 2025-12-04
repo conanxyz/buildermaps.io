@@ -14,7 +14,7 @@
     "funding": null,
     "links": {
       "homepage": "https://0xgasless.com/",
-      "logo": "/imgs/0xGasless.jpg",
+      "logo": "https://s2.loli.net/2025/11/24/jKH4EzolC5XxApZ.jpg",
       "twitter": "https://x.com/0xGasless",
       "telegram": "https://t.me/Gasless0x"
     }
@@ -97,7 +97,7 @@
   },
   {
     "name": "9lives",
-    "description": "BTC will end up above $82242 before 1763722800",
+    "description": "Prediction market platform.",
     "sectors": [
       {
         "sector": "Prediction Markets",
@@ -110,7 +110,7 @@
     "funding": null,
     "links": {
       "homepage": "https://9lives.so/simple/",
-      "logo": "https://s2.loli.net/2025/11/24/aSmPZKEV3opAuv8.jpg",
+      "logo": "/imgs/prediction_markets/Customisable/9lives.jpg",
       "twitter": "https://x.com/9livesso"
     }
   },
@@ -154,22 +154,29 @@
   },
   {
     "name": "AEON",
-    "description": "Privacy-focused Monero fork with mobile-friendly design, 4-min blocks, blockchain pruning, KangarooTwelve PoW, ring signatures",
+    "description": "Aeon provides MPC wallet infrastructure for individual traders, venture funds and DAOs active onchain. Truly decentralised. Permissionless. More than just custody.",
     "sectors": [
       {
         "sector": "x402",
         "types": [
           "Chains & Protocols"
         ]
+      },
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Analytics"
+        ]
       }
     ],
     "founded": 2014,
     "funding": null,
     "links": {
-      "homepage": "https://aeon.xyz/",
-      "logo": "https://s2.loli.net/2025/11/24/ijo9EqnJQxgcKS3.jpg",
-      "twitter": "https://x.com/AEON_Community",
-      "telegram": "https://t.me/aeonix_network"
+      "homepage": "https://www.aeon.cash/en/home",
+      "logo": "/imgs/sui_ecosystem/Analytics/Aeon.png",
+      "twitter": "https://twitter.com/aeonix_network",
+      "telegram": "https://t.me/aeonix_network",
+      "discord": "https://discord.gg/Vsjpghdhb3"
     }
   },
   {
@@ -246,7 +253,7 @@
     "funding": null,
     "links": {
       "homepage": "https://alphakek.ai/",
-      "logo": "/imgs/alphakek.jpg",
+      "logo": "https://s2.loli.net/2025/11/24/R6ZidaFyWUO3Xhq.jpg",
       "twitter": "https://x.com/alphakek",
       "telegram": "https://t.me/alphakek"
     }
@@ -365,9 +372,10 @@
     "funding": 5500000,
     "links": {
       "homepage": "https://augur.net/",
-      "logo": "https://s2.loli.net/2025/11/24/1C7h63gKvAkij9s.png",
+      "logo": "/imgs/prediction_markets/Infra/Augur.png",
       "twitter": "https://x.com/AugurProject",
-      "reddit": "https://docs.augur.net"
+      "reddit": "https://docs.augur.net",
+      "github": "https://github.com/AugurProject"
     }
   },
   {
@@ -470,11 +478,12 @@
     "funding": 11000000,
     "links": {
       "homepage": "https://azuro.org/",
-      "logo": "https://s2.loli.net/2025/11/24/2RcVS5B7byEIxTO.jpg",
+      "logo": "/imgs/prediction_markets/Infra/azuro.jpg",
       "twitter": "https://x.com/azuroprotocol",
       "medium": "https://azuroprotocol.medium.com",
       "linkedin": "https://www.linkedin.com/company/azuroprotocol",
-      "reddit": "https://azuro.org"
+      "reddit": "https://azuro.org",
+      "github": "https://github.com/azuroprotocol"
     }
   },
   {
@@ -550,7 +559,7 @@
     "funding": null,
     "links": {
       "homepage": "https://callmybluff.io/",
-      "logo": "https://s2.loli.net/2025/11/24/R3pmvAPiNtsErnz.jpg",
+      "logo": "/imgs/prediction_markets/Social Prediction/Bluff.jpg",
       "twitter": "https://x.com/CallMyBluff_io",
       "telegram": "https://t.me/bluffcat_off"
     }
@@ -675,7 +684,7 @@
     "funding": null,
     "links": {
       "homepage": "https://www.buzzing.app/",
-      "logo": "https://s2.loli.net/2025/11/24/qkBdy9lUu2EQS3K.png",
+      "logo": "/imgs/prediction_markets/Customisable/Buzzing.png",
       "twitter": "https://x.com/BuzzingApp"
     }
   },
@@ -799,7 +808,7 @@
   },
   {
     "name": "CHOMP",
-    "description": "Gamified social consensus platform blending prediction markets with guessing games on Solana",
+    "description": "Prediction market platform.",
     "sectors": [
       {
         "sector": "Prediction Markets",
@@ -811,9 +820,10 @@
     "founded": 2024,
     "funding": 8000000,
     "links": {
-      "logo": "https://s2.loli.net/2025/11/24/sOZrynLlGtjUcid.jpg",
+      "logo": "/imgs/prediction_markets/Multiple-Choice/CHOMP.jpg",
       "twitter": "https://x.com/chompdotgames",
-      "telegram": "https://t.me/chompcoinxyz"
+      "telegram": "https://t.me/chompcoinxyz",
+      "linktree": "https://linktr.ee/chompdotgames"
     }
   },
   {
@@ -1353,7 +1363,7 @@
   },
   {
     "name": "Flipr",
-    "description": "Trade markets, check odds, and place predictions without ever leaving X",
+    "description": "Prediction market platform.",
     "sectors": [
       {
         "sector": "Prediction Markets",
@@ -1366,7 +1376,7 @@
     "funding": null,
     "links": {
       "homepage": "https://flipr.bot/",
-      "logo": "https://s2.loli.net/2025/11/24/pViWytG6ngv5SIk.jpg",
+      "logo": "/imgs/prediction_markets/Bot Inferface/Flipr.jpg",
       "twitter": "https://x.com/fliprbot"
     }
   },
@@ -1410,7 +1420,7 @@
   },
   {
     "name": "Football.Fun",
-    "description": "Sports prediction market focused on football matches with real-time odds and payouts",
+    "description": "Sports prediction market focused on football matches.",
     "sectors": [
       {
         "sector": "Prediction Markets",
@@ -1423,8 +1433,9 @@
     "funding": null,
     "links": {
       "homepage": "https://pro.football.fun/",
-      "logo": "https://s2.loli.net/2025/11/24/PE7MwNIsV9Q43DG.jpg",
-      "twitter": "https://x.com/footballdotfun"
+      "logo": "/imgs/prediction_markets/Binary/Football.Fun.jpg",
+      "twitter": "https://x.com/footballdotfun",
+      "linktree": "https://linktr.ee/footballdotfun"
     }
   },
   {
@@ -1653,7 +1664,7 @@
   },
   {
     "name": "Joust",
-    "description": "Prediction markets for creators to leverage their lore and create markets on any topic",
+    "description": "Prediction market platform.",
     "sectors": [
       {
         "sector": "Prediction Markets",
@@ -1666,7 +1677,7 @@
     "funding": null,
     "links": {
       "homepage": "https://app.joustonline.com/home",
-      "logo": "https://s2.loli.net/2025/11/24/nEDj9NsdQopq5LR.jpg",
+      "logo": "/imgs/prediction_markets/Social Prediction/Joust.jpg",
       "twitter": "https://x.com/joustlabs_"
     }
   },
@@ -1707,7 +1718,7 @@
     "funding": 485000000,
     "links": {
       "homepage": "https://kalshi.com/",
-      "logo": "https://s2.loli.net/2025/11/24/FX2egWbQf7ndli3.jpg",
+      "logo": "/imgs/prediction_markets/Binary/Kalshi.jpg",
       "twitter": "https://x.com/Kalshi",
       "discord": "https://discord.com/invite/kalshi",
       "reddit": "https://kalshi.com"
@@ -1728,7 +1739,7 @@
     "funding": null,
     "links": {
       "homepage": "https://kash.bot/",
-      "logo": "https://s2.loli.net/2025/11/24/bCB5uk9XgzmWKRN.jpg",
+      "logo": "/imgs/prediction_markets/Bot Inferface/kash.jpg",
       "twitter": "https://x.com/kash_bot"
     }
   },
@@ -1774,7 +1785,7 @@
   },
   {
     "name": "Limitless",
-    "description": "Forecast the future on Limitless, financial prediction market",
+    "description": "Prediction market platform.",
     "sectors": [
       {
         "sector": "Prediction Markets",
@@ -1787,7 +1798,7 @@
     "funding": null,
     "links": {
       "homepage": "https://limitless.exchange/advanced",
-      "logo": "https://s2.loli.net/2025/11/24/ifeMT1KOhsojGl6.jpg",
+      "logo": "/imgs/prediction_markets/Binary/Limitless.jpg",
       "twitter": "https://x.com/trylimitless"
     }
   },
@@ -1972,7 +1983,7 @@
   },
   {
     "name": "Multiplier",
-    "description": "DeFi protocol offering leveraged positions and yield multiplication strategies",
+    "description": "Prediction market platform.",
     "sectors": [
       {
         "sector": "Prediction Markets",
@@ -1985,7 +1996,7 @@
     "funding": null,
     "links": {
       "homepage": "https://app.multiplier.fun/",
-      "logo": "https://s2.loli.net/2025/11/24/DYp32fZGldRevXK.jpg",
+      "logo": "/imgs/prediction_markets/Others/Multiplier.jpg",
       "twitter": "https://x.com/multiplierfun"
     }
   },
@@ -2026,14 +2037,15 @@
     "funding": null,
     "links": {
       "homepage": "https://myriad.markets/markets",
-      "logo": "https://s2.loli.net/2025/11/24/xSLzHcXq48DM9ri.jpg",
+      "logo": "/imgs/prediction_markets/Binary/Myriad Markets.jpg",
       "twitter": "https://x.com/MyriadMarkets",
-      "telegram": "https://t.me/Myriadcoinofficial"
+      "telegram": "https://t.me/Myriadcoinofficial",
+      "github": "https://github.com/myriadteam"
     }
   },
   {
     "name": "Narrative",
-    "description": "Decentralized prediction market protocol focusing on narrative-driven event outcomes",
+    "description": "Prediction market platform.",
     "sectors": [
       {
         "sector": "Prediction Markets",
@@ -2046,7 +2058,7 @@
     "funding": null,
     "links": {
       "homepage": "http://narrative.xyz/",
-      "logo": "https://s2.loli.net/2025/11/24/PoFVxiZNq9YLnhM.png",
+      "logo": "/imgs/prediction_markets/Multiple-Choice/Narrative.png",
       "twitter": "https://x.com/narrativexyz"
     }
   },
@@ -2131,12 +2143,13 @@
   },
   {
     "name": "Noise",
-    "description": "Social prediction platform combining market forecasting with community engagement",
+    "description": "Prediction market platform.",
     "sectors": [
       {
         "sector": "Prediction Markets",
         "types": [
-          "Others"
+          "Others",
+          "Multiple-Choice"
         ]
       }
     ],
@@ -2144,7 +2157,7 @@
     "funding": null,
     "links": {
       "homepage": "https://www.noise.xyz/",
-      "logo": "https://s2.loli.net/2025/11/24/S84OdYel5vU1pFK.jpg",
+      "logo": "/imgs/prediction_markets/Others/Noise.jpg",
       "twitter": "https://x.com/noise_xyz"
     }
   },
@@ -2163,7 +2176,7 @@
     "funding": null,
     "links": {
       "homepage": "https://www.onit.fun/",
-      "logo": "https://s2.loli.net/2025/11/24/zLciuTVCOrYdlq8.jpg",
+      "logo": "/imgs/prediction_markets/Social Prediction/Onit.jpg",
       "twitter": "https://x.com/onit_fun"
     }
   },
@@ -2188,7 +2201,7 @@
   },
   {
     "name": "Opinion",
-    "description": "Decentralized prediction market protocol with dynamic opinion market and AI oracle on Monad",
+    "description": "Prediction market platform.",
     "sectors": [
       {
         "sector": "Prediction Markets",
@@ -2201,7 +2214,7 @@
     "funding": 5000000,
     "links": {
       "homepage": "https://app.opinion.trade/",
-      "logo": "https://s2.loli.net/2025/11/24/BLZGz9fsUeKEnOJ.jpg",
+      "logo": "/imgs/prediction_markets/Binary/Opinion.jpg",
       "twitter": "https://x.com/opinionlabsxyz",
       "telegram": "https://t.me/OpinionFi",
       "medium": "https://opinionlabs.medium.com"
@@ -2322,9 +2335,10 @@
     "funding": null,
     "links": {
       "homepage": "https://www.picasso.markets/",
-      "logo": "https://s2.loli.net/2025/11/24/WBhMJnmfgKekPO5.jpg",
+      "logo": "/imgs/prediction_markets/Multiple-Choice/Picasso Markets.jpg",
       "twitter": "https://x.com/PicassoMarkets",
-      "telegram": "https://t.me/composable_chat"
+      "telegram": "https://t.me/composable_chat",
+      "github": "https://github.com/ComposableFi"
     }
   },
   {
@@ -2404,7 +2418,7 @@
     "funding": 74000000,
     "links": {
       "homepage": "https://polymarket.com/",
-      "logo": "https://s2.loli.net/2025/11/24/4O1flMD7Shg5bHP.jpg",
+      "logo": "/imgs/prediction_markets/Binary/Polymarket.jpg",
       "twitter": "https://x.com/Polymarket",
       "reddit": "https://polymarket.com"
     }
@@ -2443,8 +2457,9 @@
     "funding": null,
     "links": {
       "homepage": "https://core.precog.market/",
-      "logo": "https://s2.loli.net/2025/11/24/OyuqpbGD2kxdPTM.jpg",
-      "twitter": "https://x.com/precogmarket"
+      "logo": "/imgs/prediction_markets/Multiple-Choice/Precog.jpg",
+      "twitter": "https://x.com/precogmarket",
+      "github": "https://github.com/coinmetrics"
     }
   },
   {
@@ -2591,7 +2606,7 @@
   },
   {
     "name": "Rocket",
-    "description": "Telegram bot interface for prediction market trading with quick betting capabilities",
+    "description": "Prediction market platform.",
     "sectors": [
       {
         "sector": "Prediction Markets",
@@ -2604,7 +2619,7 @@
     "funding": null,
     "links": {
       "homepage": "https://userocket.app/",
-      "logo": "https://s2.loli.net/2025/11/24/1C5GVgp2vyW9YIq.jpg",
+      "logo": "/imgs/prediction_markets/Bot Inferface/Rocket.jpg",
       "twitter": "https://x.com/userocket_app"
     }
   },
@@ -2623,9 +2638,10 @@
     "funding": null,
     "links": {
       "homepage": "https://seer.pm/",
-      "logo": "https://s2.loli.net/2025/11/24/rRqcYZk1yBGiwHp.jpg",
+      "logo": "/imgs/prediction_markets/Customisable/Seer.jpg",
       "twitter": "https://x.com/seer_pm",
-      "discord": "https://discord.com/invite/rBEB4MYQwV"
+      "discord": "https://discord.com/invite/rBEB4MYQwV",
+      "github": "https://github.com/seer-pm"
     }
   },
   {
@@ -2824,19 +2840,26 @@
         "types": [
           "Indexing & Data"
         ]
+      },
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Infra"
+        ]
       }
     ],
     "founded": 2021,
     "funding": 11200000,
     "links": {
       "homepage": "https://switchboard.xyz/",
-      "logo": "https://s2.loli.net/2025/11/24/yRvQlLgo1xZ2GKb.jpg",
-      "twitter": "https://x.com/switchboardxyz"
+      "logo": "/imgs/prediction_markets/Infra/Switchboard.jpg",
+      "twitter": "https://x.com/switchboardxyz",
+      "github": "https://github.com/switchboard-xyz"
     }
   },
   {
     "name": "The Metagame",
-    "description": "Trade solo or multiplayer. Create or join trading tournaments with friends \nor other players. Track live leaderboards with real-time PnL updates. Bet \non traders. Bet on specific trades. Copy trade",
+    "description": "Prediction market platform.",
     "sectors": [
       {
         "sector": "Prediction Markets",
@@ -2849,7 +2872,7 @@
     "funding": null,
     "links": {
       "homepage": "https://www.metagame.trade/",
-      "logo": "https://s2.loli.net/2025/11/24/D42AsuNR7bmWnzJ.jpg",
+      "logo": "/imgs/prediction_markets/Others/The Metagame.jpg",
       "twitter": "https://x.com/metagametrade"
     }
   },
@@ -2926,7 +2949,7 @@
     "funding": 420000,
     "links": {
       "homepage": "https://www.trepa.io/",
-      "logo": "https://s2.loli.net/2025/11/24/5WYxXbe38csLJwj.png",
+      "logo": "/imgs/prediction_markets/Multiple-Choice/Trepa.png",
       "twitter": "https://x.com/trepa_io"
     }
   },
@@ -2945,8 +2968,9 @@
     "funding": 4000000,
     "links": {
       "homepage": "https://truemarkets.org/",
-      "logo": "https://s2.loli.net/2025/11/24/9KxfOPSZo5X6zEN.jpg",
-      "twitter": "https://x.com/truemarkets"
+      "logo": "/imgs/prediction_markets/Binary/Truemarkets.jpg",
+      "twitter": "https://x.com/truemarkets",
+      "github": "https://github.com/truemarkets"
     }
   },
   {
@@ -2972,7 +2996,7 @@
   },
   {
     "name": "Upshot",
-    "description": "NFT appraisal and prediction market using crowd wisdom to value digital assets",
+    "description": "Prediction market platform.",
     "sectors": [
       {
         "sector": "Prediction Markets",
@@ -2984,7 +3008,7 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "https://s2.loli.net/2025/11/24/U6Ex83QKpZiDGHN.jpg",
+      "logo": "/imgs/prediction_markets/Others/Upshot.jpg",
       "twitter": "https://x.com/upshot_cards"
     }
   },
@@ -3464,7 +3488,7 @@
   },
   {
     "name": "XO Market",
-    "description": "Prediction market platform for binary outcomes with simple yes/no betting interface",
+    "description": "Prediction market platform.",
     "sectors": [
       {
         "sector": "Prediction Markets",
@@ -3477,7 +3501,7 @@
     "funding": null,
     "links": {
       "homepage": "https://xo.market/",
-      "logo": "https://s2.loli.net/2025/11/24/AuNQK8JUeGvl4ic.jpg",
+      "logo": "/imgs/prediction_markets/Binary/XO Market.jpg",
       "twitter": "https://x.com/xodotmarket"
     }
   },
@@ -3522,6 +3546,2885 @@
       "telegram": "https://t.me/frankencoinzchf",
       "discord": "https://discord.gg/frankencoin",
       "youtube": "https://www.frankencoin.com"
+    }
+  },
+  {
+    "name": "Overtime",
+    "description": "Decentralized sports prediction market built on Thales protocol, operating on Optimism, Arbitrum, and Base.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Binary"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.overtime.io/",
+      "twitter": "https://x.com/Overtime_io",
+      "logo": "/imgs/prediction_markets/Binary/Overtime.jpg"
+    }
+  },
+  {
+    "name": "Fliq",
+    "description": "Mobile-first, creator-led prediction market on Aptos making trading accessible via intuitive 'yes/no' questions.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Binary"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.fliq.one/#",
+      "twitter": "https://x.com/predictonfliq",
+      "linktree": "https://linktr.ee/fliqpredictions",
+      "logo": "/imgs/prediction_markets/Binary/Fliq.jpg"
+    }
+  },
+  {
+    "name": "Tradefox",
+    "description": "AI-powered prediction market platform.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Binary"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://thetradefox.com/",
+      "twitter": "https://x.com/tradefoxai",
+      "logo": "/imgs/prediction_markets/Binary/Tradefox.jpg"
+    }
+  },
+  {
+    "name": "BRKT",
+    "description": "Decentralized prediction market platform offering binary and bracket-based predictions for sports and esports.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Binary"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.brkt.gg/",
+      "twitter": "https://x.com/BRKTgg",
+      "linktree": "https://linktr.ee/brktgg",
+      "logo": "/imgs/prediction_markets/Binary/BRKT.jpg"
+    }
+  },
+  {
+    "name": "Hilomarket",
+    "description": "Decentralized, user-driven prediction platform on HILO Chain allowing users to create and validate markets.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Binary"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://hilomarket.com/",
+      "twitter": "https://x.com/Hilomarket",
+      "logo": "/imgs/prediction_markets/Binary/Hilomarket.jpg"
+    }
+  },
+  {
+    "name": "Actions",
+    "description": "Prediction market built on Solana powered by Actions Protocol, combining Polymarket and pump.fun elements.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Binary"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://actions.fun/",
+      "twitter": "https://x.com/actionsdotfun",
+      "logo": "/imgs/prediction_markets/Binary/Actions.jpg"
+    }
+  },
+  {
+    "name": "Bodega",
+    "description": "Open-source prediction market protocol on Cardano leveraging smart contracts for secure forecasting.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Binary"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://v3.bodegamarket.io/",
+      "twitter": "https://x.com/BodegaCardano",
+      "logo": "/imgs/prediction_markets/Binary/Bodega.jpg"
+    }
+  },
+  {
+    "name": "Glimpse",
+    "description": "Prediction market platform focused on forecasting the future of finance and aggregating crowd wisdom.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Binary"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.glimpse.trading/",
+      "twitter": "https://x.com/BTCPredMrkt",
+      "logo": "/imgs/prediction_markets/Binary/Glimpse.jpg"
+    }
+  },
+  {
+    "name": "Predict",
+    "description": "Mobile app allowing users to launch prediction markets, create predictions, and earn creator fees.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Binary"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://usepredict.app/",
+      "twitter": "https://x.com/UsePredict",
+      "logo": "/imgs/prediction_markets/Binary/Predict.jpg"
+    }
+  },
+  {
+    "name": "Betmoar",
+    "description": "Prediction market analytics and trading interface for Polymarket with UMA integration.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Binary"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.betmoar.fun/",
+      "twitter": "https://x.com/betmoardotfun",
+      "logo": "/imgs/prediction_markets/Binary/Betmoar.jpg"
+    }
+  },
+  {
+    "name": "Footballfun",
+    "description": "Sports prediction market focused on football matches.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Multiple-Choice"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.football.fun/",
+      "twitter": "https://x.com/footballdotfun",
+      "linktree": "https://linktr.ee/footballdotfun",
+      "logo": "/imgs/prediction_markets/Binary/Football.Fun.jpg"
+    }
+  },
+  {
+    "name": "DGbet",
+    "description": "Decentralized sports betting platform.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Multiple-Choice"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://sportsbook.dgbet.fun/",
+      "twitter": "https://x.com/DGbet_official",
+      "logo": "/imgs/prediction_markets/Multiple-Choice/DGbet.jpg"
+    }
+  },
+  {
+    "name": "Trendle",
+    "description": "Prediction market platform.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Multiple-Choice"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://trendle.fi/",
+      "twitter": "https://x.com/TrendleFi",
+      "logo": "/imgs/prediction_markets/Multiple-Choice/Trendle.jpg"
+    }
+  },
+  {
+    "name": "Based",
+    "description": "Prediction market on Base.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Multiple-Choice"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://based.one/",
+      "twitter": "https://x.com/BasedOneX",
+      "logo": "/imgs/prediction_markets/Multiple-Choice/Based.jpg"
+    }
+  },
+  {
+    "name": "BetVibe",
+    "description": "Decentralized betting platform.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Multiple-Choice"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://beta.betvibe.win/",
+      "twitter": "https://x.com/betvibewin",
+      "logo": "/imgs/prediction_markets/Multiple-Choice/BetVibe.jpg"
+    }
+  },
+  {
+    "name": "Castora",
+    "description": "Prediction market platform.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Multiple-Choice"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.castora.xyz/",
+      "twitter": "https://x.com/Castora_xyz",
+      "logo": "/imgs/prediction_markets/Multiple-Choice/Castora.jpg"
+    }
+  },
+  {
+    "name": "Early Bird",
+    "description": "Prediction market platform.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Multiple-Choice"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.joinearlybird.com/",
+      "twitter": "https://x.com/joinearlybird",
+      "logo": "/imgs/prediction_markets/Multiple-Choice/Early Bird.jpg"
+    }
+  },
+  {
+    "name": "Euphoria",
+    "description": "Prediction market platform.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Multiple-Choice"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://euphoria.finance/",
+      "twitter": "https://x.com/Euphoria_fi",
+      "logo": "/imgs/prediction_markets/Multiple-Choice/Euphoria.jpg"
+    }
+  },
+  {
+    "name": "Feentime",
+    "description": "Prediction market platform.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Multiple-Choice"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://app.feen.bet/",
+      "twitter": "https://x.com/FEENTIME"
+    }
+  },
+  {
+    "name": "Mashdotfun",
+    "description": "Prediction market platform.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Multiple-Choice"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://app.mash.fun/",
+      "twitter": "https://x.com/mashdotfun",
+      "logo": "/imgs/prediction_markets/Multiple-Choice/Mashdotfun.jpg"
+    }
+  },
+  {
+    "name": "Metaculus",
+    "description": "Forecasting platform aggregating predictions on scientific and technological progress.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Multiple-Choice"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.metaculus.com/",
+      "twitter": "https://x.com/metaculus",
+      "logo": "/imgs/prediction_markets/Multiple-Choice/Metaculus.png"
+    }
+  },
+  {
+    "name": "Rush",
+    "description": "Prediction market platform.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Multiple-Choice"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://rush.trade/",
+      "twitter": "https://x.com/rush_trade_app",
+      "logo": "/imgs/prediction_markets/Multiple-Choice/Rush.jpg"
+    }
+  },
+  {
+    "name": "Signal",
+    "description": "Prediction market platform.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Multiple-Choice"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://signals.wtf/",
+      "twitter": "https://x.com/signalswtf",
+      "linktree": "https://signals.wtf/links/",
+      "logo": "/imgs/prediction_markets/Multiple-Choice/Signal.jpg"
+    }
+  },
+  {
+    "name": "Sui Market",
+    "description": "Prediction market on Sui.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Multiple-Choice"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "twitter": "https://x.com/SuiMarket_io",
+      "logo": "/imgs/prediction_markets/Multiple-Choice/Sui Market.png"
+    }
+  },
+  {
+    "name": "Tweem",
+    "description": "Prediction market platform.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Multiple-Choice"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.tweem.lol/",
+      "twitter": "https://x.com/tweemdotlol",
+      "logo": "/imgs/prediction_markets/Multiple-Choice/Tweem.jpg"
+    }
+  },
+  {
+    "name": "Uranus",
+    "description": "Prediction market platform.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Multiple-Choice"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://uranus.ag/trade/",
+      "twitter": "https://x.com/UranusPerps",
+      "logo": "/imgs/prediction_markets/Multiple-Choice/Uranus.jpg"
+    }
+  },
+  {
+    "name": "Vibes",
+    "description": "Prediction market platform.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Multiple-Choice"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.vibes.fun/",
+      "twitter": "https://x.com/vibesdotfun",
+      "logo": "/imgs/prediction_markets/Multiple-Choice/Vibes.png"
+    }
+  },
+  {
+    "name": "Zeitgeistpm",
+    "description": "Prediction market protocol on Polkadot/Kusama.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Multiple-Choice"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://app.zeitgeist.pm/",
+      "twitter": "https://x.com/ZeitgeistPM",
+      "logo": "/imgs/prediction_markets/Multiple-Choice/Zeitgeistpm.jpg"
+    }
+  },
+  {
+    "name": "RareBetSports",
+    "description": "Decentralized sports betting platform.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Multiple-Choice"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://app.rarebetsports.io/",
+      "twitter": "https://x.com/RareBetSports",
+      "logo": "/imgs/prediction_markets/Multiple-Choice/RareBetSports.jpg"
+    }
+  },
+  {
+    "name": "UMA",
+    "description": "Universal Market Access optimistic oracle for DeFi derivatives, $7.9M funding from Placeholder, Coinbase Ventures, Dragonfly",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": 2018,
+    "funding": 7900000,
+    "links": {
+      "homepage": "https://uma.xyz/",
+      "twitter": "https://x.com/UMAprotocol",
+      "github": "https://github.com/UMAprotocol",
+      "telegram": "https://t.me/HumanityProt",
+      "linkedin": "https://www.linkedin.com/company/umaproject",
+      "logo": "/imgs/prediction_markets/Infra/UMA.jpg"
+    }
+  },
+  {
+    "name": "Verso",
+    "description": "Prediction market platform.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.verso.trading/",
+      "twitter": "https://x.com/VersoTrading",
+      "logo": "/imgs/prediction_markets/Infra/Verso.jpg"
+    }
+  },
+  {
+    "name": "Chainlink",
+    "description": "Industry-standard decentralized oracle network connecting smart contracts with real-world data and off-chain computation",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": 2017,
+    "funding": 32000000,
+    "links": {
+      "homepage": "https://chain.link/",
+      "twitter": "https://x.com/chainlink",
+      "github": "https://github.com/smartcontractkit",
+      "telegram": "https://t.me/chainlinkofficial",
+      "discord": "https://discord.com/invite/chainlink",
+      "linkedin": "https://www.linkedin.com/company/chainlink-labs",
+      "medium": "https://blog.chain.link",
+      "reddit": "https://reddit.com/r/chainlink",
+      "logo": "/imgs/prediction_markets/Infra/Chainlink.jpg"
+    }
+  },
+  {
+    "name": "Pyth",
+    "description": "Pyth Network first-party oracle 400+ price feeds $100B volume, 50+ chains, 120+ data providers pull-based model, crypto/equities/FX/commodities",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": 2021,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.pyth.network/",
+      "twitter": "https://x.com/PythNetwork",
+      "github": "https://github.com/pyth-network",
+      "linktree": "https://linktr.ee/pythnetwork",
+      "telegram": "https://t.me/Pyth_Network",
+      "logo": "/imgs/prediction_markets/Infra/Pyth.jpg"
+    }
+  },
+  {
+    "name": "Dune",
+    "description": "Dune Analytics SQL blockchain query platform 100+ chains Ethereum/Solana/Bitcoin, free dashboards, APIs/DataShare, interactive visualizations",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": 2018,
+    "funding": null,
+    "links": {
+      "homepage": "https://dune.com/home",
+      "twitter": "https://x.com/Dune",
+      "logo": "/imgs/prediction_markets/Infra/Dune.jpg"
+    }
+  },
+  {
+    "name": "RedStone",
+    "description": "Modular oracle infrastructure specializing in yield-bearing collateral for DeFi lending markets",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": 2021,
+    "funding": 23000000,
+    "links": {
+      "homepage": "https://www.redstone.finance/",
+      "twitter": "https://x.com/redstone_defi",
+      "github": "https://github.com/redstone-finance",
+      "telegram": "https://t.me/redstoneoracles",
+      "discord": "https://discord.gg/PVxBZKFr46",
+      "linkedin": "https://www.linkedin.com/company/redstone-finance",
+      "medium": "https://medium.com/redstone-finance",
+      "reddit": "https://redstone.finance",
+      "logo": "/imgs/prediction_markets/Infra/RedStone.png"
+    }
+  },
+  {
+    "name": "API3",
+    "description": "First-party oracle network for dApps.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://api3.org/",
+      "twitter": "https://x.com/Api3DAO",
+      "logo": "/imgs/prediction_markets/Infra/API3.jpg"
+    }
+  },
+  {
+    "name": "Tellor",
+    "description": "Decentralized oracle protocol.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://tellor.io/",
+      "twitter": "https://x.com/WeAreTellor",
+      "logo": "/imgs/prediction_markets/Infra/Tellor.png"
+    }
+  },
+  {
+    "name": "Rain",
+    "description": "USDC-backed corporate card platform for Web3-native teams with automatic settlement",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": 2023,
+    "funding": null,
+    "links": {
+      "homepage": "https://rain.one",
+      "twitter": "https://x.com/Rain__Protocol",
+      "linktree": "https://linktr.ee/rain_protocol",
+      "telegram": "https://t.me/+9y2TtrFRYEA2OGFk",
+      "reddit": "https://rain.fi",
+      "logo": "/imgs/prediction_markets/Infra/Rain.jpg"
+    }
+  },
+  {
+    "name": "Covalent",
+    "description": "Covalent unified blockchain data API, 200+ chains indexed, GoldRush platform, modular infrastructure for AI agents, CQT token",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": 2017,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.covalenthq.com/",
+      "twitter": "https://x.com/Covalent_HQ",
+      "github": "https://github.com/covalenthq",
+      "telegram": "https://t.me/CovalentHQ",
+      "logo": "/imgs/prediction_markets/Infra/Covalent.jpg"
+    }
+  },
+  {
+    "name": "Sportstensor",
+    "description": "Sports prediction market.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Customisable"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.sportstensor.com/",
+      "twitter": "https://x.com/sportstensor",
+      "logo": "/imgs/prediction_markets/Customisable/Sportstensor.jpg"
+    }
+  },
+  {
+    "name": "Bento.fun",
+    "description": "Social prediction market.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Social Prediction"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "twitter": "https://x.com/bentodotfun",
+      "logo": "/imgs/prediction_markets/Social Prediction/Bento.fun.jpg"
+    }
+  },
+  {
+    "name": "Caddy",
+    "description": "Social prediction market.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Social Prediction"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "twitter": "https://x.com/caddytrade",
+      "logo": "/imgs/prediction_markets/Social Prediction/Caddy.jpg"
+    }
+  },
+  {
+    "name": "Dripit",
+    "description": "Social prediction market.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Social Prediction"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://dripit.io/",
+      "twitter": "https://x.com/dripit_io",
+      "logo": "/imgs/prediction_markets/Social Prediction/Dripit.jpg"
+    }
+  },
+  {
+    "name": "Entrave",
+    "description": "Social prediction market.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Social Prediction"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://entrave.com/",
+      "twitter": "https://x.com/TryEntrave",
+      "logo": "/imgs/prediction_markets/Social Prediction/Entrave.jpg"
+    }
+  },
+  {
+    "name": "Fireplace",
+    "description": "Social prediction market.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Social Prediction"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://fireplace.gg/",
+      "twitter": "https://x.com/fireplacegg",
+      "logo": "/imgs/prediction_markets/Social Prediction/Fireplace.jpg"
+    }
+  },
+  {
+    "name": "Foreseelol",
+    "description": "Social prediction market.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Social Prediction"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://foresee.lol/",
+      "twitter": "https://x.com/foreseelol",
+      "logo": "/imgs/prediction_markets/Social Prediction/Foreseelol.png"
+    }
+  },
+  {
+    "name": "Hedgehog",
+    "description": "Permissionless prediction markets on Solana with pooled liquidity AMM model for instant settlement",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Social Prediction"
+        ]
+      }
+    ],
+    "founded": 2023,
+    "funding": 3500000,
+    "links": {
+      "homepage": "https://www.hedgehog.markets/",
+      "twitter": "https://x.com/HedgehogMarket",
+      "github": "https://github.com/Hedgehog-Markets",
+      "telegram": "https://t.me/hedgysonic",
+      "logo": "/imgs/prediction_markets/Social Prediction/Hedgehog.jpg"
+    }
+  },
+  {
+    "name": "Hookt",
+    "description": "Social prediction market.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Social Prediction"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://hookt.app/",
+      "twitter": "https://x.com/Hookt_app",
+      "logo": "/imgs/prediction_markets/Social Prediction/Hookt.jpg"
+    }
+  },
+  {
+    "name": "Loudio",
+    "description": "Social prediction market.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Social Prediction"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.stayloud.io/",
+      "twitter": "https://x.com/stayloudio",
+      "logo": "/imgs/prediction_markets/Social Prediction/Loudio.jpg"
+    }
+  },
+  {
+    "name": "Nostradamus",
+    "description": "Blockchain-based prediction market platform inspired by Nostradamus, powered by ChainLink Oracle for real-time market updates",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Social Prediction"
+        ]
+      }
+    ],
+    "founded": 2024,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.imnostradamus.com/",
+      "twitter": "https://x.com/SeerNostradamus",
+      "telegram": "https://t.me/projectnostradamuschannel",
+      "logo": "/imgs/prediction_markets/Social Prediction/Nostradamus.jpg"
+    }
+  },
+  {
+    "name": "Poll",
+    "description": "Social prediction market.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Social Prediction"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://app.poll.fun/",
+      "twitter": "https://x.com/polldotfun",
+      "logo": "/imgs/prediction_markets/Social Prediction/Poll.jpg"
+    }
+  },
+  {
+    "name": "Wannafun",
+    "description": "Social prediction market.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Social Prediction"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://wanna.fun/",
+      "twitter": "https://x.com/wannadotfun",
+      "linktree": "https://linktr.ee/wannafun",
+      "logo": "/imgs/prediction_markets/Social Prediction/Wannafun.jpg"
+    }
+  },
+  {
+    "name": "PredX",
+    "description": "AI-powered prediction market.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Social Prediction"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://predx.ai/",
+      "twitter": "https://x.com/PredX_AI",
+      "logo": "/imgs/prediction_markets/Social Prediction/PredX.jpg"
+    }
+  },
+  {
+    "name": "Forcazt",
+    "description": "Prediction market bot interface.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Bot Inferface"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "twitter": "https://x.com/forcazt_xyz",
+      "logo": "/imgs/prediction_markets/Bot Inferface/Forcazt.jpg"
+    }
+  },
+  {
+    "name": "Legend",
+    "description": "Prediction market bot interface.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Bot Inferface"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://legendstake.com/",
+      "twitter": "https://x.com/belegends_ok",
+      "logo": "/imgs/prediction_markets/Bot Inferface/Legend.jpg"
+    }
+  },
+  {
+    "name": "Okbet",
+    "description": "Prediction market bot interface.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Bot Inferface"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://tryokbet.com/",
+      "twitter": "https://x.com/tryokbet",
+      "logo": "/imgs/prediction_markets/Bot Inferface/Okbet.jpg"
+    }
+  },
+  {
+    "name": "Polycule",
+    "description": "Prediction market bot interface.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Bot Inferface"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.polycule.trade/",
+      "twitter": "https://x.com/polycule_bot",
+      "logo": "/imgs/prediction_markets/Bot Inferface/Polycule.jpg"
+    }
+  },
+  {
+    "name": "Polyfocus",
+    "description": "Prediction market bot interface.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Bot Inferface"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://t.me/polyfocusbot",
+      "twitter": "https://x.com/PolyfocusBot",
+      "logo": "/imgs/prediction_markets/Bot Inferface/Polyfocus.jpg"
+    }
+  },
+  {
+    "name": "Cobot",
+    "description": "Prediction market bot interface.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Bot Inferface"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://cobot.gg/",
+      "twitter": "https://x.com/cobotgg",
+      "logo": "/imgs/prediction_markets/Bot Inferface/Cobot.jpg"
+    }
+  },
+  {
+    "name": "Polyquant",
+    "description": "Prediction market bot interface.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Bot Inferface"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://polyquantbuild.com/",
+      "twitter": "https://x.com/polyquant_build",
+      "logo": "/imgs/prediction_markets/Bot Inferface/Polyquant.jpg"
+    }
+  },
+  {
+    "name": "Olympus",
+    "description": "Prediction market bot interface.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Bot Inferface"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://olympusx.app/",
+      "twitter": "https://x.com/olympusappX",
+      "linktree": "https://linktr.ee/olympusapp",
+      "logo": "/imgs/prediction_markets/Bot Inferface/Olympus.jpg"
+    }
+  },
+  {
+    "name": "Agent Ted",
+    "description": "Prediction market bot interface.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Others"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://tedtech.ai/",
+      "twitter": "https://x.com/TheAgentTed",
+      "linktree": "https://linktr.ee/TheAgentTed",
+      "logo": "/imgs/prediction_markets/Others/Agent Ted.jpg"
+    }
+  },
+  {
+    "name": "Bravado Trade",
+    "description": "Prediction market platform.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Others"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.bravadotrade.com/",
+      "twitter": "https://x.com/bravadotrade",
+      "logo": "/imgs/prediction_markets/Others/Bravado Trade.jpg"
+    }
+  },
+  {
+    "name": "Butter",
+    "description": "Prediction market platform.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Others"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://app.butter.markets/request-access",
+      "twitter": "https://x.com/butterygg",
+      "logo": "/imgs/prediction_markets/Others/Butter.jpg"
+    }
+  },
+  {
+    "name": "Giraft",
+    "description": "Prediction market platform.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Others"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "twitter": "https://x.com/giraftsports",
+      "logo": "/imgs/prediction_markets/Others/Giraft.jpg"
+    }
+  },
+  {
+    "name": "Polyburg",
+    "description": "Prediction market platform.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Others"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://polyburg.com/",
+      "twitter": "https://x.com/polyburg",
+      "logo": "/imgs/prediction_markets/Others/Polyburg.jpg"
+    }
+  },
+  {
+    "name": "Polyinsider",
+    "description": "Prediction market platform.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Others"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "twitter": "https://x.com/PolyInsider_",
+      "logo": "/imgs/prediction_markets/Others/Polyinsider.jpg"
+    }
+  },
+  {
+    "name": "Predictfolio",
+    "description": "Prediction portfolio tracker.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Others"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://predictfolio.com/",
+      "twitter": "https://x.com/predictfolio",
+      "logo": "/imgs/prediction_markets/Others/Predictfolio.jpg"
+    }
+  },
+  {
+    "name": "Firefly",
+    "description": "Social app with prediction features.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Others"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://firefly.social/about",
+      "twitter": "https://x.com/thefireflyapp",
+      "logo": "/imgs/prediction_markets/Others/Firefly.jpg"
+    }
+  },
+  {
+    "name": "Robin Markets",
+    "description": "Prediction market platform.",
+    "sectors": [
+      {
+        "sector": "Prediction Markets",
+        "types": [
+          "Others"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://robin.markets/",
+      "twitter": "https://x.com/robinmarketsxyz",
+      "logo": "/imgs/prediction_markets/Others/Robin Markets.png"
+    }
+  },
+  {
+    "name": "7K Aggregator",
+    "description": "7K is a Sui-based trading aggregator that optimizes swap execution with dynamic trade routing and lower gas fees.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/7KAggregator.jpg",
+      "twitter": "https://x.com/7k_ag_",
+      "homepage": "https://7k.ag/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "aaa cat",
+    "description": "Can&#039;t stop won&#039;t stop (thinking about Sui).",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Meme"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Meme/aaacat.jpg",
+      "twitter": "https://x.com/aaaCatSui",
+      "homepage": "https://www.aaacatsui.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Aftermath Finance",
+    "description": "Aftermath is building an all-in-one trading and investment platform on Sui, offering fast, low-cost, and transparent access to DeFi markets.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/AftermathFinance.jpg",
+      "twitter": "https://x.com/AftermathFi",
+      "homepage": "https://aftermath.finance/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Agora",
+    "description": "Agora is creating a more inclusive financial system by making the US dollar accessible as a digital public good. Its fully collateralized digital dollar, AUSD, provides a secure, scalable, and borderless way for individuals and businesses to participate in the global economy.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": 2024,
+    "funding": 62000000,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/Agora.jpg",
+      "twitter": "https://twitter.com/withAUSD",
+      "homepage": "https://agora.finance",
+      "discord": "https://discord.gg/Vsjpghdhb3",
+      "github": "https://github.com/idni",
+      "linkedin": "https://www.linkedin.com/company/agora-finance",
+      "youtube": "https://www.agora.finance"
+    }
+  },
+  {
+    "name": "AlphaFi",
+    "description": "AlphaFi is a yield aggregator on the Sui blockchain, designed to simplify and optimize DeFi returns",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/AlphaFi.png",
+      "twitter": "https://x.com/AlphaFiSUI",
+      "homepage": "http://alphafi.xyz",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Anima Labs",
+    "description": "Anima Labs is a Web3 studio_creating a permissionless hub for games, virtual worlds, and autonomous experiences on Sui.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Games"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Games/AnimaLabs.jpg",
+      "twitter": "https://x.com/animalabs_io",
+      "homepage": "https://animalabs.io/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Artemis",
+    "description": "Artemis is an institutional data platform for digital assets, transforming blockchain data into actionable insights.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Analytics"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Analytics/Artemis.jpg",
+      "twitter": "https://x.com/artemis",
+      "homepage": "https://www.artemis.xyz/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Artfi",
+    "description": "Artfi is redefining fine art collecting through fractional ownership on the blockchain, making blue-chip art more accessible to investors.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Marketplace"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Marketplace/Artfi.jpg",
+      "twitter": "https://x.com/artfiglobal",
+      "homepage": "https://artfi.world/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Arttoo",
+    "description": "Arttoo makes fine art investment accessible through fractional ownership, allowing collectors to invest in iconic masterpieces without auction house or gallery markups. With blockchain-powered provenance tracking, every transaction is secure and transparent.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "NFT"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/NFT/Arttoo.jpg",
+      "twitter": "https://x.com/arttoo_official",
+      "homepage": "https://arttoo.co.uk/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Atoma Network",
+    "description": "Decentralized full-stack AI cloud with privacy and verifiability.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "AI"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/AI/AtomaNetwork.jpg",
+      "twitter": "https://x.com/TuskyTools",
+      "homepage": "https://fonts.gstatic.com",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Axelar",
+    "description": "Axelar is a cross-chain interoperability network that connects blockchains, enabling seamless communication for Web3 applications.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Bridge"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Bridge/Axelar.png",
+      "twitter": "https://x.com/axelar",
+      "homepage": "https://www.axelar.network/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Aylab",
+    "description": "Delivered 10M monthly active wallets &amp; 300M onchain transaction across apps, chains and more.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Games"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Games/Aylab.jpg",
+      "twitter": "https://x.com/Aylab_io",
+      "homepage": "https://x.com/Aylab_io",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Birdeye",
+    "description": "Birdeye is a blockchain data aggregator designed for traders, providing real-time market insights and data-driven analysis tools.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Analytics"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Analytics/Birdeye.jpg",
+      "twitter": "https://x.com/birdeye_so",
+      "homepage": "https://www.birdeye.so/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Blockberry API",
+    "description": "Blockberry is a multichain API platform by Staketab, providing rich, reliable, and scalable blockchain data for Web3 applications.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Analytics"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Analytics/BlockberryAPI.svg",
+      "twitter": "https://x.com/blockberry_api",
+      "homepage": "https://blockberry.one/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "BlockVision",
+    "description": "BlockVision is a multi-chain API provider and real-time data portal, offering low-latency access to Nodes, Mempool, FT, NFT, and DeFi data.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Analytics"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Analytics/BlockVision.png",
+      "twitter": "https://x.com/blockvisionhq",
+      "homepage": "https://blockvision.org/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Blub",
+    "description": "A degen fish in the waters of the Sui ocean.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Meme"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Meme/Blub.jpg",
+      "twitter": "https://x.com/blubsui",
+      "homepage": "https://www.blubsui.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Bluefin",
+    "description": "Bluefin is a decentralized, orderbook-based exchange designed for both professional and first-time traders. Built on a high-performance Web3 stack with rollups, it offers leverage trading, short selling, and cross-chain liquidity with a focus on security and transparency.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/Bluefin.jpg",
+      "twitter": "https://x.com/bluefinapp",
+      "homepage": "https://bluefin.io/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "BlueMove",
+    "description": "BlueMove is a super app on the Sui blockchain, combining an NFT launchpad, marketplace, and DEX in one seamless platform.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/BlueMove.png",
+      "twitter": "https://x.com/BlueMove_OA",
+      "homepage": "https://linktr.ee/bluemove",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Bucket Protocol",
+    "description": "Bucket Protocol is a DeFi engine on Sui, enabling users to borrow BUCK, a decentralized stablecoin, against SUI, BTC, ETH, and LSTs with low and predictable interest rates.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/BucketProtocol.jpg",
+      "twitter": "https://x.com/bucket_protocol",
+      "homepage": "https://www.bucketprotocol.io/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Cap",
+    "description": "The cool, calm and collected Capy who just loves to 'Spot and Chill'",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Meme"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Meme/Cap.jpg",
+      "twitter": "https://x.com/caponsui",
+      "homepage": "https://www.caponsui.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Cetus",
+    "description": "Cetus is a DEX and concentrated liquidity protocol built on Sui and Aptos, designed to provide a flexible, high-efficiency liquidity network for DeFi users.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/Cetus.png",
+      "twitter": "https://x.com/CetusProtocol",
+      "homepage": "https://www.cetus.zone/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Chirp",
+    "description": "Chirp is a DePIN network and IoT ecosystem designed for real-world assets (RWA), enabling seamless communication between devices, the internet, and blockchain.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Infra&Tools"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/InfraandTools/Chirp.png",
+      "twitter": "https://x.com/ChirpDeWi",
+      "homepage": "https://chirptoken.io/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Cosmocadia",
+    "description": "Cosmocadia is a community-driven farming game by Lucky Kat Studios, blending elements of Stardew Valley and Animal Crossing with play-and-earn mechanics.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Games"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Games/Cosmocadia.png",
+      "twitter": "https://x.com/Cosmocadia",
+      "homepage": "https://www.cosmocadia.io/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "DARKTIMES",
+    "description": "DARKTIMES is a free-to-play Web3 multiplayer Brawler Royale_Set in a Nordic-inspired dark fantasy world.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Games"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Games/DARKTIMES.jpg",
+      "twitter": "https://x.com/playDARKTIMES",
+      "homepage": "https://playdarktimes.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "DeepBook",
+    "description": "Decentralized liquidity layer for builders, traders, and the broader DeFi community, exclusively on Sui.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/DeepBook.jpg",
+      "twitter": "https://x.com/DeepBookonSui",
+      "homepage": "https://deepbook.tech/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "DefiLlama",
+    "description": "DefiLlama is the go-to platform for tracking DeFi on Sui, providing open and transparent analytics on TVL, liquidity, and protocol activity.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Analytics"
+        ]
+      }
+    ],
+    "founded": 2021,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Analytics/DefiLlama.jpg",
+      "twitter": "https://x.com/DefiLlama",
+      "homepage": "https://defillama.com",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "DeLorean Labs",
+    "description": "As part of the DeLorean Motor Company (DMC) ecosystem, DeLorean Labs is hyper-focused on innovative Web3 tech.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "NFT"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/NFT/DeLoreanLabs.jpg",
+      "twitter": "https://x.com/TuskyTools",
+      "homepage": "https://fonts.gstatic.com",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "DeSuiLabs",
+    "description": "DeSuiLabs is building the top competition platform on Web3, combining gamified experiences with unique, standout prizes to deliver an unparalleled user experience in the decentralized space.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Games"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Games/DeSuiLabs.jpg",
+      "twitter": "https://x.com/DeSuiLabs",
+      "homepage": "https://www.desuilabs.io/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "DoubleUp",
+    "description": "DoubleUp is a transparent, fair, and community-driven online betting platform on the Sui blockchain.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Launchpad"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Launchpad/DoubleUp.jpg",
+      "twitter": "https://x.com/doubleup_app",
+      "homepage": "https://www.doubleup.fun/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "FanTV",
+    "description": "FanTV is a video streaming and sharing platform where users can watch, create, and earn rewards.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Social"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Social/FanTV.jpg",
+      "twitter": "https://x.com/FanTV_official",
+      "homepage": "https://fantv.world/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Fewcha",
+    "description": "Fewcha is a non-custodial wallet built for the Move ecosystem (Sui & Aptos), offering secure, self-custody for tokens, NFTs, and DeFi assets.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Wallets"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Wallets/Fewcha.png",
+      "twitter": "https://x.com/fewchawallet",
+      "homepage": "https://fewcha.app/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Four Pillars",
+    "description": "Four Pillars is an institution-level blockchain research firm providing in-depth analysis on emerging trends, technologies, and narratives in crypto.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Education"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Education/FourPillars.png",
+      "twitter": "https://x.com/FourPillarsFP",
+      "homepage": "https://4pillars.io/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "FUD",
+    "description": "FUD is the OG meme on Sui.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Meme"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Meme/FUD.jpg",
+      "twitter": "https://x.com/fudthepug",
+      "homepage": "https://fudthepug.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Fuddies",
+    "description": "FUD around and find out.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "NFT"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/NFT/Fuddies.jpg",
+      "twitter": "https://x.com/FuddiesNFT",
+      "homepage": "https://fuddies.io/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Ika",
+    "description": "Ika is the first sub-second MPC network on Sui.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Infra&Tools"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/InfraandTools/Ika.png",
+      "twitter": "https://x.com/ikadotxyz",
+      "homepage": "https://ika.xyz/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Karrier One",
+    "description": "Building the foundation for truly borderless connectivity through decentralized infrastructure.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Identity"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Identity/KarrierOne.jpg",
+      "twitter": "https://x.com/karrier_one",
+      "homepage": "https://karrier.one/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Kriya",
+    "description": "Kriya is a DeFi project building advanced infrastructure for on-chain derivatives trading.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/Kriya.jpg",
+      "twitter": "https://x.com/KriyaDEX",
+      "homepage": "https://kriya.finance/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Kumo",
+    "description": "Kumo is more than just a cute face, this clumsy kat bridges the gap between the digital and physical worlds.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "NFT"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/NFT/Kumo.jpg",
+      "twitter": "https://x.com/Kumo_TheKat",
+      "homepage": "https://kumothekat.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Liquor",
+    "description": "Be liquor, my friend. New era of meme on Sui.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Meme"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Meme/Liquor.jpg",
+      "twitter": "https://x.com/Beliquoronsui",
+      "homepage": "https://www.beliquoronsui.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Lofi The Yeti",
+    "description": "Lofi The Yeti represents optimism, courage, and a collective vision, uniting the community to build a thriving, forward-thinking ecosystem on Sui.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Meme"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Meme/LofiTheYeti.jpg",
+      "twitter": "https://x.com/lofitheyeti",
+      "homepage": "https://lofitheyeti.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Lucky Kat",
+    "description": "Lucky Kat Studio is an independent game development and publishing studio based in the Netherlands, known for its mobile pixel art games with a pop-culture twist. With a gameplay-first approach, the studio is expanding into the metaverse, creating engaging and accessible experiences.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Games"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Games/LuckyKat.jpg",
+      "twitter": "https://x.com/LuckyKatStudios",
+      "homepage": "https://www.lucky-kat.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "MovePump",
+    "description": "Create and launch your memecoin on Sui in minutes.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Launchpad"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Launchpad/MovePump.svg",
+      "twitter": "https://x.com/BlueMove_OA",
+      "homepage": "https://movepump.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Navi Protocol",
+    "description": "Navi is the first native one-stop liquidity protocol on Sui, allowing users to supply liquidity, earn passive income, or borrow assets without intermediaries.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/NaviProtocol.jpg",
+      "twitter": "https://x.com/navi_protocol",
+      "homepage": "https://naviprotocol.io/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Nightly Connect",
+    "description": "Nightly Connect is a permissionless, open-source wallet adapter and bridge that simplifies wallet integration for dApps.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Infra&Tools"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/InfraandTools/NightlyConnect.png",
+      "twitter": "https://x.com/NightlyConnect",
+      "homepage": "https://nightly.app/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Nightly Wallet",
+    "description": "Multichain crypto wallet, your key to the metaverse, available on 11 blockchains.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Wallets"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Wallets/NightlyWallet.png",
+      "twitter": "https://x.com/TuskyTools",
+      "homepage": "https://fonts.gstatic.com",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Panzerdogs",
+    "description": "Panzerdogs is a PvP play-and-earn tank brawler on Sui, combining fast-paced combat with NFTs and Play-to-Earn mechanics.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "NFT"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/NFT/Panzerdogs.png",
+      "twitter": "https://x.com/panzerdogs",
+      "homepage": "https://home.panzerdogs.io/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Polymedia",
+    "description": "Sui apps &amp; tools by juzybits",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Infra&Tools"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/InfraandTools/Polymedia.jpg",
+      "twitter": "https://x.com/polymedia_app",
+      "homepage": "https://polymedia.app/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "PTB Studio",
+    "description": "PTB Studio is a visual composition tool for Sui PTBs, designed to help learners and developers easily build, manage, and execute PTBs.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Infra&Tools"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/InfraandTools/PTBStudio.jpg",
+      "twitter": "https://x.com/zktx_io",
+      "homepage": "https://ptb-builder.walrus.site",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Pugwifsui",
+    "description": "Resurging from the ashes of a premature rug, arose the pug that doesn&#039;t quit.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Meme"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Meme/Pugwifsui.webp",
+      "twitter": "https://x.com/SuiPugwif",
+      "homepage": "https://pugwifsui.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Quantum Temple",
+    "description": "Quantum Temple is a Web3-powered platform dedicated to preserving cultural heritage on the blockchain while providing regenerative funding for ancestral communities.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Social"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Social/QuantumTemple.jpg",
+      "twitter": "https://x.com/quantum_temple",
+      "homepage": "https://quantumtemple.xyz/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "RECRD",
+    "description": "RECRD is a Web3-powered video platform that lets creators monetize short videos and keep up to 100% of their ad revenue.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Social"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Social/RECRD.jpg",
+      "twitter": "https://x.com/recrdapp",
+      "homepage": "https://www.recrd.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Rinoco",
+    "description": "Rinoco is an NFT collectible project designed to bridge Web2 and Web3, creating a world of unique, collectible creatures.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "NFT"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/NFT/Rinoco.jpg",
+      "twitter": "https://x.com/RinocoOfficial",
+      "homepage": "https://www.rinoco.world/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Scallop",
+    "description": "Scallop is a next-generation peer-to-peer money market built for the Sui ecosystem, offering high-interest lending, low-fee borrowing, and AMM services on a unified platform.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/Scallop.jpg",
+      "twitter": "https://x.com/Scallop_io",
+      "homepage": "https://scallop.io/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Shadow",
+    "description": "Shadow is a no-code platform for launching and trading NFTs on the Sui blockchain.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "NFT"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/NFT/Shadow.jpg",
+      "twitter": "https://x.com/shadow_sui",
+      "homepage": "http://linktr.ee/shadow_app",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Shadow Wallet",
+    "description": "Shadow is a self-custodial Web3 wallet for DeFi and NFTs on the Sui blockchain.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Wallets"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Wallets/ShadowWallet.jpg",
+      "twitter": "https://x.com/shadow_sui",
+      "homepage": "https://linktr.ee/shadow_app",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Spritz Finance",
+    "description": "Spritz is a crypto payments superapp, enabling users to buy, spend, and pay bills with crypto__ll directly from their wallets.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Payments"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Payments/SpritzFinance.png",
+      "twitter": "https://x.com/spritzfinance",
+      "homepage": "https://www.spritz.finance/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Stashed",
+    "description": "Stashed is a web-based, self-custodial wallet for the Sui blockchain, allowing users to store, send, and receive assets with the ease of a web account login (e.g., Google or Twitch).",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Wallets"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Wallets/Stashed.jpg",
+      "twitter": "https://x.com/stashedofficial",
+      "homepage": "https://getstashed.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Studio Mirai",
+    "description": "Studio Mirai is a venture studio developing next-generation consumer experiences on the Sui Network.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "NFT"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/NFT/StudioMirai.jpg",
+      "twitter": "https://x.com/_StudioMirai",
+      "homepage": "https://nozomi.world/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Sui Bridge",
+    "description": "Sui Bridge is a native cross-chain bridge connecting Sui and Ethereum, allowing secure and fast transfers of native and wrapped ETH.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Bridge"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Bridge/SuiBridge.jpg",
+      "twitter": "https://x.com/SuiNetwork",
+      "homepage": "https://bridge.sui.io/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Sui Name Service",
+    "description": "Your web3 identity for all things Sui!",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Infra&Tools"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/InfraandTools/SuiNameService.png",
+      "twitter": "https://x.com/TuskyTools",
+      "homepage": "https://fonts.gstatic.com",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Sui Wallet",
+    "description": "Access SUI, swap tokens, organize your NFT collections, and explore dApps, all from Sui Wallet.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Wallets"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Wallets/SuiWallet.jpg",
+      "twitter": "https://x.com/TuskyTools",
+      "homepage": "https://fonts.gstatic.com",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Suiet",
+    "description": "Suiet is an open-source, self-custodial wallet built for the Sui blockchain, prioritizing privacy, security, and true ownership.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Wallets"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Wallets/Suiet.png",
+      "twitter": "https://x.com/suiet_wallet",
+      "homepage": "https://suiet.app/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "SuiFrens",
+    "description": "SuiFrens are principally a demonstration of Sui Move capabilities, bringing to life the composability, extensibility, and dynamism of digital assets on Sui.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Games"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Games/SuiFrens.jpg",
+      "twitter": "https://x.com/TuskyTools",
+      "homepage": "https://suifrens.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Suilend",
+    "description": "Suilend is an autonomous lending and borrowing platform on the Sui network, enabling trustless and permissionless access to digital asset loans.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/Suilend.png",
+      "twitter": "https://x.com/suilendprotocol",
+      "homepage": "https://suilend.fi/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "SuiPlay",
+    "description": "SuiPlay0X1 is the first handheld gaming device designed to integrate Web3 functionality seamlessly into gaming.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Games"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Games/SuiPlay.jpg",
+      "twitter": "https://x.com/SuiPlay",
+      "homepage": "https://www.suiplay0x1.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Suiscan Explorer",
+    "description": "Suiscan is a feature-rich block explorer and analytics platform for Sui, providing detailed insights into transactions, addresses, and network activity.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Analytics"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Analytics/SuiscanExplorer.png",
+      "twitter": "https://x.com/suiscanofficial",
+      "homepage": "https://suiscan.xyz/mainnet/home",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "SuiVision",
+    "description": "SuiVision is a comprehensive block explorer for the Sui network, providing detailed insights into transactions, accounts, objects, packages, and validators.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Analytics"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Analytics/SuiVision.svg",
+      "twitter": "https://x.com/blockvisionhq",
+      "homepage": "https://suivision.xyz/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Surf",
+    "description": "Surf Wallet is a mobile-first smart wallet for the Sui ecosystem, offering a secure and seamless way to store, transfer, and collect tokens and NFTs",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Wallets"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Wallets/Surf.png",
+      "twitter": "https://x.com/surf_wallet",
+      "homepage": "https://surf.tech/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Tradeport",
+    "description": "TradePort is the leading NFT aggregator on Sui, providing traders with advanced analytics, real-time market insights, and powerful decision-making tools",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Marketplace"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Marketplace/Tradeport.jpg",
+      "twitter": "https://x.com/tradeportxyz",
+      "homepage": "https://www.tradeport.xyz/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Triton One",
+    "description": "Triton One is a high-performance RPC service for the Sui network, designed for speed, reliability, and scalability.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Infra&Tools"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/InfraandTools/TritonOne.png",
+      "twitter": "https://x.com/triton_one",
+      "homepage": "https://triton.one/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Turbos Finance",
+    "description": "Turbos Finance is a non-custodial, hyper-efficient DEX built on Sui which offers seamless trading with best prices by aggregating liquidity from its concentrated liquidity market maker and Sui__ central limit order book.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/TurbosFinance.jpg",
+      "twitter": "https://x.com/Turbos_finance",
+      "homepage": "https://turbos.finance/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Tusky",
+    "description": "Tusky is a decentralized storage platform built on Walrus, offering end-to-end encryption, powerful file management, and a seamless user experience.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Walrus"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Walrus/Tusky.jpg",
+      "twitter": "https://x.com/TuskyTools",
+      "homepage": "https://tusky.io/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Typus Finance",
+    "description": "Typus Finance is a real yield infrastructure on the Sui blockchain, designed to offer superior risk-to-reward returns with minimal effort",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/TypusFinance.jpg",
+      "twitter": "https://x.com/TypusFinance",
+      "homepage": "https://typus.finance/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Walrus",
+    "description": "Welcome to the next generation of data storage _ secure, efficient, and decentralized.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Infra&Tools"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/InfraandTools/Walrus.jpg",
+      "twitter": "https://x.com/TuskyTools",
+      "homepage": "https://fonts.gstatic.com",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Wormhole",
+    "description": "Wormhole is a universal interoperability protocol that enables seamless value and data transfer across 14+ blockchains, including Ethereum, Sui, Solana, and Polygon.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Bridge"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Bridge/Wormhole.jpg",
+      "twitter": "https://x.com/wormhole",
+      "homepage": "https://wormhole.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "XOCIETY",
+    "description": "XOCIETY is a AAA shooter with RPG progression, combining fast-paced MMOTPS gameplay with a dynamic metaverse.",
+    "sectors": [
+      {
+        "sector": "sui ecosystem",
+        "types": [
+          "Games"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Games/XOCIETY.png",
+      "twitter": "https://x.com/xocietyofficial",
+      "homepage": "https://xociety.io/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
     }
   }
 ]
