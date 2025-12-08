@@ -116,7 +116,7 @@
   },
   {
     "name": "Acctual",
-    "description": "Accept payments in USDC, USDT, EUR or USD â__ and get paid same day to your wallet or bank. Create crypto invoices in seconds.",
+    "description": "Accept payments in USDC, USDT, EUR or USD \u00e2__ and get paid same day to your wallet or bank. Create crypto invoices in seconds.",
     "sectors": [
       {
         "sector": "Stablecoins",
@@ -196,7 +196,8 @@
       "logo": "https://s2.loli.net/2025/11/24/5kGLyzMgfFPbDwQ.jpg",
       "twitter": "https://x.com/aixbt_agent",
       "telegram": "https://t.me/aixbtportal",
-      "youtube": "https://aixbt.com"
+      "youtube": "https://aixbt.com",
+      "homepage": "https://aixbt.tech"
     }
   },
   {
@@ -208,13 +209,19 @@
         "types": [
           "Wallet & Payments"
         ]
+      },
+      {
+        "sector": "Data",
+        "types": [
+          "Infra"
+        ]
       }
     ],
     "founded": 2017,
     "funding": 564000000,
     "links": {
       "homepage": "https://www.alchemy.com/",
-      "logo": "https://s2.loli.net/2025/11/24/MiwDG4SeHhCJ6Wm.jpg",
+      "logo": "/imgs/Data/Infra/Alchemy.jpg",
       "twitter": "https://x.com/Alchemy",
       "telegram": "https://t.me/Alchemy_official",
       "linkedin": "https://www.linkedin.com/company/alchemyinc"
@@ -527,7 +534,7 @@
   },
   {
     "name": "Bitwave",
-    "description": "Bitwave streamlines tax, accounting, and compliance workflows for global finance teams. Track, manage, and move digital assets â__ with confidence and security.",
+    "description": "Bitwave streamlines tax, accounting, and compliance workflows for global finance teams. Track, manage, and move digital assets \u00e2__ with confidence and security.",
     "sectors": [
       {
         "sector": "Stablecoins",
@@ -750,7 +757,7 @@
   },
   {
     "name": "cEUR",
-    "description": "Celo is an Ethereum L2 powering fast, low-cost payments, native stablecoins, and DeFi apps â__ driving real-world adoption and financial inclusion worldwide.",
+    "description": "Celo is an Ethereum L2 powering fast, low-cost payments, native stablecoins, and DeFi apps \u00e2__ driving real-world adoption and financial inclusion worldwide.",
     "sectors": [
       {
         "sector": "Stablecoins",
@@ -783,13 +790,25 @@
           "Analytics",
           "Infra&Tools"
         ]
+      },
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Data"
+        ]
+      },
+      {
+        "sector": "Data",
+        "types": [
+          "Infra"
+        ]
       }
     ],
     "founded": 2022,
     "funding": null,
     "links": {
       "homepage": "https://chainbase.com/",
-      "logo": "https://s2.loli.net/2025/11/24/JEflFxIosLzWe8b.jpg",
+      "logo": "/imgs/Data/Infra/Chainbase.jpg",
       "twitter": "https://x.com/ChainbaseHQ",
       "telegram": "https://t.me/ChainbaseNetwork",
       "reddit": "https://chainbase.com"
@@ -1759,13 +1778,19 @@
         "types": [
           "Identity & Access"
         ]
+      },
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Data"
+        ]
       }
     ],
     "founded": 2025,
     "funding": null,
     "links": {
       "homepage": "https://gokite.ai/",
-      "logo": "https://s2.loli.net/2025/11/24/6Qu38jfBIw7ZMck.jpg",
+      "logo": "/imgs/AI_Crypto/Data/Kite AI.jpg",
       "twitter": "https://x.com/GoKiteAI"
     }
   },
@@ -2078,13 +2103,19 @@
         "types": [
           "Chains & Protocols"
         ]
+      },
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Infra"
+        ]
       }
     ],
     "founded": 2020,
     "funding": null,
     "links": {
       "homepage": "https://www.near.org/",
-      "logo": "https://s2.loli.net/2025/11/24/lVM4qTjLbYEXSZ1.jpg",
+      "logo": "/imgs/AI_Crypto/Infra/NEAR.jpg",
       "twitter": "https://x.com/NEARProtocol",
       "telegram": "https://t.me/cryptonear"
     }
@@ -4205,6 +4236,18 @@
         "types": [
           "Infra"
         ]
+      },
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Development Tools"
+        ]
+      },
+      {
+        "sector": "Data",
+        "types": [
+          "Infra"
+        ]
       }
     ],
     "founded": 2018,
@@ -4212,7 +4255,7 @@
     "links": {
       "homepage": "https://dune.com/home",
       "twitter": "https://x.com/Dune",
-      "logo": "/imgs/prediction_markets/Infra/Dune.jpg"
+      "logo": "/imgs/Data/Infra/Dune.jpg"
     }
   },
   {
@@ -4309,6 +4352,12 @@
         "types": [
           "Infra"
         ]
+      },
+      {
+        "sector": "Data",
+        "types": [
+          "Infra"
+        ]
       }
     ],
     "founded": 2017,
@@ -4318,7 +4367,7 @@
       "twitter": "https://x.com/Covalent_HQ",
       "github": "https://github.com/covalenthq",
       "telegram": "https://t.me/CovalentHQ",
-      "logo": "/imgs/prediction_markets/Infra/Covalent.jpg"
+      "logo": "/imgs/Data/Infra/Covalent.jpg"
     }
   },
   {
@@ -5423,12 +5472,18 @@
         "types": [
           "Analytics"
         ]
+      },
+      {
+        "sector": "Data",
+        "types": [
+          "Analytics"
+        ]
       }
     ],
     "founded": 2021,
     "funding": null,
     "links": {
-      "logo": "/imgs/sui_ecosystem/Analytics/DefiLlama.jpg",
+      "logo": "/imgs/Data/Analytics/DefiLlama.jpg",
       "twitter": "https://x.com/DefiLlama",
       "homepage": "https://defillama.com",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -6543,6 +6598,2350 @@
       "twitter": "https://x.com/doubleup_app",
       "homepage": "https://www.doubleup.fun",
       "logo": "/imgs/sui_ecosystem/Launchpad/DoubleUp.jpg"
+    }
+  },
+  {
+    "name": "Fetch.ai",
+    "description": "Decentralized platform enabling Autonomous Economic Agents for AI-driven economic activities",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Agents"
+        ]
+      },
+      {
+        "sector": "Data",
+        "types": [
+          "Marketplaces"
+        ]
+      }
+    ],
+    "founded": 2017,
+    "funding": 40000000,
+    "links": {
+      "homepage": "https://fetch.ai/",
+      "logo": "/imgs/Data/Marketplaces/Fetch.ai.jpg",
+      "twitter": "https://x.com/Fetch_ai",
+      "github": ""
+    }
+  },
+  {
+    "name": "Vana",
+    "description": "Vana user-owned data platform DataDAOs, AI model training data marketplace, EVM-compatible L1, data sovereignty protocol",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Agents"
+        ]
+      }
+    ],
+    "founded": 2023,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.vana.org/",
+      "logo": "/imgs/AI_Crypto/Agents/Vana.jpg",
+      "twitter": "https://x.com/vana",
+      "github": ""
+    }
+  },
+  {
+    "name": "Morpheus",
+    "description": "First decentralized P2P network of personal smart agents with $350M TVL fair launch",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Agents"
+        ]
+      }
+    ],
+    "founded": 2023,
+    "funding": null,
+    "links": {
+      "homepage": "https://mor.org/",
+      "logo": "/imgs/AI_Crypto/Agents/Morpheus.jpeg",
+      "twitter": "https://x.com/MorpheusAIs",
+      "github": ""
+    }
+  },
+  {
+    "name": "MyShell",
+    "description": "MyShell AI blockchain platform 200K+ agents, $16.6M funding Dragonfly/Delphi Ventures, ShellAgent framework, 5M+ users, SHELL token",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Agents"
+        ]
+      }
+    ],
+    "founded": 2023,
+    "funding": 16600000,
+    "links": {
+      "homepage": "https://myshell.ai/",
+      "logo": "/imgs/AI_Crypto/Agents/MyShell.jpg",
+      "twitter": "https://x.com/myshell_ai",
+      "github": ""
+    }
+  },
+  {
+    "name": "Olas",
+    "description": "Decentralized network of off-chain services merging AI with blockchain, enabling autonomous agent technology for executing complex logic and interacting with on-chain/off-chain data.",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Agents"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://olas.network/",
+      "logo": "/imgs/AI_Crypto/Agents/Olas.jpg",
+      "twitter": "https://x.com/autonolas",
+      "github": ""
+    }
+  },
+  {
+    "name": "Talus",
+    "description": "Talus AI autonomous agents on blockchain with $6M funding, Nexus framework, Polychain backed, Sui Move Protochain, IDOL.fun launchpad",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Agents"
+        ]
+      }
+    ],
+    "founded": 2024,
+    "funding": 6000000,
+    "links": {
+      "homepage": "https://testnet.talus.network/testnet",
+      "logo": "/imgs/AI_Crypto/Agents/Talus.jpg",
+      "twitter": "https://x.com/TalusNetwork",
+      "github": ""
+    }
+  },
+  {
+    "name": "Ora",
+    "description": "Ora Protocol AI oracle on-chain AI inference OAO opML optimistic machine learning, Ethereum rollup verifiable computation, ZK proofs",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Agents"
+        ]
+      }
+    ],
+    "founded": 2022,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.ora.io/",
+      "logo": "/imgs/AI_Crypto/Agents/Ora.jpg",
+      "twitter": "https://x.com/OraProtocol",
+      "github": ""
+    }
+  },
+  {
+    "name": "Kaito",
+    "description": "Kaito AI crypto intelligence $10.8M funding Dragonfly $87.5M valuation, Kaito Pro $833/month hedge fund tool, Yaps attention tokens, founded 2022",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Agents",
+          "Development Tools"
+        ]
+      }
+    ],
+    "founded": 2022,
+    "funding": 10800000,
+    "links": {
+      "homepage": "https://yaps.kaito.ai/user",
+      "logo": "/imgs/AI_Crypto/Agents/KaitoAI.jpg",
+      "twitter": "https://x.com/KaitoAI",
+      "github": ""
+    }
+  },
+  {
+    "name": "Alethea AI",
+    "description": "R&D studio building Sovereign AI Agents with iNFT standard combining AI-powered chatbots with NFTs",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Agents"
+        ]
+      }
+    ],
+    "founded": 2019,
+    "funding": 31400000,
+    "links": {
+      "homepage": "https://aliagents.ai/",
+      "logo": "/imgs/AI_Crypto/Agents/Alethea AI.jpg",
+      "twitter": "https://x.com/real_alethia",
+      "github": ""
+    }
+  },
+  {
+    "name": "WayFinder",
+    "description": "Omni-chain AI agent navigation protocol, autonomous shells with Web3 wallets, PROMPT token for wayfinding paths, cross-chain DeFi",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Agents",
+          "Inference"
+        ]
+      }
+    ],
+    "founded": 2024,
+    "funding": null,
+    "links": {
+      "homepage": "https://wayfinder.ai/",
+      "logo": "/imgs/AI_Crypto/Inference/WayFinder.jpg",
+      "twitter": "https://x.com/AIWayfinder",
+      "github": ""
+    }
+  },
+  {
+    "name": "Bittensor",
+    "description": "Blockchain-based decentralized machine learning network rewarding models with TAO tokens",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Infra",
+          "Data"
+        ]
+      }
+    ],
+    "founded": 2019,
+    "funding": null,
+    "links": {
+      "homepage": "https://bittensor.com/",
+      "logo": "/imgs/AI_Crypto/Data/Bittensor.jpg",
+      "twitter": "https://x.com/opentensor",
+      "github": ""
+    }
+  },
+  {
+    "name": "Ritual",
+    "description": "Decentralized AI compute platform enabling protocols to integrate AI models on-chain",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Infra",
+          "Training"
+        ]
+      }
+    ],
+    "founded": 2023,
+    "funding": 25000000,
+    "links": {
+      "homepage": "https://ritual.net/",
+      "logo": "/imgs/AI_Crypto/Training/Ritual.jpg",
+      "twitter": "https://x.com/ritualnet",
+      "github": ""
+    }
+  },
+  {
+    "name": "Autonomys",
+    "description": "Autonomys Network AI3.0 L1 PoAS consensus 522PB storage, distributed DSN, modular execution domains, AI agents infrastructure, AI3 token 1B supply",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Infra",
+          "Training"
+        ]
+      }
+    ],
+    "founded": 2024,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.autonomys.xyz/",
+      "logo": "/imgs/AI_Crypto/Infra/Autonomys.png",
+      "twitter": "https://x.com/AutonomysNet",
+      "github": ""
+    }
+  },
+  {
+    "name": "Sentient",
+    "description": "Open-source AGI platform with $85M seed from Founders Fund/Pantera, Polygon co-founder Sandeep Nailwal, OML framework for AI monetization",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Infra",
+          "Training"
+        ]
+      }
+    ],
+    "founded": 2024,
+    "funding": 85000000,
+    "links": {
+      "homepage": "https://www.sentient.xyz/",
+      "logo": "/imgs/AI_Crypto/Training/Sentient.jpg",
+      "twitter": "https://x.com/SentientAGI",
+      "github": ""
+    }
+  },
+  {
+    "name": "Prime Intellect",
+    "description": "Peer-to-peer compute and intelligence network enabling decentralized AI development at scale",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Infra",
+          "Training"
+        ]
+      }
+    ],
+    "founded": 2024,
+    "funding": 20000000,
+    "links": {
+      "homepage": "https://www.primeintellect.ai/",
+      "logo": "/imgs/AI_Crypto/Training/PrimeIntellect.jpg",
+      "twitter": "https://x.com/PrimeIntellect",
+      "github": ""
+    }
+  },
+  {
+    "name": "Pluralis",
+    "description": "Pluralis decentralized AI protocol for collaborative model training, $7.6M seed from CoinFund/USV, transparent ownership, data privacy, foundation models",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Infra",
+          "Training"
+        ]
+      }
+    ],
+    "founded": 2024,
+    "funding": 7600000,
+    "links": {
+      "homepage": "https://pluralis.ai/",
+      "logo": "/imgs/AI_Crypto/Training/Pluralis.jpg",
+      "twitter": "https://x.com/Pluralis",
+      "github": ""
+    }
+  },
+  {
+    "name": "Macrocosmos",
+    "description": "Macrocosmos Bittensor AI subnets SN13/25/37 democratized decentralized supercomputer protein-folding LLM fine-tuning datasets TAO",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": 2023,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.macrocosmos.ai/",
+      "logo": "/imgs/AI_Crypto/Infra/Macrocosmos.jpg",
+      "twitter": "https://x.com/MacrocosmosAI",
+      "github": ""
+    }
+  },
+  {
+    "name": "Hyperspace",
+    "description": "Hyperspace AI agent network AgenticOS L1 blockchain HAP protocol distributed inference decentralized cloud storage peer-to-peer",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": 2024,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.hyper.space/",
+      "logo": "/imgs/AI_Crypto/Infra/Hyperspace.jpg",
+      "twitter": "https://x.com/HyperspaceAI",
+      "github": ""
+    }
+  },
+  {
+    "name": "HyperCycle",
+    "description": "HyperCycle Layer 0++ blockchain for AI microservices, Internet of AI, TODA/IP ledgerless, SingularityNET Proof of Reputation, founded 2022",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": 2022,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.hypercycle.ai/",
+      "logo": "/imgs/AI_Crypto/Infra/HyperCycle.jpg",
+      "twitter": "https://x.com/Hypercycle_AI",
+      "github": ""
+    }
+  },
+  {
+    "name": "ChainGPT",
+    "description": "ChainGPT AI blockchain platform June 2023 launch, AI chatbot/smart contracts/NFT generator/CryptoGuard security, CGPT token burn economy, AIVM blockchain",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Infra",
+          "Development Tools"
+        ]
+      }
+    ],
+    "founded": 2023,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.chaingpt.org/",
+      "logo": "/imgs/AI_Crypto/DevelopmentTools/ChainGPT.jpg",
+      "twitter": "https://x.com/Chain_GPT",
+      "github": ""
+    }
+  },
+  {
+    "name": "AIZel Network",
+    "description": "Integrating on-chain AI with blockchain infrastructure using TEEs and MPC for verifiable and trustless AI findings, building a DePIN for secure ML models.",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Infra",
+          "Inference"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://aizelnetwork.com/",
+      "logo": "/imgs/AI_Crypto/Inference/AIZel Network.jpg",
+      "twitter": "https://x.com/aizel_network",
+      "github": ""
+    }
+  },
+  {
+    "name": "Render",
+    "description": "Render Network GPU rendering Ethereum/Solana RNDR token decentralized 3D graphics compute $2B+ mcap OctaneRender integration",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Compute"
+        ]
+      }
+    ],
+    "founded": 2017,
+    "funding": null,
+    "links": {
+      "homepage": "http://rendernetwork.com",
+      "logo": "/imgs/AI_Crypto/Compute/Render.jpg",
+      "twitter": "https://x.com/rendernetwork",
+      "github": ""
+    }
+  },
+  {
+    "name": "Gensyn",
+    "description": "Gensyn decentralized ML compute $43M a16z Ethereum L1 AI training verification supercluster protocol idle GPU utilization",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Compute"
+        ]
+      }
+    ],
+    "founded": 2020,
+    "funding": null,
+    "links": {
+      "homepage": "http://gensyn.ai",
+      "logo": "/imgs/AI_Crypto/Compute/Gensyn.jpg",
+      "twitter": "https://x.com/gensynai",
+      "github": ""
+    }
+  },
+  {
+    "name": "Akash",
+    "description": "Decentralized cloud computing marketplace with $4.6M funding, $5M GPU incentive program 2024, permissionless deployment platform",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Compute"
+        ]
+      }
+    ],
+    "founded": 2018,
+    "funding": 4600000,
+    "links": {
+      "homepage": "https://akash.network",
+      "logo": "/imgs/AI_Crypto/Compute/Akash.jpg",
+      "twitter": "https://x.com/akashnet",
+      "github": ""
+    }
+  },
+  {
+    "name": "io.net",
+    "description": "Decentralized GPU cloud for AI workloads, 25K+ nodes, 70-90% cost savings vs AWS/GCP, Solana-based, ParallelAI partnership",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Compute"
+        ]
+      }
+    ],
+    "founded": 2023,
+    "funding": null,
+    "links": {
+      "homepage": "https://io.net",
+      "logo": "/imgs/AI_Crypto/Compute/io.net.jpg",
+      "twitter": "https://x.com/ionet",
+      "github": ""
+    }
+  },
+  {
+    "name": "Phala",
+    "description": "Phala Network confidential smart contracts TEE-Blockchain hybrid, Polkadot parachain, dstack TEE framework, MPC/ZKP verification, AI Cloud computing",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Compute"
+        ]
+      }
+    ],
+    "founded": 2018,
+    "funding": null,
+    "links": {
+      "homepage": "https://phala.com",
+      "logo": "/imgs/AI_Crypto/Compute/Phala.jpg",
+      "twitter": "https://x.com/PhalaNetwork",
+      "github": ""
+    }
+  },
+  {
+    "name": "Grass",
+    "description": "Grass DePIN web scraping network 2.5M nodes, Solana-based, AI data collection, unused bandwidth monetization, ZK proofs, Sovereign Data Rollup",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Compute"
+        ]
+      },
+      {
+        "sector": "Data",
+        "types": [
+          "Marketplaces"
+        ]
+      }
+    ],
+    "founded": 2023,
+    "funding": null,
+    "links": {
+      "homepage": "http://grass.io",
+      "logo": "/imgs/Data/Marketplaces/grass.jpg",
+      "twitter": "https://x.com/grass",
+      "github": ""
+    }
+  },
+  {
+    "name": "Fluence",
+    "description": "Decentralized cloudless computing platform DePIN, 60-80% cost savings vs AWS, Aqua programming language, FLT token, IPC from Filecoin creators",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Compute"
+        ]
+      }
+    ],
+    "founded": 2023,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.fluence.network/",
+      "logo": "/imgs/AI_Crypto/Compute/Fluence.jpg",
+      "twitter": "https://x.com/fluence_project",
+      "github": ""
+    }
+  },
+  {
+    "name": "Aethir",
+    "description": "Aethir decentralized GPU cloud 435K+ containers, 200+ locations, 93+ countries, $400M compute, 2K+ H100s, ATH token, AI/gaming focus",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Compute"
+        ]
+      }
+    ],
+    "founded": 2023,
+    "funding": 140000000,
+    "links": {
+      "homepage": "https://hub.xyz/aethir",
+      "logo": "/imgs/AI_Crypto/Compute/Aethir.jpg",
+      "twitter": "https://x.com/AethirCloud",
+      "github": ""
+    }
+  },
+  {
+    "name": "Compute Labs",
+    "description": "AI infrastructure investment platform financializing AI compute assets and transforming GPUs into yield-bearing digital assets",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Compute"
+        ]
+      }
+    ],
+    "founded": 2024,
+    "funding": 3000000,
+    "links": {
+      "homepage": "https://www.computelabs.ai/en",
+      "logo": "/imgs/AI_Crypto/Compute/Compute Labs.jpg",
+      "twitter": "https://x.com/Compute_Labs",
+      "github": ""
+    }
+  },
+  {
+    "name": "Nosana",
+    "description": "Nosana Solana AI inference network decentralized GPU grid NOS token $50M+ TVL CI/CD pipelines test automation",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Compute"
+        ]
+      }
+    ],
+    "founded": 2021,
+    "funding": null,
+    "links": {
+      "homepage": "https://nosana.com/",
+      "logo": "/imgs/AI_Crypto/Compute/Nosana.jpg",
+      "twitter": "https://x.com/nosana_ai",
+      "github": ""
+    }
+  },
+  {
+    "name": "Exabits",
+    "description": "Exabits GPU tokenization platform $15M seed $150M valuation H100/H200/B200 compute NEAR partnership Ethereum DePIN 300% growth",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Compute"
+        ]
+      }
+    ],
+    "founded": 2021,
+    "funding": null,
+    "links": {
+      "homepage": "http://www.exabits.ai",
+      "logo": "/imgs/AI_Crypto/Compute/Exabits.jpg",
+      "twitter": "https://x.com/exa_bits",
+      "github": ""
+    }
+  },
+  {
+    "name": "Nesa",
+    "description": "Nesa L1 blockchain AI privacy-preserving execution BSNS sharding 2GB RAM nodes ZKML Split Learning zkDPS NES token marketplace",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Compute"
+        ]
+      }
+    ],
+    "founded": 2024,
+    "funding": null,
+    "links": {
+      "homepage": "https://discord.gg/nesa",
+      "logo": "/imgs/AI_Crypto/Compute/Nesa.jpg",
+      "twitter": "https://x.com/nesaorg",
+      "github": ""
+    }
+  },
+  {
+    "name": "Nous Research",
+    "description": "Applied research group focused on open-source LLM architecture and human-centric language models",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Training"
+        ]
+      }
+    ],
+    "founded": 2023,
+    "funding": null,
+    "links": {
+      "homepage": "http://nousresearch.com",
+      "logo": "/imgs/AI_Crypto/Training/NousResearch.jpg",
+      "twitter": "https://x.com/NousResearch",
+      "github": ""
+    }
+  },
+  {
+    "name": "Sahara AI",
+    "description": "Decentralized AI network enabling secure deployment of autonomous AI with privacy-first blockchain infrastructure",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Data"
+        ]
+      }
+    ],
+    "founded": 2023,
+    "funding": 43000000,
+    "links": {
+      "homepage": "https://SaharaAI.com",
+      "logo": "/imgs/AI_Crypto/Data/SaharaAI.jpg",
+      "twitter": "https://x.com/SaharaAI",
+      "github": ""
+    }
+  },
+  {
+    "name": "KIP Protocol",
+    "description": "Decentralized base layer for AI models and data owners to safely transact and monetize knowledge assets in Web3",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Data"
+        ]
+      }
+    ],
+    "founded": 2019,
+    "funding": 5000000,
+    "links": {
+      "homepage": "https://hub.xyz/kip-protocol",
+      "logo": "/imgs/AI_Crypto/Data/KIP Protocol.jpg",
+      "twitter": "https://x.com/KIPprotocol",
+      "github": ""
+    }
+  },
+  {
+    "name": "The Graph",
+    "description": "Decentralized protocol for indexing and querying blockchain data across 90+ networks",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Data"
+        ]
+      },
+      {
+        "sector": "Data",
+        "types": [
+          "Indexing"
+        ]
+      }
+    ],
+    "founded": 2018,
+    "funding": 67500000,
+    "links": {
+      "homepage": "https://thegraph.com",
+      "logo": "/imgs/Data/Indexing/The Graph.jpg",
+      "twitter": "https://x.com/graphprotocol",
+      "github": ""
+    }
+  },
+  {
+    "name": "Synternet",
+    "description": "Interoperable, real-time data infrastructure across blockchains, facilitating seamless decentralized data exchange and eliminating reliance on centralized APIs via a Data Layer.",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Data"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.synternet.com/",
+      "logo": "/imgs/AI_Crypto/Data/Synternet.jpg",
+      "twitter": "https://x.com/synternet_com",
+      "github": ""
+    }
+  },
+  {
+    "name": "Story Protocol",
+    "description": "Layer-1 blockchain for intellectual property tokenization making IP programmable, enforceable, and monetizable",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Data"
+        ]
+      },
+      {
+        "sector": "Data",
+        "types": [
+          "Marketplaces"
+        ]
+      }
+    ],
+    "founded": 2023,
+    "funding": 140000000,
+    "links": {
+      "homepage": "https://www.story.foundation/",
+      "logo": "/imgs/Data/Marketplaces/StoryProtocol.jpg",
+      "twitter": "https://x.com/StoryProtocol",
+      "github": ""
+    }
+  },
+  {
+    "name": "Space and Time",
+    "description": "Web3-native data warehouse with zero-knowledge coprocessor for SQL queries joining on-chain and off-chain data",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Data"
+        ]
+      },
+      {
+        "sector": "Data",
+        "types": [
+          "Indexing"
+        ]
+      }
+    ],
+    "founded": 2022,
+    "funding": 50000000,
+    "links": {
+      "homepage": "https://www.spaceandtime.io",
+      "logo": "/imgs/Data/Indexing/Space and Time.jpg",
+      "twitter": "https://x.com/spaceandtime",
+      "github": ""
+    }
+  },
+  {
+    "name": "Dtelecom",
+    "description": "Decentralized RTC network (DePIN) for audio/video conferencing, $DTEL token rewards, peaq blockchain integration, MagicBlock partnership",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Data"
+        ]
+      },
+      {
+        "sector": "Data",
+        "types": [
+          "Marketplaces"
+        ]
+      }
+    ],
+    "founded": 2023,
+    "funding": null,
+    "links": {
+      "homepage": "https://dtelecom.org",
+      "logo": "/imgs/Data/Marketplaces/dtelecom.jpg",
+      "twitter": "https://x.com/dtelecom",
+      "github": ""
+    }
+  },
+  {
+    "name": "Orbs",
+    "description": "Orbs Layer-3 blockchain for DeFi trading, PoS consensus, runs on Ethereum/TON, $100M+ staked, 60+ team, ORBS ERC-20 token 10B supply, founded 2017",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Data"
+        ]
+      }
+    ],
+    "founded": 2017,
+    "funding": null,
+    "links": {
+      "homepage": "https://orbs.com/",
+      "logo": "/imgs/AI_Crypto/Data/Orbs.jpg",
+      "twitter": "https://x.com/orbs_network",
+      "github": ""
+    }
+  },
+  {
+    "name": "Codatta",
+    "description": "Decentralized, multi-chain protocol transforming raw data into tokenized assets, enabling contributors to earn perpetual royalties from AI and DeSci projects.",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Data"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://bento.me/codatta",
+      "logo": "/imgs/AI_Crypto/Data/Codatta.jpg",
+      "twitter": "https://x.com/codatta_io",
+      "github": ""
+    }
+  },
+  {
+    "name": "Fractal ID",
+    "description": "Chain-agnostic decentralized identity system providing KYC/KYB verification for 250+ Web3 projects",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Data"
+        ]
+      },
+      {
+        "sector": "Data",
+        "types": [
+          "Provenance"
+        ]
+      }
+    ],
+    "founded": 2020,
+    "funding": null,
+    "links": {
+      "homepage": "https://web.fractal.id/",
+      "logo": "/imgs/Data/Provenance/Fractal ID.jpg",
+      "twitter": "https://x.com/Fractal_ID",
+      "github": ""
+    }
+  },
+  {
+    "name": "Lighthouse",
+    "description": "Lighthouse Filecoin permanent storage protocol IPFS decentralized data preservation encryption",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Data"
+        ]
+      }
+    ],
+    "founded": 2021,
+    "funding": null,
+    "links": {
+      "homepage": "https://lighthouse.storage/",
+      "logo": "/imgs/AI_Crypto/Data/Lighthouse.jpg",
+      "twitter": "https://x.com/LighthouseWeb3",
+      "github": ""
+    }
+  },
+  {
+    "name": "Cambrian",
+    "description": "AI infrastructure protocol with $5.9M seed from a16z CSX, The Graph/Semiotic alumni, AI financial agents and predictive analytics",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Data"
+        ]
+      }
+    ],
+    "founded": 2024,
+    "funding": 5900000,
+    "links": {
+      "homepage": "https://cambrian.org/",
+      "logo": "/imgs/AI_Crypto/Data/Cambrian.jpg",
+      "twitter": "https://x.com/CambrianNetwork",
+      "github": ""
+    }
+  },
+  {
+    "name": "RYSK",
+    "description": "DeFi options protocol with Dynamic Hedging Vault (DHV) AMM, $1.8M funding from Lemniscap, Arbitrum Foundation grant",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Data"
+        ]
+      }
+    ],
+    "founded": 2022,
+    "funding": 1800000,
+    "links": {
+      "homepage": "http://rysk.finance",
+      "logo": "/imgs/AI_Crypto/Data/RYSK.jpg",
+      "twitter": "https://x.com/ryskfinance",
+      "github": ""
+    }
+  },
+  {
+    "name": "Spectral",
+    "description": "Spectral Labs onchain AI agents platform, Syntax LLM for Solidity code generation, 60K+ users, 1M+ smart contracts, 4.7K memecoin launches",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Data"
+        ]
+      }
+    ],
+    "founded": 2023,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.spectrallabs.xyz/",
+      "logo": "/imgs/AI_Crypto/Data/Spectral.jpg",
+      "twitter": "https://x.com/Spectral_Labs",
+      "github": ""
+    }
+  },
+  {
+    "name": "Openledger",
+    "description": "AI Blockchain L1 protocol for data/models/agents monetization, Binance HODLer Airdrops #36, OPEN token (former BitShares DEX)",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Data"
+        ]
+      }
+    ],
+    "founded": 2024,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.openledger.xyz",
+      "logo": "/imgs/AI_Crypto/Data/Openledger.jpg",
+      "twitter": "https://x.com/OpenledgerHQ",
+      "github": ""
+    }
+  },
+  {
+    "name": "3Box",
+    "description": "3Box decentralized identity data storage Ethereum profiles social graphs user-controlled data",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Data"
+        ]
+      }
+    ],
+    "founded": 2018,
+    "funding": null,
+    "links": {
+      "homepage": "",
+      "logo": "/imgs/AI_Crypto/Data/3Box.jpg",
+      "twitter": "https://x.com/3boxlabs",
+      "github": ""
+    }
+  },
+  {
+    "name": "Teneo",
+    "description": "Teneo Protocol DePIN AI agent network browser Community Node X/Reddit/TikTok data Solana/Ethereum/Cosmos/Peaq 10B TENEO $3M seed",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Data"
+        ]
+      }
+    ],
+    "founded": 2024,
+    "funding": null,
+    "links": {
+      "homepage": "https://teneo-protocol.ai/",
+      "logo": "/imgs/AI_Crypto/Data/Teneo.jpg",
+      "twitter": "https://x.com/teneo_protocol",
+      "github": ""
+    }
+  },
+  {
+    "name": "Giza",
+    "description": "Giza verifiable AI inference ZKML zero-knowledge machine learning, on-chain AI models Starknet/Ethereum, trustless ML predictions",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Inference"
+        ]
+      }
+    ],
+    "founded": 2023,
+    "funding": null,
+    "links": {
+      "homepage": "http://www.gizatech.xyz",
+      "logo": "/imgs/AI_Crypto/Inference/Giza.jpg",
+      "twitter": "https://x.com/gizatechxyz",
+      "github": ""
+    }
+  },
+  {
+    "name": "Hyperbolic",
+    "description": "Decentralized GPU marketplace with $20M funding from Variant, Polychain, Proof of Sampling protocol, 75% cost savings, Hyper-dOS",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Inference"
+        ]
+      }
+    ],
+    "founded": 2022,
+    "funding": 20000000,
+    "links": {
+      "homepage": "http://www.hyperbolic.ai",
+      "logo": "/imgs/AI_Crypto/Inference/Hyperbolic.jpg",
+      "twitter": "https://x.com/hyperbolic_labs",
+      "github": ""
+    }
+  },
+  {
+    "name": "Kuzu",
+    "description": "KuzuDB embedded graph database MIT license Cypher queries not blockchain abandoned Oct 2025",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Inference"
+        ]
+      }
+    ],
+    "founded": 2023,
+    "funding": null,
+    "links": {
+      "homepage": "https://kuzudb.com",
+      "logo": "/imgs/AI_Crypto/Inference/Kuzu.jpg",
+      "twitter": "https://x.com/kuzudb",
+      "github": ""
+    }
+  },
+  {
+    "name": "TestMachine",
+    "description": "TestMachine AI blockchain security $2M Michigan Founders Fund/Decasonic smart contract auditing real-time testing platform",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Development Tools"
+        ]
+      }
+    ],
+    "founded": 2023,
+    "funding": null,
+    "links": {
+      "homepage": "http://testmachine.ai",
+      "logo": "/imgs/AI_Crypto/DevelopmentTools/TestMachine.jpg",
+      "twitter": "https://x.com/testmachine_ai",
+      "github": ""
+    }
+  },
+  {
+    "name": "MetaTrust",
+    "description": "MetaTrust Web3 security NTU $10M seed MetaScan automated scanning GPT-based auditing 20% more vulnerabilities detection",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Development Tools"
+        ]
+      }
+    ],
+    "founded": 2022,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.metatrust.io/",
+      "logo": "/imgs/AI_Crypto/DevelopmentTools/MetaTrust.jpg",
+      "twitter": "https://x.com/MetaTrustLabs",
+      "github": ""
+    }
+  },
+  {
+    "name": "Forta",
+    "description": "Forta Network decentralized security monitoring, $23M a16z/Coinbase, Ethereum/Polygon, 99% precision, FORT token staking, launched 2021",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Development Tools"
+        ]
+      }
+    ],
+    "founded": 2021,
+    "funding": 23000000,
+    "links": {
+      "homepage": "https://www.forta.org/",
+      "logo": "/imgs/AI_Crypto/DevelopmentTools/Forta.jpg",
+      "twitter": "https://x.com/FortaNetwork",
+      "github": ""
+    }
+  },
+  {
+    "name": "Arkham",
+    "description": "Blockchain analytics platform using AI to deanonymize on-chain data with Intel Exchange for buying and selling address labels",
+    "sectors": [
+      {
+        "sector": "AI & Crypto",
+        "types": [
+          "Development Tools"
+        ]
+      },
+      {
+        "sector": "Data",
+        "types": [
+          "Analytics"
+        ]
+      }
+    ],
+    "founded": 2020,
+    "funding": 12500000,
+    "links": {
+      "homepage": "https://arkm.com",
+      "logo": "/imgs/Data/Analytics/arkham.jpg",
+      "twitter": "https://x.com/arkham",
+      "github": ""
+    }
+  },
+  {
+    "name": "Flipside",
+    "description": "Blockchain analytics platform with $65.3M funding ($50M Series A @ $350M valuation), Republic Capital led, SQL-based crypto data queries",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Infra",
+          "Marketplaces"
+        ]
+      }
+    ],
+    "founded": 2017,
+    "funding": 65300000,
+    "links": {
+      "homepage": "https://flipsidecrypto.xyz",
+      "logo": "/imgs/Data/Marketplaces/Flipside.jpg",
+      "twitter": "https://x.com/flipsidecrypto",
+      "github": ""
+    }
+  },
+  {
+    "name": "Footprint",
+    "description": "Comprehensive blockchain data analytics platform simplifying and visualizing complex blockchain information for Web3, offering drag-and-drop tools and API access.",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.footprint.network/",
+      "logo": "/imgs/Data/Infra/Footprint.jpg",
+      "twitter": "https://x.com/Footprint_Data",
+      "github": ""
+    }
+  },
+  {
+    "name": "SubQuery",
+    "description": "SubQuery Web3 data indexing RPC infrastructure 200+ networks open-source SDK SQT token decentralized protocol 99.9% uptime managed service",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Infra",
+          "Indexing"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://subquery.network/",
+      "logo": "/imgs/Data/Indexing/SubQuery.jpg",
+      "twitter": "https://x.com/SubQueryNetwork",
+      "github": ""
+    }
+  },
+  {
+    "name": "QuickNode",
+    "description": "$105,000,000 ",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.quicknode.com/",
+      "logo": "/imgs/Data/Infra/QuickNode.jpg",
+      "twitter": "https://x.com/QuickNode",
+      "github": ""
+    }
+  },
+  {
+    "name": "Ankr",
+    "description": "Ankr DePIN infrastructure 8B daily RPC requests, 75+ blockchains, 30+ global regions, bare-metal nodes, Web3 API AppChains, founded 2017",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": 2017,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.ankr.com/",
+      "logo": "/imgs/Data/Infra/ankr.jpg",
+      "twitter": "https://x.com/ankr",
+      "github": ""
+    }
+  },
+  {
+    "name": "Figment",
+    "description": "Institutional blockchain staking provider with $17B+ assets staked across 50+ networks, backed by C1 Fund, Anchorage",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": 2018,
+    "funding": 163840000,
+    "links": {
+      "homepage": "https://figment.io/",
+      "logo": "/imgs/Data/Infra/Figment.jpg",
+      "twitter": "https://x.com/Figment_io",
+      "github": ""
+    }
+  },
+  {
+    "name": "Chainstack",
+    "description": "Chainstack blockchain infrastructure managed nodes 100+ protocols, APIs RPCs, enterprise-grade 99.9% SLA, global deployment",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": 2018,
+    "funding": null,
+    "links": {
+      "homepage": "https://chainstack.com",
+      "logo": "/imgs/Data/Infra/Chainstack.jpg",
+      "twitter": "https://x.com/ChainstackHQ",
+      "github": ""
+    }
+  },
+  {
+    "name": "Blockdaemon",
+    "description": "Blockdaemon institutional blockchain infrastructure $110B assets, 400+ institutions, 99.9% uptime, ISO 27001/SOC 2, multi-cloud 70+ POPs, #1 staking $10B",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": 2017,
+    "funding": null,
+    "links": {
+      "homepage": "https://blockdaemon.com/",
+      "logo": "/imgs/Data/Infra/Blockdaemon.jpg",
+      "twitter": "https://x.com/BlockdaemonHQ",
+      "github": ""
+    }
+  },
+  {
+    "name": "Pocket Network",
+    "description": "Decentralized infrastructure protocol connecting blockchain applications with global node operators for reliable RPC access",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": 2020,
+    "funding": 10000000,
+    "links": {
+      "homepage": "https://pocket.network/",
+      "logo": "/imgs/Data/Infra/Pocket Network.jpg",
+      "twitter": "https://x.com/POKTnetwork",
+      "github": ""
+    }
+  },
+  {
+    "name": "Blast",
+    "description": "Ethereum Layer 2 with native yield (4% ETH, 5% stablecoins) via Lido and MakerDAO DSR, founded by Blur creator Pacman",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": 2023,
+    "funding": 20000000,
+    "links": {
+      "homepage": "https://blast.io",
+      "logo": "/imgs/Data/Infra/blast.jpg",
+      "twitter": "https://x.com/blast",
+      "github": ""
+    }
+  },
+  {
+    "name": "Infura",
+    "description": "ConsenSys Ethereum infrastructure API, 430K+ developers, Web3 API for Ethereum/IPFS/Polygon/Linea, powers MetaMask/ENS/OpenZeppelin",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": 2016,
+    "funding": null,
+    "links": {
+      "homepage": "http://www.infura.io",
+      "logo": "/imgs/Data/Infra/Infura.jpg",
+      "twitter": "https://x.com/infura_io",
+      "github": ""
+    }
+  },
+  {
+    "name": "NodeReal",
+    "description": "NodeReal Singapore blockchain infrastructure MegaNode RPC APIs 20K+ developers 1B+ daily requests 99.8% uptime Ethereum/BNB/Aptos multi-chain",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": 2021,
+    "funding": null,
+    "links": {
+      "homepage": "https://nodereal.io/",
+      "logo": "/imgs/Data/Infra/NodeReal.jpg",
+      "twitter": "https://x.com/Nodereal_io",
+      "github": ""
+    }
+  },
+  {
+    "name": "GetBlock",
+    "description": "GetBlock Web3 RPC provider since 2019, 55+ blockchains, 99.99% uptime, REST/JSON-RPC/WebSocket APIs, full/archive nodes, 24/7 support",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": 2019,
+    "funding": null,
+    "links": {
+      "homepage": "https://getblock.io/?utm_source=x&utm_medium=social/",
+      "logo": "/imgs/Data/Infra/GetBlock.jpg",
+      "twitter": "https://x.com/getblockio",
+      "github": ""
+    }
+  },
+  {
+    "name": "DataLayer",
+    "description": "Datalayer parallel localchains shared validator set data availability layer blockchain internet-scale Chia DataLayer Datai Network",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "http://datalayer.xyz",
+      "logo": "/imgs/Data/Infra/DataLayer.jpg",
+      "twitter": "https://x.com/datalayerxyz",
+      "github": ""
+    }
+  },
+  {
+    "name": "Nownodes",
+    "description": "Blockchain-as-a-Service (BaaS) for 110+ networks, 99.95% uptime, RPC nodes/explorers API, shared/dedicated node infrastructure",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": 2019,
+    "funding": null,
+    "links": {
+      "homepage": "http://nownodes.io",
+      "logo": "/imgs/Data/Infra/NOWNodes.jpg",
+      "twitter": "https://x.com/NOWNodes",
+      "github": ""
+    }
+  },
+  {
+    "name": "Moralis",
+    "description": "Comprehensive suite of Web3 Data APIs and development tools simplifying dApp creation with real-time data on NFTs, tokens, and cross-chain compatibility.",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://moralis.com/",
+      "logo": "/imgs/Data/Infra/Moralis.jpg",
+      "twitter": "https://x.com/moralisdevs",
+      "github": ""
+    }
+  },
+  {
+    "name": "Redstone Protocol",
+    "description": "Modular oracle infrastructure providing 1,100+ data feeds across 60+ blockchains for DeFi protocols",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": 2020,
+    "funding": 22000000,
+    "links": {
+      "homepage": "https://redstone.finance/",
+      "logo": "/imgs/Data/Infra/Redstone Protocol.jpg",
+      "twitter": "https://x.com/redstone_defi",
+      "github": ""
+    }
+  },
+  {
+    "name": "BloXroute",
+    "description": "Blockchain Distribution Network (BDN) Layer 0 scaling solution, 400-600ms faster propagation, frontrunning protection, neutral infrastructure",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Infra"
+        ]
+      }
+    ],
+    "founded": 2018,
+    "funding": null,
+    "links": {
+      "homepage": "https://bloxroute.com/",
+      "logo": "/imgs/Data/Infra/bloxroute.jpg",
+      "twitter": "https://x.com/bloxroute",
+      "github": ""
+    }
+  },
+  {
+    "name": "Goldsky",
+    "description": "Goldsky blockchain data indexing real-time subgraphs, Mirror pipelines, high-performance infrastructure, The Graph alternative",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Indexing"
+        ]
+      }
+    ],
+    "founded": 2022,
+    "funding": null,
+    "links": {
+      "homepage": "https://goldsky.com",
+      "logo": "/imgs/Data/Indexing/Goldsky.jpg",
+      "twitter": "https://x.com/goldskyio",
+      "github": ""
+    }
+  },
+  {
+    "name": "Bitquery",
+    "description": "Bitquery GraphQL blockchain data API 40+ blockchains Coinpath\u00ae money flow analysis NFT API WebSockets real-time Ethereum/Solana/BSC analytics",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Indexing"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://bitquery.io",
+      "logo": "/imgs/Data/Indexing/Bitquery.jpg",
+      "twitter": "https://x.com/Bitquery_io",
+      "github": ""
+    }
+  },
+  {
+    "name": "APILayer",
+    "description": "Robust API service (Coinlayer) for accessing real-time and historical cryptocurrency exchange rate data from 25+ exchanges.",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Indexing"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://apilayer.com/",
+      "logo": "/imgs/Data/Indexing/APILayer.jpg",
+      "twitter": "https://x.com/apilayer",
+      "github": ""
+    }
+  },
+  {
+    "name": "Streamr",
+    "description": "Real-time data network with $30M ICO 2018, Gnosis/Polygon deployment, decentralized pub/sub infrastructure for data streams",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Indexing"
+        ]
+      }
+    ],
+    "founded": 2017,
+    "funding": 30000000,
+    "links": {
+      "homepage": "https://streamr.network",
+      "logo": "/imgs/Data/Indexing/Streamr.jpg",
+      "twitter": "https://x.com/Streamr",
+      "github": ""
+    }
+  },
+  {
+    "name": "Archway",
+    "description": "Archway Cosmos SDK blockchain developer rewards protocol, smart contract incentives, IBC-enabled, CosmWasm contracts, launched Aug 2023",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Indexing"
+        ]
+      }
+    ],
+    "founded": 2021,
+    "funding": null,
+    "links": {
+      "homepage": "https://archway.io/",
+      "logo": "/imgs/Data/Indexing/Archway.jpg",
+      "twitter": "https://x.com/archwayHQ",
+      "github": ""
+    }
+  },
+  {
+    "name": "Nansen",
+    "description": "Nansen on-chain analytics 20+ chains, 300M+ wallet labels 99% AI-inferred, 60TB data 1PB/day processing, Google Cloud BigQuery, Smart Money tracking",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Analytics",
+          "Marketplaces"
+        ]
+      }
+    ],
+    "founded": 2019,
+    "funding": null,
+    "links": {
+      "homepage": "https://nsn.ai/explore",
+      "logo": "/imgs/Data/Analytics/Nansen.jpg",
+      "twitter": "https://x.com/nansen_ai",
+      "github": ""
+    }
+  },
+  {
+    "name": "Token Terminal",
+    "description": "Token Terminal crypto fundamentals analytics, traditional financial metrics P/E ratio, revenue/fees/earnings, GMV, treasury analytics, institutional-grade",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Analytics",
+          "Marketplaces"
+        ]
+      }
+    ],
+    "founded": 2019,
+    "funding": null,
+    "links": {
+      "homepage": "https://tokenterminal.com",
+      "logo": "/imgs/Data/Analytics/tokenterminal.jpg",
+      "twitter": "https://x.com/tokenterminal",
+      "github": ""
+    }
+  },
+  {
+    "name": "Messari",
+    "description": "Messari crypto research & analytics, market intelligence, reports, token unlocks, fundraising data, Kaiko/Gemini integration, Pro/Enterprise tiers",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Analytics"
+        ]
+      }
+    ],
+    "founded": 2018,
+    "funding": null,
+    "links": {
+      "homepage": "https://messari.io",
+      "logo": "/imgs/Data/Analytics/Messari.jpg",
+      "twitter": "https://x.com/MessariCrypto",
+      "github": ""
+    }
+  },
+  {
+    "name": "Santiment",
+    "description": "Santiment crypto social analytics 1954+ assets, Twitter/Reddit/Telegram sentiment, Emerging Trends FUD/FOMO detection, on-chain+social datasets, founded 2017",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Analytics"
+        ]
+      }
+    ],
+    "founded": 2017,
+    "funding": null,
+    "links": {
+      "homepage": "https://app.santiment.net/pricing/&fpr=twitter",
+      "logo": "/imgs/Data/Analytics/Santiment.jpg",
+      "twitter": "https://x.com/santimentfeed",
+      "github": ""
+    }
+  },
+  {
+    "name": "Sentora",
+    "description": "Institutional-grade DeFi asset management service platform providing compliant, secure, and unified interface for institutional investors to access decentralized markets.",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Analytics"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.sentora.com/",
+      "logo": "/imgs/Data/Analytics/Sentora.jpg",
+      "twitter": "https://x.com/SentoraHQ",
+      "github": ""
+    }
+  },
+  {
+    "name": "DappRadar",
+    "description": "DappRadar dApp analytics 14K+ dApps 90+ chains 1M+ monthly users RADAR token DAO gaming DeFi NFT tracking 2018 Web3 discovery",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Analytics"
+        ]
+      }
+    ],
+    "founded": 2018,
+    "funding": null,
+    "links": {
+      "homepage": "https://dappradar.com/",
+      "logo": "/imgs/Data/Analytics/DappRadar.jpg",
+      "twitter": "https://x.com/DappRadar",
+      "github": ""
+    }
+  },
+  {
+    "name": "DappLooker",
+    "description": "DappLooker blockchain dApp analytics visualization no-code dashboard platform",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Analytics"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://dapplooker.com/",
+      "logo": "/imgs/Data/Analytics/dapplooker.jpg",
+      "twitter": "https://x.com/dapplooker",
+      "github": ""
+    }
+  },
+  {
+    "name": "CryptoQuant",
+    "description": "CryptoQuant on-chain analytics Bitcoin/Ethereum South Korea exchange flows miner data derivatives funding rates no-code drag-drop professional",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Analytics"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://cryptoquant.com/",
+      "logo": "/imgs/Data/Analytics/CryptoQuant.jpg",
+      "twitter": "https://x.com/cryptoquant_com",
+      "github": ""
+    }
+  },
+  {
+    "name": "Glassnode",
+    "description": "On-chain blockchain analytics and market intelligence platform, founded Zug Switzerland, Wattx investor, acquired Accointing 2022",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Analytics"
+        ]
+      }
+    ],
+    "founded": 2018,
+    "funding": null,
+    "links": {
+      "homepage": "http://glassnode.com",
+      "logo": "/imgs/Data/Analytics/Glassnode.jpg",
+      "twitter": "https://x.com/glassnode",
+      "github": ""
+    }
+  },
+  {
+    "name": "TokenInsight",
+    "description": "TokenInsight crypto research analytics ratings blockchain data intelligence",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Analytics"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "http://tokeninsight.com",
+      "logo": "/imgs/Data/Analytics/TokenInsight.jpg",
+      "twitter": "https://x.com/TokenInsight",
+      "github": ""
+    }
+  },
+  {
+    "name": "Kaiko",
+    "description": "Kaiko crypto market data provider since 2014, 100+ exchanges, WebSocket/REST API, Level 1/2 data, blockchain monitoring, indices, institutional-grade",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Analytics",
+          "Marketplaces"
+        ]
+      }
+    ],
+    "founded": 2014,
+    "funding": null,
+    "links": {
+      "homepage": "http://www.kaiko.com",
+      "logo": "/imgs/Data/Analytics/Kaiko.jpg",
+      "twitter": "https://x.com/KaikoData",
+      "github": ""
+    }
+  },
+  {
+    "name": "Blockdata",
+    "description": "Blockdata blockchain market intelligence 10K+ DLT companies, acquired by CB Insights 2020, Amsterdam-based, specialized filters/graphs for discovery",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Analytics",
+          "Marketplaces"
+        ]
+      }
+    ],
+    "founded": 2017,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.blockdata.tech/blog",
+      "logo": "/imgs/Data/Analytics/Blockdata.jpg",
+      "twitter": "https://x.com/blockdata_tech",
+      "github": ""
+    }
+  },
+  {
+    "name": "LunarCrush",
+    "description": "Social analytics platform for crypto/stocks with $5M Series A @ $30M valuation, Draper Round Table/Ince Capital led, AI-powered sentiment analysis",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Analytics"
+        ]
+      }
+    ],
+    "founded": 2019,
+    "funding": 5000000,
+    "links": {
+      "homepage": "https://LunarCrush.com",
+      "logo": "/imgs/Data/Analytics/LunarCrush.jpg",
+      "twitter": "https://x.com/LunarCrush",
+      "github": ""
+    }
+  },
+  {
+    "name": "CoinMetrics",
+    "description": "Crypto intelligence data company providing network data, market data, indexes, and risk management services, acquired by Talos",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Analytics"
+        ]
+      }
+    ],
+    "founded": 2017,
+    "funding": 35000000,
+    "links": {
+      "homepage": "https://coinmetrics.io",
+      "logo": "/imgs/Data/Analytics/coinmetrics.jpg",
+      "twitter": "https://x.com/coinmetrics",
+      "github": ""
+    }
+  },
+  {
+    "name": "CryptoRank",
+    "description": "CryptoRank crypto analytics 32K+ tokens, 1M+ users, VC funding analytics, IDO/IEO ROI tracking, Fear & Greed Index, public API 14K+ markets",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Analytics"
+        ]
+      }
+    ],
+    "founded": 2018,
+    "funding": null,
+    "links": {
+      "homepage": "https://cryptorank.io",
+      "logo": "/imgs/Data/Analytics/CryptoRank.jpg",
+      "twitter": "https://x.com/CryptoRank_io",
+      "github": ""
+    }
+  },
+  {
+    "name": "SpruceID",
+    "description": "Decentralized identity toolkit with $41.5M funding ($34M a16z-led Series A), Sign-In with Ethereum (EIP-4361), DHS $1.7M contract",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Provenance"
+        ]
+      }
+    ],
+    "founded": 2020,
+    "funding": 41500000,
+    "links": {
+      "homepage": "http://spruceid.com",
+      "logo": "/imgs/Data/Provenance/SpruceID.jpg",
+      "twitter": "https://x.com/SpruceID",
+      "github": ""
+    }
+  },
+  {
+    "name": "Lens Protocol",
+    "description": "Decentralized social graph on Polygon blockchain enabling Web3 social media platforms with user-owned content",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Provenance"
+        ]
+      }
+    ],
+    "founded": 2022,
+    "funding": 31000000,
+    "links": {
+      "homepage": "https://www.lens.xyz",
+      "logo": "/imgs/Data/Provenance/Lens Protocol.jpg",
+      "twitter": "https://x.com/LC",
+      "github": ""
+    }
+  },
+  {
+    "name": "Verida",
+    "description": "Verida self-sovereign identity data storage decentralized personal data Web3",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Provenance"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://verida.ai",
+      "logo": "/imgs/Data/Provenance/Verida.jpg",
+      "twitter": "https://x.com/Verida_io",
+      "github": ""
+    }
+  },
+  {
+    "name": "KILT Protocol",
+    "description": "Polkadot parachain for decentralized identifiers and verifiable credentials following W3C standards",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Provenance"
+        ]
+      }
+    ],
+    "founded": 2021,
+    "funding": null,
+    "links": {
+      "homepage": "https://kilt.io/",
+      "logo": "/imgs/Data/Provenance/KILT Protocol.jpg",
+      "twitter": "https://x.com/Kiltprotocol",
+      "github": ""
+    }
+  },
+  {
+    "name": "Irys",
+    "description": "Layer-1 data chain making data programmable and actionable on-chain, unifying data storage and smart contract execution for dynamic, verifiable data usage.",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Provenance"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://irys.xyz/",
+      "logo": "/imgs/Data/Provenance/Irys.jpg",
+      "twitter": "https://x.com/irys_xyz",
+      "github": ""
+    }
+  },
+  {
+    "name": "OriginTrail",
+    "description": "Open-source Web3 infrastructure combining blockchain with a Decentralized Knowledge Graph (DKG) to manage and verify data about real-world assets.",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Provenance"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://origintrail.io/",
+      "logo": "/imgs/Data/Provenance/OriginTrail.jpg",
+      "twitter": "https://x.com/origin_trail",
+      "github": ""
+    }
+  },
+  {
+    "name": "KYVE",
+    "description": "KYVE Network decentralized data lake L1 PoS blockchain, multi-chain Bitcoin/Cosmos/Solana data validation, Arweave storage, Ignite framework",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Provenance"
+        ]
+      }
+    ],
+    "founded": 2021,
+    "funding": null,
+    "links": {
+      "homepage": "https://kyve.network",
+      "logo": "/imgs/Data/Provenance/KYVE.jpg",
+      "twitter": "https://x.com/KYVENetwork",
+      "github": ""
+    }
+  },
+  {
+    "name": "Hive",
+    "description": "Hive blockchain social media DPoS 3-second transactions Steemit fork March 2020 HIVE rewards content creators decentralized apps",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Provenance"
+        ]
+      }
+    ],
+    "founded": 2020,
+    "funding": null,
+    "links": {
+      "homepage": "http://hive.io",
+      "logo": "/imgs/Data/Provenance/Hive.jpg",
+      "twitter": "https://x.com/hiveblocks",
+      "github": ""
+    }
+  },
+  {
+    "name": "EigenLayer",
+    "description": "Ethereum restaking protocol enabling ETH stakers to secure additional protocols, with $19.3B TVL and EIGEN token launch Oct 2024",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Provenance"
+        ]
+      }
+    ],
+    "founded": 2023,
+    "funding": 150000000,
+    "links": {
+      "homepage": "https://www.eigencloud.xyz/",
+      "logo": "/imgs/Data/Provenance/EigenLayer.jpg",
+      "twitter": "https://x.com/eigencloud",
+      "github": ""
+    }
+  },
+  {
+    "name": "Safeheron",
+    "description": "Safeheron MPC+TEE self-custody platform, institutional-grade, 100% private key control, 170+ institutions since 2021, open-source",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Provenance"
+        ]
+      }
+    ],
+    "founded": 2021,
+    "funding": null,
+    "links": {
+      "homepage": "https://safeheron.com",
+      "logo": "/imgs/Data/Provenance/Safeheron.jpg",
+      "twitter": "https://x.com/Safeheron",
+      "github": ""
+    }
+  },
+  {
+    "name": "CertiK",
+    "description": "Leading blockchain security firm providing auditing, real-time monitoring (Skynet), and formal verification services to enhance the security and reliability of Web3 projects.",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Provenance"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "http://www.certik.com",
+      "logo": "/imgs/Data/Provenance/CertiK.jpg",
+      "twitter": "https://x.com/CertiK",
+      "github": ""
+    }
+  },
+  {
+    "name": "Ocean Protocol",
+    "description": "Data marketplace enabling AI model and data monetization through tokenization while preserving privacy",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Marketplaces"
+        ]
+      }
+    ],
+    "founded": 2017,
+    "funding": 28000000,
+    "links": {
+      "homepage": "http://oceanprotocol.com",
+      "logo": "/imgs/Data/Marketplaces/Ocean Protocol.jpg",
+      "twitter": "https://x.com/oceanprotocol",
+      "github": ""
+    }
+  },
+  {
+    "name": "Numerai",
+    "description": "Numerai AI hedge fund 5.5K+ data scientists, crowdsourced ML models, NMR staking, $100M inflows 2022, 25.5% return 2024, founded 2015",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Marketplaces"
+        ]
+      }
+    ],
+    "founded": 2015,
+    "funding": 23000000,
+    "links": {
+      "homepage": "https://numer.ai",
+      "logo": "/imgs/Data/Marketplaces/numerai.jpg",
+      "twitter": "https://x.com/numerai",
+      "github": ""
+    }
+  },
+  {
+    "name": "Iota",
+    "description": "IOTA distributed ledger Tangle DAG not blockchain, IoT focused, 4.6B supply post-Rebased May 2025, Jaguar/Bosch/STMicro PoCs, founded 2015",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Marketplaces"
+        ]
+      }
+    ],
+    "founded": 2015,
+    "funding": null,
+    "links": {
+      "homepage": "http://www.iota.org",
+      "logo": "/imgs/Data/Marketplaces/iota.jpg",
+      "twitter": "https://x.com/iota",
+      "github": ""
+    }
+  },
+  {
+    "name": "Gauntlet",
+    "description": "DeFi risk management and economic modeling platform, $44.94M funding from Paradigm/Polychain/Ribbit, 400M+ data points daily",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Marketplaces"
+        ]
+      }
+    ],
+    "founded": 2018,
+    "funding": 44940000,
+    "links": {
+      "homepage": "http://gauntlet.xyz",
+      "logo": "/imgs/Data/Marketplaces/Gauntlet.jpg",
+      "twitter": "https://x.com/gauntlet_xyz",
+      "github": ""
+    }
+  },
+  {
+    "name": "Filecoin",
+    "description": "Decentralized storage network with 1.5 exbibytes stored by 3K providers, IPFS integration, Filecoin Foundation ecosystem funding",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Marketplaces"
+        ]
+      }
+    ],
+    "founded": 2017,
+    "funding": 257000000,
+    "links": {
+      "homepage": "https://filecoin.io/",
+      "logo": "/imgs/Data/Marketplaces/Filecoin.jpg",
+      "twitter": "https://x.com/Filecoin",
+      "github": ""
+    }
+  },
+  {
+    "name": "BitsCrunch",
+    "description": "BitsCrunch NFT analytics AI forensics 10+ blockchains Solana/Ethereum/Linea $12M Polygon/Coinbase/Animoca Mastercard/DappRadar wash-trading detection",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Marketplaces"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "homepage": "https://www.bitscrunch.com",
+      "logo": "/imgs/Data/Marketplaces/BitsCrunch.jpg",
+      "twitter": "https://x.com/bitsCrunch",
+      "github": ""
+    }
+  },
+  {
+    "name": "Delphi",
+    "description": "Delphi Digital crypto research institutional-grade 2018 Delphi Labs 2025 predictions DeAI/Solana/DeFi/DePin analysis",
+    "sectors": [
+      {
+        "sector": "Data",
+        "types": [
+          "Marketplaces"
+        ]
+      }
+    ],
+    "founded": 2018,
+    "funding": null,
+    "links": {
+      "homepage": "https://delphidigital.io",
+      "logo": "/imgs/Data/Marketplaces/Delphi.jpg",
+      "twitter": "https://x.com/Delphi_Digital",
+      "github": ""
     }
   }
 ]
