@@ -6433,5 +6433,116 @@
       "homepage": "https://xociety.io/",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
+  },
+  {
+    "name": "Momentum",
+    "description": "Momentum is the first ve(3,3) DEX on Sui, utilizing a Concentrated Liquidity Market Maker (CLMM) model to provide deep liquidity and efficient trading execution.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "twitter": "https://x.com/MomentumDEX",
+      "logo": "/imgs/sui_ecosystem/DeFi/Momentum.ico"
+    }
+  },
+  {
+    "name": "Blast.fun",
+    "description": "SocialFi memecoin launchpad on Sui that integrates with X (Twitter) for transparent token launches and sniper protection.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "twitter": "https://x.com/blastdotfun",
+      "homepage": "https://blast.fun",
+      "logo": "/imgs/sui_ecosystem/DeFi/blast_fun.jpg"
+    }
+  },
+  {
+    "name": "Alphalend",
+    "description": "DeFi lending protocol on Sui allowing users to lend and borrow assets within the ecosystem.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/AlphaFi.png"
+    }
+  },
+  {
+    "name": "Noodles Finance",
+    "description": "Fast and user-friendly DeFi trading and analytics platform on Sui offering real-time on-chain data.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "twitter": "https://x.com/NoodlesFi",
+      "homepage": "https://noodles.fi",
+      "logo": "/imgs/sui_ecosystem/DeFi/NoodlesFinance.png"
+    }
+  },
+  {
+    "name": "Full Sail",
+    "description": "Decentralized exchange on Sui featuring concentrated liquidity, dynamic fees, and a ve(4,4) mechanism.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "twitter": "https://x.com/FullSailFinance",
+      "homepage": "https://fullsail.finance",
+      "logo": "/imgs/sui_ecosystem/DeFi/FullSail.svg"
+    }
+  },
+  {
+    "name": "Double Up",
+    "description": "Transparent and fair online betting and memecoin launchpad platform on Sui.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "twitter": "https://x.com/doubleup_app",
+      "homepage": "https://www.doubleup.fun",
+      "logo": "/imgs/sui_ecosystem/Launchpad/DoubleUp.jpg"
+    }
   }
 ]
