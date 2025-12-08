@@ -1,8 +1,9 @@
 import { FormEvent, type ReactNode, useMemo, useState } from "react";
 import { ArrowLeft } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
 
 import {
-  categories as initialCategories,
+  fetchCategories,
   type Category,
   type Subcategory,
 } from "../lib/category-utils";
@@ -39,10 +40,15 @@ const initialState: FormState = {
 
 export function SubmitProject({ onBack }: SubmitProjectProps) {
   const [formState, setFormState] = useState<FormState>(initialState);
+  const { data: categories, isLoading, error } = useQuery({
+    queryKey: ["categories"],
+    queryFn: fetchCategories,
+  });
 
   const selectedCategory = useMemo<Category | undefined>(() => {
-    return initialCategories.find((cat) => cat.id === formState.categoryId);
-  }, [formState.categoryId]);
+    if (!categories) return undefined;
+    return categories.find((cat) => cat.id === formState.categoryId);
+  }, [categories, formState.categoryId]);
 
   const selectedSubcategories = useMemo<Subcategory[]>(() => {
     return selectedCategory?.subcategories ?? [];
@@ -112,16 +118,31 @@ export function SubmitProject({ onBack }: SubmitProjectProps) {
       </div>
 
       <main className="mx-auto max-w-4xl px-6 py-8">
-        <div className="rounded-lg border-2 border-gray-200 bg-white shadow-xl">
-          <div className="border-b border-gray-200 px-6 py-5">
-            <h2 className="text-lg font-semibold linux-libertine-bold">Project information</h2>
-            <p className="text-sm text-gray-600">
-              Fill in the details below. Submissions are reviewed before being
-              added to BuilderMaps.
-            </p>
+        {isLoading && (
+          <div className="flex items-center justify-center py-12">
+            <div className="text-gray-600">Loading categories...</div>
           </div>
+        )}
 
-          <form onSubmit={handleSubmit} className="space-y-6 px-6 py-6">
+        {error && (
+          <div className="rounded-lg border-2 border-red-200 bg-red-50 p-6">
+            <div className="text-red-800">
+              Failed to load categories. Please try again later.
+            </div>
+          </div>
+        )}
+
+        {categories && (
+          <div className="rounded-lg border-2 border-gray-200 bg-white shadow-xl">
+            <div className="border-b border-gray-200 px-6 py-5">
+              <h2 className="text-lg font-semibold linux-libertine-bold">Project information</h2>
+              <p className="text-sm text-gray-600">
+                Fill in the details below. Submissions are reviewed before being
+                added to BuilderMaps.
+              </p>
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-6 px-6 py-6">
             <div className="grid gap-4 md:grid-cols-2">
               <Field label="Project name" required>
                 <Input
@@ -164,9 +185,10 @@ export function SubmitProject({ onBack }: SubmitProjectProps) {
                     handleChange("subcategoryName", "");
                   }}
                   className="h-10 w-full rounded-md border border-input bg-input-background px-3 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  disabled={isLoading || !!error}
                 >
                   <option value="">Select a category</option>
-                  {initialCategories.map((category) => (
+                  {categories?.map((category) => (
                     <option key={category.id} value={category.id}>
                       {category.name}
                     </option>
@@ -234,7 +256,8 @@ export function SubmitProject({ onBack }: SubmitProjectProps) {
               </Button>
             </div>
           </form>
-        </div>
+          </div>
+        )}
       </main>
     </div>
   );

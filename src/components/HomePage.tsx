@@ -1,16 +1,15 @@
 import { ArrowRight, Github } from "lucide-react";
 
-import { categories } from "../lib/category-utils";
-
-import { countCategoryProjects, countTotalProjects } from "../lib/category-utils";
+import { countCategoryProjects, countTotalProjects, type Category } from "../lib/category-utils";
 import { Button } from "./ui/button";
 import { UserMenu } from "./UserMenu";
 
 interface HomePageProps {
+  categories: Category[];
   onCategoryClick: (categoryId: string) => void;
 }
 
-export function HomePage({ onCategoryClick }: HomePageProps) {
+export function HomePage({ categories, onCategoryClick }: HomePageProps) {
   const lastUpdated = process.env.LAST_BUILD_TIME ?? "Unknown";
   
   // Filter out "Uncategorized" category

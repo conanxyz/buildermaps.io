@@ -1,16 +1,42 @@
 import { useMemo } from "react";
 import { Navigate, Route, Routes, useLocation, useNavigate, useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
 
-import { categories, type Category } from "./lib/category-utils";
+import { fetchCategories, type Category } from "./lib/category-utils";
 import { CategoryPage } from "./components/CategoryPage";
 import { HomePage } from "./components/HomePage";
 import "./styles/global.css";
 
 function HomeRoute() {
   const navigate = useNavigate();
+  const { data: categories, isLoading, error } = useQuery({
+    queryKey: ["categories"],
+    queryFn: fetchCategories,
+  });
+
+  if (isLoading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center">
+        <div className="text-gray-600">Loading...</div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex min-h-screen items-center justify-center">
+        <div className="text-red-600">Failed to load data. Please try again later.</div>
+      </div>
+    );
+  }
+
+  if (!categories) {
+    return null;
+  }
 
   return (
     <HomePage
+      categories={categories}
       onCategoryClick={(categoryId) => {
         navigate(`/category/${categoryId}`);
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -22,10 +48,31 @@ function HomeRoute() {
 function CategoryRoute() {
   const { categoryId } = useParams();
   const navigate = useNavigate();
+  const { data: categories, isLoading, error } = useQuery({
+    queryKey: ["categories"],
+    queryFn: fetchCategories,
+  });
 
   const category: Category | undefined = useMemo(() => {
+    if (!categories) return undefined;
     return categories.find((item) => item.id === categoryId);
-  }, [categoryId]);
+  }, [categories, categoryId]);
+
+  if (isLoading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center">
+        <div className="text-gray-600">Loading...</div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex min-h-screen items-center justify-center">
+        <div className="text-red-600">Failed to load data. Please try again later.</div>
+      </div>
+    );
+  }
 
   if (!category) {
     return <Navigate to="/" replace />;
