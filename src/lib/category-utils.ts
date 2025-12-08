@@ -1,3 +1,5 @@
+import builderMapsLocal from "../../public/data/builder-maps.json";
+
 export interface Project {
   id: string;
   name: string;
@@ -63,7 +65,7 @@ function slugify(value: string): string {
 function processBuilderMapsData(builderMaps: BuilderMapEntry[]): Category[] {
   // Map to store unique projects by name to avoid duplication
   const projectMap = new Map<string, Project>();
-
+  console.log({ mode: process.env.NODE_ENV });
   // Map to store categories and their subcategories
   const categoryAccumulator = new Map<
     string,
@@ -179,6 +181,9 @@ function processBuilderMapsData(builderMaps: BuilderMapEntry[]): Category[] {
  * Fetches builder maps data from the remote URL and processes it into categories
  */
 export async function fetchCategories(): Promise<Category[]> {
+  if (process.env.NODE_ENV === "development") { 
+    return processBuilderMapsData(builderMapsLocal as BuilderMapEntry[]);
+  }
   const response = await fetch("https://net-static-dev.chainbasehq.com/public/buildermaps/data/builder-maps.json");
   if (!response.ok) {
     throw new Error(`Failed to fetch builder maps data: ${response.statusText}`);
