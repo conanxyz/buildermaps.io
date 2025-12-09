@@ -1,7 +1,7 @@
 [
   {
     "name": "0xGasless",
-    "description": "0xGasless financial autonomy for AI agents, ERC-4337 smart wallets, paymaster service and multi-chain Avalanche/Sonic/Moonbeam/BSC/Ethereum",
+    "description": "0xGasless financial autonomy for AI agents, ERC-4337 smart wallets, paymaster service, multi-chain Avalanche/Sonic/Moonbeam/BSC/Ethereum",
     "sectors": [
       {
         "sector": "x402",
