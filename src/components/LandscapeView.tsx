@@ -94,16 +94,19 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
                 </div>
               ) : (
                 <div className="flex flex-wrap">
-                  {sortProjects(subcategory.projects || []).map((project) => (
-                    <ProjectLogo
-                      key={project.id}
-                      project={project}
-                      categoryName={category.name}
-                      subcategoryName={subcategory.name}
-                      openPopoverId={openPopoverId}
-                      setOpenPopoverId={setOpenPopoverId}
-                    />
-                  ))}
+                  {sortProjects(subcategory.projects || []).map((project) => {
+                    const uniqueKey = `${project.id}-${category.name}-${subcategory.name}`;
+                    return (
+                      <ProjectLogo
+                        key={uniqueKey}
+                        project={project}
+                        categoryName={category.name}
+                        subcategoryName={subcategory.name}
+                        openPopoverId={openPopoverId}
+                        setOpenPopoverId={setOpenPopoverId}
+                      />
+                    );
+                  })}
                 </div>
               )}
             </div>
@@ -170,13 +173,15 @@ function ProjectLogo({
   openPopoverId: string | null;
   setOpenPopoverId: (id: string | null) => void;
 }) {
-  const isOpen = openPopoverId === project.id;
+  // Create a unique ID for this project instance based on its location
+  const uniqueId = `${project.id}-${categoryName}-${subcategoryName}${thirdLevelName ? `-${thirdLevelName}` : ''}`;
+  const isOpen = openPopoverId === uniqueId;
   const [imageError, setImageError] = useState(false);
   
   return (
     <Popover
       open={isOpen}
-      onOpenChange={(open) => setOpenPopoverId(open ? project.id : null)}
+      onOpenChange={(open) => setOpenPopoverId(open ? uniqueId : null)}
     >
       <PopoverTrigger asChild>
         <div
@@ -424,17 +429,20 @@ function ThirdLevelBox({
         </h5>
       </div>
       <div className="flex flex-wrap gap-1">
-        {sortProjects(subcategory.projects).map((project) => (
-          <ProjectLogo
-            key={project.id}
-            project={project}
-            categoryName={categoryName}
-            subcategoryName={parentSubcategoryName}
-            thirdLevelName={subcategory.name}
-            openPopoverId={openPopoverId}
-            setOpenPopoverId={setOpenPopoverId}
-          />
-        ))}
+        {sortProjects(subcategory.projects).map((project) => {
+          const uniqueKey = `${project.id}-${categoryName}-${parentSubcategoryName}-${subcategory.name}`;
+          return (
+            <ProjectLogo
+              key={uniqueKey}
+              project={project}
+              categoryName={categoryName}
+              subcategoryName={parentSubcategoryName}
+              thirdLevelName={subcategory.name}
+              openPopoverId={openPopoverId}
+              setOpenPopoverId={setOpenPopoverId}
+            />
+          );
+        })}
       </div>
     </div>
   );
