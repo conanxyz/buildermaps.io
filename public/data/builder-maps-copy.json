@@ -173,7 +173,7 @@
     "funding": null,
     "links": {
       "homepage": "https://www.aeon.cash/en/home",
-      "logo": "/imgs/Sui/Analytics/AEON.png",
+      "logo": "/imgs/sui_ecosystem/Analytics/Aeon.png",
       "twitter": "https://twitter.com/aeonix_network",
       "telegram": "https://t.me/aeonix_network",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -808,7 +808,7 @@
     "funding": null,
     "links": {
       "homepage": "https://chainbase.com/",
-      "logo": "/imgs/Sui/Analytics/Chainbase.png",
+      "logo": "/imgs/Data/Infra/Chainbase.jpg",
       "twitter": "https://x.com/ChainbaseHQ",
       "telegram": "https://t.me/ChainbaseNetwork",
       "reddit": "https://chainbase.com"
@@ -4961,6 +4961,26 @@
     }
   },
   {
+    "name": "7K Aggregator",
+    "description": "7K is a Sui-based trading aggregator that optimizes swap execution with dynamic trade routing and lower gas fees.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/7KAggregator.jpg",
+      "twitter": "https://x.com/7k_ag_",
+      "homepage": "https://7k.ag/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
     "name": "aaa cat",
     "description": "Can&#039;t stop won&#039;t stop (thinking about Sui).",
     "sectors": [
@@ -4974,9 +4994,72 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Meme/aaa cat.png",
+      "logo": "/imgs/sui_ecosystem/Meme/aaacat.jpg",
       "twitter": "https://x.com/aaaCatSui",
       "homepage": "https://www.aaacatsui.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Aftermath Finance",
+    "description": "Aftermath is building an all-in-one trading and investment platform on Sui, offering fast, low-cost, and transparent access to DeFi markets.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/AftermathFinance.jpg",
+      "twitter": "https://x.com/AftermathFi",
+      "homepage": "https://aftermath.finance/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Agora",
+    "description": "Agora is creating a more inclusive financial system by making the US dollar accessible as a digital public good. Its fully collateralized digital dollar, AUSD, provides a secure, scalable, and borderless way for individuals and businesses to participate in the global economy.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": 2024,
+    "funding": 62000000,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/Agora.jpg",
+      "twitter": "https://twitter.com/withAUSD",
+      "homepage": "https://agora.finance",
+      "discord": "https://discord.gg/Vsjpghdhb3",
+      "github": "https://github.com/idni",
+      "linkedin": "https://www.linkedin.com/company/agora-finance",
+      "youtube": "https://www.agora.finance"
+    }
+  },
+  {
+    "name": "AlphaFi",
+    "description": "AlphaFi is a yield aggregator on the Sui blockchain, designed to simplify and optimize DeFi returns",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/AlphaFi.png",
+      "twitter": "https://x.com/AlphaFiSUI",
+      "homepage": "http://alphafi.xyz",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
   },
@@ -4994,7 +5077,7 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Games/Anima Labs.png",
+      "logo": "/imgs/sui_ecosystem/Games/AnimaLabs.jpg",
       "twitter": "https://x.com/animalabs_io",
       "homepage": "https://animalabs.io/",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -5014,9 +5097,49 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Analytics/Artemis.png",
+      "logo": "/imgs/sui_ecosystem/Analytics/Artemis.jpg",
       "twitter": "https://x.com/artemis",
       "homepage": "https://www.artemis.xyz/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Artfi",
+    "description": "Artfi is redefining fine art collecting through fractional ownership on the blockchain, making blue-chip art more accessible to investors.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "Marketplace"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Marketplace/Artfi.jpg",
+      "twitter": "https://x.com/artfiglobal",
+      "homepage": "https://artfi.world/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Arttoo",
+    "description": "Arttoo makes fine art investment accessible through fractional ownership, allowing collectors to invest in iconic masterpieces without auction house or gallery markups. With blockchain-powered provenance tracking, every transaction is secure and transparent.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "NFT"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/NFT/Arttoo.jpg",
+      "twitter": "https://x.com/arttoo_official",
+      "homepage": "https://arttoo.co.uk/",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
   },
@@ -5034,9 +5157,29 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/AI/AtomaNetwork.jpg",
-      "twitter": "https://x.com/Atoma_Network",
-      "homepage": "https://atoma.ai/",
+      "logo": "/imgs/sui_ecosystem/AI/AtomaNetwork.jpg",
+      "twitter": "",
+      "homepage": "https://fonts.gstatic.com",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Axelar",
+    "description": "Axelar is a cross-chain interoperability network that connects blockchains, enabling seamless communication for Web3 applications.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "Bridge"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Bridge/Axelar.png",
+      "twitter": "https://x.com/axelar",
+      "homepage": "https://www.axelar.network/",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
   },
@@ -5054,7 +5197,7 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Games/Aylab.png",
+      "logo": "/imgs/sui_ecosystem/Games/Aylab.jpg",
       "twitter": "https://x.com/Aylab_io",
       "homepage": "https://x.com/Aylab_io",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -5074,7 +5217,7 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Analytics/Birdeye.png",
+      "logo": "/imgs/sui_ecosystem/Analytics/Birdeye.jpg",
       "twitter": "https://x.com/birdeye_so",
       "homepage": "https://www.birdeye.so/",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -5094,7 +5237,7 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Analytics/Blockberry API.png",
+      "logo": "/imgs/sui_ecosystem/Analytics/BlockberryAPI.svg",
       "twitter": "https://x.com/blockberry_api",
       "homepage": "https://blockberry.one/",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -5114,7 +5257,7 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Analytics/BlockVision.jpg",
+      "logo": "/imgs/sui_ecosystem/Analytics/BlockVision.png",
       "twitter": "https://x.com/blockvisionhq",
       "homepage": "https://blockvision.org/",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -5134,9 +5277,69 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Meme/Blub.png",
+      "logo": "/imgs/sui_ecosystem/Meme/Blub.jpg",
       "twitter": "https://x.com/blubsui",
       "homepage": "https://www.blubsui.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Bluefin",
+    "description": "Bluefin is a decentralized, orderbook-based exchange designed for both professional and first-time traders. Built on a high-performance Web3 stack with rollups, it offers leverage trading, short selling, and cross-chain liquidity with a focus on security and transparency.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/Bluefin.jpg",
+      "twitter": "https://x.com/bluefinapp",
+      "homepage": "https://bluefin.io/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "BlueMove",
+    "description": "BlueMove is a super app on the Sui blockchain, combining an NFT launchpad, marketplace, and DEX in one seamless platform.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/BlueMove.png",
+      "twitter": "https://x.com/BlueMove_OA",
+      "homepage": "https://linktr.ee/bluemove",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Bucket Protocol",
+    "description": "Bucket Protocol is a DeFi engine on Sui, enabling users to borrow BUCK, a decentralized stablecoin, against SUI, BTC, ETH, and LSTs with low and predictable interest rates.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/BucketProtocol.jpg",
+      "twitter": "https://x.com/bucket_protocol",
+      "homepage": "https://www.bucketprotocol.io/",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
   },
@@ -5154,9 +5357,29 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Meme/Cap.png",
+      "logo": "/imgs/sui_ecosystem/Meme/Cap.jpg",
       "twitter": "https://x.com/caponsui",
       "homepage": "https://www.caponsui.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Cetus",
+    "description": "Cetus is a DEX and concentrated liquidity protocol built on Sui and Aptos, designed to provide a flexible, high-efficiency liquidity network for DeFi users.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/Cetus.png",
+      "twitter": "https://x.com/CetusProtocol",
+      "homepage": "https://www.cetus.zone/",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
   },
@@ -5174,7 +5397,7 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/InfraTools/Chirp.png",
+      "logo": "/imgs/sui_ecosystem/InfraandTools/Chirp.png",
       "twitter": "https://x.com/ChirpDeWi",
       "homepage": "https://chirptoken.io/",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -5194,9 +5417,49 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Games/Cosmocadia.png",
+      "logo": "/imgs/sui_ecosystem/Games/Cosmocadia.png",
       "twitter": "https://x.com/Cosmocadia",
       "homepage": "https://www.cosmocadia.io/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "DARKTIMES",
+    "description": "DARKTIMES is a free-to-play Web3 multiplayer Brawler Royale_Set in a Nordic-inspired dark fantasy world.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "Games"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Games/DARKTIMES.jpg",
+      "twitter": "https://x.com/playDARKTIMES",
+      "homepage": "https://playdarktimes.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "DeepBook",
+    "description": "Decentralized liquidity layer for builders, traders, and the broader DeFi community, exclusively on Sui.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/DeepBook.jpg",
+      "twitter": "https://x.com/DeepBookonSui",
+      "homepage": "https://deepbook.tech/",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
   },
@@ -5220,9 +5483,29 @@
     "founded": 2021,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Analytics/DefiLlama.png",
+      "logo": "/imgs/Data/Analytics/DefiLlama.jpg",
       "twitter": "https://x.com/DefiLlama",
       "homepage": "https://defillama.com",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "DeLorean Labs",
+    "description": "As part of the DeLorean Motor Company (DMC) ecosystem, DeLorean Labs is hyper-focused on innovative Web3 tech.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "NFT"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/NFT/DeLoreanLabs.jpg",
+      "twitter": "",
+      "homepage": "https://fonts.gstatic.com",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
   },
@@ -5240,9 +5523,29 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Games/DeSuiLabs.png",
+      "logo": "/imgs/sui_ecosystem/Games/DeSuiLabs.jpg",
       "twitter": "https://x.com/DeSuiLabs",
       "homepage": "https://www.desuilabs.io/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "DoubleUp",
+    "description": "DoubleUp is a transparent, fair, and community-driven online betting platform on the Sui blockchain.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "Launchpad"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Launchpad/DoubleUp.jpg",
+      "twitter": "https://x.com/doubleup_app",
+      "homepage": "https://www.doubleup.fun/",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
   },
@@ -5260,7 +5563,7 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Social/FanTV.png",
+      "logo": "/imgs/sui_ecosystem/Social/FanTV.jpg",
       "twitter": "https://x.com/FanTV_official",
       "homepage": "https://fantv.world/",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -5280,7 +5583,7 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Wallets/Fewcha.png",
+      "logo": "/imgs/sui_ecosystem/Wallets/Fewcha.png",
       "twitter": "https://x.com/fewchawallet",
       "homepage": "https://fewcha.app/",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -5320,9 +5623,29 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Meme/FUD.png",
+      "logo": "/imgs/sui_ecosystem/Meme/FUD.jpg",
       "twitter": "https://x.com/fudthepug",
       "homepage": "https://fudthepug.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Fuddies",
+    "description": "FUD around and find out.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "NFT"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/NFT/Fuddies.jpg",
+      "twitter": "https://x.com/FuddiesNFT",
+      "homepage": "https://fuddies.io/",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
   },
@@ -5340,7 +5663,7 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/InfraTools/Ika.png",
+      "logo": "/imgs/sui_ecosystem/InfraandTools/Ika.png",
       "twitter": "https://x.com/ikadotxyz",
       "homepage": "https://ika.xyz/",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -5367,6 +5690,46 @@
     }
   },
   {
+    "name": "Kriya",
+    "description": "Kriya is a DeFi project building advanced infrastructure for on-chain derivatives trading.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/Kriya.jpg",
+      "twitter": "https://x.com/KriyaDEX",
+      "homepage": "https://kriya.finance/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Kumo",
+    "description": "Kumo is more than just a cute face, this clumsy kat bridges the gap between the digital and physical worlds.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "NFT"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/NFT/Kumo.jpg",
+      "twitter": "https://x.com/Kumo_TheKat",
+      "homepage": "https://kumothekat.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
     "name": "Liquor",
     "description": "Be liquor, my friend. New era of meme on Sui.",
     "sectors": [
@@ -5380,7 +5743,7 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Meme/Liquor.png",
+      "logo": "/imgs/sui_ecosystem/Meme/Liquor.jpg",
       "twitter": "https://x.com/Beliquoronsui",
       "homepage": "https://www.beliquoronsui.com/",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -5400,7 +5763,7 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Meme/Lofi The Yeti.png",
+      "logo": "/imgs/sui_ecosystem/Meme/LofiTheYeti.jpg",
       "twitter": "https://x.com/lofitheyeti",
       "homepage": "https://lofitheyeti.com/",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -5420,9 +5783,49 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Games/Lucky Kat.png",
+      "logo": "/imgs/sui_ecosystem/Games/LuckyKat.jpg",
       "twitter": "https://x.com/LuckyKatStudios",
       "homepage": "https://www.lucky-kat.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "MovePump",
+    "description": "Create and launch your memecoin on Sui in minutes.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "Launchpad"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Launchpad/MovePump.svg",
+      "twitter": "https://x.com/BlueMove_OA",
+      "homepage": "https://movepump.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Navi Protocol",
+    "description": "Navi is the first native one-stop liquidity protocol on Sui, allowing users to supply liquidity, earn passive income, or borrow assets without intermediaries.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/NaviProtocol.jpg",
+      "twitter": "https://x.com/navi_protocol",
+      "homepage": "https://naviprotocol.io/",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
   },
@@ -5440,7 +5843,7 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/InfraTools/Nightly Connect.png",
+      "logo": "/imgs/sui_ecosystem/InfraandTools/NightlyConnect.png",
       "twitter": "https://x.com/NightlyConnect",
       "homepage": "https://nightly.app/",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -5460,9 +5863,29 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Wallets/NightlyWallet.png",
+      "logo": "/imgs/sui_ecosystem/Wallets/NightlyWallet.png",
       "twitter": "",
       "homepage": "https://fonts.gstatic.com",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Panzerdogs",
+    "description": "Panzerdogs is a PvP play-and-earn tank brawler on Sui, combining fast-paced combat with NFTs and Play-to-Earn mechanics.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "NFT"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/NFT/Panzerdogs.png",
+      "twitter": "https://x.com/panzerdogs",
+      "homepage": "https://home.panzerdogs.io/",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
   },
@@ -5480,7 +5903,7 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/InfraTools/Polymedia.png",
+      "logo": "/imgs/sui_ecosystem/InfraandTools/Polymedia.jpg",
       "twitter": "https://x.com/polymedia_app",
       "homepage": "https://polymedia.app/",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -5500,7 +5923,7 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/InfraTools/PTB Studio.png",
+      "logo": "/imgs/sui_ecosystem/InfraandTools/PTBStudio.jpg",
       "twitter": "https://x.com/zktx_io",
       "homepage": "https://ptb-builder.walrus.site",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -5520,7 +5943,7 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Meme/Pugwifsui.png",
+      "logo": "/imgs/sui_ecosystem/Meme/Pugwifsui.webp",
       "twitter": "https://x.com/SuiPugwif",
       "homepage": "https://pugwifsui.com/",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -5540,7 +5963,7 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Social/Quantum Temple.png",
+      "logo": "/imgs/sui_ecosystem/Social/QuantumTemple.jpg",
       "twitter": "https://x.com/quantum_temple",
       "homepage": "https://quantumtemple.xyz/",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -5560,9 +5983,69 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Social/RECRD.png",
+      "logo": "/imgs/sui_ecosystem/Social/RECRD.jpg",
       "twitter": "https://x.com/recrdapp",
       "homepage": "https://www.recrd.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Rinoco",
+    "description": "Rinoco is an NFT collectible project designed to bridge Web2 and Web3, creating a world of unique, collectible creatures.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "NFT"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/NFT/Rinoco.jpg",
+      "twitter": "https://x.com/RinocoOfficial",
+      "homepage": "https://www.rinoco.world/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Scallop",
+    "description": "Scallop is a next-generation peer-to-peer money market built for the Sui, offering high-interest lending, low-fee borrowing, and AMM services on a unified platform.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/Scallop.jpg",
+      "twitter": "https://x.com/Scallop_io",
+      "homepage": "https://scallop.io/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Shadow",
+    "description": "Shadow is a no-code platform for launching and trading NFTs on the Sui blockchain.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "NFT"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/NFT/Shadow.jpg",
+      "twitter": "https://x.com/shadow_sui",
+      "homepage": "http://linktr.ee/shadow_app",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
   },
@@ -5580,7 +6063,7 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Wallets/Shadow Wallet.png",
+      "logo": "/imgs/sui_ecosystem/Wallets/ShadowWallet.jpg",
       "twitter": "https://x.com/shadow_sui",
       "homepage": "https://linktr.ee/shadow_app",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -5607,6 +6090,66 @@
     }
   },
   {
+    "name": "Stashed",
+    "description": "Stashed is a web-based, self-custodial wallet for the Sui blockchain, allowing users to store, send, and receive assets with the ease of a web account login (e.g., Google or Twitch).",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "Wallets"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Wallets/Stashed.jpg",
+      "twitter": "https://x.com/stashedofficial",
+      "homepage": "https://getstashed.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Studio Mirai",
+    "description": "Studio Mirai is a venture studio developing next-generation consumer experiences on the Sui Network.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "NFT"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/NFT/StudioMirai.jpg",
+      "twitter": "https://x.com/_StudioMirai",
+      "homepage": "https://nozomi.world/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Sui Bridge",
+    "description": "Sui Bridge is a native cross-chain bridge connecting Sui and Ethereum, allowing secure and fast transfers of native and wrapped ETH.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "Bridge"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Bridge/SuiBridge.jpg",
+      "twitter": "https://x.com/SuiNetwork",
+      "homepage": "https://bridge.sui.io/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
     "name": "Sui Name Service",
     "description": "Your web3 identity for all things Sui!",
     "sectors": [
@@ -5620,7 +6163,27 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/InfraandTools/SuiNameService.png",
+      "logo": "/imgs/sui_ecosystem/InfraandTools/SuiNameService.png",
+      "twitter": "",
+      "homepage": "https://fonts.gstatic.com",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Sui Wallet",
+    "description": "Access SUI, swap tokens, organize your NFT collections, and explore dApps, all from Sui Wallet.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "Wallets"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Wallets/SuiWallet.jpg",
       "twitter": "",
       "homepage": "https://fonts.gstatic.com",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -5640,7 +6203,7 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Wallets/Suiet.png",
+      "logo": "/imgs/sui_ecosystem/Wallets/Suiet.png",
       "twitter": "https://x.com/suiet_wallet",
       "homepage": "https://suiet.app/",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -5660,9 +6223,29 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Games/SuiFrens.png",
+      "logo": "/imgs/sui_ecosystem/Games/SuiFrens.jpg",
       "twitter": "",
       "homepage": "https://suifrens.com/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Suilend",
+    "description": "Suilend is an autonomous lending and borrowing platform on the Sui network, enabling trustless and permissionless access to digital asset loans.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/Suilend.png",
+      "twitter": "https://x.com/suilendprotocol",
+      "homepage": "https://suilend.fi/",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
   },
@@ -5680,7 +6263,7 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Games/SuiPlay.png",
+      "logo": "/imgs/sui_ecosystem/Games/SuiPlay.jpg",
       "twitter": "https://x.com/SuiPlay",
       "homepage": "https://www.suiplay0x1.com/",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -5700,7 +6283,7 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Analytics/Suiscan Explorer.png",
+      "logo": "/imgs/sui_ecosystem/Analytics/SuiscanExplorer.png",
       "twitter": "https://x.com/suiscanofficial",
       "homepage": "https://suiscan.xyz/mainnet/home",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -5720,7 +6303,7 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Analytics/SuiVision.png",
+      "logo": "/imgs/sui_ecosystem/Analytics/SuiVision.svg",
       "twitter": "https://x.com/blockvisionhq",
       "homepage": "https://suivision.xyz/",
       "discord": "https://discord.gg/Vsjpghdhb3"
@@ -5740,9 +6323,29 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Wallets/Surf.png",
+      "logo": "/imgs/sui_ecosystem/Wallets/Surf.png",
       "twitter": "https://x.com/surf_wallet",
       "homepage": "https://surf.tech/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Tradeport",
+    "description": "TradePort is the leading NFT aggregator on Sui, providing traders with advanced analytics, real-time market insights, and powerful decision-making tools",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "Marketplace"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Marketplace/Tradeport.jpg",
+      "twitter": "https://x.com/tradeportxyz",
+      "homepage": "https://www.tradeport.xyz/",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
   },
@@ -5760,9 +6363,29 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/InfraTools/Triton One.png",
+      "logo": "/imgs/sui_ecosystem/InfraandTools/TritonOne.png",
       "twitter": "https://x.com/triton_one",
       "homepage": "https://triton.one/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Turbos Finance",
+    "description": "Turbos Finance is a non-custodial, hyper-efficient DEX built on Sui which offers seamless trading with best prices by aggregating liquidity from its concentrated liquidity market maker and Sui__ central limit order book.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/TurbosFinance.jpg",
+      "twitter": "https://x.com/Turbos_finance",
+      "homepage": "https://turbos.finance/",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
   },
@@ -5787,6 +6410,26 @@
     }
   },
   {
+    "name": "Typus Finance",
+    "description": "Typus Finance is a real yield infrastructure on the Sui blockchain, designed to offer superior risk-to-reward returns with minimal effort",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/TypusFinance.jpg",
+      "twitter": "https://x.com/TypusFinance",
+      "homepage": "https://typus.finance/",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
     "name": "Walrus",
     "description": "Welcome to the next generation of data storage _ secure, efficient, and decentralized.",
     "sectors": [
@@ -5800,9 +6443,29 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/InfraandTools/Walrus.jpg",
+      "logo": "/imgs/sui_ecosystem/InfraandTools/Walrus.jpg",
       "twitter": "",
       "homepage": "https://fonts.gstatic.com",
+      "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Wormhole",
+    "description": "Wormhole is a universal interoperability protocol that enables seamless value and data transfer across 14+ blockchains, including Ethereum, Sui, Solana, and Polygon.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "Bridge"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/Bridge/Wormhole.jpg",
+      "twitter": "https://x.com/wormhole",
+      "homepage": "https://wormhole.com/",
       "discord": "https://discord.gg/Vsjpghdhb3"
     }
   },
@@ -5820,10 +6483,121 @@
     "founded": null,
     "funding": null,
     "links": {
-      "logo": "/imgs/Sui/Games/XOCIETY.png",
+      "logo": "/imgs/sui_ecosystem/Games/XOCIETY.png",
       "twitter": "https://x.com/xocietyofficial",
       "homepage": "https://xociety.io/",
       "discord": "https://discord.gg/Vsjpghdhb3"
+    }
+  },
+  {
+    "name": "Momentum",
+    "description": "Momentum is the first ve(3,3) DEX on Sui, utilizing a Concentrated Liquidity Market Maker (CLMM) model to provide deep liquidity and efficient trading execution.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "twitter": "https://x.com/MomentumDEX",
+      "logo": "/imgs/sui_ecosystem/DeFi/Momentum.ico"
+    }
+  },
+  {
+    "name": "Blast.fun",
+    "description": "SocialFi memecoin launchpad on Sui that integrates with X (Twitter) for transparent token launches and sniper protection.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "twitter": "https://x.com/blastdotfun",
+      "homepage": "https://blast.fun",
+      "logo": "/imgs/sui_ecosystem/DeFi/blast_fun.jpg"
+    }
+  },
+  {
+    "name": "Alphalend",
+    "description": "DeFi lending protocol on Sui allowing users to lend and borrow assets within the ecosystem.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "logo": "/imgs/sui_ecosystem/DeFi/AlphaFi.png"
+    }
+  },
+  {
+    "name": "Noodles Finance",
+    "description": "Fast and user-friendly DeFi trading and analytics platform on Sui offering real-time on-chain data.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "twitter": "https://x.com/NoodlesFi",
+      "homepage": "https://noodles.fi",
+      "logo": "/imgs/sui_ecosystem/DeFi/NoodlesFinance.png"
+    }
+  },
+  {
+    "name": "Full Sail",
+    "description": "Decentralized exchange on Sui featuring concentrated liquidity, dynamic fees, and a ve(4,4) mechanism.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "twitter": "https://x.com/FullSailFinance",
+      "homepage": "https://fullsail.finance",
+      "logo": "/imgs/sui_ecosystem/DeFi/FullSail.svg"
+    }
+  },
+  {
+    "name": "Double Up",
+    "description": "Transparent and fair online betting and memecoin launchpad platform on Sui.",
+    "sectors": [
+      {
+        "sector": "Sui",
+        "types": [
+          "DeFi"
+        ]
+      }
+    ],
+    "founded": null,
+    "funding": null,
+    "links": {
+      "twitter": "https://x.com/doubleup_app",
+      "homepage": "https://www.doubleup.fun",
+      "logo": "/imgs/sui_ecosystem/Launchpad/DoubleUp.jpg"
     }
   },
   {
@@ -5988,7 +6762,7 @@
     "funding": 10800000,
     "links": {
       "homepage": "https://yaps.kaito.ai/user",
-      "logo": "",
+      "logo": "/imgs/AI_Crypto/Agents/KaitoAI.jpg",
       "twitter": "https://x.com/KaitoAI",
       "github": ""
     }
@@ -8168,1678 +8942,6 @@
       "logo": "/imgs/Data/Marketplaces/Delphi.jpg",
       "twitter": "https://x.com/Delphi_Digital",
       "github": ""
-    }
-  },
-  {
-    "name": "Suilend",
-    "description": "Suilend is a decentralized lending protocol on Sui, allowing users to earn interest by lending their crypto assets or obtain loans by providing collateral.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://suilend.fi/",
-      "logo": "/imgs/Sui/DeFi/Suilend.png",
-      "twitter": "https://x.com/suilendprotocol"
-    }
-  },
-  {
-    "name": "NAVI",
-    "description": "NAVI Protocol is the leading liquidity protocol on the Sui blockchain, enabling users to lend and borrow assets like SUI, USDC, USDT, wETH, and wBTC.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://naviprotocol.io/",
-      "logo": "/imgs/Sui/DeFi/NAVI.png",
-      "twitter": "https://x.com/navi_protocol"
-    }
-  },
-  {
-    "name": "Bluefin",
-    "description": "Bluefin is a decentralized exchange for trading perpetual swaps with high performance and low fees on Sui.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://bluefin.io/",
-      "logo": "/imgs/Sui/DeFi/Bluefin.png",
-      "twitter": "https://x.com/bluefinapp"
-    }
-  },
-  {
-    "name": "Haedal",
-    "description": "Haedal is a liquid staking protocol natively built on Sui that allows users to stake SUI and receive haSUI to participate in DeFi activities.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://haedal.xyz/",
-      "logo": "/imgs/Sui/DeFi/Haedal.png",
-      "twitter": "https://x.com/HaedalProtocol"
-    }
-  },
-  {
-    "name": "Bucket",
-    "description": "Bucket Protocol is a Collateralized Debt Position (CDP) protocol on Sui that allows users to deposit crypto assets and borrow the BUCK stablecoin at 0% interest.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://bucketprotocol.io/",
-      "logo": "/imgs/Sui/DeFi/Bucket.png",
-      "twitter": "https://x.com/bucket_protocol"
-    }
-  },
-  {
-    "name": "Ember",
-    "description": "Ember Protocol is a Structured Vaults Product on Sui, incubated by Bluewater Labs, offering non-custodial and permissionless vaults managed by curators.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://ember.so/",
-      "logo": "/imgs/Sui/DeFi/Ember.png",
-      "twitter": "https://x.com/EmberProtocol"
-    }
-  },
-  {
-    "name": "Upshift",
-    "description": "Upshift is a protocol that democratizes institutional lending, allowing users to earn yields from real institutional loans via Core Vaults.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://upshift.finance/",
-      "logo": "/imgs/Sui/DeFi/Upshift.png",
-      "twitter": "https://x.com/upshift_fi"
-    }
-  },
-  {
-    "name": "Momentum (MMT Finance)",
-    "description": "Momentum Finance is a decentralized finance (DeFi) infrastructure platform built on the Sui Blockchain, featuring a concentrated-liquidity DEX and liquid staking.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://mmt.finance/",
-      "logo": "/imgs/Sui/DeFi/Momentum MMT Finance.png",
-      "twitter": "https://x.com/MMTFinance"
-    }
-  },
-  {
-    "name": "Cetus",
-    "description": "Cetus is a pioneer DEX and concentrated liquidity protocol built on the Sui and Aptos blockchains, focusing on providing the best trading experience and superior liquidity efficiency.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://cetus.zone/",
-      "logo": "/imgs/Sui/DeFi/Cetus.png",
-      "twitter": "https://x.com/CetusProtocol"
-    }
-  },
-  {
-    "name": "Pawtato Finance",
-    "description": "Pawtato Finance is a comprehensive DeFi utility platform built exclusively for the Sui blockchain, acting as a DeFi dApp aggregator and wallet manager.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://pawtato.finance/",
-      "logo": "/imgs/Sui/DeFi/Pawtato Finance.png",
-      "twitter": "https://x.com/PawtatoFinance"
-    }
-  },
-  {
-    "name": "Beep",
-    "description": "Beep is the Agentic Finance Protocol on Sui, designed for AI payments, A2A commerce, and yield generation.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://beep.sui.io/",
-      "logo": "/imgs/Sui/DeFi/Beep.png",
-      "twitter": "https://x.com/0xbeepit"
-    }
-  },
-  {
-    "name": "Ferra",
-    "description": "Ferra is a dynamic liquidity layer built natively on the Sui network, combining DLMM, CLMM, and DAMM engines for optimal liquidity.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://ferra.ag/",
-      "logo": "/imgs/Sui/DeFi/Ferra.png",
-      "twitter": "https://x.com/ferra_protocol"
-    }
-  },
-  {
-    "name": "Magma",
-    "description": "Magma Finance is an adaptive liquidity layer and AMM DEX on the Sui Network, focused on solving the 'Launch-and-Sustain' problem for assets.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://magmafinance.io/",
-      "logo": "/imgs/Sui/DeFi/Magma.png",
-      "twitter": "https://x.com/Magma_Finance"
-    }
-  },
-  {
-    "name": "Aftermath",
-    "description": "Aftermath Finance is a decentralized trading platform built on Sui, offering a DEX aggregator, liquid staking (afSUI), and more.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://aftermath.finance/",
-      "logo": "/imgs/Sui/DeFi/Aftermath.png",
-      "twitter": "https://x.com/AftermathFi"
-    }
-  },
-  {
-    "name": "FlowX",
-    "description": "FlowX Finance is an ecosystem-focused decentralized exchange (DEX) and liquidity aggregator built on the Sui Blockchain.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://flowx.finance/",
-      "logo": "/imgs/Sui/DeFi/FlowX.png",
-      "twitter": "https://x.com/FlowX_finance"
-    }
-  },
-  {
-    "name": "Full Sail",
-    "description": "Full Sail Finance is a decentralized exchange (DEX) deployed on the Sui blockchain, combining concentrated liquidity and dynamic fees.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://fullsail.finance/",
-      "logo": "/imgs/Sui/DeFi/Full Sail.png",
-      "twitter": "https://x.com/FullSailFi"
-    }
-  },
-  {
-    "name": "Noodles Finance",
-    "description": "Noodles Finance is a decentralized finance platform built on the Sui blockchain, designed to provide a fast trading and data analysis experience.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://noodles.fi/",
-      "logo": "/imgs/Sui/DeFi/Noodles Finance.png",
-      "twitter": "https://x.com/NoodlesFi"
-    }
-  },
-  {
-    "name": "7K Aggregator",
-    "description": "7K Aggregator is a dynamic trading route aggregator on Sui, designed to optimize user trading strategies by finding the best possible prices.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://7k.ag/",
-      "logo": "/imgs/Sui/DeFi/7KAggregator.jpg",
-      "twitter": "https://x.com/7k_ag_"
-    }
-  },
-  {
-    "name": "DeepBook",
-    "description": "DeepBook is a shared decentralized central limit order book (CLOB) built as foundational liquidity infrastructure on Sui.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://deepbook.tech/",
-      "logo": "/imgs/Sui/DeFi/DeepBook.png",
-      "twitter": "https://x.com/DeepBookonSui"
-    }
-  },
-  {
-    "name": "AlphaFi",
-    "description": "AlphaFi is a yield aggregation platform on the Sui blockchain, designed to optimize yields for users by leveraging top protocols and automatically compounding deposits.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://alphafi.xyz/",
-      "logo": "/imgs/Sui/DeFi/AlphaFi.png",
-      "twitter": "https://x.com/alphafisui"
-    }
-  },
-  {
-    "name": "AlphaLend",
-    "description": "AlphaLend is a decentralized, non-custodial lending and borrowing protocol built on the Sui blockchain, part of the AlphaFi ecosystem.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://alphafi.xyz/",
-      "logo": "/imgs/Sui/DeFi/AlphaLend.png",
-      "twitter": "https://x.com/AlphaLendSui"
-    }
-  },
-  {
-    "name": "Kriya",
-    "description": "Kriya is a one-stop DeFi protocol on Sui offering native AMM for Swaps, Limit Orders, Strategy Vaults, and Leveraged Perpetuals.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://kriya.finance/",
-      "logo": "/imgs/Sui/DeFi/Kriya.jpg",
-      "twitter": "https://x.com/kriya_finance"
-    }
-  },
-  {
-    "name": "Typus Finance",
-    "description": "Typus Finance is a real yield infrastructure that integrates swap, lending, and derivatives on Sui, focusing on DeFi Option Vaults.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://typus.finance/",
-      "logo": "/imgs/Sui/DeFi/Typus Finance.png",
-      "twitter": "https://x.com/TypusFinance"
-    }
-  },
-  {
-    "name": "Scallop",
-    "description": "Scallop is the pioneering Next Generation Interest Rate Machine for the Sui ecosystem, offering a peer-to-peer money market with high-interest lending.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://scallop.io/",
-      "logo": "/imgs/Sui/DeFi/Scallop.png",
-      "twitter": "https://x.com/Scallop_io"
-    }
-  },
-  {
-    "name": "Volo",
-    "description": "Volo is a liquid staking protocol on Sui offering a decentralized and non-custodial way to stake SUI.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://volo.fi/",
-      "logo": "/imgs/Sui/DeFi/Volo.png",
-      "twitter": "https://x.com/volo_sui"
-    }
-  },
-  {
-    "name": "DipCoin",
-    "description": "DipCoin is a high-performance decentralized exchange (DEX) built on the Sui blockchain, offering perpetuals, swaps, and liquidity opportunities.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "DeFi"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://dipcoin.io/",
-      "logo": "/imgs/Sui/DeFi/DipCoin.png",
-      "twitter": "https://x.com/DipCoinOfficial"
-    }
-  },
-  {
-    "name": "SuiPlay",
-    "description": "SuiPlay0X1 is a handheld gaming console designed to integrate Web3 functionality with traditional gaming, supporting Sui blockchain games.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Games"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://suiplay0x1.com/",
-      "logo": "/imgs/Sui/GameFi/SuiPlay.png",
-      "twitter": "https://x.com/SuiPlay"
-    }
-  },
-  {
-    "name": "Samurai Shodown R",
-    "description": "Samurai Shodown R is a mobile MMORPG on Sui, bringing the world's first weapon-based fighting game to Web3 with dynamic NFTs.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Games"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://lumiwavelab.com/",
-      "logo": "/imgs/Sui/GameFi/Samurai Shodown R.png",
-      "twitter": "https://x.com/SamuraiShodownR"
-    }
-  },
-  {
-    "name": "Jackson Protocol",
-    "description": "Jackson Protocol is a decentralized gaming protocol on Sui creating a player-driven Web3 gaming ecosystem with shared infrastructure.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Games"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://jackson.io/",
-      "logo": "/imgs/Sui/GameFi/Jackson Protocol.png",
-      "twitter": "https://x.com/JacksonProtocol"
-    }
-  },
-  {
-    "name": "Super-B",
-    "description": "Super-B is a next-gen social gaming universe set in a brick-built world, offering fast-paced mini-games and map building on Sui.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Games"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://super-b.io/",
-      "logo": "/imgs/Sui/GameFi/Super-B.png",
-      "twitter": "https://x.com/super_b_io"
-    }
-  },
-  {
-    "name": "Olympian Games",
-    "description": "Olympian Games on Sui aims to bring competitive esports and sports-themed gaming to the blockchain.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Games"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "",
-      "logo": "/imgs/Sui/GameFi/Olympian Games.png",
-      "twitter": "https://x.com/Olympian_Games"
-    }
-  },
-  {
-    "name": "Panzerdogs",
-    "description": "Panzerdogs is a multiplayer tank battler on Sui where players control customizable tanks and engage in fast-paced matches.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Games"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://panzerdogs.com/",
-      "logo": "/imgs/Sui/GameFi/Panzerdogs.png",
-      "twitter": "https://x.com/panzerdogs"
-    }
-  },
-  {
-    "name": "Ambrus Studio",
-    "description": "Ambrus Studio is a web3 gaming studio focused on creating high-quality blockchain-based games and an enduring metaverse with a focus on environmental causes.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Games"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://ambrus.studio/",
-      "logo": "/imgs/Sui/GameFi/Ambrus Studio.png",
-      "twitter": "https://x.com/AmbrusStudio"
-    }
-  },
-  {
-    "name": "XOCIETY",
-    "description": "XOCIETY is a third-person POP Shooter with RPG elements built on Unreal Engine 5 and launched on the Sui blockchain.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Games"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://xociety.io/",
-      "logo": "/imgs/Sui/GameFi/XOCIETY.png",
-      "twitter": "https://x.com/xocietyofficial"
-    }
-  },
-  {
-    "name": "Cosmocadia",
-    "description": "Cosmocadia is a community-based farming and island-builder game on Sui where players create their own utopia.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Games"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://cosmocadia.com/",
-      "logo": "/imgs/Sui/GameFi/Cosmocadia.png",
-      "twitter": "https://x.com/Cosmocadia"
-    }
-  },
-  {
-    "name": "One Fight Arena",
-    "description": "ONE Fight Arena is a free-to-play mobile combat sports game developed by Notre Game in partnership with ONE Championship, integrating Web3 features on Sui.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Games"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://onefightarena.com/",
-      "logo": "/imgs/Sui/GameFi/One Fight Arena.png",
-      "twitter": "https://x.com/onefightarena"
-    }
-  },
-  {
-    "name": "Pebble City",
-    "description": "Pebble City is a mobile Web3 social casino game on Sui, blending traditional mobile gaming with Web3 advantages.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Games"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://pebblecity.io/",
-      "logo": "/imgs/Sui/GameFi/Pebble City.png",
-      "twitter": "https://x.com/Pebble_City"
-    }
-  },
-  {
-    "name": "Dark Times",
-    "description": "Dark Times is a Nordic-inspired medieval Brawler Royale with RPG elements on Sui, set in a dark fantasy world.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Games"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://playdarktimes.com/",
-      "logo": "/imgs/Sui/GameFi/Dark Times.png",
-      "twitter": "https://x.com/playDARKTIMES"
-    }
-  },
-  {
-    "name": "Double Up",
-    "description": "Double Up is a decentralized casino platform on Sui offering a transparent, fair, and community-driven betting environment.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Games"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://doubleup.app/",
-      "logo": "/imgs/Sui/GameFi/Double Up.png",
-      "twitter": "https://x.com/doubleup_app"
-    }
-  },
-  {
-    "name": "Suigar",
-    "description": "Suigar is a gaming platform built on the Sui blockchain featuring a suite of decentralized games like Coinflip and Lootboxes.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Games"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://suigar.com/",
-      "logo": "/imgs/Sui/GameFi/Suigar.png",
-      "twitter": "https://x.com/Suigar_com"
-    }
-  },
-  {
-    "name": "Portal",
-    "description": "Portal Bridge, powered by Wormhole, facilitates multi-chain bridging to Sui from 22+ supported chains.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Bridge"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://portalbridge.com/",
-      "logo": "/imgs/Sui/Bridge/Portal.png",
-      "twitter": "https://x.com/portalbridge_"
-    }
-  },
-  {
-    "name": "Mayan",
-    "description": "Mayan Finance is a lightning-fast, intent-based cross-chain swap protocol supporting transfers between Sui, Solana, Ethereum, and more.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Bridge"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://mayan.finance/",
-      "logo": "/imgs/Sui/Bridge/Mayan.png",
-      "twitter": "https://x.com/MayanFinance"
-    }
-  },
-  {
-    "name": "Sui Bridge",
-    "description": "Sui Bridge is the native bridge for the Sui network, facilitating asset transfers between Sui and other chains.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Bridge"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://bridge.sui.io/",
-      "logo": "/imgs/Sui/Bridge/Sui Bridge.png",
-      "twitter": ""
-    }
-  },
-  {
-    "name": "Pawtato Heroes",
-    "description": "Pawtato Heroes are the adventurers of Pawtato Land, opening up opportunities for adventure and utility within the ecosystem.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "NFT"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://pawtato.finance/",
-      "logo": "/imgs/Sui/NFT/Pawtato Heroes.png",
-      "twitter": "https://x.com/PawtatoFinance"
-    }
-  },
-  {
-    "name": "Pawtato Land",
-    "description": "Pawtato Land is the first virtual land NFT collection on Sui, offering crafting, exploration, and on-chain utility.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "NFT"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://pawtato.finance/",
-      "logo": "/imgs/Sui/NFT/Pawtato Land.png",
-      "twitter": "https://x.com/PawtatoFinance"
-    }
-  },
-  {
-    "name": "Tallys",
-    "description": "Tallys NFTs signify membership in the Talus community, granting access to benefits within the decentralized AI Agent ecosystem.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "NFT"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://talus.network/",
-      "logo": "/imgs/Sui/NFT/Tallys.png",
-      "twitter": "https://x.com/TallysNFT"
-    }
-  },
-  {
-    "name": "Prime Machin",
-    "description": "Prime Machin by Studio Mirai is a technically advanced NFT collection on Sui featuring programmable objects and nested assets.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "NFT"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://studiomirai.io/",
-      "logo": "/imgs/Sui/NFT/Prime Machin.png",
-      "twitter": "https://x.com/_StudioMirai"
-    }
-  },
-  {
-    "name": "Mystic Yetis",
-    "description": "Mystic Yetis is a cozy NFT collection by the Lofi team on Sui, offering storytelling and social impact initiatives.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "NFT"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://lofitheyeti.com/",
-      "logo": "/imgs/Sui/NFT/Mystic Yetis.png",
-      "twitter": "https://x.com/lofitheyeti"
-    }
-  },
-  {
-    "name": "THE MF SQUID MARKET",
-    "description": "THE MF SQUID MARKET is an evolving NFT art collection on Sui, potentially featuring level-up functionality.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "NFT"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://mfsquid.market/",
-      "logo": "/imgs/Sui/NFT/THE MF SQUID MARKET.png",
-      "twitter": "https://x.com/ikadotxyz"
-    }
-  },
-  {
-    "name": "Pawtato Tools",
-    "description": "Pawtato Tools provides a comprehensive dashboard for managing Sui ecosystem tokens, NFTs, and DeFi positions.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "NFT"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://pawtato.app/",
-      "logo": "/imgs/Sui/NFT/Pawtato Tools.png",
-      "twitter": "https://x.com/PawtatoFinance"
-    }
-  },
-  {
-    "name": "Doonies",
-    "description": "Los Doonies is a collection of 4,444 generative PFP NFTs on Sui, granting access to a private community and staking rewards.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "NFT"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://www.doonies.io/",
-      "logo": "/imgs/Sui/NFT/Doonies.png",
-      "twitter": "https://x.com/LosDoonies"
-    }
-  },
-  {
-    "name": "Suimilios",
-    "description": "Suimilios is a community-focused NFT project on Sui featuring staking and trait upgrades (transmogs).",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "NFT"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://suimilios.com/",
-      "logo": "/imgs/Sui/NFT/Suimilios.png",
-      "twitter": "https://x.com/Suimilios"
-    }
-  },
-  {
-    "name": "The Captains",
-    "description": "The Captains is an NFT collection of 3,333 captains prepared to explore the Coral Reef on Sui.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "NFT"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://talentum.id/",
-      "logo": "/imgs/Sui/NFT/The Captains.png",
-      "twitter": "https://x.com/TalentumID"
-    }
-  },
-  {
-    "name": "AEON",
-    "description": "AEON (related to SuiNS) provides identity solutions and NFT integrations on Sui.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "NFT"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://sns.domains/",
-      "logo": "/imgs/Sui/NFT/AEON.png",
-      "twitter": "https://x.com/SuiNSdapp"
-    }
-  },
-  {
-    "name": "Popkins Legendary Pack",
-    "description": "Legendary Packs from the Popkins collection guarantee a Popkin NFT and support the development of Claynosaurz's mobile game.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "NFT"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://claynosaurz.com/",
-      "logo": "/imgs/Sui/NFT/Popkins Legendary Pack.png",
-      "twitter": "https://x.com/Claynosaurz"
-    }
-  },
-  {
-    "name": "XOCIETY Frontier",
-    "description": "XOCIETY Frontier NFTs are avatars for the XOCIETY metaverse, providing in-game and real-world benefits.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "NFT"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://xociety.io/",
-      "logo": "/imgs/Sui/NFT/XOCIETY Frontier.png",
-      "twitter": "https://x.com/Xocietyofficial"
-    }
-  },
-  {
-    "name": "Rootlets",
-    "description": "Rootlets is a collection of 3,333 friendly creatures on Sui, a companion project to Suilend.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "NFT"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://rootlets.xyz/",
-      "logo": "/imgs/Sui/NFT/Rootlets.png",
-      "twitter": "https://x.com/rootlets_nft"
-    }
-  },
-  {
-    "name": "DeLorean Labs",
-    "description": "DeLorean Labs is the Web3 arm of DMC, building a tokenized ecosystem with digital collectibles and a marketplace on Sui.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "NFT"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://deloreanlabs.com/",
-      "logo": "/imgs/Sui/NFT/DeLorean Labs.png",
-      "twitter": "https://x.com/DeLoreanlabs"
-    }
-  },
-  {
-    "name": "Fuddies",
-    "description": "Fuddies is a collection of 10,000 cartoonish owl NFTs on Sui, considered a blue-chip collection.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "NFT"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "",
-      "logo": "/imgs/Sui/NFT/Fuddies.png",
-      "twitter": "https://x.com/FuddiesNFT"
-    }
-  },
-  {
-    "name": "HIPPO",
-    "description": "HIPPO (Sudeng) is a meme coin on Sui inspired by Moo Deng, supporting wildlife conservation.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Meme"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://www.hippocto.meme/",
-      "logo": "/imgs/Sui/Meme Coins/HIPPO.png",
-      "twitter": "https://x.com/hippo_cto"
-    }
-  },
-  {
-    "name": "FUD",
-    "description": "FUD (Fud the Pug) is a meme coin rewarding early Sui NFT communities and fostering engagement.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Meme"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://fudthepug.com/",
-      "logo": "/imgs/Sui/Meme Coins/FUD.png",
-      "twitter": "https://x.com/fudthepug"
-    }
-  },
-  {
-    "name": "PUGWIF",
-    "description": "PUGWIFHAT is a community-revived meme coin on Sui aiming to raise awareness for the ecosystem.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Meme"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://pugwifhat.com/",
-      "logo": "/imgs/Sui/Meme Coins/PUGWIF.png",
-      "twitter": "https://x.com/Pugwifsui"
-    }
-  },
-  {
-    "name": "DOGSUI",
-    "description": "DOGSUI is a meme coin community on the Sui blockchain.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Meme"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "",
-      "logo": "/imgs/Sui/Meme Coins/DOGSUI.png",
-      "twitter": "https://x.com/dogsuimeme"
-    }
-  },
-  {
-    "name": "BLUB",
-    "description": "BLUB is a water-themed memecoin on Sui, inspired by Matt Furie's art and the Sui blockchain concept.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Meme"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://blubsui.com/",
-      "logo": "/imgs/Sui/Meme Coins/BLUB.png",
-      "twitter": "https://x.com/blubsui"
-    }
-  },
-  {
-    "name": "HSUI",
-    "description": "HSUI (Suicune) is a meme token embraced as the Sui network's mascot, fostering inclusion.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Meme"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://suicune.dog/",
-      "logo": "/imgs/Sui/Meme Coins/HSUI.png",
-      "twitter": "https://x.com/HsuiOnSui"
-    }
-  },
-  {
-    "name": "SCB",
-    "description": "SCB (Sacabam) is a native memecoin supported by the Sui OG Community.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Meme"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "",
-      "logo": "/imgs/Sui/Meme Coins/SCB.png",
-      "twitter": "https://x.com/sacabamfun"
-    }
-  },
-  {
-    "name": "Suieet",
-    "description": "Suieet is a 'sweet' memecoin project on Sui focused on global IRL community building.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Meme"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://suieet.com/",
-      "logo": "/imgs/Sui/Meme Coins/Suieet.png",
-      "twitter": "https://x.com/Suieet_"
-    }
-  },
-  {
-    "name": "RECRD",
-    "description": "RECRD is a SocialFi platform allowing creators to tokenize videos as NFTs and monetize based on views.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Social"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "",
-      "logo": "/imgs/Sui/SocialFi/RECRD.png",
-      "twitter": "https://x.com/RECRDapp"
-    }
-  },
-  {
-    "name": "Coral Reef",
-    "description": "Coral Reef involves social engagement within the Sui ecosystem.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Social"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "",
-      "logo": "/imgs/Sui/SocialFi/Coral Reef.png",
-      "twitter": "https://x.com/Suicoralreef"
-    }
-  },
-  {
-    "name": "Artipedia",
-    "description": "Artipedia is a 'Watch to Earn' cultural project on Sui where users earn tokens by consuming content.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Social"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "",
-      "logo": "/imgs/Sui/SocialFi/Artipedia.png",
-      "twitter": "https://x.com/Artipediaglobal"
-    }
-  },
-  {
-    "name": "Quantum Temple",
-    "description": "Quantum Temple is a Web3 platform preserving cultural heritage and funding ancestral communities via blockchain.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Social"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://quantumtemple.xyz/",
-      "logo": "/imgs/Sui/SocialFi/Quantum Temple.png",
-      "twitter": "https://x.com/quantum_temple"
-    }
-  },
-  {
-    "name": "Talus Network",
-    "description": "Talus Network is a Layer 1 blockchain for autonomous AI agents, built with Move on Sui.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "AI"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://www.talus.network/",
-      "logo": "/imgs/Sui/Ai/Talus Network.png",
-      "twitter": "https://x.com/TalusNetwork"
-    }
-  },
-  {
-    "name": "SUI Agents (SUIA)",
-    "description": "SUI Agents empowers users to create, tokenize, and trade AI Agents on the Sui blockchain.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "AI"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://suiagents.ai/",
-      "logo": "/imgs/Sui/Ai/SUI Agents SUIA.png",
-      "twitter": "https://x.com/SUI_agents"
-    }
-  },
-  {
-    "name": "Stonefish AI",
-    "description": "Stonefish AI is a 'Venomous AI Agent' on Sui combining meme culture with AI technology.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "AI"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://t.me/stonefishAI",
-      "logo": "/imgs/Sui/Ai/Stonefish AI.png",
-      "twitter": "https://x.com/stonefishai"
-    }
-  },
-  {
-    "name": "Slush Wallet",
-    "description": "Slush Wallet is a wallet for the Sui ecosystem (formerly associated with Sui Wallet branding in some contexts or a new entrant).",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Wallets"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "",
-      "logo": "/imgs/Sui/Wallets/slush.jpg",
-      "twitter": ""
-    }
-  },
-  {
-    "name": "BlueMove",
-    "description": "BlueMove is a leading NFT marketplace and launchpad on Sui and Aptos.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Launchpad"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://bluemove.net/",
-      "logo": "/imgs/Sui/Launchpad/BlueMove.png",
-      "twitter": "https://x.com/BlueMove_OA"
-    }
-  },
-  {
-    "name": "Blast.fun",
-    "description": "Blast.fun is a launchpad platform on Sui.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Launchpad"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://blast.fun/",
-      "logo": "/imgs/Sui/Launchpad/Blastfun.png",
-      "twitter": "https://x.com/blastdotfun"
-    }
-  },
-  {
-    "name": "Moonbags",
-    "description": "Moonbags is a no-code memecoin token launchpad on Sui facilitating instant token creation and fair launches.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Launchpad"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://moonbags.io/",
-      "logo": "/imgs/Sui/Launchpad/Moonbags.png",
-      "twitter": "https://x.com/moonbags_io"
-    }
-  },
-  {
-    "name": "Tradeport",
-    "description": "Tradeport is a multi-chain NFT aggregator and marketplace supporting Sui.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Marketplace"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://tradeport.xyz/",
-      "logo": "/imgs/Sui/Marketplace/Tradeport.png",
-      "twitter": "https://x.com/tradeportxyz"
-    }
-  },
-  {
-    "name": "Overtake World",
-    "description": "Overtake World is a peer-to-peer marketplace on Sui for trading game items, accounts, and currencies.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Marketplace"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://overtake.world/",
-      "logo": "/imgs/Sui/Marketplace/Overtake World.png",
-      "twitter": "https://x.com/overtake_world"
-    }
-  },
-  {
-    "name": "BlueMove",
-    "description": "BlueMove on Sui",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Marketplace"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "",
-      "logo": "/imgs/Sui/Marketplace/BlueMove.png",
-      "twitter": "https://x.com/BlueMove_OA"
-    }
-  },
-  {
-    "name": "TBook",
-    "description": "TBook is a StableFi coordination layer connecting credentials to stablecoin and RWA distribution on Sui.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Infra&Tools"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://tbook.com/",
-      "logo": "/imgs/Sui/Infra  Tools/TBook.png",
-      "twitter": "https://x.com/realtbook"
-    }
-  },
-  {
-    "name": "Ika",
-    "description": "Ika is a scalable MPC network on Sui.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Infra&Tools"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "",
-      "logo": "/imgs/sui_ecosystem/Infra&Tools/Ika.jpg",
-      "twitter": ""
-    }
-  },
-  {
-    "name": "Walrus",
-    "description": "Walrus is a decentralized storage protocol for Sui.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Infra&Tools"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "",
-      "logo": "/imgs/sui_ecosystem/Infra&Tools/Walrus.jpg",
-      "twitter": ""
-    }
-  },
-  {
-    "name": "Pyth",
-    "description": "Pyth Network provides real-time market data and price feeds to the Sui ecosystem.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Infra&Tools"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://pyth.network/",
-      "logo": "/imgs/Sui/Infra  Tools/Pyth.png",
-      "twitter": "https://x.com/PythNetwork"
-    }
-  },
-  {
-    "name": "Seal",
-    "description": "Seal is a decentralized secrets management service built on Sui for securing sensitive data.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Infra&Tools"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://seal.mystenlabs.com/",
-      "logo": "/imgs/Sui/Infra  Tools/Seal.png",
-      "twitter": ""
-    }
-  },
-  {
-    "name": "Nautilus",
-    "description": "Nautilus is a framework for secure and verifiable off-chain computation on Sui using TEEs.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Infra&Tools"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://sui.io/nautilus",
-      "logo": "/imgs/Sui/Infra  Tools/Nautilus.png",
-      "twitter": ""
-    }
-  },
-  {
-    "name": "ZK Login",
-    "description": "ZK Login allows users to access Sui applications using Web2 credentials like Google or Facebook via zero-knowledge proofs.",
-    "sectors": [
-      {
-        "sector": "Sui",
-        "types": [
-          "Infra&Tools"
-        ]
-      }
-    ],
-    "founded": null,
-    "funding": null,
-    "links": {
-      "homepage": "https://sui.io/zklogin",
-      "logo": "/imgs/Sui/Infra  Tools/ZK Login.png",
-      "twitter": ""
     }
   }
 ]
