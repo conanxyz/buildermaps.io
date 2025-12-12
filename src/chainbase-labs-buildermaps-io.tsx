@@ -11,6 +11,14 @@ const queryClient = new QueryClient({
     defaultOptions: {
         queries: {
             networkMode: 'always',
+            // Data is considered stale immediately, so it will refetch on mount
+            staleTime: 0,
+            // Keep data in cache for 5 minutes (default)
+            gcTime: 5 * 60 * 1000,
+            // Refetch when window regains focus to get fresh data
+            refetchOnWindowFocus: true,
+            // Refetch on reconnect to get fresh data after network issues
+            refetchOnReconnect: true,
         },
     },
 })
