@@ -1,0 +1,132 @@
+{
+  "sector": "Sui",
+  "types": {
+    "AI": [
+      "stonefish-ai",
+      "sui-agents-suia",
+      "talus-network"
+    ],
+    "Data & Analytics": [
+      "aeon",
+      "artemis",
+      "birdeye",
+      "blockberry-api",
+      "blockvision",
+      "chainbase",
+      "defillama",
+      "suiscan-explorer",
+      "suivision"
+    ],
+    "Bridge": [
+      "mayan",
+      "portal",
+      "sui-bridge"
+    ],
+    "DeFi": [
+      "suilend",
+      "navi",
+      "bluefin",
+      "haedal",
+      "bucket",
+      "ember",
+      "upshift",
+      "momentum-mmt-finance",
+      "cetus",
+      "pawtato-finance",
+      "beep",
+      "ferra",
+      "magma",
+      "aftermath",
+      "flowx",
+      "full-sail",
+      "noodles-finance",
+      "7k-aggregator",
+      "deepbook",
+      "alphafi",
+      "alphalend",
+      "kriya",
+      "typus-finance",
+      "scallop",
+      "dipcoin",
+      "volo"
+    ],
+    "GameFi": [
+      "suiplay",
+      "samurai-shodown-r",
+      "jackson-protocol",
+      "super-b",
+      "olympian-games",
+      "panzerdogs",
+      "ambrus-studio",
+      "xociety",
+      "cosmocadia",
+      "one-fight-arena",
+      "pebble-city",
+      "dark-times",
+      "double-up",
+      "suigar"
+    ],
+    "Infra&Tools": [
+      "tbook",
+      "ika",
+      "walrus",
+      "sui-name-service",
+      "pyth",
+      "seal",
+      "nautilus",
+      "zk-login"
+    ],
+    "Launchpad": [
+      "blast-fun",
+      "bluemove",
+      "moonbags"
+    ],
+    "Marketplace": [
+      "bluemove",
+      "overtake-world",
+      "tradeport"
+    ],
+    "Meme Coins": [
+      "fud",
+      "hippo",
+      "pugwif",
+      "dogsui",
+      "blub",
+      "hsui",
+      "scb",
+      "suieet"
+    ],
+    "NFT": [
+      "pawtato-heroes",
+      "pawtato-land",
+      "popkins-legendary-pack",
+      "tallys",
+      "prime-machin",
+      "mystic-yetis",
+      "the-mf-squid-market",
+      "pawtato-tools",
+      "doonies",
+      "suimilios",
+      "the-captains",
+      "aeon",
+      "delorean-labs",
+      "fuddies",
+      "rootlets",
+      "xociety-frontier"
+    ],
+    "SocialFi": [
+      "artipedia",
+      "coral-reef",
+      "quantum-temple",
+      "recrd"
+    ],
+    "Wallets": [
+      "fewcha",
+      "nightly-wallet",
+      "shadow-wallet",
+      "slush-wallet",
+      "suiet",
+      "surf"
+    ]
+  }
+}

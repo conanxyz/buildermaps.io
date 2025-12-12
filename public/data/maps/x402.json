@@ -1,0 +1,104 @@
+{
+  "sector": "x402",
+  "types": {
+    "Chains & Protocols": [
+      "aeon",
+      "altlayer",
+      "ar-io-network",
+      "avalanche",
+      "base",
+      "cambrian-network",
+      "eigencloud",
+      "hedera",
+      "mantle",
+      "near",
+      "peaq",
+      "polygon",
+      "skale",
+      "solana",
+      "sui"
+    ],
+    "Cloud & Edge Infra": [
+      "anthropic",
+      "aurracloud",
+      "aws",
+      "cloudflare",
+      "google-cloud",
+      "vercel"
+    ],
+    "Consumer Apps": [
+      "402rush-fun",
+      "aixbt",
+      "anchorbrowser",
+      "cod3x",
+      "ekai",
+      "heurist-ai",
+      "otto-ai",
+      "questflow",
+      "sim",
+      "slesh",
+      "snack-money",
+      "tip-md",
+      "vibe-game"
+    ],
+    "Emerging": [
+      "4mica",
+      "bond-credit",
+      "flow",
+      "jatayu-vortex",
+      "locus",
+      "roba-labs",
+      "supermission"
+    ],
+    "Identity & Access": [
+      "cloudflare",
+      "cred-protocol",
+      "ethereum",
+      "kite-ai",
+      "pieverse",
+      "snack-money"
+    ],
+    "Indexing & Data": [
+      "apify",
+      "chainbase",
+      "firecrawl",
+      "gloria-ai",
+      "indexing-co",
+      "load-network",
+      "neynar",
+      "pinata",
+      "radr-fun",
+      "switchboard",
+      "x402scan"
+    ],
+    "Infra & Devtools": [
+      "0xgasless",
+      "1shot-api",
+      "alphakek",
+      "bankr",
+      "chaoschain",
+      "corbits",
+      "crossmint",
+      "dark",
+      "fluora",
+      "hyperware",
+      "latinum",
+      "mcpay",
+      "meridian",
+      "mogami",
+      "nodekit",
+      "polymer-labs",
+      "thirdweb"
+    ],
+    "Wallet & Payments": [
+      "across",
+      "alchemy",
+      "circle",
+      "coinbase",
+      "crossmint",
+      "payai",
+      "stripe",
+      "visa"
+    ]
+  }
+}

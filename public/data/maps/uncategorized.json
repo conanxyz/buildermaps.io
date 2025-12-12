@@ -1,0 +1,17 @@
+{
+  "sector": "Uncategorized",
+  "types": {
+    "General": [
+      "four-pillars"
+    ],
+    "Identity": [
+      "karrier-one"
+    ],
+    "Payments": [
+      "spritz-finance"
+    ],
+    "Walrus": [
+      "tusky"
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "sector": "AI & Crypto",
+  "types": {
+    "Agents": [
+      "alethea-ai",
+      "fetch-ai",
+      "kaito",
+      "morpheus",
+      "myshell",
+      "olas",
+      "ora",
+      "talus",
+      "vana",
+      "wayfinder"
+    ],
+    "Compute": [
+      "aethir",
+      "akash",
+      "compute-labs",
+      "exabits",
+      "fluence",
+      "gensyn",
+      "grass",
+      "io-net",
+      "nesa",
+      "nosana",
+      "phala",
+      "render"
+    ],
+    "Data": [
+      "3box",
+      "bittensor",
+      "cambrian",
+      "chainbase",
+      "codatta",
+      "dtelecom",
+      "fractal-id",
+      "kip-protocol",
+      "kite-ai",
+      "lighthouse",
+      "openledger",
+      "orbs",
+      "rysk",
+      "sahara-ai",
+      "space-and-time",
+      "spectral",
+      "story-protocol",
+      "synternet",
+      "teneo",
+      "the-graph"
+    ],
+    "Development Tools": [
+      "arkham",
+      "chaingpt",
+      "dune",
+      "forta",
+      "kaito",
+      "metatrust",
+      "testmachine"
+    ],
+    "Inference": [
+      "aizel-network",
+      "giza",
+      "hyperbolic",
+      "kuzu",
+      "wayfinder"
+    ],
+    "Infra": [
+      "aizel-network",
+      "autonomys",
+      "bittensor",
+      "chaingpt",
+      "hypercycle",
+      "hyperspace",
+      "macrocosmos",
+      "near",
+      "pluralis",
+      "prime-intellect",
+      "ritual",
+      "sentient"
+    ],
+    "Training": [
+      "autonomys",
+      "nous-research",
+      "pluralis",
+      "prime-intellect",
+      "ritual",
+      "sentient"
+    ]
+  }
+}
