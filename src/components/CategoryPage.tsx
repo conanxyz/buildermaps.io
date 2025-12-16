@@ -30,9 +30,6 @@ export function CategoryPage({ category, onBack }: CategoryPageProps) {
     [category, searchQuery],
   );
 
-  const projectCount = countCategoryProjects(category);
-  const subcategoryCount = category.subcategories.length;
-
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="sticky top-0 z-50 border-b bg-white shadow-sm">

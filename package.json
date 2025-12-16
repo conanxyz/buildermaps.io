@@ -1,11 +1,11 @@
 {
   "name": "@chainbase-labs/buildermaps-io",
   "scripts": {
-    "start": "concurrently --names \"maps,webpack\" --prefix-colors \"cyan,green\" \"npm run watch:maps\" \"node scripts/webpack-with-build-time.js serve --mode=development\"",
+    "start": "node scripts/webpack-with-build-time.js serve --mode=development",
     "start:no-watch": "node scripts/webpack-with-build-time.js serve --mode=development",
     "iw": "npm i --workspaces false --legacy-peer-deps",
     "start:standalone": "node scripts/webpack-with-build-time.js serve --mode=development --env standalone",
-    "build": "npm run build:maps && node scripts/webpack-with-build-time.js --mode=production",
+    "build": "node scripts/webpack-with-build-time.js --mode=production",
     "build:webpack": "node scripts/webpack-with-build-time.js --mode=production",
     "build:maps": "node scripts/build-maps.js",
     "watch:maps": "node scripts/watch-maps.js",

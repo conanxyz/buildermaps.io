@@ -50,6 +50,9 @@ jobs:
           jq '.imports | keys | join(",")' import-map.cdn.json > shared-modules.txt
           echo "SHARED_MODULES=$(cat shared-modules.txt)" >> $GITHUB_ENV  
 
+      - name: Build builder-maps.json
+        run: npm run build:maps
+
       - name: Build
         run: npm run build --legacy-peer-deps
         env:
@@ -86,7 +89,8 @@ jobs:
 
       - name: Upload public assets to prod OSS
         run: |
-          ./ossutil64 cp -r public/data/ "${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/data/" --meta="Cache-Control:no-cache" --update           
+          ./ossutil64 cp -r public/data/ "${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/data/" --meta="Cache-Control:no-cache" --update
+          ./ossutil64 cp public/data/builder-maps.json "${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/data/builder-maps.json" --meta="Cache-Control:no-cache" --update           
 
       - name: Upload files to OSS
         run: |

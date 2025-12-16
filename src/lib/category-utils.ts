@@ -1,5 +1,3 @@
-import builderMapsLocal from "../../public/data/builder-maps.json";
-
 export interface Project {
   id: string;
   name: string;
@@ -178,12 +176,102 @@ function processBuilderMapsData(builderMaps: BuilderMapEntry[]): Category[] {
 }
 
 /**
+ * Builds builder maps data from local projects and maps directories
+ * This function is used in development to build data on-the-fly
+ * Uses webpack's require.context to dynamically load JSON files
+ */
+function buildFromLocalData(): BuilderMapEntry[] {
+  // Use webpack's require.context to load all JSON files
+  // @ts-ignore - require.context is a webpack feature
+  const projectsContext = require.context("../../public/data/projects", false, /\.json$/);
+  // @ts-ignore - require.context is a webpack feature
+  const mapsContext = require.context("../../public/data/maps", false, /\.json$/);
+
+  // Load all projects
+  const projects = new Map<string, any>();
+  projectsContext.keys().forEach((key: string) => {
+    const project = projectsContext(key);
+    if (project && project.id) {
+      projects.set(project.id, project);
+    }
+  });
+
+  // Load all maps and build the data structure
+  const projectSectors = new Map<string, SectorEntry[]>();
+  
+  mapsContext.keys().forEach((key: string) => {
+    const mapData = mapsContext(key);
+    if (!mapData || !mapData.sector) return;
+    
+    const sectorName = mapData.sector;
+    const types = mapData.types || [];
+
+    types.forEach((type: { id: string; name: string; projects: string[] }) => {
+      if (!type || !type.name) return;
+      
+      const typeName = type.name;
+      const projectIds = type.projects || [];
+
+      projectIds.forEach((projectId: string) => {
+        if (!projectId) return;
+        
+        if (!projectSectors.has(projectId)) {
+          projectSectors.set(projectId, []);
+        }
+
+        let sectorEntry = projectSectors.get(projectId)!.find(s => s.sector === sectorName);
+
+        if (sectorEntry) {
+          if (!sectorEntry.types.includes(typeName)) {
+            sectorEntry.types.push(typeName);
+          }
+        } else {
+          projectSectors.get(projectId)!.push({
+            sector: sectorName,
+            types: [typeName]
+          });
+        }
+      });
+    });
+  });
+
+  // Build the final structure
+  const builderMaps: BuilderMapEntry[] = [];
+  
+  for (const [projectId, sectors] of projectSectors) {
+    const project = projects.get(projectId);
+    if (!project) {
+      console.warn(`Project not found: ${projectId}`);
+      continue;
+    }
+
+    builderMaps.push({
+      name: project.name,
+      description: project.description || "",
+      sectors: sectors,
+      founded: project.founded ?? null,
+      funding: project.funding ?? null,
+      links: project.links || {}
+    });
+  }
+
+  // Sort by name
+  builderMaps.sort((a, b) => a.name.localeCompare(b.name));
+
+  return builderMaps;
+}
+
+/**
  * Fetches builder maps data from the remote URL and processes it into categories
  */
 export async function fetchCategories(): Promise<Category[]> {
-  if (process.env.NODE_ENV === "development") { 
-    return processBuilderMapsData(builderMapsLocal as BuilderMapEntry[]);
+  if (process.env.NODE_ENV === "development") {
+    // In development, build from local projects and maps
+    const builderMaps = buildFromLocalData();
+    return processBuilderMapsData(builderMaps);
   }
+  
+  // In production, fetch from OSS
   const response = await fetch("https://net-static-dev.chainbasehq.com/public/buildermaps/data/builder-maps.json");
   if (!response.ok) {
     throw new Error(`Failed to fetch builder maps data: ${response.statusText}`);
