@@ -5,6 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchCategories, type Category } from "./lib/category-utils";
 import { CategoryPage } from "./components/CategoryPage";
 import { HomePage } from "./components/HomePage";
+import { SubmitProject } from "./components/SubmitProject";
 import "./styles/global.css";
 
 function HomeRoute() {
@@ -89,6 +90,19 @@ function CategoryRoute() {
   );
 }
 
+function SubmitRoute() {
+  const navigate = useNavigate();
+
+  return (
+    <SubmitProject
+      onBack={() => {
+        navigate("/");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }}
+    />
+  );
+}
+
 export default function Root() {
   const location = useLocation();
   const isCategoryRoute = location.pathname.startsWith("/category/");
@@ -98,6 +112,7 @@ export default function Root() {
       <Routes>
         <Route path="/" element={<HomeRoute />} />
         <Route path="/category/:categoryId" element={<CategoryRoute />} />
+        <Route path="/submit" element={<SubmitRoute />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>

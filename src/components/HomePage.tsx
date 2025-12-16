@@ -1,4 +1,5 @@
-import { ArrowRight, Github } from "lucide-react";
+import { ArrowRight, Github, Plus } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 import { countCategoryProjects, countTotalProjects, type Category } from "../lib/category-utils";
 import { Button } from "./ui/button";
@@ -10,6 +11,7 @@ interface HomePageProps {
 }
 
 export function HomePage({ categories, onCategoryClick }: HomePageProps) {
+  const navigate = useNavigate();
   const lastUpdated = process.env.LAST_BUILD_TIME ?? "Unknown";
   
   // Filter out "Uncategorized" category
@@ -50,6 +52,18 @@ export function HomePage({ categories, onCategoryClick }: HomePageProps) {
               >
                 <Github className="h-4 w-4" />
                 View on GitHub
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                className="gap-2 border-gray-300"
+                onClick={() => {
+                  navigate("/submit");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <Plus className="h-4 w-4" />
+                Submit Project
               </Button>
               <UserMenu />
             </div>
