@@ -1,9 +1,9 @@
 import { ArrowRight, Github, Plus } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 
 import { countCategoryProjects, countTotalProjects, type Category } from "../lib/category-utils";
 import { Button } from "./ui/button";
 import { UserMenu } from "./UserMenu";
+import { useSubmitProjectModal } from "./SubmitProjectModal";
 
 interface HomePageProps {
   categories: Category[];
@@ -11,7 +11,7 @@ interface HomePageProps {
 }
 
 export function HomePage({ categories, onCategoryClick }: HomePageProps) {
-  const navigate = useNavigate();
+  const { setOpen } = useSubmitProjectModal();
   const lastUpdated = process.env.LAST_BUILD_TIME ?? "Unknown";
   
   // Filter out "Uncategorized" category
@@ -57,10 +57,7 @@ export function HomePage({ categories, onCategoryClick }: HomePageProps) {
                 variant="outline"
                 size="sm"
                 className="gap-2 border-gray-300"
-                onClick={() => {
-                  navigate("/submit");
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
+                onClick={() => setOpen(true)}
               >
                 <Plus className="h-4 w-4" />
                 Submit Project
