@@ -64,7 +64,7 @@ function splitData() {
       if (!sectorMaps.has(sectorId)) {
         sectorMaps.set(sectorId, {
           sector: sectorName,
-          types: {}
+          types: new Map() // 使用Map存储，key为type name，value为type对象
         });
       }
 
@@ -73,16 +73,23 @@ function splitData() {
       // 处理每个type
       const types = sectorEntry.types || ['General'];
       types.forEach(typeName => {
-        const typeKey = typeName.trim() || 'General';
+        const typeNameTrimmed = typeName.trim() || 'General';
+        const typeId = slugify(typeNameTrimmed);
 
-        // 初始化type数组
-        if (!sectorMap.types[typeKey]) {
-          sectorMap.types[typeKey] = [];
+        // 获取或创建type对象
+        if (!sectorMap.types.has(typeNameTrimmed)) {
+          sectorMap.types.set(typeNameTrimmed, {
+            id: typeId,
+            name: typeNameTrimmed,
+            projects: []
+          });
         }
 
+        const typeObj = sectorMap.types.get(typeNameTrimmed);
+
         // 添加项目ID（避免重复）
-        if (!sectorMap.types[typeKey].includes(projectId)) {
-          sectorMap.types[typeKey].push(projectId);
+        if (!typeObj.projects.includes(projectId)) {
+          typeObj.projects.push(projectId);
         }
       });
     });
@@ -106,11 +113,13 @@ function splitData() {
   for (const [sectorId, sectorMap] of sectorMaps) {
     const filePath = path.join(MAPS_DIR, `${sectorId}.json`);
 
-    // 对每个type下的项目ID进行排序
-    const sortedTypes = {};
-    Object.keys(sectorMap.types).sort().forEach(typeKey => {
-      sortedTypes[typeKey] = sectorMap.types[typeKey].sort();
-    });
+    // 将Map转换为数组，对每个type下的项目ID进行排序，并按type name排序
+    const sortedTypes = Array.from(sectorMap.types.values())
+      .map(type => ({
+        ...type,
+        projects: type.projects.sort()
+      }))
+      .sort((a, b) => a.name.localeCompare(b.name));
 
     const output = {
       sector: sectorMap.sector,
@@ -129,11 +138,11 @@ function splitData() {
   // 列出所有sectors
   console.log('\n📋 Sector列表：');
   for (const [sectorId, sectorMap] of sectorMaps) {
-    const totalProjects = Object.values(sectorMap.types).reduce((sum, projects) => sum + projects.length, 0);
-    const typeCount = Object.keys(sectorMap.types).length;
+    const totalProjects = Array.from(sectorMap.types.values()).reduce((sum, type) => sum + type.projects.length, 0);
+    const typeCount = sectorMap.types.size;
     console.log(`   - ${sectorMap.sector} (${typeCount} 个types, ${totalProjects} 个项目)`);
-    Object.entries(sectorMap.types).forEach(([typeName, projects]) => {
-      console.log(`     * ${typeName}: ${projects.length} 个项目`);
+    Array.from(sectorMap.types.values()).forEach((type) => {
+      console.log(`     * ${type.name}: ${type.projects.length} 个项目`);
     });
   }
 

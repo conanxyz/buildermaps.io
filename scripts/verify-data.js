@@ -43,7 +43,7 @@ function verifyData() {
     );
 
     const sectorName = mapData.sector;
-    const types = mapData.types || {};
+    const types = mapData.types || [];
 
     console.log(`📍 ${sectorName}:`);
 
@@ -51,7 +51,9 @@ function verifyData() {
     const missingProjects = [];
 
     // 遍历每个type及其项目列表
-    Object.entries(types).forEach(([typeName, projectIds]) => {
+    types.forEach((type) => {
+      const typeName = type.name;
+      const projectIds = type.projects || [];
       sectorTotal += projectIds.length;
 
       // 验证每个projectId
@@ -70,10 +72,12 @@ function verifyData() {
     });
 
     console.log(`   - 映射项目数: ${sectorTotal}`);
-    console.log(`   - Types数量: ${Object.keys(types).length}`);
+    console.log(`   - Types数量: ${types.length}`);
 
     // 显示每个type的统计
-    Object.entries(types).forEach(([typeName, projectIds]) => {
+    types.forEach((type) => {
+      const typeName = type.name;
+      const projectIds = type.projects || [];
       console.log(`     * ${typeName}: ${projectIds.length} 个项目`);
     });
 
@@ -86,7 +90,7 @@ function verifyData() {
     sectorStats.push({
       sector: sectorName,
       count: sectorTotal,
-      typeCount: Object.keys(types).length,
+      typeCount: types.length,
       valid: missingProjects.length === 0
     });
 

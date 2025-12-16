@@ -54,10 +54,13 @@ function buildData() {
   // 遍历所有映射，收集每个项目的sectors信息
   maps.forEach(map => {
     const sectorName = map.sector;
-    const types = map.types || {};
+    const types = map.types || [];
 
     // 遍历每个type及其项目列表
-    Object.entries(types).forEach(([typeName, projectIds]) => {
+    types.forEach((type) => {
+      const typeName = type.name;
+      const projectIds = type.projects || [];
+      
       projectIds.forEach(projectId => {
         // 获取或初始化项目的sectors数组
         if (!projectSectors.has(projectId)) {

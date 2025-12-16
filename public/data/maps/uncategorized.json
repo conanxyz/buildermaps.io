@@ -1,17 +1,33 @@
 {
   "sector": "Uncategorized",
-  "types": {
-    "General": [
-      "four-pillars"
-    ],
-    "Identity": [
-      "karrier-one"
-    ],
-    "Payments": [
-      "spritz-finance"
-    ],
-    "Walrus": [
-      "tusky"
-    ]
-  }
+  "types": [
+    {
+      "id": "general",
+      "name": "General",
+      "projects": [
+        "four-pillars"
+      ]
+    },
+    {
+      "id": "identity",
+      "name": "Identity",
+      "projects": [
+        "karrier-one"
+      ]
+    },
+    {
+      "id": "payments",
+      "name": "Payments",
+      "projects": [
+        "spritz-finance"
+      ]
+    },
+    {
+      "id": "walrus",
+      "name": "Walrus",
+      "projects": [
+        "tusky"
+      ]
+    }
+  ]
 }
