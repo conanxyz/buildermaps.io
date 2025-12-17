@@ -1,13 +1,12 @@
 {
   "id": "fantv",
   "name": "FanTV",
-  "description": "FanTV is a video streaming and sharing platform where users can watch, create, and earn rewards.",
+  "description": "Social video streaming platform empowering creators and viewers.",
   "founded": null,
   "funding": null,
   "links": {
-    "logo": "/imgs/Sui/Social/FanTV.png",
-    "twitter": "https://x.com/FanTV_official",
     "homepage": "https://fantv.world/",
-    "discord": "https://discord.gg/Vsjpghdhb3"
+    "logo": "/imgs/Sui/SocialFi/FanTV.png",
+    "twitter": "https://x.com/FanTV_official"
   }
 }

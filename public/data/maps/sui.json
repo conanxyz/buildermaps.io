@@ -161,7 +161,22 @@
         "artipedia",
         "coral-reef",
         "quantum-temple",
-        "recrd"
+        "recrd",
+        "alkimi-exchange",
+        "giverep",
+        "fantv"
+      ]
+    },
+    {
+      "id": "rwa",
+      "name": "RWA",
+      "projects": [
+        "sagint-inc",
+        "rwadepin",
+        "creek-finance",
+        "arttoo",
+        "plume-network",
+        "matrixdock"
       ]
     },
     {
