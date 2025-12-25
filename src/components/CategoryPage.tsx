@@ -3,6 +3,7 @@ import {
   ArrowLeft,
   LayoutGrid,
   LayoutList,
+  Plus,
   Search,
 } from "lucide-react";
 
@@ -15,6 +16,7 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { CardView } from "./CardView";
 import { LandscapeView } from "./LandscapeView";
+import { useSubmitProjectModal } from "./SubmitProjectModal";
 
 interface CategoryPageProps {
   category: Category;
@@ -24,6 +26,21 @@ interface CategoryPageProps {
 export function CategoryPage({ category, onBack }: CategoryPageProps) {
   const [view, setView] = useState<"landscape" | "card">("landscape");
   const [searchQuery, setSearchQuery] = useState("");
+  const { setOpen } = useSubmitProjectModal();
+
+  const handleSubmitProject = () => {
+    // Pre-fill with current category
+    // If there's only one subcategory, pre-fill that too
+    const subcategoryName = category.subcategories.length === 1 
+      ? category.subcategories[0].name 
+      : undefined;
+    
+    setOpen(true, {
+      categoryId: category.id,
+      subcategoryName: subcategoryName,
+      lockCategory: true, // Lock the category when opened from CategoryPage
+    });
+  };
 
   const filteredCategory = useMemo(
     () => filterCategory(category, searchQuery),
@@ -78,9 +95,10 @@ export function CategoryPage({ category, onBack }: CategoryPageProps) {
             <Button
               variant="outline"
               className="gap-2"
-              onClick={() => window.open("https://github.com/chainbase-labs/buildermaps.io", "_blank", "noopener,noreferrer")}
+              onClick={handleSubmitProject}
             >
-              Submit a project
+              <Plus className="h-4 w-4" />
+              Submit Project
             </Button>
           </div>
         </div>

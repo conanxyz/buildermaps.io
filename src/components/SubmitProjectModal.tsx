@@ -17,7 +17,9 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 // Context for managing modal state
 interface SubmitProjectModalContextType {
   open: boolean;
-  setOpen: (open: boolean) => void;
+  setOpen: (open: boolean, initialValues?: { categoryId?: string; subcategoryName?: string; lockCategory?: boolean }) => void;
+  initialValues: { categoryId?: string; subcategoryName?: string };
+  lockCategory: boolean;
 }
 
 const SubmitProjectModalContext = createContext<SubmitProjectModalContextType | undefined>(undefined);
@@ -33,9 +35,22 @@ export function useSubmitProjectModal() {
 // Provider component
 export function SubmitProjectModalProvider({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
+  const [initialValues, setInitialValues] = useState<{ categoryId?: string; subcategoryName?: string }>({});
+  const [lockCategory, setLockCategory] = useState(false);
+
+  const handleSetOpen = (isOpen: boolean, values?: { categoryId?: string; subcategoryName?: string; lockCategory?: boolean }) => {
+    setOpen(isOpen);
+    if (isOpen && values) {
+      setInitialValues({ categoryId: values.categoryId, subcategoryName: values.subcategoryName });
+      setLockCategory(values.lockCategory || false);
+    } else if (!isOpen) {
+      setInitialValues({});
+      setLockCategory(false);
+    }
+  };
 
   return (
-    <SubmitProjectModalContext.Provider value={{ open, setOpen }}>
+    <SubmitProjectModalContext.Provider value={{ open, setOpen: handleSetOpen, initialValues, lockCategory }}>
       {children}
       <SubmitProjectModalContent />
     </SubmitProjectModalContext.Provider>
@@ -44,20 +59,18 @@ export function SubmitProjectModalProvider({ children }: { children: ReactNode }
 
 // Modal content component
 function SubmitProjectModalContent() {
-  const { open, setOpen } = useSubmitProjectModal();
+  const { open, setOpen, initialValues, lockCategory } = useSubmitProjectModal();
   const [logoPreview, setLogoPreview] = useState<string>('');
   const [categoryData, setCategoryData] = useState<Category[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
   const [selectedSubcategory, setSelectedSubcategory] = useState<Subcategory | null>(null);
-  const [requiresThirdLevel, setRequiresThirdLevel] = useState(false);
+  const [initialValuesApplied, setInitialValuesApplied] = useState(false);
   
   // New category/subcategory dialogs
   const [newCategoryDialog, setNewCategoryDialog] = useState(false);
   const [newSubcategoryDialog, setNewSubcategoryDialog] = useState(false);
-  const [newThirdLevelDialog, setNewThirdLevelDialog] = useState(false);
   const [newCategoryName, setNewCategoryName] = useState('');
   const [newSubcategoryName, setNewSubcategoryName] = useState('');
-  const [newThirdLevelName, setNewThirdLevelName] = useState('');
 
   const { data: categories, isLoading, error } = useQuery({
     queryKey: ['categories'],
@@ -97,10 +110,9 @@ function SubmitProjectModalContent() {
     if (!open) {
       reset();
       setLogoPreview('');
-      setCategoryData([]);
       setSelectedCategory(null);
       setSelectedSubcategory(null);
-      setRequiresThirdLevel(false);
+      setInitialValuesApplied(false);
     }
   }, [open, reset]);
 
@@ -118,37 +130,52 @@ function SubmitProjectModalContent() {
     }
   }, [watchLogoUrl]);
 
+  // Set initial values when modal opens with initial values (only once)
+  useEffect(() => {
+    if (open && initialValues.categoryId && !initialValuesApplied) {
+      // Use categoryData if available, otherwise use categories directly
+      const dataToUse = categoryData.length > 0 ? categoryData : (categories || []);
+      
+      if (dataToUse.length > 0) {
+        // Check if the category exists
+        const categoryExists = dataToUse.some(cat => cat.id === initialValues.categoryId);
+        if (categoryExists) {
+          setValue('categoryId', initialValues.categoryId);
+          setInitialValuesApplied(true);
+          if (initialValues.subcategoryName) {
+            // Use a small delay to ensure category is set first
+            const timer = setTimeout(() => {
+              setValue('subcategoryName', initialValues.subcategoryName!);
+            }, 100);
+            return () => clearTimeout(timer);
+          }
+        }
+      }
+    }
+  }, [open, initialValues.categoryId, initialValues.subcategoryName, categoryData, categories, setValue, initialValuesApplied]);
+
   // Update selected category when category changes
   useEffect(() => {
     if (watchCategoryId && categoryData.length > 0) {
       const category = categoryData.find(cat => cat.id === watchCategoryId);
       setSelectedCategory(category || null);
-      setValue('subcategoryName', '');
-      setValue('thirdLevelName', '');
-      setSelectedSubcategory(null);
+      // Only clear subcategory if we're not setting an initial value
+      if (!initialValues.subcategoryName || watchCategoryId !== initialValues.categoryId) {
+        setValue('subcategoryName', '');
+        setSelectedSubcategory(null);
+      }
     }
-  }, [watchCategoryId, categoryData, setValue]);
+  }, [watchCategoryId, categoryData, setValue, initialValues]);
 
-  // Update selected subcategory and check if third level is required
+  // Update selected subcategory
   useEffect(() => {
     if (selectedCategory && watchSubcategoryName) {
       const subcat = selectedCategory.subcategories.find(
         sub => sub.name === watchSubcategoryName
       );
       setSelectedSubcategory(subcat || null);
-      
-      // Check if third level is required (subcategory has no direct projects)
-      if (subcat) {
-        const hasNoDirectProjects = !subcat.projects || subcat.projects.length === 0;
-        const hasThirdLevel = subcat.subcategories && subcat.subcategories.length > 0;
-        setRequiresThirdLevel(hasNoDirectProjects && hasThirdLevel);
-      } else {
-        setRequiresThirdLevel(false);
-      }
-      
-      setValue('thirdLevelName', '');
     }
-  }, [selectedCategory, watchSubcategoryName, setValue]);
+  }, [selectedCategory, watchSubcategoryName]);
 
   const handleAddNewCategory = () => {
     if (!newCategoryName.trim()) {
@@ -201,50 +228,105 @@ function SubmitProjectModalContent() {
     toast.success('Subcategory added successfully');
   };
 
-  const handleAddNewThirdLevel = () => {
-    if (!selectedCategory || !selectedSubcategory) {
-      toast.error('Please select a category and subcategory first');
-      return;
+
+  // Helper function to convert string to kebab-case
+  const slugify = (text: string): string => {
+    return text
+      .toLowerCase()
+      .replace(/&/g, 'and')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  };
+
+  // Helper function to parse funding value
+  const parseFunding = (value?: string): number | string | null => {
+    if (!value || !value.trim()) return null;
+    // Try to extract number from strings like "$10M", "$1.5B", etc.
+    const numberMatch = value.match(/[\d.]+/);
+    if (numberMatch) {
+      const num = parseFloat(numberMatch[0]);
+      if (value.toUpperCase().includes('B')) return num * 1000000000;
+      if (value.toUpperCase().includes('M')) return num * 1000000;
+      if (value.toUpperCase().includes('K')) return num * 1000;
+      return num;
     }
-    if (!newThirdLevelName.trim()) {
-      toast.error('Please enter a third level name');
-      return;
-    }
+    // If it's a funding round like "Series A", return as string
+    return value;
+  };
 
-    const newThirdLevel: Subcategory = {
-      name: newThirdLevelName,
-      projects: [],
-    };
-
-    const updatedCategories = categoryData.map(cat => {
-      if (cat.id === selectedCategory.id) {
-        return {
-          ...cat,
-          subcategories: cat.subcategories.map(sub => {
-            if (sub.name === selectedSubcategory.name) {
-              return {
-                ...sub,
-                subcategories: [...(sub.subcategories || []), newThirdLevel],
-              };
-            }
-            return sub;
-          }),
-        };
-      }
-      return cat;
-    });
-
-    setCategoryData(updatedCategories);
-    setValue('thirdLevelName', newThirdLevelName);
-    setNewThirdLevelName('');
-    setNewThirdLevelDialog(false);
-    toast.success('Third level category added successfully');
+  // Helper function to parse founded year
+  const parseFounded = (value?: string): number | null => {
+    if (!value || !value.trim()) return null;
+    const year = parseInt(value, 10);
+    return isNaN(year) ? null : year;
   };
 
   const onSubmit = (data: ProjectFormData) => {
-    console.log('Form submitted:', data);
-    toast.success('Project submitted successfully!', {
-      duration: 4000,
+    // Generate project ID from name
+    const projectId = slugify(data.name);
+
+    // Build project JSON
+    const projectJson = {
+      id: projectId,
+      name: data.name,
+      description: data.description || '',
+      founded: parseFounded(data.founded),
+      funding: parseFunding(data.raised),
+      links: {
+        ...(data.website && { homepage: data.website }),
+        ...(data.logo && { logo: data.logo }),
+        ...(data.twitter && { twitter: data.twitter }),
+        ...(data.github && { github: data.github }),
+      },
+    };
+
+    // Build map JSON snippet
+    const selectedCategoryObj = categoryData.find(cat => cat.id === data.categoryId);
+    const sectorName = selectedCategoryObj?.name || data.categoryId;
+    const typeName = data.subcategoryName;
+    const typeId = slugify(typeName);
+
+    // Build GitHub issue URL
+    const title = encodeURIComponent(`Add Project: ${data.name}`);
+    const labels = encodeURIComponent('project:add');
+    
+    const body = encodeURIComponent(
+      `Please paste or review the complete project JSON below. The \`id\` must be kebab-case and match the filename in \`public/data/projects/\`.
+
+\`\`\`json
+${JSON.stringify(projectJson, null, 2)}
+\`\`\`
+
+Step 2: Please add this project to the appropriate sector and type map. Find the map file \`public/data/maps/${slugify(sectorName)}.json\` and add \`"${projectId}"\` to the \`projects\` array of the type with \`id: "${typeId}"\` (name: "${typeName}").
+
+Example - add \`"${projectId}"\` to the projects array:
+
+\`\`\`json
+{
+  "sector": "${sectorName}",
+  "types": [
+    {
+      "id": "${typeId}",
+      "name": "${typeName}",
+      "projects": [
+        "${projectId}",
+        "existing-project-1",
+        "existing-project-2"
+      ]
+    }
+  ]
+}
+\`\`\`
+`
+    );
+
+    const githubUrl = `https://github.com/chainbase-labs/buildermaps.io/issues/new?title=${title}&labels=${labels}&body=${body}`;
+
+    // Open GitHub issue in new tab
+    window.open(githubUrl, '_blank');
+
+    toast.success('Opening GitHub issue...', {
+      duration: 3000,
     });
     setOpen(false);
   };
@@ -263,7 +345,9 @@ function SubmitProjectModalContent() {
         alignItems: 'center',
         justifyContent: 'center',
         padding: 2,
+        zIndex: 1300,
       }}
+      disablePortal={false}
     >
       <Box
         sx={{
@@ -425,18 +509,28 @@ function SubmitProjectModalContent() {
                       <Label htmlFor="categoryId">Primary Category *</Label>
                       <div className="flex gap-2">
                         <Select
-                          value={watch('categoryId')}
+                          value={watch('categoryId') || ''}
                           onValueChange={(value) => setValue('categoryId', value)}
+                          disabled={lockCategory}
                         >
-                          <SelectTrigger className={errors.categoryId ? 'border-red-500' : ''}>
+                          <SelectTrigger 
+                            className={errors.categoryId ? 'border-red-500' : ''}
+                            disabled={lockCategory}
+                          >
                             <SelectValue placeholder="Select a category" />
                           </SelectTrigger>
-                          <SelectContent>
-                            {categoryData.map((cat) => (
-                              <SelectItem key={cat.id} value={cat.id}>
-                                {cat.name}
-                              </SelectItem>
-                            ))}
+                          <SelectContent className="z-[9999]">
+                            {categoryData.length > 0 ? (
+                              categoryData.map((cat) => (
+                                <SelectItem key={cat.id} value={cat.id}>
+                                  {cat.name}
+                                </SelectItem>
+                              ))
+                            ) : (
+                              <div className="px-2 py-1.5 text-sm text-muted-foreground">
+                                Loading categories...
+                              </div>
+                            )}
                           </SelectContent>
                         </Select>
                         <Dialog open={newCategoryDialog} onOpenChange={setNewCategoryDialog}>
@@ -482,13 +576,13 @@ function SubmitProjectModalContent() {
                         <Label htmlFor="subcategoryName">Secondary Category *</Label>
                         <div className="flex gap-2">
                           <Select
-                            value={watch('subcategoryName')}
+                            value={watch('subcategoryName') || ''}
                             onValueChange={(value) => setValue('subcategoryName', value)}
                           >
                             <SelectTrigger className={errors.subcategoryName ? 'border-red-500' : ''}>
                               <SelectValue placeholder="Select a subcategory" />
                             </SelectTrigger>
-                            <SelectContent>
+                            <SelectContent className="z-[9999]">
                               {selectedCategory.subcategories.map((subcat) => (
                                 <SelectItem key={subcat.name} value={subcat.name}>
                                   {subcat.name}
@@ -534,107 +628,6 @@ function SubmitProjectModalContent() {
                       </div>
                     )}
 
-                    {/* Third Level Category */}
-                    {selectedSubcategory && (
-                      <div className="space-y-2">
-                        <Label htmlFor="thirdLevelName">
-                          Third Level Category {requiresThirdLevel && '*'}
-                        </Label>
-                        {selectedSubcategory.subcategories && selectedSubcategory.subcategories.length > 0 ? (
-                          <div className="flex gap-2">
-                            <Select
-                              value={watch('thirdLevelName')}
-                              onValueChange={(value) => setValue('thirdLevelName', value)}
-                            >
-                              <SelectTrigger className={errors.thirdLevelName ? 'border-red-500' : ''}>
-                                <SelectValue placeholder="Select a third level category" />
-                              </SelectTrigger>
-                              <SelectContent>
-                                {selectedSubcategory.subcategories.map((thirdLevel) => (
-                                  <SelectItem key={thirdLevel.name} value={thirdLevel.name}>
-                                    {thirdLevel.name}
-                                  </SelectItem>
-                                ))}
-                              </SelectContent>
-                            </Select>
-                            <Dialog open={newThirdLevelDialog} onOpenChange={setNewThirdLevelDialog}>
-                              <DialogTrigger asChild>
-                                <Button type="button" variant="outline" size="icon">
-                                  <Plus className="h-4 w-4" />
-                                </Button>
-                              </DialogTrigger>
-                              <DialogContent>
-                                <DialogHeader>
-                                  <DialogTitle>Add New Third Level Category</DialogTitle>
-                                </DialogHeader>
-                                <div className="space-y-4 py-4">
-                                  <div className="space-y-2">
-                                    <Label htmlFor="newThirdLevel">Third Level Name</Label>
-                                    <Input
-                                      id="newThirdLevel"
-                                      value={newThirdLevelName}
-                                      onChange={(e) => setNewThirdLevelName(e.target.value)}
-                                      placeholder="e.g., Flash Loans"
-                                    />
-                                  </div>
-                                  <Button onClick={handleAddNewThirdLevel} className="w-full">
-                                    <Check className="h-4 w-4 mr-2" />
-                                    Add Third Level
-                                  </Button>
-                                </div>
-                              </DialogContent>
-                            </Dialog>
-                          </div>
-                        ) : (
-                          <Dialog open={newThirdLevelDialog} onOpenChange={setNewThirdLevelDialog}>
-                            <DialogTrigger asChild>
-                              <Button 
-                                type="button" 
-                                variant="outline" 
-                                className="w-full justify-center gap-2"
-                              >
-                                <Plus className="h-4 w-4" />
-                                Create Third Level Category
-                              </Button>
-                            </DialogTrigger>
-                            <DialogContent>
-                              <DialogHeader>
-                                <DialogTitle>Add New Third Level Category</DialogTitle>
-                              </DialogHeader>
-                              <div className="space-y-4 py-4">
-                                <div className="space-y-2">
-                                  <Label htmlFor="newThirdLevel">Third Level Name</Label>
-                                  <Input
-                                    id="newThirdLevel"
-                                    value={newThirdLevelName}
-                                    onChange={(e) => setNewThirdLevelName(e.target.value)}
-                                    placeholder="e.g., Flash Loans"
-                                  />
-                                </div>
-                                <Button onClick={handleAddNewThirdLevel} className="w-full">
-                                  <Check className="h-4 w-4 mr-2" />
-                                  Add Third Level
-                                </Button>
-                              </div>
-                            </DialogContent>
-                          </Dialog>
-                        )}
-                        <input
-                          type="hidden"
-                          {...register('thirdLevelName', { 
-                            required: requiresThirdLevel ? 'Third level category is required for this subcategory' : false 
-                          })}
-                        />
-                        {errors.thirdLevelName && (
-                          <p className="text-xs text-red-600">{errors.thirdLevelName.message}</p>
-                        )}
-                        {requiresThirdLevel && (
-                          <p className="text-xs text-blue-600">
-                            * This subcategory requires a third level selection
-                          </p>
-                        )}
-                      </div>
-                    )}
                   </div>
 
                   {/* Links */}
