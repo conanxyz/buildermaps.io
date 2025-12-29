@@ -12,15 +12,6 @@ interface CardViewProps {
 
 export function CardView({ category }: CardViewProps) {
   const groups = category.subcategories.map((subcategory) => {
-    if (subcategory.subcategories && subcategory.subcategories.length > 0) {
-      return {
-        title: subcategory.name,
-        sections: subcategory.subcategories.map((third) => ({
-          heading: third.name,
-          projects: third.projects,
-        })),
-      };
-    }
     return {
       title: subcategory.name,
       sections: [
@@ -54,7 +45,6 @@ export function CardView({ category }: CardViewProps) {
                       project={project}
                       categoryName={category.name}
                       subcategoryName={group.title}
-                      thirdLevelName={section.heading}
                     />
                   ))}
                 </div>
@@ -71,12 +61,10 @@ function ProjectCard({
   project,
   categoryName,
   subcategoryName,
-  thirdLevelName,
 }: {
   project: Project;
   categoryName: string;
   subcategoryName: string;
-  thirdLevelName?: string;
 }) {
   return (
     <div className="flex flex-col overflow-hidden rounded-sm border border-gray-300 bg-white transition-all hover:border-blue-400 hover:shadow-lg">
@@ -223,11 +211,6 @@ function ProjectCard({
           <span className="inline-block rounded bg-green-100 px-2 py-0.5 text-[10px] text-green-700">
             {subcategoryName}
           </span>
-          {thirdLevelName && (
-            <span className="inline-block rounded bg-blue-100 px-2 py-0.5 text-[10px] text-blue-700">
-              {thirdLevelName}
-            </span>
-          )}
         </div>
       </div>
     </div>

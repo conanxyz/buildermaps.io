@@ -281,15 +281,7 @@ export async function fetchCategories(): Promise<Category[]> {
 }
 
 export function countSubcategoryProjects(subcategory: Subcategory): number {
-  let count = subcategory.projects.length;
-
-  if (subcategory.subcategories) {
-    for (const nestedSubcategory of subcategory.subcategories) {
-      count += countSubcategoryProjects(nestedSubcategory);
-    }
-  }
-
-  return count;
+  return subcategory.projects.length;
 }
 
 export function countCategoryProjects(category: Category): number {

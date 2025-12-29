@@ -37,8 +37,6 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
             .sort((a, b) => countSubcategoryProjects(b) - countSubcategoryProjects(a));
           
           return sortedSubcategories.map((subcategory, index) => {
-          const hasThirdLevel =
-            subcategory.subcategories && subcategory.subcategories.length > 0;
           const hasDirectProjects =
             subcategory.projects && subcategory.projects.length > 0;
           const colSpan = calculateColSpan(subcategory);
@@ -71,30 +69,8 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
                 </h3>
               </div>
 
-              {hasThirdLevel ? (
-                <div
-                  className={`grid ${
-                    subcategory.subcategories!.length <= 3
-                      ? "grid-cols-3"
-                      : subcategory.subcategories!.length === 4
-                        ? "grid-cols-4"
-                        : "grid-cols-5"
-                  } gap-2`}
-                >
-                  {subcategory.subcategories!.map((thirdLevel) => (
-                    <ThirdLevelBox
-                      key={thirdLevel.name}
-                      categoryName={category.name}
-                      parentSubcategoryName={subcategory.name}
-                      subcategory={thirdLevel}
-                      openPopoverId={openPopoverId}
-                      setOpenPopoverId={setOpenPopoverId}
-                    />
-                  ))}
-                </div>
-              ) : (
-                <div className="flex flex-wrap">
-                  {sortProjects(subcategory.projects || []).map((project) => {
+              <div className="flex flex-wrap">
+                {sortProjects(subcategory.projects || []).map((project) => {
                     const uniqueKey = `${project.id}-${category.name}-${subcategory.name}`;
                     return (
                       <ProjectLogo
@@ -108,7 +84,6 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
                     );
                   })}
                 </div>
-              )}
             </div>
           );
           });
@@ -162,19 +137,17 @@ function ProjectLogo({
   project,
   categoryName,
   subcategoryName,
-  thirdLevelName,
   openPopoverId,
   setOpenPopoverId,
 }: {
   project: Project;
   categoryName: string;
   subcategoryName: string;
-  thirdLevelName?: string;
   openPopoverId: string | null;
   setOpenPopoverId: (id: string | null) => void;
 }) {
   // Create a unique ID for this project instance based on its location
-  const uniqueId = `${project.id}-${categoryName}-${subcategoryName}${thirdLevelName ? `-${thirdLevelName}` : ''}`;
+  const uniqueId = `${project.id}-${categoryName}-${subcategoryName}`;
   const isOpen = openPopoverId === uniqueId;
   const [imageError, setImageError] = useState(false);
   
@@ -232,7 +205,6 @@ function ProjectLogo({
           project={project}
           categoryName={categoryName}
           subcategoryName={subcategoryName}
-          thirdLevelName={thirdLevelName}
         />
       </PopoverContent>
     </Popover>
@@ -243,12 +215,10 @@ function ProjectCard({
   project,
   categoryName,
   subcategoryName,
-  thirdLevelName,
 }: {
   project: Project;
   categoryName: string;
   subcategoryName: string;
-  thirdLevelName?: string;
 }) {
   return (
     <div className="space-y-3 p-4">
@@ -394,55 +364,6 @@ function ProjectCard({
         <span className="inline-block rounded bg-green-100 px-2 py-0.5 text-[10px] text-green-700">
           {subcategoryName}
         </span>
-        {thirdLevelName && (
-          <span className="inline-block rounded bg-blue-100 px-2 py-0.5 text-[10px] text-blue-700">
-            {thirdLevelName}
-          </span>
-        )}
-      </div>
-    </div>
-  );
-}
-
-function ThirdLevelBox({
-  categoryName,
-  parentSubcategoryName,
-  subcategory,
-  openPopoverId,
-  setOpenPopoverId,
-}: {
-  categoryName: string;
-  parentSubcategoryName: string;
-  subcategory: Subcategory;
-  openPopoverId: string | null;
-  setOpenPopoverId: (id: string | null) => void;
-}) {
-  return (
-    <div
-      className="relative rounded border border-black bg-white px-2 pb-2 pt-6 max-[568px]:px-1 max-[568px]:pb-1 max-[568px]:pt-3"
-    >
-      <div
-        className="absolute -top-3 left-1/2 -translate-x-1/2 rounded border border-black bg-white px-3 py-1 shadow-sm max-[568px]:px-2 max-[568px]:py-0.5"
-      >
-        <h5 className="text-black whitespace-nowrap text-xs">
-          {subcategory.name}
-        </h5>
-      </div>
-      <div className="flex flex-wrap gap-1">
-        {sortProjects(subcategory.projects).map((project) => {
-          const uniqueKey = `${project.id}-${categoryName}-${parentSubcategoryName}-${subcategory.name}`;
-          return (
-            <ProjectLogo
-              key={uniqueKey}
-              project={project}
-              categoryName={categoryName}
-              subcategoryName={parentSubcategoryName}
-              thirdLevelName={subcategory.name}
-              openPopoverId={openPopoverId}
-              setOpenPopoverId={setOpenPopoverId}
-            />
-          );
-        })}
       </div>
     </div>
   );
@@ -509,12 +430,6 @@ function getSubcategoryStyle(index: number) {
 }
 
 function calculateColSpan(subcategory: Subcategory) {
-  if (subcategory.subcategories && subcategory.subcategories.length > 0) {
-    const count = subcategory.subcategories.length;
-    if (count <= 3) return 9;
-    if (count <= 5) return 12;
-    return 12;
-  }
   const itemCount = subcategory.projects?.length ?? 0;
   if (itemCount <= 6) return 3;
   if (itemCount <= 9) return 4;

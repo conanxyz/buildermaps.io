@@ -162,8 +162,7 @@ function filterCategory(category: Category, query: string): Category {
     .map((subcategory) => filterSubcategory(subcategory, normalizedQuery))
     .filter(
       (subcat): subcat is Subcategory =>
-        subcat.projects.length > 0 ||
-        Boolean(subcat.subcategories && subcat.subcategories.length > 0),
+        subcat.projects.length > 0,
     );
 
   return {
@@ -183,20 +182,9 @@ function filterSubcategory(
     );
   });
 
-  const nested = subcategory.subcategories
-    ? subcategory.subcategories
-        .map((child) => filterSubcategory(child, query))
-        .filter(
-          (child) =>
-            child.projects.length > 0 ||
-            Boolean(child.subcategories && child.subcategories.length > 0),
-        )
-    : undefined;
-
   return {
     ...subcategory,
     projects: matches,
-    subcategories: nested,
   };
 }
 

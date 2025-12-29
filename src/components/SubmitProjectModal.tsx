@@ -89,7 +89,6 @@ function SubmitProjectModalContent() {
     logo?: string;
     categoryId: string;
     subcategoryName: string;
-    thirdLevelName?: string;
   }
 
   const {
