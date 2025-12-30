@@ -1,7 +1,8 @@
-import { useState } from "react";
-import { Building2, Globe, Github, Twitter, Linkedin } from "lucide-react";
+import { useMemo, useRef, useState } from "react";
+import { Building2, Globe, Github, Twitter, Linkedin, Download } from "lucide-react";
 import { FaTelegram, FaDiscord, FaReddit } from "react-icons/fa";
 import { SiMedium } from "react-icons/si";
+import * as htmlToImage from "html-to-image";
 
 import type { Category, Project, Subcategory } from "../lib/category-utils";
 import { countSubcategoryProjects, sortProjects } from "../lib/category-utils";
@@ -16,6 +17,90 @@ interface LandscapeViewProps {
 export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
   const [openPopoverId, setOpenPopoverId] = useState<string | null>(null);
 
+  const subcatRefs = useRef<Record<string, HTMLDivElement | null>>({});
+  const setSubcatRef = (key: string) => (el: HTMLDivElement | null) => {
+    subcatRefs.current[key] = el;
+  };
+
+  const [exportingKey, setExportingKey] = useState<string | null>(null);
+  const [hoveredSubcategoryKey, setHoveredSubcategoryKey] = useState<string | null>(null);
+
+  const sortedSubcategories = useMemo(() => {
+    return [...category.subcategories].sort(
+      (a, b) => countSubcategoryProjects(b) - countSubcategoryProjects(a)
+    );
+  }, [category.subcategories]);
+async function exportSubcategoryPng(subcategory: Subcategory) {
+  const key = `${category.name}__${subcategory.name}`;
+  const node = subcatRefs.current[key];
+  if (!node) return;
+
+  try {
+    setOpenPopoverId(null);
+    setExportingKey(key);
+
+    await new Promise((r) => requestAnimationFrame(r));
+
+    // Hide the export button before taking screenshot
+    const exportButton = node.querySelector('button[data-export-button]') as HTMLButtonElement | null;
+    const originalButtonDisplay = exportButton?.style.display || '';
+    if (exportButton) {
+      exportButton.style.display = 'none';
+    }
+
+    const watermark = document.createElement("div");
+    watermark.innerText = "BuilderMaps.io";
+    watermark.style.position = "absolute";
+    watermark.style.inset = "0";
+    watermark.style.display = "flex";
+    watermark.style.alignItems = "center";
+    watermark.style.justifyContent = "center";
+    watermark.style.pointerEvents = "none";
+    watermark.style.userSelect = "none";
+    watermark.style.fontSize = "64px";
+    watermark.style.fontWeight = "700";
+    watermark.style.opacity = "0.08";
+    watermark.style.transform = "rotate(-12deg)";
+    watermark.style.color = "#000";
+    watermark.style.zIndex = "50";
+
+    node.style.position ||= "relative";
+    node.appendChild(watermark);
+
+    const dataUrl = await htmlToImage.toPng(node, {
+      cacheBust: true,
+      backgroundColor: "#ffffff",
+      pixelRatio: Math.min(2, window.devicePixelRatio || 1),
+    });
+
+    const safe = (s: string) =>
+      s.replace(/[\/\\?%*:|"<>]/g, "-").replace(/\s+/g, "-");
+
+    const a = document.createElement("a");
+    a.href = dataUrl;
+    a.download = `${safe(category.name)}-${safe(subcategory.name)}.png`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    // Restore the export button
+    if (exportButton) {
+      exportButton.style.display = originalButtonDisplay || '';
+    }
+    watermark.remove();
+    setExportingKey(null);
+  } catch (err) {
+    console.error("Export failed:", err);
+    // Restore the export button in case of error
+    const exportButton = node?.querySelector('button[data-export-button]') as HTMLButtonElement | null;
+    if (exportButton) {
+      exportButton.style.display = '';
+    }
+    setExportingKey(null);
+  }
+}
+
+
   return (
     <div
       ref={exportRef}
@@ -26,44 +111,68 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
           BuilderMaps.io
         </div>
       </div>
-      
-      <h2 className="relative z-20 mb-6 text-3xl max-[568px]:text-2xl text-black tracking-wide linux-libertine-bold font-bold text-center">
+
+      <h2 className="relative z-20 mb-3 text-3xl max-[568px]:text-2xl text-black tracking-wide linux-libertine-bold font-bold text-center">
         {category.name} Ecosystem Map
       </h2>
 
-      <div className="relative z-0 grid grid-cols-12 gap-6 max-[568px]:gap-4">
-        {(() => {
-          const sortedSubcategories = [...category.subcategories]
-            .sort((a, b) => countSubcategoryProjects(b) - countSubcategoryProjects(a));
-          
-          return sortedSubcategories.map((subcategory, index) => {
+      <div className="relative z-0 grid grid-cols-12 gap-0 max-[768px]:grid-cols-6">
+        {sortedSubcategories.map((subcategory, index) => {
           const hasDirectProjects =
             subcategory.projects && subcategory.projects.length > 0;
-          const colSpan = calculateColSpan(subcategory);
-          const background = hasDirectProjects
-            ? "bg-white"
-            : getSubcategoryStyle(index).bg;
-          
-          // Check if even child and its odd sibling have the same project count
+          const background = hasDirectProjects ? "bg-white" : getSubcategoryStyle(index).bg;
+
+          // For screens < 768px (md breakpoint), always use col-span-6
+          // For larger screens, use the original logic: same count = 6/6, otherwise 7/5
           const isEven = index % 2 === 0;
           const currentCount = countSubcategoryProjects(subcategory);
           const siblingIndex = isEven ? index + 1 : index - 1;
-          const siblingCount = siblingIndex >= 0 && siblingIndex < sortedSubcategories.length 
-            ? countSubcategoryProjects(sortedSubcategories[siblingIndex])
-            : null;
-          const hasSameCountAsSibling = siblingCount !== null && currentCount === siblingCount;
+          const siblingCount =
+            siblingIndex >= 0 && siblingIndex < sortedSubcategories.length
+              ? countSubcategoryProjects(sortedSubcategories[siblingIndex])
+              : null;
+          const hasSameCountAsSibling =
+            siblingCount !== null && currentCount === siblingCount;
+
+          const desktopColumnSpan = hasSameCountAsSibling
+            ? "col-span-6"
+            : isEven
+            ? "col-span-7"
+            : "col-span-5";
           
-          // If they have the same count, use 50% (6 cols) for both, otherwise use 60%/40%
-          const columnSpanClass = hasSameCountAsSibling ? 'col-span-6' : (isEven ? 'col-span-7' : 'col-span-5');
+          // Always col-span-6 on screens < 768px, use calculated span on larger screens
+          const columnSpanClass = `max-md:col-span-6 ${desktopColumnSpan}`;
+
+          const refKey = `${category.name}__${subcategory.name}`;
+          const isExporting = exportingKey === refKey;
+          const isHovered = hoveredSubcategoryKey === refKey;
 
           return (
-            <div
-              key={subcategory.name}
-              className={`relative rounded border border-black ${background} px-2 pb-2 pt-5 ${columnSpanClass} max-[968px]:col-span-12 max-[568px]:px-1 max-[568px]:pb-1`}
+            <div 
+              ref={setSubcatRef(refKey)}
+              className={`relative ${columnSpanClass} p-4`}
+              onMouseEnter={() => setHoveredSubcategoryKey(refKey)}
+              onMouseLeave={() => setHoveredSubcategoryKey(null)}
             >
-              <div
-                className="absolute -top-3 left-1/2 -translate-x-1/2 rounded bg-white px-2 py-0.5 max-[568px]:py-0.5"
+            <div
+              key={subcategory.name}              
+              className={`border border-black rounded ${background} px-2 pb-2 pt-5 max-[968px]:col-span-12 max-[568px]:px-1 max-[568px]:pb-1`}
+            >
+              <button
+                type="button"
+                data-export-button
+                onClick={() => exportSubcategoryPng(subcategory)}
+                disabled={isExporting}
+                className={`cursor-pointer absolute right-6 top-6 z-20 inline-flex items-center gap-1 rounded border border-black bg-white px-2 py-1 text-xs text-black hover:bg-gray-50 disabled:opacity-60 transition-opacity duration-200 max-md:opacity-80 ${
+                  isHovered ? 'md:opacity-80' : 'md:opacity-0'
+                }`}
+                title="Export this section"
               >
+                <Download className="h-3.5 w-3.5" />
+                {isExporting ? "Exporting..." : "Export"}
+              </button>
+
+              <div className="absolute top-1 left-1/2 -translate-x-1/2 rounded bg-white px-2 py-0.5 max-[568px]:py-0.5">
                 <h3 className="text-black text-sm linux-libertine text-center linux-libertine-bold">
                   {subcategory.name}
                 </h3>
@@ -71,67 +180,50 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
 
               <div className="flex flex-wrap">
                 {sortProjects(subcategory.projects || []).map((project) => {
-                    const uniqueKey = `${project.id}-${category.name}-${subcategory.name}`;
-                    return (
-                      <ProjectLogo
-                        key={uniqueKey}
-                        project={project}
-                        categoryName={category.name}
-                        subcategoryName={subcategory.name}
-                        openPopoverId={openPopoverId}
-                        setOpenPopoverId={setOpenPopoverId}
-                      />
-                    );
-                  })}
-                </div>
+                  const uniqueKey = `${project.id}-${category.name}-${subcategory.name}`;
+                  return (
+                    <ProjectLogo
+                      key={uniqueKey}
+                      project={project}
+                      categoryName={category.name}
+                      subcategoryName={subcategory.name}
+                      openPopoverId={openPopoverId}
+                      setOpenPopoverId={setOpenPopoverId}
+                    />
+                  );
+                })}
+              </div>
+            </div>
             </div>
           );
-          });
-        })()}
+        })}
       </div>
-        <footer className="pt-4 g-gray-50">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-3 gap-4 text-sm text-gray-600 max-[568px]:grid-cols-1 max-[568px]:gap-3 max-[568px]:text-xs">
-              <div className="text-left">
-                Date: {formatDate()}
-              </div>
-              <div className="text-center max-[568px]:text-left">
-                Source:{" "}
-                buildermaps.io
-                {" "}
-                <a
-                  href="https://x.com/ChainbaseHQ"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:text-blue-800 hover:underline"
-                >
-                  @ChainbaseHQ
-                </a>
-              </div>
-              <div className="text-right max-[568px]:text-left">
-                Disclaimer: Listed ≠ endorsement. DYOR.
-              </div>
+
+      <footer className="pt-4 g-gray-50">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-3 gap-4 text-sm text-gray-600 max-[568px]:grid-cols-1 max-[568px]:gap-3 max-[568px]:text-xs">
+            <div className="text-left">Date: {formatDate()}</div>
+            <div className="text-center max-[568px]:text-left">
+              Source: buildermaps.io{" "}
+              <a
+                href="https://x.com/ChainbaseHQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 hover:underline"
+              >
+                @ChainbaseHQ
+              </a>
+            </div>
+            <div className="text-right max-[568px]:text-left">
+              Disclaimer: Listed ≠ endorsement. DYOR.
             </div>
           </div>
-        </footer>
+        </div>
+      </footer>
     </div>
   );
 }
 
-function formatProjectName(name: string, maxLength: number = 20): string {
-  // Remove parenthetical content
-  let formatted = name.replace(/\s*\([^)]*\)/g, '');
-  
-  // If length exceeds maxLength, remove last word repeatedly
-  while (formatted.length > maxLength) {
-    const words = formatted.trim().split(/\s+/);
-    if (words.length <= 1) break; // Can't remove more words
-    words.pop(); // Remove last word
-    formatted = words.join(' ');
-  }
-  
-  return formatted;
-}
 
 function ProjectLogo({
   project,
@@ -369,52 +461,6 @@ function ProjectCard({
   );
 }
 
-function getCategoryColor(categoryId: string) {
-  const map: Record<
-    string,
-    { bg: string; labelBg: string; border: string; text: string }
-  > = {
-    stablecoins: {
-      bg: "bg-blue-100/80",
-      labelBg: "bg-white",
-      border: "border-blue-600",
-      text: "text-blue-700",
-    },
-    payfi: {
-      bg: "bg-purple-100/80",
-      labelBg: "bg-white",
-      border: "border-purple-600",
-      text: "text-purple-700",
-    },
-    "ai-crypto": {
-      bg: "bg-green-100/80",
-      labelBg: "bg-white",
-      border: "border-green-600",
-      text: "text-green-700",
-    },
-    "public-chain": {
-      bg: "bg-orange-100/80",
-      labelBg: "bg-white",
-      border: "border-orange-600",
-      text: "text-orange-700",
-    },
-    data: {
-      bg: "bg-pink-100/80",
-      labelBg: "bg-white",
-      border: "border-pink-600",
-      text: "text-pink-700",
-    },
-  };
-  return (
-    map[categoryId] || {
-      bg: "bg-gray-100/80",
-      labelBg: "bg-white",
-      border: "border-gray-600",
-      text: "text-gray-700",
-    }
-  );
-}
-
 function getSubcategoryStyle(index: number) {
   const styles = [
     { border: "border-purple-400", bg: "bg-purple-50/60" },
@@ -444,4 +490,19 @@ function formatDate() {
   const day = today.getDate();
   const year = today.getFullYear();
   return `${month} ${day},${year}`;
+}
+
+function formatProjectName(name: string, maxLength: number = 20): string {
+  // Remove parenthetical content
+  let formatted = name.replace(/\s*\([^)]*\)/g, '');
+  
+  // If length exceeds maxLength, remove last word repeatedly
+  while (formatted.length > maxLength) {
+    const words = formatted.trim().split(/\s+/);
+    if (words.length <= 1) break; // Can't remove more words
+    words.pop(); // Remove last word
+    formatted = words.join(' ');
+  }
+  
+  return formatted;
 }
