@@ -22,8 +22,14 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
     subcatRefs.current[key] = el;
   };
 
+  // Create internal ref if exportRef is not provided
+  const internalExportRef = useRef<HTMLDivElement>(null);
+  const mapExportRef = exportRef || internalExportRef;
+
   const [exportingKey, setExportingKey] = useState<string | null>(null);
   const [hoveredSubcategoryKey, setHoveredSubcategoryKey] = useState<string | null>(null);
+  const [exportingWholeMap, setExportingWholeMap] = useState(false);
+  const [hoveredMapBox, setHoveredMapBox] = useState(false);
 
   const sortedSubcategories = useMemo(() => {
     return [...category.subcategories].sort(
@@ -173,16 +179,154 @@ async function exportSubcategoryPng(subcategory: Subcategory) {
   }
 }
 
+  const exportWholeMap = async () => {
+    console.log("exportWholeMap called");
+    const node = mapExportRef.current;
+    if (!node) {
+      console.error("Export ref is not available");
+      return;
+    }
+    console.log("Node found, starting export");
+
+    try {
+      setExportingWholeMap(true);
+
+    await new Promise((r) => requestAnimationFrame(r));
+
+    // Get computed styles and dimensions from the original node
+    const rect = node.getBoundingClientRect();
+
+    // Create an off-screen container for cloning (visible but positioned off-screen)
+    const invisibleContainer = document.createElement("div");
+    invisibleContainer.setAttribute('data-export-container', 'true');
+    invisibleContainer.style.position = "fixed";
+    invisibleContainer.style.left = "-9999px";
+    invisibleContainer.style.top = "0";
+    invisibleContainer.style.width = `${rect.width}px`;
+    invisibleContainer.style.height = `${rect.height}px`;
+    invisibleContainer.style.overflow = "visible";
+    invisibleContainer.style.pointerEvents = "none";
+    invisibleContainer.style.zIndex = "-9999";
+    invisibleContainer.style.visibility = "visible";
+    invisibleContainer.style.opacity = "1";
+    invisibleContainer.style.backgroundColor = "#ffffff";
+    document.body.appendChild(invisibleContainer);
+
+    // Clone the entire element (not just its children)
+    const clonedNode = node.cloneNode(true) as HTMLDivElement;
+    
+    // Copy computed styles to the clone
+    clonedNode.style.width = `${rect.width}px`;
+    clonedNode.style.height = `${rect.height}px`;
+    clonedNode.style.position = "relative";
+    clonedNode.style.visibility = "visible";
+    clonedNode.style.opacity = "1";
+    
+    // Hide all export buttons in the clone (both subcategory and main map export buttons)
+    const exportButtons = clonedNode.querySelectorAll('button[data-export-button], button[data-export-whole-map-button]');
+    exportButtons.forEach(button => {
+      (button as HTMLElement).style.display = 'none';
+    });
+
+    // Append the clone to the container
+    invisibleContainer.appendChild(clonedNode);
+
+    // Wait for the clone to be rendered and images to load
+    await new Promise((r) => requestAnimationFrame(r));
+    await new Promise((r) => requestAnimationFrame(r));
+    await new Promise((r) => setTimeout(r, 200));
+    
+    // Wait for all images in the clone to load at full resolution
+    const images = clonedNode.querySelectorAll('img');
+    if (images.length > 0) {
+      await Promise.all(
+        Array.from(images).map(
+          (img) =>
+            new Promise<void>((resolve) => {
+              // Ensure images are loaded at full resolution
+              if (img.complete && img.naturalWidth > 0) {
+                resolve();
+              } else {
+                const timeout = setTimeout(() => resolve(), 3000); // Timeout after 3s
+                img.onload = () => {
+                  clearTimeout(timeout);
+                  resolve();
+                };
+                img.onerror = () => {
+                  clearTimeout(timeout);
+                  resolve(); // Continue even if image fails
+                };
+              }
+            })
+        )
+      );
+    }
+    
+    // Additional wait to ensure everything is fully rendered
+    await new Promise((r) => setTimeout(r, 100));
+
+    // Use higher pixel ratio for better image quality (3-4x for crisp images)
+    const basePixelRatio = window.devicePixelRatio || 1;
+    const pixelRatio = Math.min(4, Math.max(3, basePixelRatio * 2));
+    
+    const dataUrl = await htmlToImage.toPng(clonedNode, {
+      cacheBust: true,
+      backgroundColor: "#ffffff",
+      pixelRatio: pixelRatio,
+    });
+
+    const safe = (s: string) =>
+      s.replace(/[\/\\?%*:|"<>]/g, "-").replace(/\s+/g, "-");
+
+    const a = document.createElement("a");
+    a.href = dataUrl;
+    a.download = `${safe(category.name)}-Ecosystem-Map.png`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    // Clean up: remove the invisible container and clone
+    invisibleContainer.remove();
+    setExportingWholeMap(false);
+  } catch (err) {
+    console.error("Export failed:", err);
+    // Clean up container in case of error
+    const container = document.querySelector('[data-export-container]');
+    if (container) {
+      container.remove();
+    }
+    setExportingWholeMap(false);
+    }
+  };
 
   return (
     <div
-      ref={exportRef}
+      ref={mapExportRef}
       className="relative rounded-lg border-[1.5px] border-black bg-white p-12 pb-4 shadow-lg max-[568px]:border-0 max-[568px]:w-full max-[568px]:px-3 max-[568px]:py-6"
+      onMouseEnter={() => setHoveredMapBox(true)}
+      onMouseLeave={() => setHoveredMapBox(false)}
     >
       <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center">
         <div className="select-none text-9xl max-[568px]:text-4xl text-gray-400/20 -rotate-12">
           BuilderMaps.io
         </div>
+      </div>
+
+      {/* Export Map Button - Top Right */}
+      <div className="absolute top-6 right-6 z-20 max-[568px]:top-1 max-[568px]:right-1">
+        <button
+          type="button"
+          data-export-whole-map-button
+          onClick={() => exportWholeMap()}
+          disabled={exportingWholeMap}
+          className={`inline-flex items-center gap-1.5 rounded border cursor-pointer border-black bg-white px-3 py-1.5 text-sm text-black hover:bg-gray-50 disabled:opacity-60 transition-opacity duration-200 max-[568px]:px-2 max-[568px]:py-1 max-[568px]:text-xs ${
+            hoveredMapBox ? 'md:opacity-80' : 'md:opacity-0'
+          } max-md:opacity-80`}
+          title="Export entire ecosystem map"
+        >
+          <Download className="h-4 w-4 max-[568px]:h-3.5 max-[568px]:w-3.5" />
+          {exportingWholeMap ? "Exporting..." : "Export Map"}
+        </button>
       </div>
 
       <h2 className="relative z-20 mb-3 text-3xl max-[568px]:text-2xl text-black tracking-wide linux-libertine-bold font-bold text-center">
@@ -235,9 +379,12 @@ async function exportSubcategoryPng(subcategory: Subcategory) {
                 type="button"
                 data-export-button
                 onClick={() => exportSubcategoryPng(subcategory)}
-                disabled={isExporting}
-                className={`cursor-pointer absolute right-6 top-6 z-20 inline-flex items-center gap-1 rounded border border-black bg-white px-2 py-1 text-xs text-black hover:bg-gray-50 disabled:opacity-60 transition-opacity duration-200 max-md:opacity-80 ${
-                  isHovered ? 'md:opacity-80' : 'md:opacity-0'
+                disabled={isExporting || exportingWholeMap}
+                style={exportingWholeMap ? { display: 'none' } : undefined}
+                className={`cursor-pointer absolute right-6 top-6 z-20 inline-flex items-center gap-1 rounded border border-black bg-white px-2 py-1 text-xs text-black hover:bg-gray-50 disabled:opacity-60 transition-opacity duration-200 ${
+                  isHovered 
+                    ? 'md:opacity-80 max-md:opacity-80' 
+                    : 'md:opacity-0 max-md:opacity-80'
                 }`}
                 title="Export this section"
               >
