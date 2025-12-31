@@ -41,13 +41,49 @@ async function exportSubcategoryPng(subcategory: Subcategory) {
 
     await new Promise((r) => requestAnimationFrame(r));
 
-    // Hide the export button before taking screenshot
-    const exportButton = node.querySelector('button[data-export-button]') as HTMLButtonElement | null;
-    const originalButtonDisplay = exportButton?.style.display || '';
+    // Get computed styles and dimensions from the original node
+    const computedStyle = window.getComputedStyle(node);
+    const rect = node.getBoundingClientRect();
+
+    // Create an off-screen container for cloning (visible but positioned off-screen)
+    const invisibleContainer = document.createElement("div");
+    invisibleContainer.setAttribute('data-export-container', 'true');
+    invisibleContainer.style.position = "fixed";
+    invisibleContainer.style.left = "-9999px";
+    invisibleContainer.style.top = "0";
+    invisibleContainer.style.width = `${rect.width}px`;
+    invisibleContainer.style.height = `${rect.height}px`;
+    invisibleContainer.style.overflow = "visible";
+    invisibleContainer.style.pointerEvents = "none";
+    invisibleContainer.style.zIndex = "-9999";
+    invisibleContainer.style.visibility = "visible";
+    invisibleContainer.style.opacity = "1";
+    invisibleContainer.style.backgroundColor = "#ffffff";
+    document.body.appendChild(invisibleContainer);
+
+    // Clone the entire element (not just its children)
+    const clonedNode = node.cloneNode(true) as HTMLDivElement;
+    
+    // Copy computed styles to the clone
+    clonedNode.style.width = `${rect.width}px`;
+    clonedNode.style.height = `${rect.height}px`;
+    clonedNode.style.position = "relative";
+    clonedNode.style.visibility = "visible";
+    clonedNode.style.opacity = "1";
+    
+    // Hide the export button in the clone
+    const exportButton = clonedNode.querySelector('button[data-export-button]') as HTMLButtonElement | null;
     if (exportButton) {
       exportButton.style.display = 'none';
     }
 
+    // Update the subcategory title to include category name
+    const subcategoryTitle = clonedNode.querySelector('h3');
+    if (subcategoryTitle) {
+      subcategoryTitle.textContent = `${category.name} Ecosystem Map - ${subcategory.name}`;
+    }
+
+    // Add watermark to the clone
     const watermark = document.createElement("div");
     watermark.innerText = "BuilderMaps.io";
     watermark.style.position = "absolute";
@@ -64,13 +100,53 @@ async function exportSubcategoryPng(subcategory: Subcategory) {
     watermark.style.color = "#000";
     watermark.style.zIndex = "50";
 
-    node.style.position ||= "relative";
-    node.appendChild(watermark);
+    clonedNode.appendChild(watermark);
 
-    const dataUrl = await htmlToImage.toPng(node, {
+    // Append the clone to the container
+    invisibleContainer.appendChild(clonedNode);
+
+    // Wait for the clone to be rendered and images to load
+    await new Promise((r) => requestAnimationFrame(r));
+    await new Promise((r) => requestAnimationFrame(r));
+    await new Promise((r) => setTimeout(r, 200));
+    
+    // Wait for all images in the clone to load at full resolution
+    const images = clonedNode.querySelectorAll('img');
+    if (images.length > 0) {
+      await Promise.all(
+        Array.from(images).map(
+          (img) =>
+            new Promise<void>((resolve) => {
+              // Ensure images are loaded at full resolution
+              if (img.complete && img.naturalWidth > 0) {
+                resolve();
+              } else {
+                const timeout = setTimeout(() => resolve(), 3000); // Timeout after 3s
+                img.onload = () => {
+                  clearTimeout(timeout);
+                  resolve();
+                };
+                img.onerror = () => {
+                  clearTimeout(timeout);
+                  resolve(); // Continue even if image fails
+                };
+              }
+            })
+        )
+      );
+    }
+    
+    // Additional wait to ensure everything is fully rendered
+    await new Promise((r) => setTimeout(r, 100));
+
+    // Use higher pixel ratio for better image quality (3-4x for crisp images)
+    const basePixelRatio = window.devicePixelRatio || 1;
+    const pixelRatio = Math.min(4, Math.max(3, basePixelRatio * 2));
+    
+    const dataUrl = await htmlToImage.toPng(clonedNode, {
       cacheBust: true,
       backgroundColor: "#ffffff",
-      pixelRatio: Math.min(2, window.devicePixelRatio || 1),
+      pixelRatio: pixelRatio,
     });
 
     const safe = (s: string) =>
@@ -83,18 +159,15 @@ async function exportSubcategoryPng(subcategory: Subcategory) {
     a.click();
     a.remove();
 
-    // Restore the export button
-    if (exportButton) {
-      exportButton.style.display = originalButtonDisplay || '';
-    }
-    watermark.remove();
+    // Clean up: remove the invisible container and clone
+    invisibleContainer.remove();
     setExportingKey(null);
   } catch (err) {
     console.error("Export failed:", err);
-    // Restore the export button in case of error
-    const exportButton = node?.querySelector('button[data-export-button]') as HTMLButtonElement | null;
-    if (exportButton) {
-      exportButton.style.display = '';
+    // Clean up container in case of error
+    const container = document.querySelector('[data-export-container]');
+    if (container) {
+      container.remove();
     }
     setExportingKey(null);
   }
