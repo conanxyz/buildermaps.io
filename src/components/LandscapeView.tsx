@@ -58,7 +58,8 @@ async function exportSubcategoryPng(subcategory: Subcategory) {
     invisibleContainer.style.left = "-9999px";
     invisibleContainer.style.top = "0";
     invisibleContainer.style.width = `${rect.width}px`;
-    invisibleContainer.style.height = `${rect.height}px`;
+    invisibleContainer.style.height = "auto"; // Allow container to expand for footer
+    invisibleContainer.style.minHeight = `${rect.height}px`;
     invisibleContainer.style.overflow = "visible";
     invisibleContainer.style.pointerEvents = "none";
     invisibleContainer.style.zIndex = "-9999";
@@ -72,7 +73,8 @@ async function exportSubcategoryPng(subcategory: Subcategory) {
     
     // Copy computed styles to the clone
     clonedNode.style.width = `${rect.width}px`;
-    clonedNode.style.height = `${rect.height}px`;
+    clonedNode.style.height = "auto"; // Allow height to expand for footer
+    clonedNode.style.minHeight = `${rect.height}px`;
     clonedNode.style.position = "relative";
     clonedNode.style.visibility = "visible";
     clonedNode.style.opacity = "1";
@@ -87,6 +89,13 @@ async function exportSubcategoryPng(subcategory: Subcategory) {
     const subcategoryTitle = clonedNode.querySelector('h3');
     if (subcategoryTitle) {
       subcategoryTitle.textContent = `${category.name} Ecosystem Map - ${subcategory.name}`;
+    }
+    
+    // Ensure inner content div doesn't have overflow constraints
+    const innerContentDiv = clonedNode.querySelector('div[class*="border"]') as HTMLDivElement | null;
+    if (innerContentDiv) {
+      innerContentDiv.style.overflow = "visible";
+      innerContentDiv.style.height = "auto";
     }
 
     // Add watermark to the clone
@@ -108,6 +117,75 @@ async function exportSubcategoryPng(subcategory: Subcategory) {
 
     clonedNode.appendChild(watermark);
 
+    // Add footer to the innerContentDiv
+    if (innerContentDiv) {
+      const formatDate = () => {
+        const today = new Date();
+        const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        const month = months[today.getMonth()];
+        const day = today.getDate();
+        const year = today.getFullYear();
+        return `${month} ${day},${year}`;
+      };
+
+      const footer = document.createElement("footer");
+      footer.style.paddingTop = "1rem";
+      footer.style.paddingBottom = "1rem";
+      footer.style.width = "100%";
+      footer.style.position = "relative";
+      footer.style.zIndex = "10";
+      
+      const footerContainer = document.createElement("div");
+      footerContainer.style.maxWidth = "100%";
+      footerContainer.style.marginLeft = "auto";
+      footerContainer.style.marginRight = "auto";
+      footerContainer.style.paddingLeft = "1rem";
+      footerContainer.style.paddingRight = "1rem";
+      
+      const footerGrid = document.createElement("div");
+      footerGrid.style.display = "grid";
+      footerGrid.style.gridTemplateColumns = "auto 1fr 1fr"; // Date shrinks, Source and Disclaimer share remaining space
+      footerGrid.style.gap = "1rem";
+      footerGrid.style.fontSize = "0.875rem";
+      footerGrid.style.color = "#4b5563";
+      footerGrid.style.paddingTop = "0.5rem";
+      
+      // Date
+      const dateDiv = document.createElement("div");
+      dateDiv.style.textAlign = "left";
+      dateDiv.style.whiteSpace = "nowrap";
+      dateDiv.textContent = `Date: ${formatDate()}`;
+      
+      // Source
+      const sourceDiv = document.createElement("div");
+      sourceDiv.style.textAlign = "center";
+      sourceDiv.style.whiteSpace = "nowrap";
+      const sourceText = document.createTextNode("Source: buildermaps.io ");
+      const sourceLink = document.createElement("a");
+      sourceLink.href = "https://x.com/ChainbaseHQ";
+      sourceLink.target = "_blank";
+      sourceLink.rel = "noopener noreferrer";
+      sourceLink.style.color = "#2563eb";
+      sourceLink.style.textDecoration = "none";
+      sourceLink.textContent = "@ChainbaseHQ";
+      sourceDiv.appendChild(sourceText);
+      sourceDiv.appendChild(sourceLink);
+      
+      // Disclaimer
+      const disclaimerDiv = document.createElement("div");
+      disclaimerDiv.style.textAlign = "right";
+      disclaimerDiv.style.whiteSpace = "nowrap";
+      disclaimerDiv.textContent = "Disclaimer: Listed ≠ endorsement. DYOR.";
+      
+      footerGrid.appendChild(dateDiv);
+      footerGrid.appendChild(sourceDiv);
+      footerGrid.appendChild(disclaimerDiv);
+      footerContainer.appendChild(footerGrid);
+      footer.appendChild(footerContainer);
+      
+      innerContentDiv.appendChild(footer);
+    }
+
     // Append the clone to the container
     invisibleContainer.appendChild(clonedNode);
 
@@ -115,6 +193,33 @@ async function exportSubcategoryPng(subcategory: Subcategory) {
     await new Promise((r) => requestAnimationFrame(r));
     await new Promise((r) => requestAnimationFrame(r));
     await new Promise((r) => setTimeout(r, 200));
+    
+    // Wait for footer to be fully rendered, then check width and adjust layout
+    await new Promise((r) => requestAnimationFrame(r));
+    await new Promise((r) => setTimeout(r, 100));
+    
+    // Check if footer needs vertical layout (if width is too narrow)
+    if (innerContentDiv) {
+      const footerGrid = innerContentDiv.querySelector('footer > div > div[style*="grid"]') as HTMLDivElement | null;
+      if (footerGrid) {
+        const footerRect = footerGrid.getBoundingClientRect();
+        const dateDiv = footerGrid.children[0] as HTMLElement;
+        const sourceDiv = footerGrid.children[1] as HTMLElement;
+        const disclaimerDiv = footerGrid.children[2] as HTMLElement;
+        
+        // Estimate minimum width needed (rough estimate: ~600px for 3 columns)
+        const minWidthForHorizontal = 600;
+        
+        if (footerRect.width < minWidthForHorizontal) {
+          // Switch to vertical layout
+          footerGrid.style.gridTemplateColumns = "1fr";
+          footerGrid.style.gap = "0.5rem";
+          dateDiv.style.textAlign = "left";
+          sourceDiv.style.textAlign = "left";
+          disclaimerDiv.style.textAlign = "left";
+        }
+      }
+    }
     
     // Wait for all images in the clone to load at full resolution
     const images = clonedNode.querySelectorAll('img');
@@ -144,11 +249,17 @@ async function exportSubcategoryPng(subcategory: Subcategory) {
     
     // Additional wait to ensure everything is fully rendered
     await new Promise((r) => setTimeout(r, 100));
+    
+    // Get the final height including footer and update container
+    const finalRect = clonedNode.getBoundingClientRect();
+    clonedNode.style.height = `${finalRect.height}px`;
+    invisibleContainer.style.height = `${finalRect.height}px`;
 
     // Use higher pixel ratio for better image quality (3-4x for crisp images)
     const basePixelRatio = window.devicePixelRatio || 1;
     const pixelRatio = Math.min(4, Math.max(3, basePixelRatio * 2));
     
+    // Export the cloned node which now includes the footer
     const dataUrl = await htmlToImage.toPng(clonedNode, {
       cacheBust: true,
       backgroundColor: "#ffffff",
