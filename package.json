@@ -2,7 +2,6 @@
   "name": "@chainbase-labs/buildermaps-io",
   "scripts": {
     "start": "node scripts/webpack-with-build-time.js serve --mode=development",
-    "start:no-watch": "node scripts/webpack-with-build-time.js serve --mode=development",
     "iw": "npm i --workspaces false --legacy-peer-deps",
     "start:standalone": "node scripts/webpack-with-build-time.js serve --mode=development --env standalone",
     "build": "node scripts/webpack-with-build-time.js --mode=production",
