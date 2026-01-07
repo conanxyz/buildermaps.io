@@ -462,7 +462,7 @@ Common types vary by sector but include:
 - `Emerging`
 - `Crypto Backed`
 - `T-Bills Backed`
-- And many more...
+- And many more..
 
 Check existing map files in `public/data/maps/` to see what sectors and types are available.
 
