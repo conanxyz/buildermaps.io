@@ -1,4 +1,4 @@
-import { useState, useEffect, createContext, useContext, ReactNode } from 'react';
+import { useState, useEffect, createContext, useContext, ReactNode, useRef } from 'react';
 import { Modal, Box, IconButton, Typography } from '@mui/material';
 import { Close as CloseIcon } from '@mui/icons-material';
 import { useForm } from 'react-hook-form';
@@ -57,6 +57,64 @@ export function SubmitProjectModalProvider({ children }: { children: ReactNode }
   );
 }
 
+// Helper function to load all projects
+function loadAllProjects(): any[] {
+  try {
+    // @ts-ignore - require.context is a webpack feature
+    const projectsContext = require.context("../../public/data/projects", false, /\.json$/);
+    const projects: any[] = [];
+    projectsContext.keys().forEach((key: string) => {
+      const project = projectsContext(key);
+      if (project && project.id) {
+        projects.push(project);
+      }
+    });
+    return projects;
+  } catch (error) {
+    console.error('Error loading projects:', error);
+    return [];
+  }
+}
+
+// Helper function to search for a project by name
+function searchProjectByName(projectName: string): any | null {
+  if (!projectName || projectName.trim().length === 0) {
+    return null;
+  }
+  
+  const projects = loadAllProjects();
+  const normalizedSearchName = projectName.trim().toLowerCase();
+  
+  // Try exact match first (case-insensitive)
+  let match = projects.find(p => p.name && p.name.toLowerCase() === normalizedSearchName);
+  
+  // If no exact match, try partial match
+  if (!match) {
+    match = projects.find(p => 
+      p.name && p.name.toLowerCase().includes(normalizedSearchName)
+    );
+  }
+  
+  return match || null;
+}
+
+// Helper function to normalize logo URL - add domain prefix if it's a relative path
+function normalizeLogoUrl(url: string): string {
+  if (!url || !url.trim()) {
+    return url;
+  }
+  
+  const trimmedUrl = url.trim();
+  
+  // If it starts with '/', add the buildermaps.io domain
+  if (trimmedUrl.startsWith('/')) {
+    return `https://buildermaps.io${trimmedUrl}`;
+  }
+  
+  // If it's already a full URL, return as is
+  return trimmedUrl;
+}
+
 // Modal content component
 function SubmitProjectModalContent() {
   const { open, setOpen, initialValues, lockCategory } = useSubmitProjectModal();
@@ -65,6 +123,12 @@ function SubmitProjectModalContent() {
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
   const [selectedSubcategory, setSelectedSubcategory] = useState<Subcategory | null>(null);
   const [initialValuesApplied, setInitialValuesApplied] = useState(false);
+  const [isAutoFilling, setIsAutoFilling] = useState(false);
+  const searchTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const lastAutoFilledProjectNameRef = useRef<string | null>(null);
+  const originalAutoFilledValuesRef = useRef<Partial<ProjectFormData> | null>(null);
+  const originalProjectJsonRef = useRef<any | null>(null);
+  const originalCategoryRef = useRef<{ categoryId: string; subcategoryName: string } | null>(null);
   
   // New category/subcategory dialogs
   const [newCategoryDialog, setNewCategoryDialog] = useState(false);
@@ -79,7 +143,7 @@ function SubmitProjectModalContent() {
 
   interface ProjectFormData {
     name: string;
-    location: string;
+    location?: string;
     description: string;
     founded?: string;
     raised?: string;
@@ -97,12 +161,24 @@ function SubmitProjectModalContent() {
     watch,
     setValue,
     reset,
+    getValues,
     formState: { errors },
   } = useForm<ProjectFormData>();
 
   const watchCategoryId = watch('categoryId');
   const watchSubcategoryName = watch('subcategoryName');
   const watchLogoUrl = watch('logo');
+  const watchProjectName = watch('name');
+  const watchDescription = watch('description');
+  const watchFounded = watch('founded');
+  const watchRaised = watch('raised');
+  const watchWebsite = watch('website');
+  const watchTwitter = watch('twitter');
+  const watchGithub = watch('github');
+  const watchLocation = watch('location');
+  
+  // Watch all form values to trigger re-renders when they change
+  const allFormValues = watch();
 
   // Reset form when modal closes
   useEffect(() => {
@@ -112,8 +188,203 @@ function SubmitProjectModalContent() {
       setSelectedCategory(null);
       setSelectedSubcategory(null);
       setInitialValuesApplied(false);
+      setIsAutoFilling(false);
+      lastAutoFilledProjectNameRef.current = null;
+      originalAutoFilledValuesRef.current = null;
+      originalProjectJsonRef.current = null;
+      originalCategoryRef.current = null;
+      // Clear any pending search timeout
+      if (searchTimeoutRef.current) {
+        clearTimeout(searchTimeoutRef.current);
+        searchTimeoutRef.current = null;
+      }
     }
   }, [open, reset]);
+
+  // Debounced search for existing projects when name changes
+  useEffect(() => {
+    // Don't search if modal is closed
+    if (!open) {
+      return;
+    }
+
+    // Clear existing timeout
+    if (searchTimeoutRef.current) {
+      clearTimeout(searchTimeoutRef.current);
+    }
+
+    // Don't search if name is empty or if we're currently auto-filling
+    if (!watchProjectName || watchProjectName.trim().length === 0 || isAutoFilling) {
+      return;
+    }
+
+    const normalizedName = watchProjectName.trim().toLowerCase();
+    
+    // Don't search if we've already auto-filled for this exact project name
+    // This prevents infinite loops when setValue triggers re-renders
+    if (lastAutoFilledProjectNameRef.current === normalizedName) {
+      return;
+    }
+
+    // Set up debounced search (3 seconds)
+    searchTimeoutRef.current = setTimeout(() => {
+      const matchedProject = searchProjectByName(watchProjectName);
+      
+      if (matchedProject) {
+        // Mark that we've auto-filled for this project name
+        lastAutoFilledProjectNameRef.current = normalizedName;
+        // Immediately clear original values to ensure button is disabled
+        originalAutoFilledValuesRef.current = null;
+        setIsAutoFilling(true);
+        
+        // Auto-fill form fields
+        if (matchedProject.description) {
+          setValue('description', matchedProject.description);
+        }
+        
+        if (matchedProject.founded) {
+          setValue('founded', String(matchedProject.founded));
+        }
+        
+        if (matchedProject.funding) {
+          // Format funding value for display
+          const funding = matchedProject.funding;
+          if (typeof funding === 'number') {
+            if (funding >= 1000000000) {
+              setValue('raised', `$${(funding / 1000000000).toFixed(1)}B`);
+            } else if (funding >= 1000000) {
+              setValue('raised', `$${(funding / 1000000).toFixed(1)}M`);
+            } else if (funding >= 1000) {
+              setValue('raised', `$${(funding / 1000).toFixed(1)}K`);
+            } else {
+              setValue('raised', `$${funding}`);
+            }
+          } else {
+            setValue('raised', String(funding));
+          }
+        }
+        
+        if (matchedProject.links) {
+          if (matchedProject.links.homepage) {
+            setValue('website', matchedProject.links.homepage);
+          }
+          if (matchedProject.links.logo) {
+            setValue('logo', normalizeLogoUrl(matchedProject.links.logo));
+          }
+          if (matchedProject.links.twitter) {
+            setValue('twitter', matchedProject.links.twitter);
+          }
+          if (matchedProject.links.github) {
+            setValue('github', matchedProject.links.github);
+          }
+        }
+        
+        // Prepare original values for comparison
+        let foundCategoryId = '';
+        let foundSubcategoryName = '';
+        
+        // Try to find and set category/subcategory if available
+        if (categoryData.length > 0) {
+          // Search through categories to find where this project belongs
+          let found = false;
+          
+          for (const category of categoryData) {
+            if (found) break;
+            for (const subcategory of category.subcategories) {
+              const projectInSubcategory = subcategory.projects.find(
+                p => p.id === matchedProject.id || p.name === matchedProject.name
+              );
+              if (projectInSubcategory) {
+                foundCategoryId = category.id;
+                foundSubcategoryName = subcategory.name;
+                found = true;
+                break;
+              }
+            }
+          }
+          
+          // Set category first, then subcategory after a delay to ensure category is set
+          if (found) {
+            // Set category first
+            setValue('categoryId', foundCategoryId);
+            // Use a small delay to ensure category is set first before setting subcategory
+            // This also allows the selectedCategory state to update before we set the subcategory
+            setTimeout(() => {
+              setValue('subcategoryName', foundSubcategoryName);
+            }, 200);
+          }
+        }
+
+        // Calculate formatted funding value
+        const formattedFunding = matchedProject.funding 
+          ? (typeof matchedProject.funding === 'number'
+            ? (matchedProject.funding >= 1000000000
+              ? `$${(matchedProject.funding / 1000000000).toFixed(1)}B`
+              : matchedProject.funding >= 1000000
+              ? `$${(matchedProject.funding / 1000000).toFixed(1)}M`
+              : matchedProject.funding >= 1000
+              ? `$${(matchedProject.funding / 1000).toFixed(1)}K`
+              : `$${matchedProject.funding}`)
+            : String(matchedProject.funding))
+          : '';
+
+        // Store original project JSON for comparison
+        originalProjectJsonRef.current = {
+          id: matchedProject.id,
+          name: matchedProject.name,
+          description: matchedProject.description || '',
+          founded: matchedProject.founded ?? null,
+          funding: matchedProject.funding ?? null,
+          links: matchedProject.links || {},
+        };
+
+        // Store original category/subcategory
+        if (foundCategoryId && foundSubcategoryName) {
+          originalCategoryRef.current = {
+            categoryId: foundCategoryId,
+            subcategoryName: foundSubcategoryName,
+          };
+        }
+
+        // Store original values after a delay to ensure all form values are set
+        // Wait for category/subcategory to be set as well (200ms + buffer)
+        // Capture the actual form values after they're all set
+        setTimeout(() => {
+          // Get the actual current form values to ensure we capture exactly what was set
+          const currentFormValues = getValues();
+          const originalValues: Partial<ProjectFormData> = {
+            name: currentFormValues.name || '',
+            description: currentFormValues.description || '',
+            founded: currentFormValues.founded || '',
+            raised: currentFormValues.raised || '',
+            website: currentFormValues.website || '',
+            logo: currentFormValues.logo || '',
+            twitter: currentFormValues.twitter || '',
+            github: currentFormValues.github || '',
+            categoryId: currentFormValues.categoryId || '',
+            subcategoryName: currentFormValues.subcategoryName || '',
+            location: currentFormValues.location || '', // Location might be empty, that's fine
+          };
+          originalAutoFilledValuesRef.current = originalValues;
+          setIsAutoFilling(false);
+        }, 400);
+        
+        toast.success(`Found existing project: ${matchedProject.name}.`, {
+          duration: 4000,
+        });
+      }
+      
+      searchTimeoutRef.current = null;
+    }, 1000);
+
+    // Cleanup function
+    return () => {
+      if (searchTimeoutRef.current) {
+        clearTimeout(searchTimeoutRef.current);
+        searchTimeoutRef.current = null;
+      }
+    };
+  }, [open, watchProjectName, categoryData, setValue, isAutoFilling]);
 
   // Update categoryData when categories are loaded
   useEffect(() => {
@@ -125,7 +396,7 @@ function SubmitProjectModalContent() {
   // Update logo preview when URL changes
   useEffect(() => {
     if (watchLogoUrl) {
-      setLogoPreview(watchLogoUrl);
+      setLogoPreview(normalizeLogoUrl(watchLogoUrl));
     }
   }, [watchLogoUrl]);
 
@@ -158,13 +429,16 @@ function SubmitProjectModalContent() {
     if (watchCategoryId && categoryData.length > 0) {
       const category = categoryData.find(cat => cat.id === watchCategoryId);
       setSelectedCategory(category || null);
-      // Only clear subcategory if we're not setting an initial value
+      // Only clear subcategory if we're not setting an initial value and not auto-filling
       if (!initialValues.subcategoryName || watchCategoryId !== initialValues.categoryId) {
-        setValue('subcategoryName', '');
-        setSelectedSubcategory(null);
+        // Don't clear if we're currently auto-filling or if subcategory is already set
+        if (!isAutoFilling && !watchSubcategoryName) {
+          setValue('subcategoryName', '');
+          setSelectedSubcategory(null);
+        }
       }
     }
-  }, [watchCategoryId, categoryData, setValue, initialValues]);
+  }, [watchCategoryId, categoryData, setValue, initialValues, isAutoFilling, watchSubcategoryName]);
 
   // Update selected subcategory
   useEffect(() => {
@@ -260,9 +534,56 @@ function SubmitProjectModalContent() {
     return isNaN(year) ? null : year;
   };
 
+  // Helper function to check if form has changed from original auto-filled values
+  const hasFormChanged = (): boolean => {
+    const original = originalAutoFilledValuesRef.current;
+    // If no original values yet, consider form as unchanged (button stays disabled)
+    if (!original) return false;
+    
+    // Normalize values for comparison (trim and handle empty strings)
+    const normalize = (val: string | undefined | null): string => {
+      return (val || '').trim();
+    };
+
+    // Compare all fields using current form values from watch()
+    const current = allFormValues;
+    
+    // Compare each field - return true if any field has changed
+    // Handle undefined/null values by using || '' to ensure comparison works
+    if (normalize(current.name || '') !== normalize(original.name || '')) return true;
+    if (normalize(current.description || '') !== normalize(original.description || '')) return true;
+    if (normalize(current.founded || '') !== normalize(original.founded || '')) return true;
+    if (normalize(current.raised || '') !== normalize(original.raised || '')) return true;
+    if (normalize(current.website || '') !== normalize(original.website || '')) return true;
+    if (normalize(current.logo || '') !== normalize(original.logo || '')) return true;
+    if (normalize(current.twitter || '') !== normalize(original.twitter || '')) return true;
+    if (normalize(current.github || '') !== normalize(original.github || '')) return true;
+    if (normalize(current.categoryId || '') !== normalize(original.categoryId || '')) return true;
+    if (normalize(current.subcategoryName || '') !== normalize(original.subcategoryName || '')) return true;
+    // Include location in comparison
+    if (normalize(current.location || '') !== normalize(original.location || '')) return true;
+    
+    return false;
+  };
+  
+  // Check if we're in update mode
+  const isUpdateMode = lastAutoFilledProjectNameRef.current === (watchProjectName?.trim().toLowerCase() || '');
+  
+  // Check if form has changed (only relevant in update mode)
+  // In update mode: disabled if no changes, enabled if changes
+  const formHasChanged = hasFormChanged();
+  
+  // Button should be disabled if:
+  // - We're in update mode AND form hasn't changed
+  const shouldDisableButton = isUpdateMode && !formHasChanged;
+
   const onSubmit = (data: ProjectFormData) => {
     // Generate project ID from name
     const projectId = slugify(data.name);
+
+    // Check if we're updating an existing project (was auto-filled)
+    const normalizedName = data.name.trim().toLowerCase();
+    const isUpdate = lastAutoFilledProjectNameRef.current === normalizedName;
 
     // Build project JSON
     const projectJson = {
@@ -273,7 +594,7 @@ function SubmitProjectModalContent() {
       funding: parseFunding(data.raised),
       links: {
         ...(data.website && { homepage: data.website }),
-        ...(data.logo && { logo: data.logo }),
+        ...(data.logo && { logo: normalizeLogoUrl(data.logo) }),
         ...(data.twitter && { twitter: data.twitter }),
         ...(data.github && { github: data.github }),
       },
@@ -286,11 +607,99 @@ function SubmitProjectModalContent() {
     const typeId = slugify(typeName);
 
     // Build GitHub issue URL
-    const title = encodeURIComponent(`Add Project: ${data.name}`);
-    const labels = encodeURIComponent('project:add');
+    const title = encodeURIComponent(isUpdate ? `Update Project: ${data.name}` : `Add Project: ${data.name}`);
+    const labels = encodeURIComponent(isUpdate ? 'project:update' : 'project:add');
     
-    const body = encodeURIComponent(
-      `Please paste or review the complete project JSON below. The \`id\` must be kebab-case and match the filename in \`public/data/projects/\`.
+    let body = '';
+    
+    if (isUpdate && originalProjectJsonRef.current) {
+      // Generate diff for update
+      const original = originalProjectJsonRef.current;
+      const changes: string[] = [];
+      
+      // Compare project fields (skip name as it shouldn't change in update mode)
+      if (projectJson.description !== original.description) {
+        changes.push(`- **Description**: "${original.description}" → "${projectJson.description}"`);
+      }
+      if (projectJson.founded !== original.founded) {
+        changes.push(`- **Founded**: ${original.founded ?? 'null'} → ${projectJson.founded ?? 'null'}`);
+      }
+      if (JSON.stringify(projectJson.funding) !== JSON.stringify(original.funding)) {
+        changes.push(`- **Funding**: ${JSON.stringify(original.funding)} → ${JSON.stringify(projectJson.funding)}`);
+      }
+      
+      // Compare links - only show if actually changed
+      const originalLinks: any = original.links || {};
+      const newLinks: any = projectJson.links || {};
+      
+      // Normalize logo URLs for comparison (remove domain prefix for comparison)
+      const normalizeLogoForComparison = (url: string | undefined): string => {
+        if (!url) return '';
+        // Remove https://buildermaps.io prefix if present for comparison
+        return url.replace(/^https:\/\/buildermaps\.io/, '').trim();
+      };
+      
+      const originalHomepage = (originalLinks.homepage || '').trim();
+      const newHomepage = (newLinks.homepage || '').trim();
+      if (originalHomepage !== newHomepage && !(originalHomepage === '' && newHomepage === '')) {
+        changes.push(`- **Homepage**: "${originalHomepage || '(empty)'}" → "${newHomepage || '(empty)'}"`);
+      }
+      
+      const originalLogo = normalizeLogoForComparison(originalLinks.logo);
+      const newLogo = normalizeLogoForComparison(newLinks.logo);
+      if (originalLogo !== newLogo && !(originalLogo === '' && newLogo === '')) {
+        // Remove https://buildermaps.io prefix for display in issue
+        const displayOriginalLogo = originalLinks.logo ? originalLinks.logo.replace(/^https:\/\/buildermaps\.io/, '') : '(empty)';
+        const displayNewLogo = newLinks.logo ? newLinks.logo.replace(/^https:\/\/buildermaps\.io/, '') : '(empty)';
+        changes.push(`- **Logo**: "${displayOriginalLogo}" → "${displayNewLogo}"`);
+      }
+      
+      const originalTwitter = (originalLinks.twitter || '').trim();
+      const newTwitter = (newLinks.twitter || '').trim();
+      if (originalTwitter !== newTwitter && !(originalTwitter === '' && newTwitter === '')) {
+        changes.push(`- **Twitter**: "${originalTwitter || '(empty)'}" → "${newTwitter || '(empty)'}"`);
+      }
+      
+      const originalGithub = (originalLinks.github || '').trim();
+      const newGithub = (newLinks.github || '').trim();
+      if (originalGithub !== newGithub && !(originalGithub === '' && newGithub === '')) {
+        changes.push(`- **GitHub**: "${originalGithub || '(empty)'}" → "${newGithub || '(empty)'}"`);
+      }
+      
+      // Compare location (stored in form values, not in project JSON)
+      const originalValues = originalAutoFilledValuesRef.current;
+      if (originalValues) {
+        const originalLocation = (originalValues.location || '').trim();
+        const newLocation = (data.location || '').trim();
+        if (originalLocation !== newLocation && !(originalLocation === '' && newLocation === '')) {
+          changes.push(`- **Location**: "${originalLocation || '(empty)'}" → "${newLocation || '(empty)'}"`);
+        }
+      }
+      
+      // Compare category/subcategory
+      const originalCategory = originalCategoryRef.current;
+      if (originalCategory) {
+        if (data.categoryId !== originalCategory.categoryId) {
+          const oldCategory = categoryData.find(cat => cat.id === originalCategory.categoryId);
+          const newCategory = categoryData.find(cat => cat.id === data.categoryId);
+          changes.push(`- **Category**: "${oldCategory?.name || originalCategory.categoryId}" → "${newCategory?.name || data.categoryId}"`);
+        }
+        if (data.subcategoryName !== originalCategory.subcategoryName) {
+          changes.push(`- **Subcategory**: "${originalCategory.subcategoryName}" → "${data.subcategoryName}"`);
+        }
+      }
+      
+      body = `Please review the following changes to the project:
+
+## Changes Made
+
+${changes.length > 0 ? changes.join('\n') : '- No changes detected (please verify manually)'}
+
+Thank you for your time.
+`;
+    } else {
+      // Original add project flow
+      body = `Please paste or review the complete project JSON below. The \`id\` must be kebab-case and match the filename in \`public/data/projects/\`.
 
 \`\`\`json
 ${JSON.stringify(projectJson, null, 2)}
@@ -316,10 +725,12 @@ Example - add \`"${projectId}"\` to the projects array:
   ]
 }
 \`\`\`
-`
-    );
+`;
+    }
+    
+    const encodedBody = encodeURIComponent(body);
 
-    const githubUrl = `https://github.com/chainbase-labs/buildermaps.io/issues/new?title=${title}&labels=${labels}&body=${body}`;
+    const githubUrl = `https://github.com/chainbase-labs/buildermaps.io/issues/new?title=${title}&labels=${labels}&body=${encodedBody}`;
 
     // Open GitHub issue in new tab
     window.open(githubUrl, '_blank');
@@ -454,15 +865,11 @@ Example - add \`"${projectId}"\` to the projects array:
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="location">Location *</Label>
+                      <Label htmlFor="location">Location</Label>
                       <Input
-                        {...register('location', { required: 'Location is required' })}
+                        {...register('location')}
                         placeholder="e.g., United States"
-                        className={errors.location ? 'border-red-500' : ''}
                       />
-                      {errors.location && (
-                        <p className="text-xs text-red-600">{errors.location.message}</p>
-                      )}
                     </div>
                   </div>
 
@@ -506,60 +913,31 @@ Example - add \`"${projectId}"\` to the projects array:
                     {/* Primary Category */}
                     <div className="space-y-2">
                       <Label htmlFor="categoryId">Primary Category *</Label>
-                      <div className="flex gap-2">
-                        <Select
-                          value={watch('categoryId') || ''}
-                          onValueChange={(value) => setValue('categoryId', value)}
+                      <Select
+                        value={watch('categoryId') || ''}
+                        onValueChange={(value) => setValue('categoryId', value)}
+                        disabled={lockCategory}
+                      >
+                        <SelectTrigger 
+                          className={errors.categoryId ? 'border-red-500' : ''}
                           disabled={lockCategory}
                         >
-                          <SelectTrigger 
-                            className={errors.categoryId ? 'border-red-500' : ''}
-                            disabled={lockCategory}
-                          >
-                            <SelectValue placeholder="Select a category" />
-                          </SelectTrigger>
-                          <SelectContent className="z-[9999]">
-                            {categoryData.length > 0 ? (
-                              categoryData.map((cat) => (
-                                <SelectItem key={cat.id} value={cat.id}>
-                                  {cat.name}
-                                </SelectItem>
-                              ))
-                            ) : (
-                              <div className="px-2 py-1.5 text-sm text-muted-foreground">
-                                Loading categories...
-                              </div>
-                            )}
-                          </SelectContent>
-                        </Select>
-                        <Dialog open={newCategoryDialog} onOpenChange={setNewCategoryDialog}>
-                          <DialogTrigger asChild>
-                            <Button type="button" variant="outline" size="icon">
-                              <Plus className="h-4 w-4" />
-                            </Button>
-                          </DialogTrigger>
-                          <DialogContent>
-                            <DialogHeader>
-                              <DialogTitle>Add New Category</DialogTitle>
-                            </DialogHeader>
-                            <div className="space-y-4 py-4">
-                              <div className="space-y-2">
-                                <Label htmlFor="newCategory">Category Name</Label>
-                                <Input
-                                  id="newCategory"
-                                  value={newCategoryName}
-                                  onChange={(e) => setNewCategoryName(e.target.value)}
-                                  placeholder="e.g., DeFi"
-                                />
-                              </div>
-                              <Button onClick={handleAddNewCategory} className="w-full">
-                                <Check className="h-4 w-4 mr-2" />
-                                Add Category
-                              </Button>
+                          <SelectValue placeholder="Select a category" />
+                        </SelectTrigger>
+                        <SelectContent className="z-[9999]">
+                          {categoryData.length > 0 ? (
+                            categoryData.map((cat) => (
+                              <SelectItem key={cat.id} value={cat.id}>
+                                {cat.name}
+                              </SelectItem>
+                            ))
+                          ) : (
+                            <div className="px-2 py-1.5 text-sm text-muted-foreground">
+                              Loading categories...
                             </div>
-                          </DialogContent>
-                        </Dialog>
-                      </div>
+                          )}
+                        </SelectContent>
+                      </Select>
                       <input
                         type="hidden"
                         {...register('categoryId', { required: 'Primary category is required' })}
@@ -573,50 +951,21 @@ Example - add \`"${projectId}"\` to the projects array:
                     {selectedCategory && (
                       <div className="space-y-2">
                         <Label htmlFor="subcategoryName">Secondary Category *</Label>
-                        <div className="flex gap-2">
-                          <Select
-                            value={watch('subcategoryName') || ''}
-                            onValueChange={(value) => setValue('subcategoryName', value)}
-                          >
-                            <SelectTrigger className={errors.subcategoryName ? 'border-red-500' : ''}>
-                              <SelectValue placeholder="Select a subcategory" />
-                            </SelectTrigger>
-                            <SelectContent className="z-[9999]">
-                              {selectedCategory.subcategories.map((subcat) => (
-                                <SelectItem key={subcat.name} value={subcat.name}>
-                                  {subcat.name}
-                                </SelectItem>
-                              ))}
-                            </SelectContent>
-                          </Select>
-                          <Dialog open={newSubcategoryDialog} onOpenChange={setNewSubcategoryDialog}>
-                            <DialogTrigger asChild>
-                              <Button type="button" variant="outline" size="icon">
-                                <Plus className="h-4 w-4" />
-                              </Button>
-                            </DialogTrigger>
-                            <DialogContent>
-                              <DialogHeader>
-                                <DialogTitle>Add New Subcategory</DialogTitle>
-                              </DialogHeader>
-                              <div className="space-y-4 py-4">
-                                <div className="space-y-2">
-                                  <Label htmlFor="newSubcategory">Subcategory Name</Label>
-                                  <Input
-                                    id="newSubcategory"
-                                    value={newSubcategoryName}
-                                    onChange={(e) => setNewSubcategoryName(e.target.value)}
-                                    placeholder="e.g., Lending"
-                                  />
-                                </div>
-                                <Button onClick={handleAddNewSubcategory} className="w-full">
-                                  <Check className="h-4 w-4 mr-2" />
-                                  Add Subcategory
-                                </Button>
-                              </div>
-                            </DialogContent>
-                          </Dialog>
-                        </div>
+                        <Select
+                          value={watch('subcategoryName') || ''}
+                          onValueChange={(value) => setValue('subcategoryName', value)}
+                        >
+                          <SelectTrigger className={errors.subcategoryName ? 'border-red-500' : ''}>
+                            <SelectValue placeholder="Select a subcategory" />
+                          </SelectTrigger>
+                          <SelectContent className="z-[9999]">
+                            {selectedCategory.subcategories.map((subcat) => (
+                              <SelectItem key={subcat.name} value={subcat.name}>
+                                {subcat.name}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
                         <input
                           type="hidden"
                           {...register('subcategoryName', { required: 'Secondary category is required' })}
@@ -675,8 +1024,12 @@ Example - add \`"${projectId}"\` to the projects array:
 
                   {/* Submit Button */}
                   <div className="flex gap-3 pt-4">
-                    <Button type="submit" className="flex-1">
-                      Submit Project
+                    <Button 
+                      type="submit" 
+                      className="flex-1"
+                      disabled={shouldDisableButton}
+                    >
+                      {isUpdateMode ? 'Update Project' : 'Submit Project'}
                     </Button>
                     <Button type="button" variant="outline" onClick={handleClose}>
                       Cancel
