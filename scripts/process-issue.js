@@ -40,12 +40,22 @@ function extractJsonFromMarkdown(text) {
 // Parse changes from "Changes Made" section
 function parseChanges(text) {
   const changes = {};
-  const changesSection = text.match(/## Changes Made\s*\n([\s\S]*?)(?:\nThank you|$)/);
-  if (!changesSection) return null;
+  console.log('Parsing changes from issue body...');
+  
+  // Match the "Changes Made" section - be more flexible with the ending
+  const changesSection = text.match(/## Changes Made\s*\n([\s\S]*?)(?:\nThank you|Thank you for your time|$)/i);
+  if (!changesSection) {
+    console.log('Could not find "Changes Made" section in issue body');
+    return null;
+  }
 
   const changesText = changesSection[1];
+  console.log('Changes text:', changesText.substring(0, 200));
+  
   // Match both formats: "value" → "value" and value → value (for null)
-  const changeLines = changesText.match(/- \*\*([^*]+)\*\*: ([^\n]+)/g) || [];
+  // Use a more flexible regex that handles the arrow character
+  const changeLines = changesText.match(/- \*\*([^*]+)\*\*:\s*([^\n]+)/g) || [];
+  console.log(`Found ${changeLines.length} change lines`);
   
   changeLines.forEach(line => {
     // Match format: - **Field**: "old" → "new" or - **Field**: null → null
@@ -53,13 +63,29 @@ function parseChanges(text) {
     if (match) {
       const field = match[1].trim().toLowerCase();
       const changePart = match[2].trim();
+      console.log(`Processing field: ${field}, change: ${changePart.substring(0, 50)}`);
       
       // Parse the change part (can be "value" → "value" or null → null)
-      const arrowMatch = changePart.match(/(.+?)\s*→\s*(.+)/);
-      if (!arrowMatch) return;
+      // Handle both Unicode arrow (→) and ASCII arrow (->)
+      // Use a more flexible pattern that matches the arrow character
+      const arrowMatch = changePart.match(/(.+?)\s*(?:→|->)\s*(.+)/);
+      if (!arrowMatch) {
+        console.log(`  ⚠️  Could not parse arrow in: ${changePart}`);
+        return;
+      }
       
-      const oldValue = arrowMatch[1].trim().replace(/^"|"$/g, '');
-      const newValue = arrowMatch[2].trim().replace(/^"|"$/g, '');
+      let oldValue = arrowMatch[1].trim();
+      let newValue = arrowMatch[2].trim();
+      
+      // Remove quotes if present, but preserve null as string first
+      if (oldValue.startsWith('"') && oldValue.endsWith('"')) {
+        oldValue = oldValue.slice(1, -1);
+      }
+      if (newValue.startsWith('"') && newValue.endsWith('"')) {
+        newValue = newValue.slice(1, -1);
+      }
+      
+      console.log(`  Old: "${oldValue}", New: "${newValue}"`);
       
       // Map field names to JSON paths
       if (field === 'description') {
@@ -101,6 +127,7 @@ function parseChanges(text) {
     }
   });
   
+  console.log('Parsed changes:', JSON.stringify(changes, null, 2));
   return changes;
 }
 
@@ -220,12 +247,17 @@ function processIssue() {
       }
       
       projectData = JSON.parse(fs.readFileSync(projectFilePath, 'utf-8'));
+      console.log(`Loaded existing project: ${projectId}`);
+      
       const changes = parseChanges(ISSUE_BODY);
       
       if (!changes || Object.keys(changes).length === 0) {
         console.log('No changes detected in issue body');
+        console.log('Issue body preview:', ISSUE_BODY.substring(0, 500));
         process.exit(0);
       }
+      
+      console.log('Applying changes to project data...');
       
       // Apply changes to project data
       if (changes.description !== undefined) projectData.description = changes.description;
