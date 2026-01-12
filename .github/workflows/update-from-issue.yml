@@ -46,15 +46,18 @@ jobs:
 
       - name: Check issue labels and parse
         id: parse_issue
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_LABELS: ${{ toJson(github.event.issue.labels) }}
         run: |
-          LABELS='${{ toJson(github.event.issue.labels) }}'
-          echo "Labels: $LABELS"
+          echo "Labels: $ISSUE_LABELS"
           # Extract label names and check if project:add or project:update exists
-          LABEL_NAMES=$(echo "$LABELS" | jq -r '.[].name' | tr '\n' ' ')
+          LABEL_NAMES=$(echo "$ISSUE_LABELS" | jq -r '.[].name' | tr '\n' ' ')
           echo "Label names: $LABEL_NAMES"
           if echo "$LABEL_NAMES" | grep -q "project:add\|project:update"; then
             echo "Valid label found, processing issue..."
-            node scripts/process-issue.js "${{ github.event.issue.body }}" "${{ github.event.issue.title }}" "$LABELS"
+            node scripts/process-issue.js "$ISSUE_BODY" "$ISSUE_TITLE" "$ISSUE_LABELS"
           else
             echo "⚠️ Skipping: Issue does not have project:add or project:update label"
             echo "Available labels: $LABEL_NAMES"

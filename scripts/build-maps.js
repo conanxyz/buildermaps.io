@@ -16,10 +16,10 @@ const MAPS_DIR = path.join(DATA_DIR, 'maps');
 const OUTPUT_FILE = path.join(DATA_DIR, 'builder-maps.json');
 
 function buildData() {
-  console.log('🔨 开始构建 builder-maps.json...\n');
+  console.log('🔨 Starting to build builder-maps.json...\n');
 
   // 1. 加载所有项目
-  console.log('📦 加载项目文件...');
+  console.log('📦 Loading project files...');
   const projectFiles = fs.readdirSync(PROJECTS_DIR).filter(f => f.endsWith('.json'));
   const projects = new Map();
 
@@ -30,10 +30,10 @@ function buildData() {
     projects.set(projectData.id, projectData);
   });
 
-  console.log(`✅ 加载了 ${projects.size} 个项目\n`);
+  console.log(`✅ Loaded ${projects.size} projects\n`);
 
   // 2. 加载所有映射
-  console.log('🗺️  加载映射文件...');
+  console.log('🗺️  Loading map files...');
   const mapFiles = fs.readdirSync(MAPS_DIR).filter(f => f.endsWith('.json'));
   const maps = [];
 
@@ -44,10 +44,10 @@ function buildData() {
     maps.push(mapData);
   });
 
-  console.log(`✅ 加载了 ${maps.length} 个映射文件\n`);
+  console.log(`✅ Loaded ${maps.length} map files\n`);
 
   // 3. 构建完整数据
-  console.log('🔄 构建数据结构...');
+  console.log('🔄 Building data structure...');
   const builderMaps = [];
   const projectSectors = new Map(); // 存储每个项目的sectors
 
@@ -93,7 +93,7 @@ function buildData() {
     const project = projects.get(projectId);
 
     if (!project) {
-      warnings.push(`⚠️  项目不存在: ${projectId}`);
+      warnings.push(`⚠️  Project not found: ${projectId}`);
       continue;
     }
 
@@ -111,24 +111,24 @@ function buildData() {
   // 按项目名称排序
   builderMaps.sort((a, b) => a.name.localeCompare(b.name));
 
-  console.log(`✅ 构建了 ${builderMaps.length} 个项目条目\n`);
+  console.log(`✅ Built ${builderMaps.length} project entries\n`);
 
   // 4. 输出警告
   if (warnings.length > 0) {
-    console.log('⚠️  警告:');
+    console.log('⚠️  Warnings:');
     warnings.forEach(warning => console.log(`   ${warning}`));
     console.log('');
   }
 
   // 5. 写入文件
-  console.log('💾 写入 builder-maps.json...');
+  console.log('💾 Writing builder-maps.json...');
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(builderMaps, null, 2));
-  console.log(`✅ 成功写入 ${OUTPUT_FILE}\n`);
+  console.log(`✅ Successfully wrote ${OUTPUT_FILE}\n`);
 
   // 6. 统计信息
-  console.log('📊 构建统计:');
-  console.log(`   - 输出项目数: ${builderMaps.length}`);
-  console.log(`   - 文件大小: ${(fs.statSync(OUTPUT_FILE).size / 1024).toFixed(2)} KB`);
+  console.log('📊 Build statistics:');
+  console.log(`   - Output projects: ${builderMaps.length}`);
+  console.log(`   - File size: ${(fs.statSync(OUTPUT_FILE).size / 1024).toFixed(2)} KB`);
 
   // 统计每个sector的项目数
   const sectorCounts = new Map();
@@ -139,19 +139,19 @@ function buildData() {
     });
   });
 
-  console.log('\n📋 Sector分布:');
+  console.log('\n📋 Sector distribution:');
   const sortedSectors = Array.from(sectorCounts.entries()).sort((a, b) => b[1] - a[1]);
   for (const [sector, count] of sortedSectors) {
-    console.log(`   - ${sector}: ${count} 个项目`);
+    console.log(`   - ${sector}: ${count} projects`);
   }
 
-  console.log('\n✨ 构建完成！');
+  console.log('\n✨ Build complete!');
 }
 
 // 执行构建
 try {
   buildData();
 } catch (error) {
-  console.error('❌ 构建失败:', error);
+  console.error('❌ Build failed:', error);
   process.exit(1);
 }
