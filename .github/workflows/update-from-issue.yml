@@ -1,0 +1,89 @@
+name: Update Data from Issue
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    # Only run if issue has project:add or project:update label
+    if: |
+      contains(github.event.issue.labels.*.name, 'project:add') || 
+      contains(github.event.issue.labels.*.name, 'project:update')
+    
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.9.0"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install OSSUtil
+        run: |
+          pip install oss2
+          wget http://gosspublic.alicdn.com/ossutil/1.7.18/ossutil64
+          chmod 755 ossutil64
+
+      - name: Configure OSSUtil
+        run: |
+          ./ossutil64 config -e oss-ap-southeast-1.aliyuncs.com -i ${{ secrets.ALI_ACCESS_KEY_ID }} -k ${{ secrets.ALI_ACCESS_KEY_SECRET }}
+
+      - name: Download current data from OSS
+        run: |
+          mkdir -p public/data/projects public/data/maps
+          ./ossutil64 cp -r ${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/data/projects/ public/data/projects/ --update || true
+          ./ossutil64 cp -r ${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/data/maps/ public/data/maps/ --update || true
+
+      - name: Parse issue and update data
+        id: parse_issue
+        run: |
+          node scripts/process-issue.js "${{ github.event.issue.body }}" "${{ github.event.issue.title }}" '${{ toJson(github.event.issue.labels) }}'
+
+      - name: Check for duplicate project IDs
+        run: node scripts/check-duplicate-ids.js
+
+      - name: Build builder-maps.json
+        run: npm run build:maps
+
+      - name: Upload updated data to OSS
+        run: |
+          ./ossutil64 cp -r public/data/ "${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/data/" --meta="Cache-Control:no-cache" --update
+          ./ossutil64 cp public/data/builder-maps.json "${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/data/builder-maps.json" --meta="Cache-Control:no-cache" --update
+
+      - name: Comment on issue (success)
+        if: success()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '✅ Data has been successfully updated in OSS!\n\nYou can view the changes at: ${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL }}/public/buildermaps/data/'
+            })
+
+      - name: Comment on issue (error)
+        if: failure()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '❌ Failed to process the issue. Please check the workflow logs for details.'
+            })
