@@ -93,7 +93,7 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '✅ Data has been successfully updated in OSS!\n\nYou can view the changes at: ${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL }}/public/buildermaps/data/'
+              body: '✅ Data has been successfully updated!'
             })
 
       - name: Comment on issue (error)
