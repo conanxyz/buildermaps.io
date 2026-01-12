@@ -2,7 +2,7 @@ name: Update Data from Issue
 
 on:
   issues:
-    types: [opened]
+    types: [labeled]
 
 jobs:
   update-data:
@@ -44,25 +44,31 @@ jobs:
           ./ossutil64 cp -r ${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/data/projects/ public/data/projects/ --update || true
           ./ossutil64 cp -r ${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/data/maps/ public/data/maps/ --update || true
 
+      - name: Check if label is project:add or project:update
+        id: check_label
+        run: |
+          LABEL_NAME="${{ github.event.label.name }}"
+          echo "Label added: $LABEL_NAME"
+          if [ "$LABEL_NAME" == "project:add" ] || [ "$LABEL_NAME" == "project:update" ]; then
+            echo "valid_label=true" >> $GITHUB_OUTPUT
+            echo "✅ Valid label detected: $LABEL_NAME"
+          else
+            echo "valid_label=false" >> $GITHUB_OUTPUT
+            echo "⚠️ Skipping: Label '$LABEL_NAME' is not project:add or project:update"
+            exit 0
+          fi
+
       - name: Check issue labels and parse
         id: parse_issue
+        if: steps.check_label.outputs.valid_label == 'true'
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
           ISSUE_TITLE: ${{ github.event.issue.title }}
           ISSUE_LABELS: ${{ toJson(github.event.issue.labels) }}
         run: |
           echo "Labels: $ISSUE_LABELS"
-          # Extract label names and check if project:add or project:update exists
-          LABEL_NAMES=$(echo "$ISSUE_LABELS" | jq -r '.[].name' | tr '\n' ' ')
-          echo "Label names: $LABEL_NAMES"
-          if echo "$LABEL_NAMES" | grep -q "project:add\|project:update"; then
-            echo "Valid label found, processing issue..."
-            node scripts/process-issue.js "$ISSUE_BODY" "$ISSUE_TITLE" "$ISSUE_LABELS"
-          else
-            echo "⚠️ Skipping: Issue does not have project:add or project:update label"
-            echo "Available labels: $LABEL_NAMES"
-            exit 0
-          fi
+          echo "Processing issue #${{ github.event.issue.number }}..."
+          node scripts/process-issue.js "$ISSUE_BODY" "$ISSUE_TITLE" "$ISSUE_LABELS"
 
       - name: Check for duplicate project IDs
         if: steps.parse_issue.outcome == 'success'
