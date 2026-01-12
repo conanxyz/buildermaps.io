@@ -7,10 +7,6 @@ on:
 jobs:
   update-data:
     runs-on: ubuntu-latest
-    # Only run if issue has project:add or project:update label
-    if: |
-      contains(github.event.issue.labels.*.name, 'project:add') || 
-      contains(github.event.issue.labels.*.name, 'project:update')
     
     steps:
       - name: Check out code
@@ -48,18 +44,33 @@ jobs:
           ./ossutil64 cp -r ${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/data/projects/ public/data/projects/ --update || true
           ./ossutil64 cp -r ${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/data/maps/ public/data/maps/ --update || true
 
-      - name: Parse issue and update data
+      - name: Check issue labels and parse
         id: parse_issue
         run: |
-          node scripts/process-issue.js "${{ github.event.issue.body }}" "${{ github.event.issue.title }}" '${{ toJson(github.event.issue.labels) }}'
+          LABELS='${{ toJson(github.event.issue.labels) }}'
+          echo "Labels: $LABELS"
+          # Extract label names and check if project:add or project:update exists
+          LABEL_NAMES=$(echo "$LABELS" | jq -r '.[].name' | tr '\n' ' ')
+          echo "Label names: $LABEL_NAMES"
+          if echo "$LABEL_NAMES" | grep -q "project:add\|project:update"; then
+            echo "Valid label found, processing issue..."
+            node scripts/process-issue.js "${{ github.event.issue.body }}" "${{ github.event.issue.title }}" "$LABELS"
+          else
+            echo "⚠️ Skipping: Issue does not have project:add or project:update label"
+            echo "Available labels: $LABEL_NAMES"
+            exit 0
+          fi
 
       - name: Check for duplicate project IDs
+        if: steps.parse_issue.outcome == 'success'
         run: node scripts/check-duplicate-ids.js
 
       - name: Build builder-maps.json
+        if: steps.parse_issue.outcome == 'success'
         run: npm run build:maps
 
       - name: Upload updated data to OSS
+        if: steps.parse_issue.outcome == 'success'
         run: |
           ./ossutil64 cp -r public/data/ "${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/data/" --meta="Cache-Control:no-cache" --update
           ./ossutil64 cp public/data/builder-maps.json "${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/data/builder-maps.json" --meta="Cache-Control:no-cache" --update
