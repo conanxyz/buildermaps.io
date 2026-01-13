@@ -1,5 +1,8 @@
 name: Update Data from Issue
 
+permissions:
+  contents: write
+
 on:
   issues:
     types: [labeled]
