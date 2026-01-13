@@ -13,6 +13,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -77,6 +78,25 @@ jobs:
       - name: Build builder-maps.json
         if: steps.parse_issue.outcome == 'success'
         run: npm run build:maps
+
+      - name: Configure Git
+        if: steps.parse_issue.outcome == 'success'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and push changes
+        if: steps.parse_issue.outcome == 'success'
+        run: |
+          git add public/data/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            ISSUE_NUMBER="${{ github.event.issue.number }}"
+            ISSUE_TITLE="${{ github.event.issue.title }}"
+            git commit -m "Update data from issue #${ISSUE_NUMBER}: ${ISSUE_TITLE}"
+            git push
+          fi
 
       - name: Upload updated data to OSS
         if: steps.parse_issue.outcome == 'success'
