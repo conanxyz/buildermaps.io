@@ -466,7 +466,7 @@ async function exportSubcategoryPng(subcategory: Subcategory) {
           </button>
 
           <div className="absolute top-1 left-1/2 -translate-x-1/2 rounded bg-white px-2 py-0.5 max-[568px]:py-0.5">
-            <h3 className="text-black text-sm linux-libertine text-center linux-libertine-bold">
+            <h3 className="text-black text-sm linux-libertine text-center linux-libertine-bold whitespace-nowrap">
               {subcategory.name}
             </h3>
           </div>
