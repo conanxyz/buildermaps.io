@@ -437,7 +437,7 @@ async function exportSubcategoryPng(subcategory: Subcategory) {
       <div
         key={refKey}
         ref={setSubcatRef(refKey)}
-        className={`relative p-4 ${columnSpanClass} ${
+        className={`relative ${isCompactSubcategory ? "py-4 px-2" : "p-4"} ${columnSpanClass} ${
           isCompactSubcategory ? "justify-self-start self-end w-fit max-w-full" : ""
         }`}
         onMouseEnter={() => setHoveredSubcategoryKey(refKey)}
@@ -445,7 +445,7 @@ async function exportSubcategoryPng(subcategory: Subcategory) {
       >
         <div
           className={`relative border border-black rounded ${background} px-2 pb-2 pt-5 max-[968px]:col-span-12 max-[568px]:px-1 max-[568px]:pb-1 ${
-            isCompactSubcategory ? "inline-block w-fit max-w-full" : ""
+            isCompactSubcategory ? "inline-block w-fit max-w-full px-0" : ""
           }`}
         >
           <button
@@ -454,7 +454,7 @@ async function exportSubcategoryPng(subcategory: Subcategory) {
             onClick={() => exportSubcategoryPng(subcategory)}
             disabled={isExporting || exportingWholeMap}
             style={exportingWholeMap ? { display: 'none' } : undefined}
-            className={`cursor-pointer absolute right-3 top-3 z-20 inline-flex items-center gap-1 rounded border border-black bg-white px-2 py-1 text-xs text-black hover:bg-gray-50 disabled:opacity-60 transition-opacity duration-200 ${
+            className={`cursor-pointer absolute right-3 top-3 z-50 inline-flex items-center gap-1 rounded border border-black bg-white px-2 py-1 text-xs text-black hover:bg-gray-50 disabled:opacity-60 transition-opacity duration-200 ${
               isHovered 
                 ? 'md:opacity-80 max-md:opacity-80' 
                 : 'md:opacity-0 max-md:opacity-80'
@@ -561,7 +561,7 @@ async function exportSubcategoryPng(subcategory: Subcategory) {
       </div>
 
       {compactSubcategories.length > 0 && (
-        <div className="relative flex">
+        <div className="relative flex flex-wrap">
           {compactSubcategories.map((item) => {
             const { subcategory, sortIndex } = item;
             const hasDirectProjects =
@@ -633,7 +633,7 @@ function ProjectLogo({
     >
       <PopoverTrigger asChild>
         <div
-          className="group h-[96px] w-[75px] max-[568px]:h-[90px] max-[568px]:w-[72px] cursor-pointer max-[568px]:cursor-default max-[568px]:pointer-events-none"
+          className="group relative z-20 h-[96px] w-[75px] max-[568px]:h-[90px] max-[568px]:w-[72px] cursor-pointer max-[568px]:cursor-default max-[568px]:pointer-events-none"
           title={project.name}
         >
           <div
@@ -856,14 +856,6 @@ function getSubcategoryStyle(index: number) {
     { border: "border-teal-400", bg: "bg-teal-50/60" },
   ];
   return styles[index % styles.length];
-}
-
-function calculateColSpan(subcategory: Subcategory) {
-  const itemCount = subcategory.projects?.length ?? 0;
-  if (itemCount <= 6) return 3;
-  if (itemCount <= 9) return 4;
-  if (itemCount <= 12) return 6;
-  return 12;
 }
 
 function formatDate() {
