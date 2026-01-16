@@ -410,6 +410,87 @@ async function exportSubcategoryPng(subcategory: Subcategory) {
     }
   };
 
+  const subcategoryItems = sortedSubcategories.map((subcategory, sortIndex) => ({
+    subcategory,
+    sortIndex,
+    projectCount: countSubcategoryProjects(subcategory),
+  }));
+
+  const compactSubcategories = subcategoryItems.filter(
+    (item) => item.projectCount < 6
+  );
+  const regularSubcategories = subcategoryItems.filter(
+    (item) => item.projectCount >= 6
+  );
+
+  const renderSubcategoryCard = (
+    subcategory: Subcategory,
+    background: string,
+    columnSpanClass: string,
+    isCompactSubcategory: boolean
+  ) => {
+    const refKey = `${category.name}__${subcategory.name}`;
+    const isExporting = exportingKey === refKey;
+    const isHovered = hoveredSubcategoryKey === refKey;
+
+    return (
+      <div
+        key={refKey}
+        ref={setSubcatRef(refKey)}
+        className={`relative p-4 ${columnSpanClass} ${
+          isCompactSubcategory ? "justify-self-start self-end w-fit max-w-full" : ""
+        }`}
+        onMouseEnter={() => setHoveredSubcategoryKey(refKey)}
+        onMouseLeave={() => setHoveredSubcategoryKey(null)}
+      >
+        <div
+          className={`relative border border-black rounded ${background} px-2 pb-2 pt-5 max-[968px]:col-span-12 max-[568px]:px-1 max-[568px]:pb-1 ${
+            isCompactSubcategory ? "inline-block w-fit max-w-full" : ""
+          }`}
+        >
+          <button
+            type="button"
+            data-export-button
+            onClick={() => exportSubcategoryPng(subcategory)}
+            disabled={isExporting || exportingWholeMap}
+            style={exportingWholeMap ? { display: 'none' } : undefined}
+            className={`cursor-pointer absolute right-3 top-3 z-20 inline-flex items-center gap-1 rounded border border-black bg-white px-2 py-1 text-xs text-black hover:bg-gray-50 disabled:opacity-60 transition-opacity duration-200 ${
+              isHovered 
+                ? 'md:opacity-80 max-md:opacity-80' 
+                : 'md:opacity-0 max-md:opacity-80'
+            }`}
+            title="Export this section"
+          >
+            <Download className="h-3.5 w-3.5" />
+            {isExporting ? "Exporting..." : "Export"}
+          </button>
+
+          <div className="absolute top-1 left-1/2 -translate-x-1/2 rounded bg-white px-2 py-0.5 max-[568px]:py-0.5">
+            <h3 className="text-black text-sm linux-libertine text-center linux-libertine-bold">
+              {subcategory.name}
+            </h3>
+          </div>
+
+          <div className="flex flex-wrap">
+            {sortProjects(subcategory.projects || []).map((project) => {
+              const uniqueKey = `${project.id}-${category.name}-${subcategory.name}`;
+              return (
+                <ProjectLogo
+                  key={uniqueKey}
+                  project={project}
+                  categoryName={category.name}
+                  subcategoryName={subcategory.name}
+                  openPopoverId={openPopoverId}
+                  setOpenPopoverId={setOpenPopoverId}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div
       ref={mapExportRef}
@@ -445,90 +526,61 @@ async function exportSubcategoryPng(subcategory: Subcategory) {
       </h2>
 
       <div className="relative z-0 grid grid-cols-12 gap-0 max-[768px]:grid-cols-6">
-        {sortedSubcategories.map((subcategory, index) => {
+        {regularSubcategories.map((item, index) => {
+          const { subcategory, sortIndex, projectCount } = item;
           const hasDirectProjects =
             subcategory.projects && subcategory.projects.length > 0;
-          const background = hasDirectProjects ? "bg-white" : getSubcategoryStyle(index).bg;
+          const background = hasDirectProjects
+            ? "bg-white"
+            : getSubcategoryStyle(sortIndex).bg;
 
-          // For screens < 768px (md breakpoint), always use col-span-6
-          // For larger screens, use the original logic: same count = 6/6, otherwise 7/5
           const isEven = index % 2 === 0;
-          const currentCount = countSubcategoryProjects(subcategory);
           const siblingIndex = isEven ? index + 1 : index - 1;
           const siblingCount =
-            siblingIndex >= 0 && siblingIndex < sortedSubcategories.length
-              ? countSubcategoryProjects(sortedSubcategories[siblingIndex])
+            siblingIndex >= 0 && siblingIndex < regularSubcategories.length
+              ? regularSubcategories[siblingIndex].projectCount
               : null;
           const hasSameCountAsSibling =
-            siblingCount !== null && currentCount === siblingCount;
+            siblingCount !== null && projectCount === siblingCount;
 
           const desktopColumnSpan = hasSameCountAsSibling
             ? "col-span-6"
             : isEven
             ? "col-span-7"
             : "col-span-5";
-          
-          // Always col-span-6 on screens < 768px, use calculated span on larger screens
+
           const columnSpanClass = `max-md:col-span-6 ${desktopColumnSpan}`;
 
-          const refKey = `${category.name}__${subcategory.name}`;
-          const isExporting = exportingKey === refKey;
-          const isHovered = hoveredSubcategoryKey === refKey;
-
-          return (
-            <div 
-              ref={setSubcatRef(refKey)}
-              className={`relative ${columnSpanClass} p-4`}
-              onMouseEnter={() => setHoveredSubcategoryKey(refKey)}
-              onMouseLeave={() => setHoveredSubcategoryKey(null)}
-            >
-            <div
-              key={subcategory.name}              
-              className={`border border-black rounded ${background} px-2 pb-2 pt-5 max-[968px]:col-span-12 max-[568px]:px-1 max-[568px]:pb-1`}
-            >
-              <button
-                type="button"
-                data-export-button
-                onClick={() => exportSubcategoryPng(subcategory)}
-                disabled={isExporting || exportingWholeMap}
-                style={exportingWholeMap ? { display: 'none' } : undefined}
-                className={`cursor-pointer absolute right-6 top-6 z-20 inline-flex items-center gap-1 rounded border border-black bg-white px-2 py-1 text-xs text-black hover:bg-gray-50 disabled:opacity-60 transition-opacity duration-200 ${
-                  isHovered 
-                    ? 'md:opacity-80 max-md:opacity-80' 
-                    : 'md:opacity-0 max-md:opacity-80'
-                }`}
-                title="Export this section"
-              >
-                <Download className="h-3.5 w-3.5" />
-                {isExporting ? "Exporting..." : "Export"}
-              </button>
-
-              <div className="absolute top-1 left-1/2 -translate-x-1/2 rounded bg-white px-2 py-0.5 max-[568px]:py-0.5">
-                <h3 className="text-black text-sm linux-libertine text-center linux-libertine-bold">
-                  {subcategory.name}
-                </h3>
-              </div>
-
-              <div className="flex flex-wrap">
-                {sortProjects(subcategory.projects || []).map((project) => {
-                  const uniqueKey = `${project.id}-${category.name}-${subcategory.name}`;
-                  return (
-                    <ProjectLogo
-                      key={uniqueKey}
-                      project={project}
-                      categoryName={category.name}
-                      subcategoryName={subcategory.name}
-                      openPopoverId={openPopoverId}
-                      setOpenPopoverId={setOpenPopoverId}
-                    />
-                  );
-                })}
-              </div>
-            </div>
-            </div>
+          return renderSubcategoryCard(
+            subcategory,
+            background,
+            columnSpanClass,
+            false
           );
         })}
       </div>
+
+      {compactSubcategories.length > 0 && (
+        <div className="relative flex">
+          {compactSubcategories.map((item) => {
+            const { subcategory, sortIndex } = item;
+            const hasDirectProjects =
+              subcategory.projects && subcategory.projects.length > 0;
+            const background = hasDirectProjects
+              ? "bg-white"
+              : getSubcategoryStyle(sortIndex).bg;
+
+            const columnSpanClass = "max-md:col-span-6 col-span-3";
+
+            return renderSubcategoryCard(
+              subcategory,
+              background,
+              columnSpanClass,
+              true
+            );
+          })}
+        </div>
+      )}
 
       <footer className="pt-4 g-gray-50">
         <div className="container mx-auto">
