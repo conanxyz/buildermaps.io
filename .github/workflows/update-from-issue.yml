@@ -91,15 +91,24 @@ jobs:
       - name: Commit and push changes
         if: steps.parse_issue.outcome == 'success'
         run: |
+          set -e
+
           git add public/data/
+
           if git diff --staged --quiet; then
             echo "No changes to commit"
-          else
-            ISSUE_NUMBER="${{ github.event.issue.number }}"
-            ISSUE_TITLE="${{ github.event.issue.title }}"
-            git commit -m "Update data from issue #${ISSUE_NUMBER}: ${ISSUE_TITLE}"
-            git push
+            exit 0
           fi
+
+          ISSUE_NUMBER="${{ github.event.issue.number }}"
+          ISSUE_TITLE="${{ github.event.issue.title }}"
+
+          SAFE_TITLE="$(printf "%s" "$ISSUE_TITLE" | tr '\r\n' ' ' | sed 's/[[:space:]]\+/ /g' | cut -c1-80)"
+
+          git commit -m "chore(data): update from issue #${ISSUE_NUMBER} - ${SAFE_TITLE}" \
+                    -m "Triggered by issue #${ISSUE_NUMBER}"
+
+          git push origin HEAD:master
 
       - name: Upload updated data to OSS
         if: steps.parse_issue.outcome == 'success'
