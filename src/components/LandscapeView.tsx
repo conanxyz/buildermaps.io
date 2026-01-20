@@ -444,7 +444,7 @@ async function exportSubcategoryPng(subcategory: Subcategory) {
         onMouseLeave={() => setHoveredSubcategoryKey(null)}
       >
         <div
-          className={`relative border border-black rounded ${background} px-2 pb-2 pt-5 max-[968px]:col-span-12 max-[568px]:px-1 max-[568px]:pb-1 ${
+          className={`relative border border-black rounded ${background} px-2 pb-2 pt-7 max-[968px]:col-span-12 max-[568px]:px-2 max-[568px]:pb-1 ${
             isCompactSubcategory ? "inline-block w-fit max-w-full px-0" : ""
           }`}
         >
