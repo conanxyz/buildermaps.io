@@ -11,7 +11,7 @@ import {
     type Category,
     type Subcategory,
     type Project,
-} from './category-utils';
+} from '../src/lib/category-utils';
 
 // ============================================================================
 // Helper Functions for Creating Test Data

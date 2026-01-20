@@ -31,16 +31,6 @@ module.exports = (webpackConfigEnv, argv) => {
         module: {
             rules: [
                 {
-                    test: /\.tsx?$/,
-                    exclude: /node_modules/,
-                    use: {
-                        loader: 'ts-loader',
-                        options: {
-                            transpileOnly: true,
-                        },
-                    },
-                },
-                {
                     test: /\.css$/i,
                     use: [
                         'style-loader',
@@ -85,7 +75,7 @@ module.exports = (webpackConfigEnv, argv) => {
         ],
         resolve: {
             fallback: {
-                process: require.resolve('process'), 
+                process: require.resolve('process'),
             },
         },
     })
