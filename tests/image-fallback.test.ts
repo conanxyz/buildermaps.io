@@ -3,7 +3,7 @@
  * Tests the image URL transformation functions for different environments
  */
 
-import { getProductionImageUrl, getLocalhostFallback } from './image-fallback';
+import { getProductionImageUrl, getLocalhostFallback } from '../src/utils/image-fallback';
 
 // ============================================================================
 // Helper to mock window.location
