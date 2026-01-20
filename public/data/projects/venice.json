@@ -1,0 +1,12 @@
+{
+  "id": "venice",
+  "name": "Venice",
+  "description": "Try Venice.ai for free. Generate text, images, characters and video using private and unbiased AI.",
+  "location": "",
+  "links": {
+    "logo": "/imgs/Base/AIAgent/venice.png",
+    "homepage": "https://venice.ai/",
+    "twitter": "https://x.com/AskVenice",
+    "github": ""
+  }
+}
