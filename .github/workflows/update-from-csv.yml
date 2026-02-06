@@ -83,30 +83,11 @@ jobs:
         with:
           python-version: "3.11"
           cache: "pip"
-          cache-dependency-path: "process-builder-data/requirements.txt"
 
-      - name: Install Python dependencies (process-builder-data)
-        if: steps.check_label.outputs.valid_label == 'true'
-        run: pip install -r process-builder-data/requirements.txt
-
-      - name: Generate data from CSV into temp output
+      - name: Apply CSV into public/data (merge, no deletions)
         if: steps.check_label.outputs.valid_label == 'true'
         run: |
-          rm -rf .tmp/output
-          python process-builder-data/processor.py \
-            .tmp/input.csv \
-            .tmp/output \
-            --skip-logos \
-            --skip-descriptions \
-            --quiet \
-            --rate-limit 0
-
-      - name: Sync generated data into public/data
-        if: steps.check_label.outputs.valid_label == 'true'
-        run: |
-          mkdir -p public/data/projects public/data/maps
-          rsync -a --delete .tmp/output/data/projects/ public/data/projects/
-          rsync -a --delete .tmp/output/data/maps/ public/data/maps/
+          python process-builder-data/apply_to_buildermaps.py .tmp/input.csv --repo-root .
 
       - name: Setup Node.js
         if: steps.check_label.outputs.valid_label == 'true'
@@ -144,7 +125,7 @@ jobs:
           body: |
             This PR was generated from the CSV attachment on issue #${{ github.event.issue.number }}.
             
-            - Regenerated `public/data/projects/*` and `public/data/maps/*`
+            - Merged updates into `public/data/projects/*` and `public/data/maps/*` (no deletions)
             - Rebuilt `public/data/builder-maps.json`
             - Ran `check-duplicate-ids`, `verify:maps`, and `build:maps`
           labels: |
