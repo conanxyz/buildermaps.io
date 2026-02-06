@@ -20,6 +20,7 @@ import csv
 import json
 import re
 import sys
+import time
 from pathlib import Path
 
 
@@ -44,9 +45,58 @@ def write_json(path: Path, data: dict) -> None:
         f.write("\n")
 
 
-def apply_csv(csv_file: Path, repo_root: Path) -> None:
+def extract_twitter_handle(twitter_url: str) -> str:
+    """Extract username from Twitter/X URL."""
+    if not twitter_url:
+        return ""
+    match = re.search(r"x\.com/([^/?]+)", twitter_url)
+    if match:
+        return match.group(1)
+    match = re.search(r"twitter\.com/([^/?]+)", twitter_url)
+    if match:
+        return match.group(1)
+    return ""
+
+
+def download_logo(twitter_url: str, save_path: Path, timeout_s: int = 10) -> bool:
+    """
+    Download Twitter/X avatar using unavatar API.
+    Mirrors `process-builder-data/processor.py` behavior.
+    """
+    try:
+        import requests  # type: ignore
+    except Exception as e:
+        raise RuntimeError(
+            "Python dependency 'requests' is required for --download-logos. "
+            "Install via process-builder-data/requirements.txt"
+        ) from e
+
+    twitter_handle = extract_twitter_handle(twitter_url)
+    if not twitter_handle:
+        return False
+
+    api_url = f"https://unavatar.io/twitter/{twitter_handle}"
+    save_path.parent.mkdir(parents=True, exist_ok=True)
+
+    resp = requests.get(api_url, timeout=timeout_s)
+    if resp.status_code != 200 or not resp.content:
+        return False
+
+    save_path.write_bytes(resp.content)
+    return True
+
+
+def apply_csv(
+    csv_file: Path,
+    repo_root: Path,
+    *,
+    download_logos: bool = False,
+    logo_overwrite: bool = False,
+    rate_limit_s: float = 0.0,
+) -> None:
     projects_dir = repo_root / "public" / "data" / "projects"
     maps_dir = repo_root / "public" / "data" / "maps"
+    imgs_dir = repo_root / "public" / "imgs"
 
     if not csv_file.exists():
         raise FileNotFoundError(f"CSV file not found: {csv_file}")
@@ -67,6 +117,7 @@ def apply_csv(csv_file: Path, repo_root: Path) -> None:
 
     updated_projects = 0
     updated_maps = 0
+    downloaded_logos = 0
 
     for row in rows:
         name = get(row, "name").strip()
@@ -112,6 +163,28 @@ def apply_csv(csv_file: Path, repo_root: Path) -> None:
             links["twitter"] = twitter
         if github:
             links["github"] = github
+
+        # Optional logo download
+        if download_logos and twitter:
+            type_dir_name = type_name.replace(" ", "")
+            logo_rel_path = f"/imgs/{sector}/{type_dir_name}/{project_id}.png"
+            logo_abs_path = imgs_dir / sector / type_dir_name / f"{project_id}.png"
+
+            has_logo_field = bool(links.get("logo"))
+            should_try_download = (
+                logo_overwrite
+                or not has_logo_field
+                or (has_logo_field and not logo_abs_path.exists())
+            )
+
+            if should_try_download:
+                ok = download_logo(twitter, logo_abs_path)
+                if ok:
+                    links["logo"] = logo_rel_path
+                    downloaded_logos += 1
+                # If download fails, keep existing logo (if any)
+                if rate_limit_s > 0:
+                    time.sleep(rate_limit_s)
 
         if links:
             project["links"] = links
@@ -159,6 +232,8 @@ def apply_csv(csv_file: Path, repo_root: Path) -> None:
     print(f"Applied CSV: {csv_file}")
     print(f"Updated/created project files: {updated_projects}")
     print(f"Updated/created map files: {updated_maps}")
+    if download_logos:
+        print(f"Downloaded logos: {downloaded_logos}")
 
 
 def main() -> None:
@@ -171,10 +246,33 @@ def main() -> None:
         default=".",
         help="Repo root path (default: current working directory)",
     )
+    parser.add_argument(
+        "--download-logos",
+        action="store_true",
+        help="Download logos via unavatar using the CSV's x/twitter field",
+    )
+    parser.add_argument(
+        "--logo-overwrite",
+        action="store_true",
+        help="Overwrite existing logo file/links.logo when downloading",
+    )
+    parser.add_argument(
+        "--rate-limit",
+        dest="rate_limit_s",
+        type=float,
+        default=0.0,
+        help="Delay between logo downloads in seconds (default: 0)",
+    )
     args = parser.parse_args()
 
     try:
-        apply_csv(Path(args.csv_file).resolve(), Path(args.repo_root).resolve())
+        apply_csv(
+            Path(args.csv_file).resolve(),
+            Path(args.repo_root).resolve(),
+            download_logos=bool(args.download_logos),
+            logo_overwrite=bool(args.logo_overwrite),
+            rate_limit_s=float(args.rate_limit_s),
+        )
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)

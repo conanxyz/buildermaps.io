@@ -84,10 +84,14 @@ jobs:
           # No pip dependencies are installed in this workflow (stdlib-only script),
           # so avoid enabling pip cache to prevent post-job cache errors.
 
+      - name: Install Python dependencies (for logo download)
+        if: steps.check_label.outputs.valid_label == 'true'
+        run: pip install -r process-builder-data/requirements.txt
+
       - name: Apply CSV into public/data (merge, no deletions)
         if: steps.check_label.outputs.valid_label == 'true'
         run: |
-          python process-builder-data/apply_to_buildermaps.py .tmp/input.csv --repo-root .
+          python process-builder-data/apply_to_buildermaps.py .tmp/input.csv --repo-root . --download-logos --rate-limit 0.2
 
       - name: Setup Node.js
         if: steps.check_label.outputs.valid_label == 'true'
@@ -123,7 +127,7 @@ jobs:
           git config --local user.name "GitHub Action"
 
           git checkout -b "$BRANCH_NAME"
-          git add public/data/
+          git add public/data/ public/imgs/
 
           if git diff --staged --quiet; then
             echo "No changes to commit"
