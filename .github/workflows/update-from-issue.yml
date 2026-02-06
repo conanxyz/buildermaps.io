@@ -118,7 +118,7 @@ jobs:
           ./ossutil64 cp public/data/builder-maps.json "${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/data/builder-maps.json" --meta="Cache-Control:no-cache" --update
 
       - name: Comment on issue (success)
-        if: success()
+        if: steps.check_label.outputs.valid_label == 'true' && steps.parse_issue.outcome == 'success' && success()
         uses: actions/github-script@v6
         with:
           script: |
@@ -130,7 +130,7 @@ jobs:
             })
 
       - name: Comment on issue (error)
-        if: failure()
+        if: steps.check_label.outputs.valid_label == 'true' && failure()
         uses: actions/github-script@v6
         with:
           script: |

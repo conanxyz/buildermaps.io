@@ -81,7 +81,8 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          cache: "pip"
+          # No pip dependencies are installed in this workflow (stdlib-only script),
+          # so avoid enabling pip cache to prevent post-job cache errors.
 
       - name: Apply CSV into public/data (merge, no deletions)
         if: steps.check_label.outputs.valid_label == 'true'
