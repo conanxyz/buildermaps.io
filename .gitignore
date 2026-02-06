@@ -60,6 +60,7 @@ typings/
 # next.js build output
 .next
 dist
+.tmp
 
 # Generated files
 public/data/builder-maps.json
