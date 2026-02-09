@@ -274,7 +274,7 @@ export async function fetchCategories(): Promise<Category[]> {
   // In production, fetch from OSS (path depends on hostname)
   const hostname = window.location.hostname;
   const dataPath = hostname === "net-static-dev.chainbasehq.com"
-    ? "https://net-static-dev.chainbasehq.com/public/test/buildermaps/data/builder-maps.json"
+    ? "https://net-static-dev.chainbasehq.com/public/buildermaps/test/data/builder-maps.json"
     : hostname.endsWith("buildermaps.io")
       ? "https://net-static-dev.chainbasehq.com/public/buildermaps/data/builder-maps.json"
       : "https://net-static-dev.chainbasehq.com/public/buildermaps/data/builder-maps.json";
