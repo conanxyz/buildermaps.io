@@ -271,8 +271,15 @@ export async function fetchCategories(): Promise<Category[]> {
     return processBuilderMapsData(builderMaps);
   }
   
-  // In production, fetch from OSS
-  const response = await fetch("https://net-static-dev.chainbasehq.com/public/buildermaps/data/builder-maps.json");
+  // In production, fetch from OSS (path depends on hostname)
+  const hostname = window.location.hostname;
+  const dataPath = hostname === "net-static-dev.chainbasehq.com"
+    ? "https://net-static-dev.chainbasehq.com/public/test/buildermaps/data/builder-maps.json"
+    : hostname.endsWith("buildermaps.io")
+      ? "https://net-static-dev.chainbasehq.com/public/buildermaps/data/builder-maps.json"
+      : "https://net-static-dev.chainbasehq.com/public/buildermaps/data/builder-maps.json";
+
+  const response = await fetch(dataPath);
   if (!response.ok) {
     throw new Error(`Failed to fetch builder maps data: ${response.statusText}`);
   }
