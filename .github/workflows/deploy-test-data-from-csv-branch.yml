@@ -4,16 +4,25 @@ on:
   push:
     branches:
       - "chore/update-from-csv-issue*"
+  workflow_run:
+    workflows: ["Update Data from CSV Attachment"]
+    types: [completed]
   workflow_dispatch:
 
 jobs:
   deploy-test-data:
+    if: |
+      (github.event_name == 'push') ||
+      (github.event_name == 'workflow_run' &&
+        github.event.workflow_run.conclusion == 'success' &&
+        startsWith(github.event.workflow_run.head_branch, 'chore/update-from-csv-issue'))
     runs-on: ubuntu-latest
 
     steps:
       - name: Check out code
         uses: actions/checkout@v4
         with:
+          ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_branch || github.ref }}
           fetch-depth: 0
 
       - name: Setup Node.js
