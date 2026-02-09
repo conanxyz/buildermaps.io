@@ -31,7 +31,9 @@ jobs:
         if: steps.check_label.outputs.valid_label == 'true'
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          # Use a PAT so the branch push can trigger other workflows (push from GITHUB_TOKEN is suppressed).
+          # Create a repo/org secret named `CSV_PUSH_TOKEN` with `repo` scope.
+          token: ${{ secrets.CSV_PUSH_TOKEN }}
           fetch-depth: 0
 
       - name: Extract CSV attachment URL from issue body
