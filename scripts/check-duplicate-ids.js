@@ -210,7 +210,7 @@ function checkDuplicateIds() {
     console.log('');
     hasErrors = true;
   } else {
-    console.log(`📦 Found ${existingIds.size} existing project IDs (all unique)\n`);
+    console.log(`📦 Found ${existingIds.size} existing project IDs \n`);
   }
 
   // Check maps files for duplicates and missing projects (always check, even if project duplicates exist)
