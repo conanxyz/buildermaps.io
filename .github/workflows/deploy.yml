@@ -96,7 +96,8 @@ jobs:
           ./ossutil64 cp -r public/data/ "${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/data/" --meta="Cache-Control:no-cache" --update
           ./ossutil64 cp public/data/builder-maps.json "${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/data/builder-maps.json" --meta="Cache-Control:no-cache" --update           
           # Also override test/staging data (used by net-static-dev.buildermaps)
-          ./ossutil64 rm -r "${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/test/data/" || true
+          # Force delete to avoid interactive prompt in CI
+          ./ossutil64 rm -r -f "${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/test/data/" || true
           ./ossutil64 cp -r public/data/ "${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/test/data/" --meta="Cache-Control:no-cache"
           ./ossutil64 cp public/data/builder-maps.json "${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/test/data/builder-maps.json" --meta="Cache-Control:no-cache"
 
