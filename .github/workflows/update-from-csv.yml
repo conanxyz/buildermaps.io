@@ -93,7 +93,7 @@ jobs:
       - name: Apply CSV into public/data (merge, no deletions)
         if: steps.check_label.outputs.valid_label == 'true'
         run: |
-          python process-builder-data/apply_to_buildermaps.py .tmp/input.csv --repo-root . --download-logos --rate-limit 0.2
+          python process-builder-data/apply_to_buildermaps.py .tmp/input.csv --repo-root . --download-logos --logo-overwrite --rate-limit 0.2
 
       - name: Setup Node.js
         if: steps.check_label.outputs.valid_label == 'true'
