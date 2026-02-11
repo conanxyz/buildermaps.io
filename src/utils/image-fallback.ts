@@ -11,7 +11,9 @@ export function getProductionImageUrl(imageUrl: string): string {
   // Check if it's a relative path like /imgs/alphakek.jpg
   if (imageUrl.startsWith('/imgs/')) {
     const filename = imageUrl.replace('/imgs/', '');
-    return `https://net-static-dev.chainbasehq.com/public/buildermaps/imgs/${filename}`;
+    // Ensure '+' in path segments is encoded as '%2B'
+    const safeFilename = filename.replace(/\+/g, '%2B');
+    return `https://net-static-dev.chainbasehq.com/public/buildermaps/imgs/${safeFilename}`;
   }
 
   // If it's already a full URL, return as-is
