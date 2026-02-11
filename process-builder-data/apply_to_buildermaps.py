@@ -9,7 +9,7 @@ What it does:
 - Never removes existing projects or map entries
 
 CSV columns (case-insensitive):
-Required: name, sector, type, website
+Required: name, sector, type
 Optional: x/twitter, github, description
 """
 
@@ -125,9 +125,10 @@ def apply_csv(
         type_name = get(row, "type").strip()
         website = get(row, "website").strip()
 
-        if not name or not sector or not type_name or not website:
+        # Website is optional (some rows may not have a homepage yet), but sector/type are required
+        if not name or not sector or not type_name:
             raise ValueError(
-                f"Missing required fields (name/sector/type/website) in row: {row}"
+                f"Missing required fields (name/sector/type) in row: {row}"
             )
 
         twitter = (get(row, "x").strip() or get(row, "twitter").strip())
