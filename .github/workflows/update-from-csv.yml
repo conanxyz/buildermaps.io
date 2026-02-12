@@ -158,6 +158,14 @@ jobs:
           fi
 
           git commit -m "chore(data): update from csv issue #${{ github.event.issue.number }}"
+
+          # On workflow re-runs, the remote branch may have moved (previous run already pushed).
+          # Rebase onto the latest remote head to avoid non-fast-forward push rejection.
+          git fetch origin "$BRANCH_NAME" || true
+          if git show-ref --verify --quiet "refs/remotes/origin/$BRANCH_NAME"; then
+            git pull --rebase origin "$BRANCH_NAME"
+          fi
+
           git push --set-upstream origin "$BRANCH_NAME"
 
           echo "no_changes=false" >> "$GITHUB_OUTPUT"
