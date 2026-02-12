@@ -21,6 +21,7 @@ import json
 import re
 import sys
 import time
+from urllib.parse import quote
 from pathlib import Path
 
 
@@ -84,6 +85,47 @@ def download_logo(twitter_url: str, save_path: Path, timeout_s: int = 10) -> boo
 
     save_path.write_bytes(resp.content)
     return True
+
+
+def production_logo_exists(logo_rel_path: str, timeout_s: int = 6) -> bool:
+    """
+    Check whether the logo already exists on the net-static-dev CDN.
+
+    The app resolves `/imgs/...` to:
+      https://net-static-dev.chainbasehq.com/public/buildermaps/imgs/<path>
+
+    NOTE: The app also encodes '+' as '%2B' when forming the final URL, so we
+    check the encoded form first.
+    """
+    try:
+        import requests  # type: ignore
+    except Exception:
+        # If requests isn't available, don't block processing; just attempt download later.
+        return False
+
+    if not logo_rel_path.startswith("/imgs/"):
+        return False
+
+    filename = logo_rel_path.replace("/imgs/", "", 1)
+    # Encode path segments but keep slashes
+    encoded_filename = quote(filename, safe="/")
+    encoded_filename = encoded_filename.replace("+", "%2B")
+
+    base = "https://net-static-dev.chainbasehq.com/public/buildermaps/imgs/"
+    url = f"{base}{encoded_filename}"
+
+    try:
+        r = requests.head(url, timeout=timeout_s, allow_redirects=True)
+        if r.status_code == 200:
+            return True
+        # Fallback: some servers treat '+' literally in path; try unencoded '+'
+        if "+" in filename:
+            url2 = f"{base}{filename}"
+            r2 = requests.head(url2, timeout=timeout_s, allow_redirects=True)
+            return r2.status_code == 200
+        return False
+    except Exception:
+        return False
 
 
 def apply_csv(
@@ -174,15 +216,24 @@ def apply_csv(
                 links.pop("twitter", None)
         if github:
             links["github"] = github
-        # If CSV explicitly provides a logo URL/path, use it and do NOT auto-download.
+        # Fill `links.logo` for every row:
+        # - If CSV explicitly provides logo URL/path, use it and do NOT auto-download.
+        # - Otherwise set a deterministic local path based on sector/type/project id.
+        type_dir_name = type_name.replace(" ", "")
+        default_logo_rel_path = f"/imgs/{sector}/{type_dir_name}/{project_id}.png"
         if logo:
             links["logo"] = logo
+        else:
+            links["logo"] = default_logo_rel_path
 
         # Optional logo download
         if download_logos and twitter and not logo:
-            type_dir_name = type_name.replace(" ", "")
-            logo_rel_path = f"/imgs/{sector}/{type_dir_name}/{project_id}.png"
+            logo_rel_path = default_logo_rel_path
             logo_abs_path = imgs_dir / sector / type_dir_name / f"{project_id}.png"
+
+            # If the logo already exists on the CDN, skip downloading.
+            if production_logo_exists(logo_rel_path):
+                continue
 
             has_logo_field = bool(links.get("logo"))
             should_try_download = (
@@ -194,7 +245,6 @@ def apply_csv(
             if should_try_download:
                 ok = download_logo(twitter, logo_abs_path)
                 if ok:
-                    links["logo"] = logo_rel_path
                     downloaded_logos += 1
                 # If download fails, keep existing logo (if any)
                 if rate_limit_s > 0:
