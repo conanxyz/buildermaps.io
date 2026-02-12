@@ -11,6 +11,9 @@ on:
 jobs:
   update-data-from-csv:
     runs-on: ubuntu-latest
+    outputs:
+      branch_name: ${{ steps.commit.outputs.branch_name }}
+      no_changes: ${{ steps.commit.outputs.no_changes }}
 
     steps:
       - name: Check if label is update-from-csv
@@ -177,3 +180,49 @@ jobs:
               body: `✅ CSV updates pushed to branch: \`${branchName}\`.\n\nTo apply an override patch later: comment the patch CSV link + this branch name, then add label \`patch-csv\`.`
             })
 
+  deploy-test-data:
+    name: Deploy Test Data to OSS (same run)
+    needs: update-data-from-csv
+    if: needs.update-data-from-csv.outputs.no_changes != 'true' && needs.update-data-from-csv.outputs.branch_name != ''
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out generated branch
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.CSV_PUSH_TOKEN }}
+          ref: ${{ needs.update-data-from-csv.outputs.branch_name }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.9.0"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Build builder-maps.json
+        run: npm run build:maps
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install OSSUtil
+        run: |
+          pip install oss2
+          wget http://gosspublic.alicdn.com/ossutil/1.7.18/ossutil64
+          chmod 755 ossutil64
+
+      - name: Configure OSSUtil
+        run: |
+          ./ossutil64 config -e oss-ap-southeast-1.aliyuncs.com -i ${{ secrets.ALI_ACCESS_KEY_ID }} -k ${{ secrets.ALI_ACCESS_KEY_SECRET }}
+
+      - name: Upload test assets/data to OSS (public/buildermaps/test/*)
+        run: |
+          ./ossutil64 cp -r public/imgs/ "${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/test/imgs/" --meta="Cache-Control:max-age=31536000" --update
+          ./ossutil64 cp -r public/data/ "${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/test/data/" --meta="Cache-Control:no-cache" --update
+          ./ossutil64 cp public/data/builder-maps.json "${{ vars.ALI_MICRO_FE_OFFICIAL_BUCKET_OSS_URL}}/public/buildermaps/test/data/builder-maps.json" --meta="Cache-Control:no-cache" --update
