@@ -45,8 +45,16 @@ jobs:
           BRANCH_NAME: "chore/update-from-csv-issue-${{ github.event.issue.number }}-${{ github.run_id }}"
         run: |
           set -e
-          # Explicitly create/checkout the target branch for this run (based on current checkout)
-          git checkout -b "$BRANCH_NAME"
+          # Explicitly create/checkout the target branch for this run.
+          # On workflow re-runs, the branch may already exist remotely; base on it to avoid non-fast-forward pushes.
+          git fetch origin "$BRANCH_NAME" || true
+          if git show-ref --verify --quiet "refs/remotes/origin/$BRANCH_NAME"; then
+            echo "Remote branch exists: origin/$BRANCH_NAME (reusing it)"
+            git checkout -B "$BRANCH_NAME" "origin/$BRANCH_NAME"
+          else
+            echo "Remote branch does not exist: creating $BRANCH_NAME from current checkout"
+            git checkout -b "$BRANCH_NAME"
+          fi
 
       - name: Extract CSV attachment URL from issue body
         if: steps.check_label.outputs.valid_label == 'true'
