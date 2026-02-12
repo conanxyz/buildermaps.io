@@ -232,8 +232,7 @@ def apply_csv(
             logo_abs_path = imgs_dir / sector / type_dir_name / f"{project_id}.png"
 
             # If the logo already exists on the CDN, skip downloading.
-            if production_logo_exists(logo_rel_path):
-                continue
+            prod_exists = production_logo_exists(logo_rel_path)
 
             has_logo_field = bool(links.get("logo"))
             should_try_download = (
@@ -242,7 +241,7 @@ def apply_csv(
                 or (has_logo_field and not logo_abs_path.exists())
             )
 
-            if should_try_download:
+            if should_try_download and not prod_exists:
                 ok = download_logo(twitter, logo_abs_path)
                 if ok:
                     downloaded_logos += 1
