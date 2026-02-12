@@ -148,12 +148,6 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-          # Always rebase onto latest remote head BEFORE committing (important on re-runs)
-          git fetch origin "refs/heads/$BRANCH_NAME:refs/remotes/origin/$BRANCH_NAME" || true
-          if git show-ref --verify --quiet "refs/remotes/origin/$BRANCH_NAME"; then
-            git pull --rebase origin "$BRANCH_NAME"
-          fi
-
           git add public/data/ public/imgs/
 
           if git diff --staged --quiet; then
@@ -165,7 +159,18 @@ jobs:
 
           git commit -m "chore(data): update from csv issue #${{ github.event.issue.number }}"
 
-          git push --set-upstream origin "$BRANCH_NAME"
+          # Push. On re-runs, the remote branch may already exist and may have moved.
+          # If push is rejected, rebase onto latest remote head and retry once.
+          if git push --set-upstream origin "$BRANCH_NAME"; then
+            echo "Pushed successfully"
+          else
+            echo "Push rejected (likely non-fast-forward). Rebasing onto origin/$BRANCH_NAME and retrying..."
+            git fetch origin "refs/heads/$BRANCH_NAME:refs/remotes/origin/$BRANCH_NAME" || true
+            if git show-ref --verify --quiet "refs/remotes/origin/$BRANCH_NAME"; then
+              git rebase "origin/$BRANCH_NAME"
+            fi
+            git push --set-upstream origin "$BRANCH_NAME"
+          fi
 
           echo "no_changes=false" >> "$GITHUB_OUTPUT"
           echo "branch_name=$BRANCH_NAME" >> "$GITHUB_OUTPUT"
