@@ -669,7 +669,7 @@ function ProjectLogo({
                 </div>
               )}
             </div>
-            <div className="mt-1 h-[28px] max-[568px]:h-[26px] text-center text-xs font-bold leading-tight text-gray-900 transition-colors group-hover:text-blue-600 w-full flex items-center justify-center">
+            <div className="mt-1 min-h-[28px] max-[568px]:min-h-[26px] text-center text-xs font-bold leading-tight text-gray-900 transition-colors group-hover:text-blue-600 w-full whitespace-normal break-words">
               {formatProjectName(project.name)}
             </div>
           </div>
