@@ -10,7 +10,7 @@ What it does:
 
 CSV columns (case-insensitive):
 Required: name, sector, type
-Optional: x/twitter, github, description
+Optional: x/twitter, github, description, logo
 """
 
 from __future__ import annotations
@@ -111,6 +111,9 @@ def apply_csv(
     # Case-insensitive header mapping
     headers = {k.lower(): k for k in rows[0].keys()}
 
+    def has_col(field: str) -> bool:
+        return field.lower() in headers
+
     def get(row: dict, field: str) -> str:
         key = headers.get(field.lower())
         return (row.get(key, "") if key else "") or ""
@@ -134,6 +137,7 @@ def apply_csv(
         twitter = (get(row, "x").strip() or get(row, "twitter").strip())
         github = get(row, "github").strip()
         description = get(row, "description").strip()
+        logo = get(row, "logo").strip()
 
         project_id = slugify_repo(name)
         if not project_id:
@@ -160,13 +164,22 @@ def apply_csv(
 
         if website:
             links["homepage"] = website
-        if twitter:
-            links["twitter"] = twitter
+        # Twitter override semantics:
+        # - If CSV provides `x` or `twitter` column: override existing value
+        # - If provided but empty: remove links.twitter
+        if has_col("x") or has_col("twitter"):
+            if twitter:
+                links["twitter"] = twitter
+            else:
+                links.pop("twitter", None)
         if github:
             links["github"] = github
+        # If CSV explicitly provides a logo URL/path, use it and do NOT auto-download.
+        if logo:
+            links["logo"] = logo
 
         # Optional logo download
-        if download_logos and twitter:
+        if download_logos and twitter and not logo:
             type_dir_name = type_name.replace(" ", "")
             logo_rel_path = f"/imgs/{sector}/{type_dir_name}/{project_id}.png"
             logo_abs_path = imgs_dir / sector / type_dir_name / f"{project_id}.png"

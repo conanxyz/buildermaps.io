@@ -272,14 +272,14 @@ def process_csv(
                 if not quiet and verbose:
                     print("  Using placeholder description (--skip-descriptions)")
             else:
-                description = fetch_website_description(website, verbose)
-                if description and not quiet and verbose:
-                    print("  Description fetched from website")
-                elif not description:
-                    description = f"{name} - crypto project"
-                    if not quiet and verbose:
-                        print("  Using placeholder description")
-                time.sleep(rate_limit)
+            description = fetch_website_description(website, verbose)
+            if description and not quiet and verbose:
+                print("  Description fetched from website")
+            elif not description:
+                description = f"{name} - crypto project"
+                if not quiet and verbose:
+                    print("  Using placeholder description")
+            time.sleep(rate_limit)
 
         # Build project JSON
         project_json = {

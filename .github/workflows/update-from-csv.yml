@@ -36,6 +36,15 @@ jobs:
           token: ${{ secrets.CSV_PUSH_TOKEN }}
           fetch-depth: 0
 
+      - name: Create working branch for this run
+        if: steps.check_label.outputs.valid_label == 'true'
+        env:
+          BRANCH_NAME: "chore/update-from-csv-issue-${{ github.event.issue.number }}-${{ github.run_id }}"
+        run: |
+          set -e
+          # Explicitly create/checkout the target branch for this run (based on current checkout)
+          git checkout -b "$BRANCH_NAME"
+
       - name: Extract CSV attachment URL from issue body
         if: steps.check_label.outputs.valid_label == 'true'
         id: csv
@@ -128,7 +137,6 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-          git checkout -b "$BRANCH_NAME"
           git add public/data/ public/imgs/
 
           if git diff --staged --quiet; then
@@ -157,7 +165,7 @@ jobs:
                 issue_number: context.issue.number,
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                body: `✅ No data changes detected from the attached CSV. (Branch: \`${branchName}\`)`
+                body: `✅ No data changes detected from the attached CSV. (Branch: \`${branchName}\`)\n\nTo apply an override patch later: comment the patch CSV link + this branch name, then add label \`patch-csv\`.`
               })
               return
             }
@@ -166,6 +174,6 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `✅ CSV updates pushed to branch: \`${branchName}\`. You can open a PR from this branch when ready.`
+              body: `✅ CSV updates pushed to branch: \`${branchName}\`.\n\nTo apply an override patch later: comment the patch CSV link + this branch name, then add label \`patch-csv\`.`
             })
 
