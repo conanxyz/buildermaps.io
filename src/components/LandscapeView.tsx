@@ -650,12 +650,17 @@ function ProjectLogo({
                   alt={project.name}
                   className="h-full w-full object-contain rounded-full"
                   onError={(e) => {
-                    const fallback = getLocalhostFallback(project.logoUrl || '');
-                    if (fallback) {
-                      (e.target as HTMLImageElement).src = fallback;
-                    } else {
-                      setImageError(true);
+                    const img = e.currentTarget;
+                    const fallback = getLocalhostFallback(project.logoUrl || "");
+                    const attempted = img.dataset.localFallbackAttempted === "1";
+
+                    if (!attempted && fallback && img.src !== fallback) {
+                      img.dataset.localFallbackAttempted = "1";
+                      img.src = fallback;
+                      return;
                     }
+
+                    setImageError(true);
                   }}
                 />
               ) : (
@@ -695,20 +700,29 @@ function ProjectCard({
   categoryName: string;
   subcategoryName: string;
 }) {
+  const [logoFailed, setLogoFailed] = useState(false);
+
   return (
     <div className="space-y-3 p-4">
       <div className="flex items-start gap-3">
         <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm">
-          {project.logoUrl ? (
+          {project.logoUrl && !logoFailed ? (
             <img
               src={getProductionImageUrl(project.logoUrl)}
               alt={project.name}
               className="h-12 w-12 object-contain rounded-full"
               onError={(e) => {
-                const fallback = getLocalhostFallback(project.logoUrl || '');
-                if (fallback) {
-                  (e.target as HTMLImageElement).src = fallback;
+                const img = e.currentTarget;
+                const fallback = getLocalhostFallback(project.logoUrl || "");
+                const attempted = img.dataset.localFallbackAttempted === "1";
+
+                if (!attempted && fallback && img.src !== fallback) {
+                  img.dataset.localFallbackAttempted = "1";
+                  img.src = fallback;
+                  return;
                 }
+
+                setLogoFailed(true);
               }}
             />
           ) : (

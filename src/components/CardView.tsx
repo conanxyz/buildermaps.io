@@ -1,4 +1,5 @@
-import { Globe, Github, Twitter, Linkedin } from "lucide-react";
+import { useState } from "react";
+import { Building2, Globe, Github, Linkedin, Twitter } from "lucide-react";
 import { FaTelegram, FaDiscord, FaReddit } from "react-icons/fa";
 import { SiMedium } from "react-icons/si";
 
@@ -66,25 +67,37 @@ function ProjectCard({
   categoryName: string;
   subcategoryName: string;
 }) {
+  const [logoFailed, setLogoFailed] = useState(false);
+
   return (
     <div className="flex flex-col overflow-hidden rounded-sm border border-gray-300 bg-white transition-all hover:border-blue-400 hover:shadow-lg">
       <div className="p-4">
         <div className="mb-3 flex items-start gap-3">
           <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-sm border-2 border-gray-200 bg-white shadow-sm">
-            {project.logoUrl ? (
+            {project.logoUrl && !logoFailed ? (
               <img
                 src={getProductionImageUrl(project.logoUrl)}
                 alt={project.name}
                 className="h-12 w-12 object-contain"
                 onError={(e) => {
-                  const fallback = getLocalhostFallback(project.logoUrl || '');
-                  if (fallback) {
-                    (e.target as HTMLImageElement).src = fallback;
+                  const img = e.currentTarget;
+                  const fallback = getLocalhostFallback(project.logoUrl || "");
+                  const attempted = img.dataset.localFallbackAttempted === "1";
+
+                  if (!attempted && fallback && img.src !== fallback) {
+                    img.dataset.localFallbackAttempted = "1";
+                    img.src = fallback;
+                    return;
                   }
+
+                  // Stop retry loop: render icon instead of <img>
+                  setLogoFailed(true);
                 }}
               />
             ) : (
-              <div className="text-sm text-gray-400">{project.name[0]}</div>
+              <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-gray-100">
+                <Building2 className="h-6 w-6 text-gray-400" />
+              </div>
             )}
           </div>
           <div className="min-w-0 flex-1">
