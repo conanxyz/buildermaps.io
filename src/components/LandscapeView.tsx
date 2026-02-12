@@ -9,6 +9,10 @@ import { countSubcategoryProjects, sortProjects } from "../lib/category-utils";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { getProductionImageUrl, getLocalhostFallback } from "../utils/image-fallback";
 
+// Used by html-to-image when any logo URL fails (e.g. temporary 404 from third-party hosts).
+const EXPORT_IMAGE_PLACEHOLDER =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Ccircle cx='28' cy='28' r='27' fill='%23f3f4f6' stroke='%23d1d5db'/%3E%3Crect x='17' y='22' width='22' height='16' rx='3' fill='%239ca3af'/%3E%3C/svg%3E";
+
 interface LandscapeViewProps {
   category: Category;
   exportRef?: React.RefObject<HTMLDivElement>;
@@ -261,9 +265,10 @@ async function exportSubcategoryPng(subcategory: Subcategory) {
     
     // Export the cloned node which now includes the footer
     const dataUrl = await htmlToImage.toPng(clonedNode, {
-      cacheBust: true,
+      cacheBust: false,
       backgroundColor: "#ffffff",
       pixelRatio: pixelRatio,
+      imagePlaceholder: EXPORT_IMAGE_PLACEHOLDER,
     });
 
     const safe = (s: string) =>
@@ -381,9 +386,10 @@ async function exportSubcategoryPng(subcategory: Subcategory) {
     const pixelRatio = Math.min(4, Math.max(3, basePixelRatio * 2));
     
     const dataUrl = await htmlToImage.toPng(clonedNode, {
-      cacheBust: true,
+      cacheBust: false,
       backgroundColor: "#ffffff",
       pixelRatio: pixelRatio,
+      imagePlaceholder: EXPORT_IMAGE_PLACEHOLDER,
     });
 
     const safe = (s: string) =>
