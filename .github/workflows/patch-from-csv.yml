@@ -36,7 +36,9 @@ jobs:
             const repo = context.repo.repo
             const issue_number = context.issue.number
 
-            const branchRe = /chore\/update-from-csv-issue-\d+-\d+/g
+            // Supports: chore/update-from-csv-issue-<issue>-<run_id>-<run_attempt>
+            // (and older variants without run_attempt)
+            const branchRe = /chore\/update-from-csv-issue-\d+-\d+(?:-\d+)*/g
             const csvRe = /(https?:\/\/\S+\.csv(?:\?\S+)?)|(\(https?:\/\/[^)\s]+\.csv(?:\?[^)\s]+)?\))/i
 
             const comments = await github.paginate(github.rest.issues.listComments, {

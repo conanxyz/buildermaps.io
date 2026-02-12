@@ -47,7 +47,7 @@ jobs:
           set -e
           # Explicitly create/checkout the target branch for this run.
           # On workflow re-runs, the branch may already exist remotely; base on it to avoid non-fast-forward pushes.
-          git fetch origin "$BRANCH_NAME" || true
+          git fetch origin "refs/heads/$BRANCH_NAME:refs/remotes/origin/$BRANCH_NAME" || true
           if git show-ref --verify --quiet "refs/remotes/origin/$BRANCH_NAME"; then
             echo "Remote branch exists: origin/$BRANCH_NAME (reusing it)"
             git checkout -B "$BRANCH_NAME" "origin/$BRANCH_NAME"
@@ -161,7 +161,7 @@ jobs:
 
           # On workflow re-runs, the remote branch may have moved (previous run already pushed).
           # Rebase onto the latest remote head to avoid non-fast-forward push rejection.
-          git fetch origin "$BRANCH_NAME" || true
+          git fetch origin "refs/heads/$BRANCH_NAME:refs/remotes/origin/$BRANCH_NAME" || true
           if git show-ref --verify --quiet "refs/remotes/origin/$BRANCH_NAME"; then
             git pull --rebase origin "$BRANCH_NAME"
           fi
