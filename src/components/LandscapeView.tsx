@@ -457,18 +457,9 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
     })
   );
 
-  const compactSubcategories = subcategoryItems.filter(
-    (item) => item.projectCount < 6
-  );
-  const regularSubcategories = subcategoryItems.filter(
-    (item) => item.projectCount >= 6
-  );
-
   const renderSubcategoryCard = (
     subcategory: Subcategory,
-    background: string,
-    columnSpanClass: string,
-    isCompactSubcategory: boolean
+    background: string
   ) => {
     const refKey = `${category.name}__${subcategory.name}`;
     const isExporting = exportingKey === refKey;
@@ -478,16 +469,12 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
       <div
         key={refKey}
         ref={setSubcatRef(refKey)}
-        className={`relative ${
-          isCompactSubcategory ? "py-4 px-2" : "p-4"
-        } ${columnSpanClass} justify-self-start self-end w-fit max-w-full`}
+        className="relative py-4 px-1 w-fit max-w-[50%]"
         onMouseEnter={() => setHoveredSubcategoryKey(refKey)}
         onMouseLeave={() => setHoveredSubcategoryKey(null)}
       >
         <div
-          className={`relative border border-black rounded ${background} px-2 pb-2 pt-7 max-[968px]:col-span-12 max-[568px]:px-2 max-[568px]:pb-1 inline-block w-fit max-w-full ${
-            isCompactSubcategory ? "px-0" : ""
-          }`}
+          className={`relative border border-black rounded ${background} px-2 pb-2 pt-7 max-[968px]:col-span-12 max-[568px]:px-2 max-[568px]:pb-1 inline-block w-fit max-w-full`}
         >
           <button
             type="button"
@@ -535,7 +522,7 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
   return (
     <div
       ref={mapExportRef}
-      className="relative rounded-lg border-[1.5px] border-black bg-white p-12 pb-4 shadow-lg max-[568px]:border-0 max-[568px]:w-full max-[568px]:px-3 max-[568px]:py-6"
+      className="relative rounded-lg border-[1.5px] border-black bg-white py-12 px-6 pb-4 shadow-lg max-[568px]:border-0 max-[568px]:w-full max-[568px]:px-3 max-[568px]:py-6"
       onMouseEnter={() => setHoveredMapBox(true)}
       onMouseLeave={() => setHoveredMapBox(false)}
     >
@@ -566,62 +553,18 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
         {category.name} Ecosystem Map
       </h2>
 
-      <div className="relative z-0 grid grid-cols-12 gap-0 max-[768px]:grid-cols-6">
-        {regularSubcategories.map((item, index) => {
-          const { subcategory, sortIndex, projectCount } = item;
+      <div className="relative z-0 flex flex-wrap gap-0">
+        {subcategoryItems.map((item) => {
+          const { subcategory, sortIndex } = item;
           const hasDirectProjects =
             subcategory.projects && subcategory.projects.length > 0;
           const background = hasDirectProjects
             ? "bg-white"
             : getSubcategoryStyle(sortIndex).bg;
 
-          const isEven = index % 2 === 0;
-          const siblingIndex = isEven ? index + 1 : index - 1;
-          const siblingCount =
-            siblingIndex >= 0 && siblingIndex < regularSubcategories.length
-              ? regularSubcategories[siblingIndex].projectCount
-              : null;
-          const hasSameCountAsSibling =
-            siblingCount !== null && projectCount === siblingCount;
-
-          const desktopColumnSpan = hasSameCountAsSibling
-            ? "col-span-6"
-            : isEven
-            ? "col-span-7"
-            : "col-span-5";
-
-          const columnSpanClass = `max-md:col-span-6 ${desktopColumnSpan}`;
-
-          return renderSubcategoryCard(
-            subcategory,
-            background,
-            columnSpanClass,
-            false
-          );
+          return renderSubcategoryCard(subcategory, background);
         })}
       </div>
-
-      {compactSubcategories.length > 0 && (
-        <div className="relative flex flex-wrap">
-          {compactSubcategories.map((item) => {
-            const { subcategory, sortIndex } = item;
-            const hasDirectProjects =
-              subcategory.projects && subcategory.projects.length > 0;
-            const background = hasDirectProjects
-              ? "bg-white"
-              : getSubcategoryStyle(sortIndex).bg;
-
-            const columnSpanClass = "";
-
-            return renderSubcategoryCard(
-              subcategory,
-              background,
-              columnSpanClass,
-              true
-            );
-          })}
-        </div>
-      )}
 
       <footer className="pt-4 g-gray-50">
         <div className="container mx-auto">
