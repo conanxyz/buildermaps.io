@@ -464,12 +464,14 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
     const refKey = `${category.name}__${subcategory.name}`;
     const isExporting = exportingKey === refKey;
     const isHovered = hoveredSubcategoryKey === refKey;
+    const projectCount = countSubcategoryProjects(subcategory);
+    const maxWidthClass = projectCount > 9 ? "max-w-[50%]" : "max-w-[65%]";
 
     return (
       <div
         key={refKey}
         ref={setSubcatRef(refKey)}
-        className="relative py-4 px-1 w-fit max-w-[65%]"
+        className={`relative py-4 px-1 w-fit ${maxWidthClass}`}
         onMouseEnter={() => setHoveredSubcategoryKey(refKey)}
         onMouseLeave={() => setHoveredSubcategoryKey(null)}
       >
