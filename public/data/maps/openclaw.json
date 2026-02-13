@@ -18,7 +18,10 @@
     {
       "id": "gaming-and-npc-agents",
       "name": "Gaming & NPC Agents",
-      "projects": ["clawra", "molt-chess"]
+      "projects": [
+        "clawra",
+        "molt-chess"
+      ]
     },
     {
       "id": "dev-and-agent-builders",
@@ -29,13 +32,17 @@
         "clawdbot",
         "cybercentry",
         "ember",
+        "horizon-flow",
         "mit-molt"
       ]
     },
     {
       "id": "messaging",
       "name": "Messaging",
-      "projects": ["agent-relay", "moltline"]
+      "projects": [
+        "agent-relay",
+        "moltline"
+      ]
     },
     {
       "id": "launchpads",
@@ -52,17 +59,30 @@
     {
       "id": "prediction-markets-attention",
       "name": "Prediction Markets + Attention",
-      "projects": ["claito", "clawarena", "clawdict", "qrcoin"]
+      "projects": [
+        "claito",
+        "clawarena",
+        "clawdict",
+        "qrcoin"
+      ]
     },
     {
       "id": "standards-and-protocols",
       "name": "Standards & Protocols",
-      "projects": ["acp", "erc-8004", "x402"]
+      "projects": [
+        "acp",
+        "erc-8004",
+        "x402"
+      ]
     },
     {
       "id": "payments-and-commerce",
       "name": "Payments & Commerce",
-      "projects": ["b402", "x402-layer", "zauth"]
+      "projects": [
+        "b402",
+        "x402-layer",
+        "zauth"
+      ]
     },
     {
       "id": "compute-and-data",
@@ -79,17 +99,32 @@
     {
       "id": "security-and-trust",
       "name": "Security & Trust",
-      "projects": ["chaosclaw", "prompintel", "regent", "wachai"]
+      "projects": [
+        "chaosclaw",
+        "prompintel",
+        "regent",
+        "wachai"
+      ]
     },
     {
       "id": "aggregators-and-discovery",
       "name": "Aggregators & Discovery",
-      "projects": ["claw-direct", "clawnews", "hotmolts", "moltecosystem"]
+      "projects": [
+        "claw-direct",
+        "clawnews",
+        "hotmolts",
+        "moltecosystem"
+      ]
     },
     {
       "id": "media-and-entertainment",
       "name": "Media & Entertainment",
-      "projects": ["clawbazaar", "forgeai", "molt-space", "retake-tv"]
+      "projects": [
+        "clawbazaar",
+        "forgeai",
+        "molt-space",
+        "retake-tv"
+      ]
     },
     {
       "id": "work-and-marketplaces",
@@ -106,7 +141,12 @@
     {
       "id": "other",
       "name": "Other",
-      "projects": ["clawlancers", "clawshi", "dx-rg", "spredd"]
+      "projects": [
+        "clawlancers",
+        "clawshi",
+        "dx-rg",
+        "spredd"
+      ]
     },
     {
       "id": "the-molt-society",
