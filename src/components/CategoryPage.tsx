@@ -45,7 +45,7 @@ export function CategoryPage({ category, onBack }: CategoryPageProps) {
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="sticky top-0 z-50 border-b bg-white shadow-sm">
-        <div className="container mx-auto px-6 py-4 max-[568px]:px-3">
+        <div className="container mx-auto px-3 py-4 max-[568px]:px-3">
           <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
             <Button
               variant="ghost"
@@ -100,7 +100,7 @@ export function CategoryPage({ category, onBack }: CategoryPageProps) {
       </header>
 
       <main
-        className={`container mx-auto px-6 py-8 ${
+        className={`container mx-auto px-4 py-8 ${
           view === "landscape" ? "max-[568px]:px-0" : ""
         }`}
       >

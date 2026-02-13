@@ -465,7 +465,7 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
     const isExporting = exportingKey === refKey;
     const isHovered = hoveredSubcategoryKey === refKey;
     const projectCount = countSubcategoryProjects(subcategory);
-    const maxWidthClass = projectCount > 9 ? "max-w-[50%]" : "max-w-[65%]";
+    const maxWidthClass = projectCount > 9 ? "max-w-[50%]" : "max-w-[70%]";
 
     return (
       <div
@@ -524,7 +524,7 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
   return (
     <div
       ref={mapExportRef}
-      className="relative rounded-lg border-[1.5px] border-black bg-white py-12 px-6 pb-4 shadow-lg max-[568px]:border-0 max-[568px]:w-full max-[568px]:px-3 max-[568px]:py-6"
+      className="relative rounded-lg border-[1.5px] border-black bg-white py-12 px-3 pb-4 shadow-lg max-[568px]:border-0 max-[568px]:w-full max-[568px]:px-3 max-[568px]:py-6"
       onMouseEnter={() => setHoveredMapBox(true)}
       onMouseLeave={() => setHoveredMapBox(false)}
     >
