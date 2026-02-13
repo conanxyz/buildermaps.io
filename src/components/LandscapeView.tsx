@@ -469,12 +469,12 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
       <div
         key={refKey}
         ref={setSubcatRef(refKey)}
-        className="relative py-4 px-1 w-fit max-w-[50%]"
+        className="relative py-4 px-1 w-fit max-w-[65%]"
         onMouseEnter={() => setHoveredSubcategoryKey(refKey)}
         onMouseLeave={() => setHoveredSubcategoryKey(null)}
       >
         <div
-          className={`relative border border-black rounded ${background} px-2 pb-2 pt-7 max-[968px]:col-span-12 max-[568px]:px-2 max-[568px]:pb-1 inline-block w-fit max-w-full`}
+          className={`relative border border-black rounded ${background} px-1 pb-2 pt-7 max-[968px]:col-span-12 max-[568px]:px-2 max-[568px]:pb-1 inline-block w-fit max-w-full`}
         >
           <button
             type="button"
@@ -553,7 +553,7 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
         {category.name} Ecosystem Map
       </h2>
 
-      <div className="relative z-0 flex flex-wrap gap-0">
+      <div className="relative z-0 flex w-full flex-wrap gap-0">
         {subcategoryItems.map((item) => {
           const { subcategory, sortIndex } = item;
           const hasDirectProjects =
@@ -616,7 +616,7 @@ function ProjectLogo({
     >
       <PopoverTrigger asChild>
         <div
-          className="group relative z-20 h-[96px] w-[75px] max-[568px]:h-[90px] max-[568px]:w-[72px] cursor-pointer max-[568px]:cursor-default max-[568px]:pointer-events-none"
+          className="group relative z-20 h-[96px] w-fit max-[568px]:h-[90px] cursor-pointer max-[568px]:cursor-default max-[568px]:pointer-events-none"
           title={project.name}
         >
           <div
@@ -655,7 +655,7 @@ function ProjectLogo({
                 </div>
               )}
             </div>
-            <div className="mt-1 min-h-[28px] max-[568px]:min-h-[26px] text-center text-xs font-bold leading-tight text-gray-900 transition-colors group-hover:text-blue-600 w-full whitespace-normal break-words">
+            <div className="mt-1 min-h-[28px] max-[568px]:min-h-[26px] text-center text-xs font-bold leading-tight text-gray-900 transition-colors group-hover:text-blue-600 whitespace-normal break-words">
               {formatProjectName(project.name)}
             </div>
           </div>
