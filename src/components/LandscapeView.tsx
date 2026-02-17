@@ -383,8 +383,30 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
       // Append the clone to the container
       invisibleContainer.appendChild(clonedNode);
 
-      // Wait for the clone to be rendered and images to load
+      // Wait for the clone to be rendered
+      // Two frames needed: first for DOM insertion, second for layout calculation
       await new Promise((r) => requestAnimationFrame(r));
+      await new Promise((r) => requestAnimationFrame(r));
+
+      // Fix subcategory boxes to maintain their layout during export
+      // Find all subcategory boxes using the data attribute
+      const subcategoryBoxes = clonedNode.querySelectorAll(
+        "[data-subcategory-box]"
+      );
+      subcategoryBoxes.forEach((box) => {
+        const htmlBox = box as HTMLElement;
+        // Get the computed dimensions to lock them in
+        const boxRect = htmlBox.getBoundingClientRect();
+        if (boxRect.width > 0 && boxRect.height > 0) {
+          htmlBox.style.width = `${boxRect.width}px`;
+          htmlBox.style.minHeight = `${boxRect.height}px`;
+          // Ensure content doesn't overflow the box
+          htmlBox.style.overflow = "hidden";
+        }
+      });
+
+      // Wait for layout to settle after dimension fixes
+      // 200ms allows browser to complete reflow and repaint
       await new Promise((r) => requestAnimationFrame(r));
       await new Promise((r) => setTimeout(r, 200));
 
@@ -481,6 +503,7 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
         onMouseLeave={() => setHoveredSubcategoryKey(null)}
       >
         <div
+          data-subcategory-box
           className={`relative border border-black rounded ${background} px-1 pb-2 pt-7 max-[968px]:col-span-12 max-[568px]:px-2 max-[568px]:pb-1 inline-block w-fit max-w-full`}
         >
           <button
