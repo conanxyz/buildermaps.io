@@ -50,6 +50,49 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
   const [exportingWholeMap, setExportingWholeMap] = useState(false);
   const [hoveredMapBox, setHoveredMapBox] = useState(false);
 
+  const waitForExportImages = async (container: HTMLElement) => {
+    const images = container.querySelectorAll("img");
+    if (images.length === 0) return;
+
+    await Promise.all(
+      Array.from(images).map(
+        (img) =>
+          new Promise<void>((resolve) => {
+            let settled = false;
+            const done = () => {
+              if (settled) return;
+              settled = true;
+              resolve();
+            };
+
+            const decodeAndDone = () => {
+              if (typeof img.decode === "function") {
+                img.decode().catch(() => undefined).finally(done);
+                return;
+              }
+              done();
+            };
+
+            if (img.complete && img.naturalWidth > 0) {
+              decodeAndDone();
+              return;
+            }
+
+            // Whole-map exports include many logos; allow longer for slower image loads.
+            const timeout = setTimeout(done, 10000);
+            img.onload = () => {
+              clearTimeout(timeout);
+              decodeAndDone();
+            };
+            img.onerror = () => {
+              clearTimeout(timeout);
+              done();
+            };
+          })
+      )
+    );
+  };
+
   const sortedSubcategories = useMemo(() => {
     return [...category.subcategories].sort(
       (a, b) => countSubcategoryProjects(b) - countSubcategoryProjects(a)
@@ -260,30 +303,7 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
       }
 
       // Wait for all images in the clone to load at full resolution
-      const images = clonedNode.querySelectorAll("img");
-      if (images.length > 0) {
-        await Promise.all(
-          Array.from(images).map(
-            (img) =>
-              new Promise<void>((resolve) => {
-                // Ensure images are loaded at full resolution
-                if (img.complete && img.naturalWidth > 0) {
-                  resolve();
-                } else {
-                  const timeout = setTimeout(() => resolve(), 3000); // Timeout after 3s
-                  img.onload = () => {
-                    clearTimeout(timeout);
-                    resolve();
-                  };
-                  img.onerror = () => {
-                    clearTimeout(timeout);
-                    resolve(); // Continue even if image fails
-                  };
-                }
-              })
-          )
-        );
-      }
+      await waitForExportImages(clonedNode);
 
       // Additional wait to ensure everything is fully rendered
       await new Promise((r) => setTimeout(r, 100));
@@ -353,7 +373,8 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
       invisibleContainer.style.left = "-9999px";
       invisibleContainer.style.top = "0";
       invisibleContainer.style.width = `${rect.width}px`;
-      invisibleContainer.style.height = `${rect.height}px`;
+      invisibleContainer.style.height = "auto";
+      invisibleContainer.style.minHeight = `${rect.height}px`;
       invisibleContainer.style.overflow = "visible";
       invisibleContainer.style.pointerEvents = "none";
       invisibleContainer.style.zIndex = "-9999";
@@ -367,7 +388,8 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
 
       // Copy computed styles to the clone
       clonedNode.style.width = `${rect.width}px`;
-      clonedNode.style.height = `${rect.height}px`;
+      clonedNode.style.height = "auto";
+      clonedNode.style.minHeight = `${rect.height}px`;
       clonedNode.style.position = "relative";
       clonedNode.style.visibility = "visible";
       clonedNode.style.opacity = "1";
@@ -400,8 +422,8 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
         if (boxRect.width > 0 && boxRect.height > 0) {
           htmlBox.style.width = `${boxRect.width}px`;
           htmlBox.style.minHeight = `${boxRect.height}px`;
-          // Ensure content doesn't overflow the box
-          htmlBox.style.overflow = "hidden";
+          // Keep title badges visible above borders
+          htmlBox.style.overflow = "visible";
         }
       });
 
@@ -411,30 +433,7 @@ export function LandscapeView({ category, exportRef }: LandscapeViewProps) {
       await new Promise((r) => setTimeout(r, 200));
 
       // Wait for all images in the clone to load at full resolution
-      const images = clonedNode.querySelectorAll("img");
-      if (images.length > 0) {
-        await Promise.all(
-          Array.from(images).map(
-            (img) =>
-              new Promise<void>((resolve) => {
-                // Ensure images are loaded at full resolution
-                if (img.complete && img.naturalWidth > 0) {
-                  resolve();
-                } else {
-                  const timeout = setTimeout(() => resolve(), 3000); // Timeout after 3s
-                  img.onload = () => {
-                    clearTimeout(timeout);
-                    resolve();
-                  };
-                  img.onerror = () => {
-                    clearTimeout(timeout);
-                    resolve(); // Continue even if image fails
-                  };
-                }
-              })
-          )
-        );
-      }
+      await waitForExportImages(clonedNode);
 
       // Additional wait to ensure everything is fully rendered
       await new Promise((r) => setTimeout(r, 100));
