@@ -1,0 +1,10 @@
+{
+  "id": "symbiosis",
+  "name": "Symbiosis",
+  "description": "Symbiosis is a cross-chain bridge that pools together liquidity from different networks: L1s and L2s, EVM and non-EVM. With Symbiosis, you can easily swap any token and move your assets across different networks",
+  "links": {
+    "homepage": "https://app.symbiosis.finance/swap",
+    "logo": "/imgs/monad/symbiosis.png",
+    "twitter": "https://x.com/symbiosis_fi"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "flap",
+  "name": "Flap",
+  "description": "Flap is a user-centric, multi-chain token launchpad, which supports Monad, BNB, Xlayer and Morph ecosystems. Flap features open protocol bonding curves, integrated tax tokens, and streamlined DAO launches to support fun, competitive and transparent token discoveries and releases.",
+  "links": {
+    "homepage": "https://flap.sh/monad",
+    "logo": "/imgs/monad/flap.webp",
+    "twitter": "https://x.com/flapdotsh"
+  }
+}

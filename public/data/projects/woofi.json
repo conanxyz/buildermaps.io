@@ -1,0 +1,10 @@
+{
+  "id": "woofi",
+  "name": "WOOFi",
+  "description": "WOOFi is a DeFi trading and earn platform from WOO. Swap with deep liquidity and low slippage, trade perps with tight pricing, and put idle assets to work through vaults and staking. Built for fast execution, clear fees, and a smooth experience across web and mobile.",
+  "links": {
+    "homepage": "https://woofi.com/swap",
+    "logo": "/imgs/monad/woofi.webp",
+    "twitter": "https://x.com/_WOOFi"
+  }
+}

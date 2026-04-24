@@ -1,0 +1,10 @@
+{
+  "id": "agora",
+  "name": "Agora",
+  "description": "Agora is a stablecoin issuer of AUSD, backed 1:1 by cash and cash equivalent reserves managed by VanEck and custodied by State Street.",
+  "links": {
+    "homepage": "https://www.agora.finance/",
+    "logo": "/imgs/monad/agora.webp",
+    "twitter": "https://x.com/withAUSD"
+  }
+}

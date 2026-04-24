@@ -1,0 +1,10 @@
+{
+  "id": "the-arena",
+  "name": "The Arena",
+  "description": "The Arena brings creators together through streaming, social audio, and ticket-gated chats. An in-app wallet enables memecoin tipping, smooth earning, and community rewards. The integrated Launchpad helps users launch, discover and support exciting new creator-driven projects across different ecosystems and blockchains.",
+  "links": {
+    "homepage": "https://arena.social",
+    "logo": "/imgs/monad/the-arena.webp",
+    "twitter": "https://x.com/TheArena"
+  }
+}

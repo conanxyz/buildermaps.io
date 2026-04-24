@@ -1,0 +1,10 @@
+{
+  "id": "geckoterminal",
+  "name": "GeckoTerminal",
+  "description": "GeckoTerminal your go-to DEX tracker and onchain price charting tool, built by the team behind CoinGecko. Monitor real-time crypto prices, volume, transactions, liquidity and more on decentralized exchanges (DEX) across hundreds of blockchains.",
+  "links": {
+    "homepage": "https://www.geckoterminal.com/",
+    "logo": "/imgs/monad/geckoterminal.webp",
+    "twitter": "https://x.com/GeckoTerminal"
+  }
+}

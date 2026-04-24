@@ -1,0 +1,10 @@
+{
+  "id": "clober",
+  "name": "Clober",
+  "description": "Clober is a performant on-chain CLOB protocol with a gas-efficient matching engine designed for decentralized execution, powering the next generation of DeFi.",
+  "links": {
+    "homepage": "https://app.clober.io",
+    "logo": "/imgs/monad/clober.webp",
+    "twitter": "https://x.com/CloberDEX"
+  }
+}

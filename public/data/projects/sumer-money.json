@@ -1,0 +1,10 @@
+{
+  "id": "sumer-money",
+  "name": "Sumer Money",
+  "description": "Sumer unifies lending, borrowing, synthetic minting, and cross-chain bridging into one capital-efficient liquidity layer. Its correlation-aware risk framework enables higher LTVs and smarter leverage, while Sumer Synthetic Assets let users access yields across chains without moving liquidity or leaving their native chains.",
+  "links": {
+    "homepage": "https://app.sumer.money/?chain=143",
+    "logo": "/imgs/monad/sumer-money.webp",
+    "twitter": "https://x.com/SumerMoney"
+  }
+}

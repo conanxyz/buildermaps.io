@@ -1,0 +1,10 @@
+{
+  "id": "interport-finance",
+  "name": "Interport Finance",
+  "description": "Interport is a cross-chain hub that enables seamless asset bridging and swaps across blockchain networks. Built for reliability and scale, Interport supports secure cross-chain routing, zero-slippage transfers, and gas-efficient execution powered by leading messaging infrastructure.",
+  "links": {
+    "homepage": "https://app.interport.fi/bridge/1/143/USDC/USDC",
+    "logo": "/imgs/monad/interport-finance.webp",
+    "twitter": "https://x.com/interportfi"
+  }
+}

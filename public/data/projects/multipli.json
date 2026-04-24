@@ -1,0 +1,10 @@
+{
+  "id": "multipli",
+  "name": "Multipli",
+  "description": "Multipli is the world’s first yield infrastructure designed to generate yield on real-world assets such as Gold, Stocks, and Stablecoins.",
+  "links": {
+    "homepage": "https://app.multipli.fi/?network=monad",
+    "logo": "/imgs/monad/multipli.webp",
+    "twitter": "https://x.com/multiplifi"
+  }
+}

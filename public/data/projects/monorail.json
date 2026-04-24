@@ -1,0 +1,10 @@
+{
+  "id": "monorail",
+  "name": "Monorail",
+  "description": "Monorail combines AMMs, on-chain orderbooks, and RFQ liquidity into one unified model ensuring reliable and efficient trade execution of any token across the entire Monad ecosystem",
+  "links": {
+    "homepage": "https://monorail.xyz/",
+    "logo": "/imgs/monad/monorail.webp",
+    "twitter": "https://x.com/monorail_xyz"
+  }
+}

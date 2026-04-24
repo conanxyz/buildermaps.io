@@ -1,0 +1,10 @@
+{
+  "id": "bean-exchange",
+  "name": "Bean Exchange",
+  "description": "Bean Exchange is a capital-efficient Perps & DLMM Spot on Monad. Trade Perps with deep liquidity. Multi-asset collateral, cross-margin, Vault, Guild, Bean Point, and up to 50x leverage across varied assets. Provide liquidity in price range. Wide pool support, preset LP strategies, Vault, and dynamic fee built to earn yield",
+  "links": {
+    "homepage": "https://bean.exchange",
+    "logo": "/imgs/monad/bean-exchange.webp",
+    "twitter": "https://x.com/Bean_DEX"
+  }
+}

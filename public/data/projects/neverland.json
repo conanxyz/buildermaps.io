@@ -1,0 +1,10 @@
+{
+  "id": "neverland",
+  "name": "Neverland",
+  "description": "Neverland is a next-generation, Monad-exclusive lending protocol fusing secure, battle-tested lending tech with proprietary veTokenomics that allow users to direct 100% of revenue. Featuring self-repaying loans, flexible governance locks, and automated yield strategies, designed to maximize capital efficiency and long-term alignment.",
+  "links": {
+    "homepage": "https://app.neverland.money",
+    "logo": "/imgs/monad/neverland.webp",
+    "twitter": "https://x.com/neverland_money"
+  }
+}

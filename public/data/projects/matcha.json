@@ -1,0 +1,10 @@
+{
+  "id": "matcha",
+  "name": "Matcha",
+  "description": "Matcha delivers optimal trade execution and helps you discover new token, by aggregating hundreds of DEXs and private market makers. Get complete token coverage, gasless swaps, and deep liquidity on Monad and 15 other chains with unbeatable pricing on any token pair.",
+  "links": {
+    "homepage": "https://matcha.xyz/",
+    "logo": "/imgs/monad/matcha.webp",
+    "twitter": "https://x.com/matchaxyz"
+  }
+}

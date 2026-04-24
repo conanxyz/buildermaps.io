@@ -1,0 +1,161 @@
+{
+  "sector": "Monad",
+  "types": [
+    {
+      "id": "defi",
+      "name": "DeFi",
+      "projects": [
+        "uniswap",
+        "lfj",
+        "leverup",
+        "perpl",
+        "pancakeswap",
+        "clober",
+        "kyberswap",
+        "woofi",
+        "neverland",
+        "matcha",
+        "fastlane",
+        "pingu-exchange",
+        "gmgn",
+        "monorail",
+        "euler",
+        "openocean",
+        "morpho",
+        "curvance",
+        "bean-exchange",
+        "kintsu",
+        "curve",
+        "covenant",
+        "monday-trade",
+        "townsquare",
+        "yieldapp-by-accountable",
+        "capricorn",
+        "agora",
+        "lido",
+        "ammplify",
+        "apebond",
+        "apriori",
+        "beefy",
+        "chainpro",
+        "dirol",
+        "gearbox-protocol",
+        "infinex",
+        "lagoon",
+        "mevx",
+        "midas",
+        "multipli",
+        "nabla-finance",
+        "narwhal-finance",
+        "pinotfinance",
+        "relay",
+        "renzo",
+        "rhea-finance",
+        "solv-protocol",
+        "spectra",
+        "stakestone",
+        "sumer-money",
+        "sushiswap",
+        "tadle",
+        "universalx",
+        "upshift",
+        "yuzu-money"
+      ]
+    },
+    {
+      "id": "launchpad",
+      "name": "Launchpad",
+      "projects": [
+        "nad-fun",
+        "kuru",
+        "balancer",
+        "printr",
+        "clanker-world",
+        "flap",
+        "crystal",
+        "token-mill"
+      ]
+    },
+    {
+      "id": "ai",
+      "name": "AI",
+      "projects": [
+        "lumiterra",
+        "aarna",
+        "dfusion-ai",
+        "fereai",
+        "infinit",
+        "kinetk",
+        "kinic",
+        "noah-ai",
+        "nubila-network",
+        "prismax",
+        "sela-network",
+        "symphony"
+      ]
+    },
+    {
+      "id": "socialfi",
+      "name": "SocialFi",
+      "projects": [
+        "farcaster",
+        "fomo",
+        "0xppl",
+        "aco-labs",
+        "memetok",
+        "muku",
+        "the-arena"
+      ]
+    },
+    {
+      "id": "bridge",
+      "name": "Bridge",
+      "projects": [
+        "mayan",
+        "cashmere",
+        "cctp-exchange",
+        "across",
+        "bungee",
+        "debridge",
+        "hyperlane-nexus",
+        "interport-finance",
+        "jumper-exchange",
+        "matcha-meta",
+        "stargate-finance",
+        "symbiosis",
+        "wormhole-portal"
+      ]
+    },
+    {
+      "id": "nft",
+      "name": "NFT",
+      "projects": [
+        "opensea",
+        "playkami",
+        "lootgo",
+        "omnia"
+      ]
+    },
+    {
+      "id": "prediction-market",
+      "name": "Prediction Market",
+      "projects": [
+        "rarebetsports",
+        "levr-bet",
+        "blinq",
+        "kizzy"
+      ]
+    },
+    {
+      "id": "data-analytics",
+      "name": "Data & Analytics",
+      "projects": [
+        "birdeye",
+        "geckoterminal",
+        "itrocket-staking",
+        "nadradar",
+        "silk-nodes"
+      ]
+    }
+  ]
+}

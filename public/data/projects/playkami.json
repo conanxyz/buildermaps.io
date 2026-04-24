@@ -1,0 +1,10 @@
+{
+  "id": "playkami",
+  "name": "PlayKami",
+  "description": "PlayKami is a gamified marketplace where users can collect real and redeemable collectibles, backed by transparent odds and verified inventory. Every pack purchased includes a real physical collectible, from Pokemon and One Piece TCG cards to luxury watches and bags, that can be traded, sold back instantly, or redeemed physically to your location.",
+  "links": {
+    "homepage": "https://playkami.io",
+    "logo": "/imgs/monad/playkami.webp",
+    "twitter": "https://x.com/PlayKamiApp"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "balancer",
+  "name": "Balancer",
+  "description": "Balancer is a programmable and customizable DEX and AMM infrastructure supporting multiple pool types: Weighted and Stable Pools (both available as Boosted for yield generation via lending protocols), LBPs for fair token launches, and reCLAMMs for passive concentrated liquidity. All pools are extendable via V3 hooks for custom logic",
+  "links": {
+    "homepage": "https://balancer.fi/pools",
+    "logo": "/imgs/monad/balancer.webp",
+    "twitter": "https://x.com/Balancer"
+  }
+}

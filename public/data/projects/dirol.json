@@ -1,0 +1,10 @@
+{
+  "id": "dirol",
+  "name": "Dirol",
+  "description": "Dirol is the all-in-one trading aggregator for the Monad ecosystem, designed to be a single gateway to everything in DeFi.  We aggregate all token launches, launchpads, and DEX liquidity from multiple sources into one seamless platform, giving to user the best route possible.",
+  "links": {
+    "homepage": "https://dex.dirol.io/",
+    "logo": "/imgs/monad/dirol.webp",
+    "twitter": "https://x.com/DirolProtocol"
+  }
+}

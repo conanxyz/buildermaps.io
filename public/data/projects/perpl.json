@@ -1,0 +1,10 @@
+{
+  "id": "perpl",
+  "name": "Perpl",
+  "description": "The first true on-chain CLOB on a generalized L1, to deliver all three: efficiency, full EVM composability, and security. Trade perps on Perpl's CLOB on the Monad blockchain.",
+  "links": {
+    "homepage": "https://app.perpl.xyz/",
+    "logo": "/imgs/monad/perpl.webp",
+    "twitter": "http://twitter.com/perpltrade"
+  }
+}

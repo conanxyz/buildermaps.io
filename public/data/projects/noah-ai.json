@@ -1,0 +1,10 @@
+{
+  "id": "noah-ai",
+  "name": "Noah AI",
+  "description": "Noah is an AI powered no-code builder that helps anyone create and deploy full onchain apps on Monad, just by chatting with it. Whether it’s a DeFi protocol, prediction market, onchain game, or liquid staking app, Noah builds the smart contract, generates the frontend, and deploys it live.",
+  "links": {
+    "homepage": "https://trynoah.ai",
+    "logo": "/imgs/monad/noah-ai.png",
+    "twitter": "https://x.com/TryNoahAI"
+  }
+}

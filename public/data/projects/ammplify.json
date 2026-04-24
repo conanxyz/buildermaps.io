@@ -1,0 +1,10 @@
+{
+  "id": "ammplify",
+  "name": "Ammplify",
+  "description": "AMM LP aggregator, exclusive to Monad, that offers advanced simulation-based fee metrics alongside exclusive yield boosts from free V3 auto-compounding and risk-neutral rehypothecation.",
+  "links": {
+    "homepage": "https://ammplify.xyz",
+    "logo": "/imgs/monad/ammplify.webp",
+    "twitter": "https://x.com/ammplify_xyz"
+  }
+}

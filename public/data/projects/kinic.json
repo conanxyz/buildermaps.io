@@ -1,0 +1,10 @@
+{
+  "id": "kinic",
+  "name": "Kinic",
+  "description": "Give your AI agent a memory it can use cand prove. Store insights, research, and data with semantic search powered by Kinic. Unlike traditional databases, every memory operation logs human-readable metadata to Monad blockchain - titles, summaries, tags anyone can verify. Build trust through transparency.",
+  "links": {
+    "homepage": "https://kinicmemory.com/",
+    "logo": "/imgs/monad/kinic.png",
+    "twitter": "https://x.com/kinic_app"
+  }
+}

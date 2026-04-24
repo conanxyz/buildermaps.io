@@ -1,0 +1,10 @@
+{
+  "id": "yieldapp-by-accountable",
+  "name": "YieldApp by Accountable",
+  "description": "YieldApp is the first yield marketplace built on top of Accountable's Data Verification Network. Every opportunity from borrower vaults to structured credit strategies is backed by live, cryptographically verifiable data. Designed for allocators, YieldApp makes it easy to discover, assess, and deploy into yield opportunities you can trust.",
+  "links": {
+    "homepage": "https://yield.accountable.capital/?utm_source=monad&utm_medium=ecosystem",
+    "logo": "/imgs/monad/yieldapp-by-accountable.png",
+    "twitter": "https://x.com/AccountableData"
+  }
+}

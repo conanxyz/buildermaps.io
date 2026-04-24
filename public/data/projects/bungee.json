@@ -1,0 +1,10 @@
+{
+  "id": "bungee",
+  "name": "Bungee",
+  "description": "Bungee lets anyone trade any token across any chain in a single tap — fast, reliable, and without worrying about gas or routing complexity. Built on SOCKET’s infra, Bungee powers 23B+ in volume and reaches 30M+ users through partners like MetaMask, Coinbase, Rabby, OKX, and more.",
+  "links": {
+    "homepage": "https://www.bungee.exchange/",
+    "logo": "/imgs/monad/bungee.webp",
+    "twitter": "https://x.com/BungeeExchange"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "covenant",
+  "name": "Covenant",
+  "description": "Covenant is liquid credit market that powers leverage and yield backed by any collateral asset.",
+  "links": {
+    "homepage": "https://app.covenant.finance/?network=143",
+    "logo": "/imgs/monad/covenant.webp",
+    "twitter": "https://x.com/covenantFi"
+  }
+}

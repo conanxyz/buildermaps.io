@@ -1,0 +1,10 @@
+{
+  "id": "chainpro",
+  "name": "Chainpro",
+  "description": "the zero-fee, non-custodial trading terminal for pros",
+  "links": {
+    "homepage": "https://chainpro.xyz/",
+    "logo": "/imgs/monad/chainpro.webp",
+    "twitter": "https://x.com/chainpro_xyz"
+  }
+}

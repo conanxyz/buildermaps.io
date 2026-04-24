@@ -1,0 +1,10 @@
+{
+  "id": "tadle",
+  "name": "Tadle",
+  "description": "Tadle, a visionary protocol incubated by Chainlink, unifies and boosts on-chain blockchain activity by supporting strong communities and unique marketing. Its Sandbox feature enables automation across various blockchain applications, like DEXs, bridges, prediction markets, staking, launchpads, NFTs, domains, and lending services.",
+  "links": {
+    "homepage": "https://sandbox.tadle.com",
+    "logo": "/imgs/monad/tadle.webp",
+    "twitter": "https://x.com/tadle_com"
+  }
+}

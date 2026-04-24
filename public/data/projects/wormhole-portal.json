@@ -1,0 +1,10 @@
+{
+  "id": "wormhole-portal",
+  "name": "Wormhole Portal",
+  "description": "Wormhole Portal is the go-to bridge for fast, secure token transfers and swaps on any chain. $56B+ transferred by 1M+ users",
+  "links": {
+    "homepage": "https://portalbridge.com/",
+    "logo": "/imgs/monad/wormhole-portal.webp",
+    "twitter": "https://x.com/portalbridge_"
+  }
+}

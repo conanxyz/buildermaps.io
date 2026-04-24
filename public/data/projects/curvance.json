@@ -1,0 +1,10 @@
+{
+  "id": "curvance",
+  "name": "Curvance",
+  "description": "Curvance is a capital-efficient lending platform on Monad. Users can deposit and borrow against productive assets, earn Bytes through on-chain activity, unlock milestone rewards, and access lootbox incentives. Built for users aiming to position early and capture real yield across the ecosystem.",
+  "links": {
+    "homepage": "https://app.curvance.com/",
+    "logo": "/imgs/monad/curvance.webp",
+    "twitter": "https://x.com/Curvance"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "openocean",
+  "name": "OpenOcean",
+  "description": "OpenOcean is a leading multi-chain DEX aggregator, integrating liquidity from the most comprehensive set of DEXs across both EVM and non-EVM chains. Designed for both traders and enterprise partners, it provides optimized execution, cross-chain token swaps, and a full suite of DeFi tools, along with a robust API for easy integration.",
+  "links": {
+    "homepage": "https://app.openocean.finance/swap/monad",
+    "logo": "/imgs/monad/openocean.webp",
+    "twitter": "https://x.com/OpenOceanGlobal"
+  }
+}

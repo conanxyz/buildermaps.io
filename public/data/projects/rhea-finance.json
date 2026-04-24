@@ -1,0 +1,10 @@
+{
+  "id": "rhea-finance",
+  "name": "RHEA",
+  "description": "Rhea Finance is redefining the user experience of decentralized finance by eliminating fragmentation. Born from the strategic consolidation of NEAR’s foundational DEX and lending protocols, Rhea provides a resilient, chain-abstracted liquidity layer",
+  "links": {
+    "homepage": "https://x.rhea.finance/",
+    "logo": "/imgs/monad/rhea-finance.webp",
+    "twitter": "https://x.com/rhea_finance"
+  }
+}

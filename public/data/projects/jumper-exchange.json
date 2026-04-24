@@ -1,0 +1,10 @@
+{
+  "id": "jumper-exchange",
+  "name": "Jumper.Exchange",
+  "description": "Jumper Exchange is a platform to swap and bridge any crypto asset across 50+ chains, including EVM chains, Hyperliquid, SUI, Solana, and Bitcoin. Powered by LI.FI, Jumper aggregates 20+ DEXs and 20+ bridges to enable swaps at the best available rates.",
+  "links": {
+    "homepage": "https://jumper.exchange/",
+    "logo": "/imgs/monad/jumper-exchange.webp",
+    "twitter": "https://x.com/JumperExchange"
+  }
+}

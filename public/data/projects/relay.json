@@ -1,0 +1,10 @@
+{
+  "id": "relay",
+  "name": "Relay",
+  "description": "The interoperability infrastructure for onchain money.",
+  "links": {
+    "homepage": "https://relay.link/bridge",
+    "logo": "/imgs/monad/relay.webp",
+    "twitter": "https://x.com/RelayProtocol"
+  }
+}

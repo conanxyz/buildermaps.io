@@ -1,0 +1,10 @@
+{
+  "id": "kizzy",
+  "name": "Kizzy",
+  "description": "Kizzy is the world's first social media betting app allowing you to bet on metrics of influencers on Youtube and X.   Download our mobile first app to bet over/under on popular influencers like Mr.Beast, Elon Musk, Pokimane, and so many more.",
+  "links": {
+    "homepage": "http://app.kizzy.io/",
+    "logo": "/imgs/monad/kizzy.webp",
+    "twitter": "https://x.com/kizzymobile"
+  }
+}

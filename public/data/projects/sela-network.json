@@ -1,0 +1,10 @@
+{
+  "id": "sela-network",
+  "name": "Sela Network",
+  "description": "Sela Network is a frictionless, decentralized data infrastructure that enables the unrestricted supply and use of real-life data.",
+  "links": {
+    "homepage": "https://www.selanetwork.io/",
+    "logo": "/imgs/monad/sela-network.webp",
+    "twitter": "https://x.com/SelaNetwork"
+  }
+}

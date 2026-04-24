@@ -1,0 +1,10 @@
+{
+  "id": "cashmere",
+  "name": "Cashmere",
+  "description": "We are building the Autonomous Monetary Infrastructure for stablecoins — a unified layer that powers zero-slippage omnichain transfers, yield agent, on/off ramps, privacy transfers directly on app.cashmere.exchange. Incubated by BinanceLabs. Circle Alliance.",
+  "links": {
+    "homepage": "https://app.cashmere.exchange",
+    "logo": "/imgs/monad/cashmere.png",
+    "twitter": "https://x.com/cashmerelabs"
+  }
+}

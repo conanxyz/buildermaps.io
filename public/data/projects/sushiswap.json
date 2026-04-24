@@ -1,0 +1,10 @@
+{
+  "id": "sushiswap",
+  "name": "Sushiswap",
+  "description": "The ultimate multi-chain DEX + Aggregator that lets you SWAP ANYTHING.",
+  "links": {
+    "homepage": "https://sushi.com",
+    "logo": "/imgs/monad/sushiswap.png",
+    "twitter": "https://x.com/sushiswap"
+  }
+}

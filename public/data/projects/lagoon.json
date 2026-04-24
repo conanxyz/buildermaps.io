@@ -1,0 +1,10 @@
+{
+  "id": "lagoon",
+  "name": "Lagoon",
+  "description": "Lagoon provides general-purpose, permissionless, modular vault infrastructure for asset curation.  Any strategy can become a tokenized product: scalable, composable, and LP-ready.  Lagoon empowers Web3 businesses and ecosystems to deliver one-click crypto yield through the apps users already know and trust.",
+  "links": {
+    "homepage": "https://app.lagoon.finance/",
+    "logo": "/imgs/monad/lagoon.webp",
+    "twitter": "https://x.com/lagoon_finance"
+  }
+}
