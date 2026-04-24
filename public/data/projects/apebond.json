@@ -1,0 +1,10 @@
+{
+  "id": "apebond",
+  "name": "ApeBond",
+  "description": "ApeBond is a decentralized bonding platform where users can buy tokens at a discount that vest over time, while projects grow long-term liquidity and strengthen their treasury.",
+  "links": {
+    "homepage": "https://www.ape.bond/",
+    "logo": "/imgs/monad/apebond.webp",
+    "twitter": "https://x.com/ApeBond"
+  }
+}

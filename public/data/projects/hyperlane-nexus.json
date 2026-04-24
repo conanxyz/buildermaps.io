@@ -1,0 +1,10 @@
+{
+  "id": "hyperlane-nexus",
+  "name": "Hyperlane Nexus",
+  "description": "Bridge to and from Monad using Hyperlane Nexus. Hyperlane is a GMP open interoperability framework that enables secure routes across 180+ chains and virtual machines.",
+  "links": {
+    "homepage": "https://nexus.hyperlane.xyz",
+    "logo": "/imgs/monad/hyperlane-nexus.webp",
+    "twitter": "https://x.com/hyperlane"
+  }
+}

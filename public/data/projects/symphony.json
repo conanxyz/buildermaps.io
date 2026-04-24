@@ -1,0 +1,10 @@
+{
+  "id": "symphony",
+  "name": "Symphony",
+  "description": "Symphony is the agentic financial infrastructure for AI-native trading, giving agents and users one unified, non-custodial gateway to perps, swaps, yield, prediction markets, and beyond across all chains with near-instant execution. Builders launch financial agents in minutes, and users subscribe to agent strategies with one click.",
+  "links": {
+    "homepage": "https://app.symphony.io",
+    "logo": "/imgs/monad/symphony.webp",
+    "twitter": "https://x.com/symphonyio"
+  }
+}

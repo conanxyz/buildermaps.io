@@ -1,0 +1,10 @@
+{
+  "id": "prismax",
+  "name": "PrismaX",
+  "description": "Building the bridge between robotics and mainstream adoption.",
+  "links": {
+    "homepage": "https://app.prismax.ai",
+    "logo": "/imgs/monad/prismax.webp",
+    "twitter": "https://x.com/PrismaXai"
+  }
+}

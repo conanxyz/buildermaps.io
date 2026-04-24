@@ -1,0 +1,10 @@
+{
+  "id": "token-mill",
+  "name": "Token Mill",
+  "description": "The launchpad that turns trading fees into MON airdrops. Built for the strongest nads communities.",
+  "links": {
+    "homepage": "https://lfj.gg/mill",
+    "logo": "/imgs/monad/token-mill.webp",
+    "twitter": "https://x.com/token_mill"
+  }
+}

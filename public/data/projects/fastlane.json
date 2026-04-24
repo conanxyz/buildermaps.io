@@ -1,0 +1,10 @@
+{
+  "id": "fastlane",
+  "name": "FastLane",
+  "description": "ShMonad is the first liquid staking token to have its yield boosted by validators (MEV), applications (MEV, UX), and more.",
+  "links": {
+    "homepage": "https://shmonad.xyz",
+    "logo": "/imgs/monad/fastlane.webp",
+    "twitter": "https://x.com/0xFastLane"
+  }
+}

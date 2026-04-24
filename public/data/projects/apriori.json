@@ -1,0 +1,10 @@
+{
+  "id": "apriori",
+  "name": "aPriori",
+  "description": "The Intelligent Order Flow Coordination Layer for High-Performance Blockchains",
+  "links": {
+    "homepage": "https://app.apr.io/",
+    "logo": "/imgs/monad/apriori.webp",
+    "twitter": "https://x.com/aPriori"
+  }
+}

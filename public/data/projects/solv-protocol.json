@@ -1,0 +1,10 @@
+{
+  "id": "solv-protocol",
+  "name": "Solv Protocol",
+  "description": "Solv Protocol, the onchain Bitcoin asset manager bridging TradFi, CeFi, and DeFi, is powering the next era of RWAfi through Bitcoin reserves. Through SolvBTC and its five specialized LSTs (including SolvBTC.JUP and SolvBTC.BBN), Solv transforms Bitcoin into a productive institutional asset while powering stablecoin, credit, and RWA markets.",
+  "links": {
+    "homepage": "https://solv.finance",
+    "logo": "/imgs/monad/solv-protocol.webp",
+    "twitter": "https://x.com/SolvProtocol"
+  }
+}

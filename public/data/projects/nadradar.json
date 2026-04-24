@@ -1,0 +1,10 @@
+{
+  "id": "nadradar",
+  "name": "Nadradar",
+  "description": "Real-time analytics for Monad blockchain. Track validators, MEV transactions, LST protocols, and dApp performance. Essential metrics and insights for the Monad ecosystem.",
+  "links": {
+    "homepage": "https://nadradar.com",
+    "logo": "/imgs/monad/nadradar.webp",
+    "twitter": "https://x.com/nad_radar"
+  }
+}

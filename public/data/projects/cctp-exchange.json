@@ -1,0 +1,10 @@
+{
+  "id": "cctp-exchange",
+  "name": "CCTP Exchange",
+  "description": "CCTP Exchange lets you move native USDC across chains with speed, reliability, and zero slippage. Powered by Rath.fi and Circle CCTP.",
+  "links": {
+    "homepage": "https://cctp.exchange",
+    "logo": "/imgs/monad/cctp-exchange.webp",
+    "twitter": "https://x.com/CctpExchange"
+  }
+}

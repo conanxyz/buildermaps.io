@@ -1,0 +1,10 @@
+{
+  "id": "kintsu",
+  "name": "Kintsu",
+  "description": "Kintsu is the first liquid staking protocol truly engineered as a public good, without central control. Built to maximize capital efficiency and infuse staking yield into everything, Kintsu unifies liquidity and network security with its novel DAO curated gauge stake delegation solution.",
+  "links": {
+    "homepage": "https://kintsu.xyz/",
+    "logo": "/imgs/monad/kintsu.webp",
+    "twitter": "https://x.com/Kintsu"
+  }
+}

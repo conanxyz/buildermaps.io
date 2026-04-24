@@ -1,0 +1,10 @@
+{
+  "id": "kyberswap",
+  "name": "KyberSwap",
+  "description": "KyberSwap is a decentralized trading solution that helps users find optimized token swap rates by routing trades through multiple DEXs and other liquidity sources across multiple chains.",
+  "links": {
+    "homepage": "https://kyberswap.com/swap/monad",
+    "logo": "/imgs/monad/kyberswap.webp",
+    "twitter": "https://x.com/KyberNetwork"
+  }
+}

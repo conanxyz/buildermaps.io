@@ -1,0 +1,10 @@
+{
+  "id": "pinotfinance",
+  "name": "PinotFinance",
+  "description": "Pinot is the native AMM/veDex with unique convenient features for traders/LPs",
+  "links": {
+    "homepage": "https://pinot.finance",
+    "logo": "/imgs/monad/pinotfinance.webp",
+    "twitter": "https://x.com/pinotfinance"
+  }
+}

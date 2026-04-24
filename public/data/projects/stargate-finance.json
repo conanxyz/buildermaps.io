@@ -1,0 +1,10 @@
+{
+  "id": "stargate-finance",
+  "name": "Stargate Finance",
+  "description": "Stargate is a composable cross-chain liquidity transport protocol enabling seamless asset transfers between blockchains.",
+  "links": {
+    "homepage": "https://stargate.finance/",
+    "logo": "/imgs/monad/stargate-finance.webp",
+    "twitter": "https://x.com/StargateFinance"
+  }
+}

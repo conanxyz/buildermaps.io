@@ -1,0 +1,10 @@
+{
+  "id": "spectra",
+  "name": "Spectra",
+  "description": "Fix rates, trade yield, or earn on liquidity with Spectra. The protocol enables exposure to fixed and floating rates on interest-bearing assets through Principal and Yield Tokens, allowing users to choose between predictability, speculation, or liquidity provision.",
+  "links": {
+    "homepage": "https://app.spectra.finance/pools",
+    "logo": "/imgs/monad/spectra.webp",
+    "twitter": "https://x.com/spectra_finance"
+  }
+}

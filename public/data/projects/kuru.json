@@ -1,0 +1,10 @@
+{
+  "id": "kuru",
+  "name": "Kuru",
+  "description": "Kuru is an all-in-one trading hub for Monad. Trade any spot asset with our smart aggregator and trading interface. Deploy liquidity on our hybrid AMM-orderbook. Launch a new token in seconds.",
+  "links": {
+    "homepage": "https://www.kuru.io/swap?from=0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a&to=0x0000000000000000000000000000000000000000",
+    "logo": "/imgs/monad/kuru.webp",
+    "twitter": "https://x.com/KuruExchange"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "townsquare",
+  "name": "TownSquare",
+  "description": "TownSquare is a Monad-native modular lending market, powered by a crosschain borrowing & lending engine. Backed by Monad early contributors including Monad co-founder James Hunsaker and other top tier VCs.",
+  "links": {
+    "homepage": "https://app.townsq.xyz/",
+    "logo": "/imgs/monad/townsquare.webp",
+    "twitter": "https://x.com/TownSquarexyz"
+  }
+}

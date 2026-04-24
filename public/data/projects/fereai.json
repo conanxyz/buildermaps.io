@@ -1,0 +1,10 @@
+{
+  "id": "fereai",
+  "name": "FereAI",
+  "description": "Autonomous AI agents for crypto trading. Research markets, analyze social signals, discover trends, and trade onchain.All automated so you can move faster than the market.",
+  "links": {
+    "homepage": "https://www.fereai.xyz/",
+    "logo": "/imgs/monad/fereai.webp",
+    "twitter": "https://x.com/fere_ai"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "pancakeswap",
+  "name": "PancakeSwap",
+  "description": "Trade and earn crypto on the all-in-one decentralized exchange. Enjoy low fees, high liquidity, and a user-friendly interface.",
+  "links": {
+    "homepage": "https://pancakeswap.finance/swap?chain=monad&inputCurrency=0x754704Bc059F8C67012fEd69BC8A327a5aafb603&outputCurrency=MON",
+    "logo": "/imgs/monad/pancakeswap.webp",
+    "twitter": "https://x.com/PancakeSwap/"
+  }
+}

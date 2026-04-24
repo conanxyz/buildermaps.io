@@ -1,0 +1,10 @@
+{
+  "id": "nubila-network",
+  "name": "Nubila Network",
+  "description": "Nubila provides the physical perception layer for AI and prediction markets. By collecting and verifying real-world data through decentralized hardware and validator nodes, Nubila delivers trusted on-chain signals that power autonomous AI agents and enhance market accuracy.",
+  "links": {
+    "homepage": "https://nubila.network/dashboard/",
+    "logo": "/imgs/monad/nubila-network.png",
+    "twitter": "https://x.com/nubilanetwork"
+  }
+}

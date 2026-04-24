@@ -1,0 +1,10 @@
+{
+  "id": "nabla-finance",
+  "name": "Nabla Finance",
+  "description": "Nabla Finance brings the disruptive concept of actively-priced “Prop AMMs” to Monad, yet with the twist of crowdsourced liquidity pools. Its HFT-grade pricing engine and super-concentrated liquidity allows it to profitably offer deep swap liquidity with minimal swap fees and marginal slippage to traders, Dex aggregators and arbitrage bots.",
+  "links": {
+    "homepage": "https://monad.nabla.fi/",
+    "logo": "/imgs/monad/nabla-finance.webp",
+    "twitter": "https://x.com/NablaFi"
+  }
+}

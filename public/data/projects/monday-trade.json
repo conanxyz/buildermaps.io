@@ -1,0 +1,10 @@
+{
+  "id": "monday-trade",
+  "name": "Monday Trade",
+  "description": "Monday Trade is Monad’s native DEX combining the best of CEX and DEX trading. Powered by Monad’s low latency, it executes trades within milliseconds, letting traders capture every market move without giving up asset ownership. A highly efficient hybrid DEX built for beginner, pro, and institutional traders.",
+  "links": {
+    "homepage": "https://app.monday.trade/#/spot",
+    "logo": "/imgs/monad/monday-trade.webp",
+    "twitter": "https://x.com/MondayTrade_"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "infinex",
+  "name": "Infinex",
+  "description": "Meet Infinex - the crypto superapp combining a non-custodial wallet, portfolio manager, and trading terminal in one.",
+  "links": {
+    "homepage": "https://infinex.xyz/",
+    "logo": "/imgs/monad/infinex.webp",
+    "twitter": "https://x.com/infinex"
+  }
+}

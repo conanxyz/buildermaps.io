@@ -1,0 +1,10 @@
+{
+  "id": "clanker-world",
+  "name": "Clanker World",
+  "description": "Clanker lets you launch instantly tradable tokens on Monad. No dev needed. Airdrop to your community, vault a portion, or insta-buy to show skin in the game.",
+  "links": {
+    "homepage": "https://clanker.world/deploy?monad=true",
+    "logo": "/imgs/monad/clanker-world.webp",
+    "twitter": "https://x.com/clanker_world"
+  }
+}

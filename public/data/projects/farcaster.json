@@ -1,0 +1,10 @@
+{
+  "id": "farcaster",
+  "name": "Farcaster",
+  "description": "Farcaster is the best place to find new people, projects and ideas in crypto. It's a social network and crypto wallet reimagined.",
+  "links": {
+    "homepage": "http://farcaster.xyz/",
+    "logo": "/imgs/monad/farcaster.webp",
+    "twitter": "https://x.com/farcaster_xyz"
+  }
+}

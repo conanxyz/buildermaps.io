@@ -1,0 +1,10 @@
+{
+  "id": "euler",
+  "name": "Euler",
+  "description": "Euler is the DeFi Super App that unites permissionless lending, borrowing, earning and swapping in a single app.",
+  "links": {
+    "homepage": "https://app.euler.finance/?network=monad",
+    "logo": "/imgs/monad/euler.webp",
+    "twitter": "https://x.com/eulerfinance"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "leverup",
+  "name": "LeverUp",
+  "description": "LeverUp is an LP-Free perpetuals exchange offering uncapped open interest, extreme leverage up to 1001x, and fully on-chain transparency. All protocol fees are returned to traders and every market settles in native LVUSD/LVMON, enabling unmatched capital efficiency and scalable, trader-first perps.",
+  "links": {
+    "homepage": "https://app.leverup.xyz/",
+    "logo": "/imgs/monad/leverup.webp",
+    "twitter": "https://x.com/LeverUp_xyz"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "midas",
+  "name": "Midas",
+  "description": "Midas is a platform for composable onchain investment products. It enables asset managers to turn institutional strategies into regulatory-compliant tokens that offer full transparency, instant redemptions, and native composability across DeFi.",
+  "links": {
+    "homepage": "https://midas.app/",
+    "logo": "/imgs/monad/midas.webp",
+    "twitter": "https://x.com/MidasRWA"
+  }
+}

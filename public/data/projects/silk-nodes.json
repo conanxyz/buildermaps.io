@@ -1,0 +1,10 @@
+{
+  "id": "silk-nodes",
+  "name": "Silk Nodes",
+  "description": "Silknodes' Monad Hub is a unified ecosystem interface for the Monad network, built to help users, builders, and operators access staking, track network activity, explore ecosystem projects, and operate infrastructure through a single, open platform.",
+  "links": {
+    "homepage": "https://monad.silknodes.io/",
+    "logo": "/imgs/monad/silk-nodes.webp",
+    "twitter": "https://x.com/silk_nodes"
+  }
+}

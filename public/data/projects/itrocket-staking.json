@@ -1,0 +1,10 @@
+{
+  "id": "itrocket-staking",
+  "name": "ITRocket Staking",
+  "description": "ITRocket team provides enterprise-level infrastructure and state-of-the-art solutions for node operators, developers, and analysts. Our cross-network expertise lets us design adaptable, multichain products that solve real problems, while prioritizing security, reliability and utility.",
+  "links": {
+    "homepage": "https://monad-space.itrocket.net",
+    "logo": "/imgs/monad/itrocket-staking.webp",
+    "twitter": "https://x.com/itrocket_team"
+  }
+}

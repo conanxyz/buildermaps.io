@@ -1,0 +1,10 @@
+{
+  "id": "gearbox-protocol",
+  "name": "Gearbox",
+  "description": "The credit layer for DeFi. Borrow and lend with market-leading rates and institutional-grade risk controls. Start optimizing your capital today.",
+  "links": {
+    "homepage": "https://app.gearbox.finance/pools",
+    "logo": "/imgs/monad/gearbox-protocol.webp",
+    "twitter": "https://x.com/GearboxProtocol"
+  }
+}

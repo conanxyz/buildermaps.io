@@ -1,0 +1,10 @@
+{
+  "id": "infinit",
+  "name": "INFINIT",
+  "description": "INFINIT is an agentic DeFi ecosystem powered by INFINIT AI Agent Infrastructure to simplify DeFi. Users can convert natural-language strategy ideas into on-chain actions (Prompt-to-DeFi), execute sophisticated DeFi strategies with full asset custody (INFINIT Strategies), and discover personalized yield opportunities (INFINIT Intelligence).",
+  "links": {
+    "homepage": "https://app.infinit.tech/",
+    "logo": "/imgs/monad/infinit.webp",
+    "twitter": "https://x.com/Infinit_Labs"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "capricorn",
+  "name": "Capricorn",
+  "description": "Capricorn delivers optimal onchain swap experience through hyper capital efficient liquidity. The flagship proactive liquidity pool uses a pricing engine that actively refreshes spreads and depths every block using up-to-the-moment oracle feeds rather than the pool’s balance of assets as the key mechanism to price assets.",
+  "links": {
+    "homepage": "https://www.capricorn.exchange/",
+    "logo": "/imgs/monad/capricorn.webp",
+    "twitter": "https://x.com/CapricornDEX"
+  }
+}

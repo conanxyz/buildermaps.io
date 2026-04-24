@@ -1,0 +1,10 @@
+{
+  "id": "narwhal-finance",
+  "name": "Narwhal Finance",
+  "description": "Trade smarter with Narwhal Finance, a next-gen perpetual DEX on Monad. Trade while you earn across crypto, forex, and stocks.",
+  "links": {
+    "homepage": "https://narwhal.finance",
+    "logo": "/imgs/monad/narwhal-finance.webp",
+    "twitter": "https://x.com/Narwhal_Finance"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "pingu-exchange",
+  "name": "Pingu Exchange",
+  "description": "A perps protocol for trading crypto and real-world assets with leverage.",
+  "links": {
+    "homepage": "https://pingu.exchange/",
+    "logo": "/imgs/monad/pingu-exchange.webp",
+    "twitter": "https://x.com/pinguexchange"
+  }
+}

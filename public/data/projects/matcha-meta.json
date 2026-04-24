@@ -1,0 +1,10 @@
+{
+  "id": "matcha-meta",
+  "name": "Matcha Meta",
+  "description": "Matcha Meta is a transparent meta-aggregator that compares quotes across aggregators to find the best real execution for your swap.",
+  "links": {
+    "homepage": "https://meta.matcha.xyz/",
+    "logo": "/imgs/monad/matcha-meta.webp",
+    "twitter": "https://x.com/matchametaxyz"
+  }
+}
