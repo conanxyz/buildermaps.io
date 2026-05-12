@@ -1,0 +1,13 @@
+{
+  "id": "clearpool-t-pool",
+  "name": "Clearpool T-Pool",
+  "description": "cUSDX is the equivalent of an LP (Liquidity Provider) token commonly used in many DeFi protocols. It represents a 1:1 value of your deposited USDX. When you deposit USDX on Clearpool, you not only earn a yield on your USDX but also receive additional rewards in the form of FLR tokens. Users can claim USDX and FLR rewards anytime without withdrawing their initial staked USDX.",
+  "links": {
+    "homepage": "https://clearpool.finance/",
+    "logo": "https://flare.builders/icons/clearpool-t-pool.png",
+    "twitter": "https://x.com/ClearpoolFin",
+    "telegram": "https://t.me/clearpoolofficial",
+    "discord": "https://discord.gg/YYzxscA4nu",
+    "github": "https://github.com/clearpool-finance"
+  }
+}

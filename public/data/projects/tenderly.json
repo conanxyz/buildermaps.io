@@ -1,0 +1,11 @@
+{
+  "id": "tenderly",
+  "name": "Tenderly",
+  "description": "Tenderly offers industry-leading solutions for debugging, simulation, and production infrastructure that will empower Flare developers to streamline dApp development and testing. Move fast from development to on-chain deployment with a multichain node RPC, integrated development environments, and debugging tools.",
+  "links": {
+    "homepage": "https://tenderly.co/",
+    "logo": "https://flare.builders/icons/tenderly.png",
+    "twitter": "https://x.com/TenderlyApp",
+    "github": "https://github.com/Tenderly"
+  }
+}

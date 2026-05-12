@@ -1,0 +1,13 @@
+{
+  "id": "enosys-bridge",
+  "name": "Enosys Bridge",
+  "description": "Ēnosys Bridge allows users to move their assets from one network to a different supported network. It allows holders of tokens on other networks to bring their currencies to the Flare Network. Additionally, it allows users to bridge supported Non-Fungible Tokens(NFTs) between networks.",
+  "links": {
+    "homepage": "https://bridge.enosys.global/",
+    "logo": "https://flare.builders/icons/enosys-bridge.webp",
+    "twitter": "https://x.com/enosys_global",
+    "telegram": "https://t.me/enosys_global",
+    "discord": "https://discord.gg/enosys-global",
+    "github": "https://github.com/flrfinance"
+  }
+}

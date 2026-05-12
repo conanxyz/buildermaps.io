@@ -1,0 +1,10 @@
+{
+  "id": "flr-market-value-calculator",
+  "name": "FLR Market Value Calculator",
+  "description": "This is a mini-application for Japanese FLR holders that outputs a list of transactions from wallet address, using the http://bitbank.cc price as a reference and calculating the market value in Japanese yen. CSV files are also available for download.",
+  "links": {
+    "homepage": "https://dhalsimxrp.github.io/flare/",
+    "logo": "https://flare.builders/icons/flr-market-value-calculator.png",
+    "twitter": "https://x.com/DhalXRP"
+  }
+}

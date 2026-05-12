@@ -1,0 +1,13 @@
+{
+  "id": "enosys-farms",
+  "name": "Enosys Farms",
+  "description": "Ēnosys Farms is a user-governed token Launchpad geared towards giving holders a chance to support projects hoping to build in and around the Networks Ecosystem. Holders of supported tokens can participate in non-custodial yield farming to earn a share of the primary Governance token distribution.",
+  "links": {
+    "homepage": "https://farms.enosys.global/",
+    "logo": "https://flare.builders/icons/enosys-farms.webp",
+    "twitter": "https://x.com/enosys_global",
+    "telegram": "https://t.me/enosys_global",
+    "discord": "https://discord.gg/enosys-global",
+    "github": "https://github.com/flrfinance"
+  }
+}

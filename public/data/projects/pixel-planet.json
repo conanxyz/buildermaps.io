@@ -1,0 +1,12 @@
+{
+  "id": "pixel-planet",
+  "name": "Pixel Planet",
+  "description": "Pixel Planet is a shared canvas dApp powered by Astral Credits where users buy pixels with XAC and create artwork with the Songbird community.",
+  "links": {
+    "homepage": "https://www.astralcredits.xyz/pixels/",
+    "logo": "https://flare.builders/icons/pixel-planet.gif",
+    "twitter": "https://x.com/AstralCredits",
+    "discord": "https://discord.gg/AJd4YDZSqD",
+    "github": "https://github.com/Astral-Credits"
+  }
+}

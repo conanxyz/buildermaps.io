@@ -1,0 +1,12 @@
+{
+  "id": "steer-protocol",
+  "name": "Steer Protocol",
+  "description": "With Steer Smart Pools now integrated into SparkDEX and Flare Network, we bring our automated liquidity management solutions to a broader audience. Steer’s ability to support multi-chain operations means SparkDEX users can enjoy seamless liquidity management across Flare and other connected chains. Our integration will enable SparkDEX users to leverage sophisticated liquidity management strategies, enhancing their trading experiences and maximizing yields. Smart Pools utilize advanced algorithms to automate and optimize liquidity placement, ensuring efficient and effective market operations.",
+  "links": {
+    "homepage": "https://steer.finance/",
+    "logo": "https://flare.builders/icons/steer-protocol.png",
+    "twitter": "https://x.com/steerprotocol",
+    "discord": "https://discord.gg/pb9SY67jS6",
+    "github": "https://github.com/SteerProtocol"
+  }
+}

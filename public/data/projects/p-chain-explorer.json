@@ -1,0 +1,11 @@
+{
+  "id": "p-chain-explorer",
+  "name": "P-chain Explorer",
+  "description": "The P-Chain is short for the platform chain and it facilitates FLR staking. For those staking their FLR, flare.space offers the simplest way to monitor their staked funds. Explore the Flare Network's P-Chain effortlessly through our user-friendly tool. Flare.space's P-Chain Explorer offers up-to-date data, ensuring a sense of security and control to all users staking on the Flare Network. Currently, P-Chain Explorer offers the simplest way to monitor transactions on P-Chain.",
+  "links": {
+    "homepage": "https://flare.space/dapp/p-chain-explorer/",
+    "logo": "https://flare.builders/icons/p-chain-explorer.png",
+    "twitter": "https://x.com/flare_dot_space",
+    "github": "https://github.com/flare-space"
+  }
+}

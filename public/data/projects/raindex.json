@@ -1,0 +1,11 @@
+{
+  "id": "raindex",
+  "name": "Raindex",
+  "description": "The Raindex app utilizes the intuitive Rainlang smart contract language, giving anyone the ability to design, write, deploy and manage customized token trading strategies, while leveraging Flare’s native decentralized price oracle, the FTSO, for reliable and secure asset price triggers. Users can now set bid and offer prices, activate stop loss and take profit mechanisms, and replicate other traders’ strategies in a trustless, fully-permissionless, decentralized way, on-chain.",
+  "links": {
+    "homepage": "https://docs.rainlang.xyz/raindex/download/",
+    "logo": "https://flare.builders/icons/raindex.png",
+    "telegram": "https://t.me/+w4mJbCT6IfI2YTU0",
+    "github": "https://github.com/rainlanguage"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "rpsls-game",
+  "name": "RPSLS Game",
+  "description": "Rock, Paper, Scissors, Lizard, Spock game (RPSLS) on Flare shows in a fun and exciting way how to use blockchain to eliminate the need for intermediaries, and remove any doubts or disputes, ensuring that the game results are transparent, tamper-proof, and verifiable by anyone on the blockchain.",
+  "links": {
+    "homepage": "https://flare.space/dapp/rps/connect/",
+    "logo": "https://flare.builders/icons/rpsls-game.png",
+    "twitter": "https://x.com/flare_dot_space",
+    "github": "https://github.com/flare-space"
+  }
+}

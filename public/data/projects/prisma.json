@@ -1,0 +1,11 @@
+{
+  "id": "prisma",
+  "name": "Prisma",
+  "description": "Prisma, is an interactive explorer and management platform for the Flare blockchain ecosystem. It provides a unified, wallet-centric command center that aggregates historic and current wallet activity into a single coherent interface.",
+  "links": {
+    "homepage": "https://prisma.useyourspark.com/",
+    "logo": "https://flare.builders/icons/prisma.png",
+    "twitter": "https://x.com/useyourspark",
+    "telegram": "https://t.me/useyourspark"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "pangolin",
+  "name": "Pangolin",
+  "description": "Pangolin is a multichain decentralized cryptocurrency exchange (DEX) on the Flare and Songbird Networks.",
+  "links": {
+    "homepage": "https://app.pangolin.exchange/#/dashboard/?ref=flare.builders",
+    "logo": "https://flare.builders/icons/pangolin.png",
+    "twitter": "https://x.com/pangolindex",
+    "telegram": "https://t.me/pangolinv3",
+    "discord": "https://discord.com/invite/a6JJybnMhY",
+    "github": "https://github.com/pangolindex"
+  }
+}

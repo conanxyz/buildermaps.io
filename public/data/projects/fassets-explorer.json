@@ -1,0 +1,11 @@
+{
+  "id": "fassets-explorer",
+  "name": "FAssets Explorer",
+  "description": "All FAssets minting and redemption transactions in one place. Search by transaction hash or account address. Review the top agents and active addresses from the last 24 hours, and inspect or confirm any defaulted transactions.",
+  "links": {
+    "homepage": "https://explorer.au.cc/",
+    "logo": "https://flare.builders/icons/au.png",
+    "twitter": "https://x.com/aucc_official",
+    "discord": "https://discord.gg/y6dc6AsTGx"
+  }
+}

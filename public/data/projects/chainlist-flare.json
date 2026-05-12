@@ -1,0 +1,10 @@
+{
+  "id": "chainlist-flare",
+  "name": "Chainlist - Flare",
+  "description": "Helping users connect to EVM powered networks. Users can use the information to connect their wallets and Web3 middleware providers to the appropriate Chain ID and Network ID to connect to the Flare Network.",
+  "links": {
+    "homepage": "https://chainlist.org/chain/14/",
+    "logo": "https://flare.builders/icons/chainlist-flare.png",
+    "github": "https://github.com/DefiLlama/chainlist"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "flare-linux",
+  "name": "Flare Linux",
+  "description": "Flare Linux is a custom-built GNU/Linux stack to run Flare server nodes.",
+  "links": {
+    "homepage": "https://flarelinux.xyz/",
+    "logo": "https://flare.builders/icons/flare-linux.png",
+    "twitter": "https://x.com/linuxforphp",
+    "github": "https://github.com/linuxforphp/flarelinux"
+  }
+}

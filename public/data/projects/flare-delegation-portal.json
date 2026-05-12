@@ -1,0 +1,13 @@
+{
+  "id": "flare-delegation-portal",
+  "name": "Flare Delegation Portal",
+  "description": "Wrap, delegate and claim your SGB and FLR tokens using Flare's Delegation Portal. Set-up autoclaim by nominating an executor. Set-up main and delegation accounts.",
+  "links": {
+    "homepage": "https://portal.flare.network/",
+    "logo": "https://flare.builders/icons/flare-delegation-portal.png",
+    "twitter": "https://x.com/FlareNetworks",
+    "telegram": "https://t.me/FlareNetwork",
+    "discord": "https://discord.gg/flarenetwork",
+    "github": "https://github.com/flare-foundation"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "sparkdex",
+  "name": "SparkDEX",
+  "description": "SparkDEX is an advanced decentralized finance hub, featuring an AMM and a perps protocol, which will leverage Flare’s enshrined data protocols for decentralized data access. SparkDEX is pushing the boundaries of DeFi innovation by combining the apex of available DeFi products, the latest DEX tech, next-gen perps including digital assets, commodities & forex with up to 100x leverage, and the exciting world of emerging AI tech. SparkDEX delivers a unique experience that promises to reshape the way users think of DeFi on Flare.",
+  "links": {
+    "homepage": "https://sparkdex.ai/",
+    "logo": "https://flare.builders/icons/sparkdex.png",
+    "twitter": "https://x.com/SparkDexAI",
+    "telegram": "https://t.me/SparkDexAI",
+    "discord": "https://discord.com/invite/eUjY9R4Fqz",
+    "github": "https://github.com/SparkDEX"
+  }
+}

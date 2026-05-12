@@ -1,0 +1,9 @@
+{
+  "id": "dinero",
+  "name": "Dinero",
+  "description": "flrETH—a Flare-native ETH liquid staking solution, built by Dinero, that lets users earn ETH staking yield directly on Flare. All without leaving Flare. Developers can also begin integrating flrETH into the ecosystem, offering ETH staking on Flare for the first time.",
+  "links": {
+    "homepage": "https://dinero.xyz/",
+    "logo": "https://flare.builders/icons/dinero.png"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "contract-call-decoder",
+  "name": "Contract Call Decoder",
+  "description": "This tool is designed to help you verify that your smart contract call can be trusted. It verifies if ABI and the smart contract are found in the official Flare contract registry and reveals details about your transaction.",
+  "links": {
+    "homepage": "https://flare.space/dapp/decoder/",
+    "logo": "https://flare.builders/icons/contract-call-decoder.png",
+    "twitter": "https://x.com/flare_dot_space",
+    "discord": "https://discord.gg/flare-space",
+    "github": "https://github.com/flare-space"
+  }
+}

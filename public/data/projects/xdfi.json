@@ -1,0 +1,12 @@
+{
+  "id": "xdfi",
+  "name": "XDFi",
+  "description": "Purchase Futures Contracts on the Flare Network. 100% Non-Custodial, 100% Compliant. With regulatory uncertainty still an impediment to larger-scale institutional investment in DeFi, XDFi represents a welcome proposition for major investors. The protocol’s third-party Know Your Customer tokenization (KYCT) ensures 100% confidence that futures contract positions are purchased in a fully compliant manner. This ensures that all P2P matches between long and short positions are only between eligible counterparties. This KYCT approach is the first of a kind for DeFi, ensuring full compliance without a centralized intermediary, broker, or custodian.",
+  "links": {
+    "homepage": "https://xdfi.io/",
+    "logo": "https://flare.builders/icons/xdfi.png",
+    "twitter": "https://x.com/XDFiProtocol",
+    "telegram": "https://t.me/xdfiprotocol",
+    "discord": "https://discord.com/invite/8nyNuSE8qt"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "enosys-dex",
+  "name": "Enosys DEX",
+  "description": "Ēnosys DEX enables users to swap currencies and earn passive income providing liquidity. Ēnosys DEX utilizes smart contracts to provide automated market makers (AMMs) with liquidity. Participants of the ecosystem can become Decentralised On-Demand Liquidity Providers (DODLP) and earn fees for doing so.",
+  "links": {
+    "homepage": "https://dex.enosys.global/",
+    "logo": "https://flare.builders/icons/enosys-dex.webp",
+    "twitter": "https://x.com/enosys_global",
+    "telegram": "https://t.me/enosys_global",
+    "discord": "https://discord.gg/enosys-global",
+    "github": "https://github.com/flrfinance"
+  }
+}

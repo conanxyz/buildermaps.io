@@ -1,0 +1,11 @@
+{
+  "id": "flamix",
+  "name": "Flamix",
+  "description": "Flamix is an advanced decentralized perpetuals exchange native to Flare Network, offering high-leverage trading on crypto, forex, and commodities using any ERC-20 token as collateral. Flamix eliminates price volatility risk from the collateral asset, allowing any asset - from governance tokens to memecoins - to be collateralized without additional liquidation risks. Flamix brings new utility to all tokens in the crypto space, enabling traders to gain exposure to other assets without ever selling their holdings.",
+  "links": {
+    "homepage": "https://www.flamix.trade/",
+    "logo": "https://flare.builders/icons/flamix.png",
+    "twitter": "https://x.com/flamix_trade",
+    "discord": "https://discord.gg/PDuNWK9qC2"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "flare-labs",
+  "name": "Flare Labs",
+  "description": "Flare Labs researches and develops software to increase the utility of decentralized systems. Flare Labs built the software that powers the Flare and Songbird blockchains, which was subsequently licensed to the Flare Foundation.",
+  "links": {
+    "homepage": "https://flarelabs.org/",
+    "logo": "https://flare.builders/icons/flare-labs.png",
+    "twitter": "https://x.com/Flare_Labs",
+    "github": "https://github.com/flare-labs-ltd"
+  }
+}

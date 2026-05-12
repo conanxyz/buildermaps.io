@@ -1,0 +1,13 @@
+{
+  "id": "envio",
+  "name": "Envio",
+  "description": "Developer-friendly indexing solution, akin to subgraphs, for real-time and historical data access. Applications on Flare can sync and query their protocol data in under a few minutes, making the setup process on Flare significantly easier With Envio, building applications, block explorers, wallets, analytics, and other data-related activities on Flare will be much easier and cost-effective.",
+  "links": {
+    "homepage": "https://envio.dev/",
+    "logo": "https://flare.builders/icons/envio.png",
+    "twitter": "https://x.com/envio_indexer",
+    "telegram": "https://t.me/+5mI61oZibEM5OGQ8",
+    "discord": "https://discord.gg/envio",
+    "github": "https://github.com/enviodev"
+  }
+}
