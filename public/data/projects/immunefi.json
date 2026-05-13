@@ -3,6 +3,7 @@
   "name": "Immunefi",
   "description": "Immunefi powers Flare's bug bounty program, connecting the network with web3 security researchers and whitehat contributors.",
   "links": {
-    "homepage": "https://immunefi.com/bug-bounty/flarenetwork/"
+    "homepage": "https://immunefi.com/bug-bounty/flarenetwork/",
+    "logo": "/imgs/flare/security/Immunefi/Immunefi.png"
   }
 }
