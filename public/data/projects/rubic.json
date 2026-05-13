@@ -3,6 +3,7 @@
   "name": "Rubic",
   "description": "Rubic is a DEX aggregator for cross-chain swaps that helps Flare users route trades across integrated DEXs and bridges.",
   "links": {
-    "homepage": "https://rubic.exchange/"
+    "homepage": "https://rubic.exchange/",
+    "logo": "/imgs/flare/bridge/rubic/rubic.png"
   }
 }
