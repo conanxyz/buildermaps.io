@@ -1,0 +1,13 @@
+{
+  "id": "subsquid",
+  "name": "Subsquid",
+  "description": "Subsquid is a full-stack blockchain indexing solution consisting of an open-source SDK, specialized data lakes for on-chain data and a hosted service. Developers building decentralized applications can tap into the Flare blockchain to access large volumes of historical on-chain data through the distributed data lake of Subsquid.",
+  "links": {
+    "homepage": "https://subsquid.io/",
+    "logo": "https://flare.builders/icons/subsquid.png",
+    "twitter": "https://x.com/hellosqd",
+    "telegram": "https://t.me/HydraDevs",
+    "discord": "https://discord.gg/hellosqd",
+    "github": "https://github.com/subsquid/squid-sdk"
+  }
+}

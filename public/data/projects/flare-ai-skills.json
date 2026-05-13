@@ -1,0 +1,13 @@
+{
+  "id": "flare-ai-skills",
+  "name": "Flare AI Skills",
+  "description": "A collection of Agent Skills for Cursor, Claude Code, and other skills.sh-compatible agents. Provides domain knowledge and guidance for Flare development, including FTSO, FAssets, Smart Accounts, and more. Same SKILL.md format works across tools.",
+  "links": {
+    "homepage": "https://github.com/flare-foundation/flare-ai-skills/",
+    "logo": "https://flare.builders/icons/flare.png",
+    "twitter": "https://x.com/FlareDevHub",
+    "telegram": "https://t.me/FlareNetwork",
+    "discord": "https://discord.gg/flarenetwork",
+    "github": "https://github.com/flare-foundation"
+  }
+}

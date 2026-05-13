@@ -1,0 +1,12 @@
+{
+  "id": "cyclo",
+  "name": "Cyclo",
+  "description": "Cyclo, a ground-breaking protocol that offers a new way to engage with cryptocurrencies on Flare, enabling users to leverage their holdings without the risk of liquidation.",
+  "links": {
+    "homepage": "https://cyclo.finance/",
+    "logo": "https://flare.builders/icons/cyclo.png",
+    "twitter": "https://x.com/cyclofinance",
+    "telegram": "https://t.me/cyclofinance",
+    "github": "https://github.com/cyclofinance"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "alchemy-markets",
+  "name": "Alchemy Markets",
+  "description": "Tokenized precious metals marketplace on Flare Network. Buy, sell, and auction fractional NFT shares backed by physical gold, silver, platinum, and copper bars and over-collateralized by FLR. Each token represents real vault-held metals.",
+  "links": {
+    "homepage": "https://alchemy-markets.xyz/",
+    "logo": "https://flare.builders/icons/alchemy-markets.png",
+    "discord": "https://discord.gg/Rz8rVM3r5"
+  }
+}

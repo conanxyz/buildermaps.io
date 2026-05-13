@@ -1,0 +1,12 @@
+{
+  "id": "blaze-swap",
+  "name": "Blaze Swap",
+  "description": "The first open-source fully decentralized exchange on the Songbird and Flare Networks.",
+  "links": {
+    "homepage": "https://app.blazeswap.xyz/",
+    "logo": "https://flare.builders/icons/blaze-swap.png",
+    "twitter": "https://x.com/blazeswapdex",
+    "discord": "https://discord.gg/V8nSzJ74YV",
+    "github": "https://github.com/blazeswap"
+  }
+}

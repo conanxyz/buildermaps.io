@@ -1,0 +1,10 @@
+{
+  "id": "flr-domains",
+  "name": ".flr Domains",
+  "description": "The first web3 domain service on Flare, brought to you by the creators of Songbird Domains. Get yourself a .flr web3 username!",
+  "links": {
+    "homepage": "https://flr.domains/",
+    "logo": "https://flare.builders/icons/flr-domains.png",
+    "twitter": "https://x.com/flrdomains"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "flarescan-enosys",
+  "name": "FlareScan",
+  "description": "A blockchain explorer is known to be an online browser for blockchain that displays all the details of transactions that have taken place in a blockchain network.",
+  "links": {
+    "homepage": "https://www.flarescan.org/",
+    "logo": "https://flare.builders/icons/flarescan-enosys.png",
+    "twitter": "https://x.com/enosys_global",
+    "telegram": "https://t.me/enosys_global",
+    "discord": "https://discord.gg/enosys-global",
+    "github": "https://github.com/flrfinance"
+  }
+}

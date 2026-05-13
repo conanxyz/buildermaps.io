@@ -1,0 +1,10 @@
+{
+  "id": "geckoterminal-flare",
+  "name": "GeckoTerminal - Flare",
+  "description": "Real-time DEX Tracker. Track real-time cryptocurrency prices, trading and transaction volume, liquidity in a pool across Flare. Filter by DEX including Ēnosys, OracleSwap, Pangolin and BlazeSwap.",
+  "links": {
+    "homepage": "https://www.geckoterminal.com/flare/pools/",
+    "logo": "https://flare.builders/icons/geckoterminal-flare.png",
+    "twitter": "https://x.com/GeckoTerminal"
+  }
+}

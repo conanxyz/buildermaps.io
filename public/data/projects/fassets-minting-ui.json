@@ -1,0 +1,11 @@
+{
+  "id": "fassets-minting-ui",
+  "name": "FAssets Minting UI",
+  "description": "FAssets is a trustless, over-collateralized bridge connecting non smart contract networks to Flare. It enables the creation of wrapped tokens (FAssets) for assets like BTC, DOGE and XRP. These tokens can participate in Flare's DeFi ecosystem or be redeemed for their original assets.",
+  "links": {
+    "homepage": "https://fassets.au.cc/",
+    "logo": "https://flare.builders/icons/au.png",
+    "twitter": "https://x.com/aucc_official",
+    "telegram": "https://t.me/y6dc6AsTGx"
+  }
+}

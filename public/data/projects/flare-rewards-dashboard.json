@@ -1,0 +1,10 @@
+{
+  "id": "flare-rewards-dashboard",
+  "name": "Flare Rewards Dashboard",
+  "description": "A real-time, free on-chain analytics dashboard for Flare Network that tracks 10+ reward categories: FTSO delegation, protocol rewards, P-Chain staking, FlareDrop distributions, FAssets (minting, redemption, collateral pool rewards), LP fees on Enosys and SparkDEX, any many more.",
+  "links": {
+    "homepage": "https://www.flarerewards.xyz/",
+    "logo": "https://flare.builders/icons/flare-rewards-dashboard.png",
+    "twitter": "https://x.com/Tabbakhh"
+  }
+}

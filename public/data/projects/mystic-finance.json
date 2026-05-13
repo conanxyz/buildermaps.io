@@ -1,0 +1,11 @@
+{
+  "id": "mystic-finance",
+  "name": "Mystic Finance",
+  "description": "Mystic Finance is a decentralized finance protocol that allows users to borrow and lend assets on the Flare network.",
+  "links": {
+    "homepage": "https://app.mysticfinance.xyz/",
+    "logo": "https://flare.builders/icons/mystic-finance.png",
+    "twitter": "https://x.com/mystic_finance",
+    "discord": "https://discord.com/invite/XTYys5vTw"
+  }
+}

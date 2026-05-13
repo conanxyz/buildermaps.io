@@ -1,0 +1,11 @@
+{
+  "id": "ignitemarket",
+  "name": "IgniteMarket",
+  "description": "Introducing Ignite Market, a fully decentralized prediction market for real-world events. Powered by Flare’s Data Connector (FDC) - proving reliable, trust-minimized resolution in real time.",
+  "links": {
+    "homepage": "https://ignitemarket.xyz/",
+    "logo": "https://flare.builders/icons/ignitemarket.png",
+    "twitter": "https://x.com/IgniteMarketX",
+    "discord": "https://discord.com/invite/4VuZnEedgj"
+  }
+}

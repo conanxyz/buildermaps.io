@@ -1,0 +1,12 @@
+{
+  "id": "dworm",
+  "name": "DWorm",
+  "description": "DWorm is a playful real-time visualization game powered by the Flare Network's FTSO (Flare Time Series Oracle), crafted by the ftso.eu team. A curious worm tries to “eat” accurate predictions of selected FTSO price feeds, using a simple regression model. If the predicted price is close enough to the real one , the worm gets a tasty bite. You can switch between different feeds and see how often the worm succeeds. The number of price points adapts to your screen size — less on phones, more on tablets and desktops. Made with ❤️ by ftso.eu.",
+  "links": {
+    "homepage": "https://dworm.ftso.eu/",
+    "logo": "https://flare.builders/icons/dworm.png",
+    "twitter": "https://x.com/ftso_eu",
+    "telegram": "https://t.me/ftso_eu",
+    "discord": "https://discord.gg/ftsoeu"
+  }
+}

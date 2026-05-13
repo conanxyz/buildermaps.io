@@ -1,0 +1,9 @@
+{
+  "id": "nftsalesbot",
+  "name": "NFTSalesBot",
+  "description": "Track all NFT sales on Songbird Network & Flare Network. Add the bot to your Discord server free of charge.",
+  "links": {
+    "homepage": "https://nftsalesbot.mouradski.dev/",
+    "logo": "https://flare.builders/icons/nftsalesbot.png"
+  }
+}

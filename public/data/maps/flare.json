@@ -1,0 +1,158 @@
+{
+  "sector": "Flare",
+  "types": [
+    {
+      "id": "defi",
+      "name": "DeFi",
+      "projects": [
+        "blaze-swap",
+        "clearpool-t-pool",
+        "cyclo",
+        "dinero",
+        "enosys-dex",
+        "fassets-explorer",
+        "fassets-minting-ui",
+        "firelight",
+        "flamix",
+        "flare-fair",
+        "kinetic",
+        "mystic-finance",
+        "pangolin",
+        "raindex",
+        "rysk",
+        "sparkdex",
+        "spectra",
+        "steer-protocol",
+        "upshift",
+        "usdx",
+        "xdfi",
+        "xrpfi"
+      ]
+    },
+    {
+      "id": "launchpad",
+      "name": "Launchpad",
+      "projects": [
+        "enosys-farms",
+        "trustswap"
+      ]
+    },
+    {
+      "id": "ai",
+      "name": "AI",
+      "projects": [
+        "aigentdotrun",
+        "flare-ai-skills",
+        "rezon"
+      ]
+    },
+    {
+      "id": "socialfi",
+      "name": "SocialFi",
+      "projects": [
+        "astral-credits",
+        "flare-africa",
+        "flare-colombia",
+        "streetflarenaija",
+        "flare-japan-community"
+      ]
+    },
+    {
+      "id": "bridge",
+      "name": "Bridge",
+      "projects": [
+        "enosys-bridge",
+        "jumper",
+        "layerzero",
+        "lifi",
+        "rubic",
+        "stargate-finance"
+      ]
+    },
+    {
+      "id": "nft",
+      "name": "NFT",
+      "projects": [
+        "alchemy-markets",
+        "block-bonez",
+        "digital-dynamix",
+        "enosys-gallery",
+        "ermis-protocol",
+        "mitto",
+        "nftsalesbot",
+        "smuggler-chimps",
+        "truegems",
+        "uppercent",
+        "veriguardnft"
+      ]
+    },
+    {
+      "id": "prediction-market",
+      "name": "Prediction Market",
+      "projects": [
+        "ignitemarket"
+      ]
+    },
+    {
+      "id": "data-analytics",
+      "name": "Data & Analytics",
+      "projects": [
+        "ankr",
+        "arkham",
+        "envio",
+        "flare-explorer",
+        "flarescan-enosys",
+        "flr-market-value-calculator",
+        "geckoterminal-flare",
+        "goldsky",
+        "prisma",
+        "quidli",
+        "solidify-app",
+        "subquery",
+        "subsquid",
+        "towo-labs",
+        "turnkey"
+      ]
+    },
+    {
+      "id": "gamefi",
+      "name": "GameFi",
+      "projects": [
+        "dworm",
+        "pixel-planet",
+        "rpsls-game",
+        "harmony",
+        "xspectar"
+      ]
+    },
+    {
+      "id": "infra-tools",
+      "name": "Infra & Tools",
+      "projects": [
+        "flr-domains",
+        "chainlist-flare",
+        "contract-call-decoder",
+        "enosys",
+        "flare-advisor",
+        "flare-delegation-portal",
+        "flare-labs",
+        "flare-linux",
+        "flare-rewards-dashboard",
+        "mr-tipbot",
+        "nownodes",
+        "p-chain-explorer",
+        "quicknode",
+        "tenderly"
+      ]
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "projects": [
+        "elliptic",
+        "hypernative",
+        "immunefi"
+      ]
+    }
+  ]
+}

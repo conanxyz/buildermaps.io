@@ -1,0 +1,11 @@
+{
+  "id": "flare-advisor",
+  "name": "Flare Advisor",
+  "description": "Flare Advisor is the latest dApp from Flare.space designed to help users maximize their earnings. It shows how much users can earn annually by participating in the ecosystem through staking and delegation opportunities.",
+  "links": {
+    "homepage": "https://flare.space/dapp/flare-advisor/",
+    "logo": "https://flare.builders/icons/flare-advisor.png",
+    "twitter": "https://x.com/flare_dot_space",
+    "github": "https://github.com/flare-space"
+  }
+}

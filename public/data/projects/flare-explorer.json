@@ -1,0 +1,13 @@
+{
+  "id": "flare-explorer",
+  "name": "Flare Explorer",
+  "description": "Flare Explorer is a tool for inspecting and analyzing transactions, addresses and other activities on the Flare blockchain.",
+  "links": {
+    "homepage": "https://flare-explorer.flare.network/",
+    "logo": "https://flare.builders/icons/flare-explorer.png",
+    "twitter": "https://x.com/FlareNetworks",
+    "telegram": "https://t.me/FlareNetwork",
+    "discord": "https://discord.gg/flarenetwork",
+    "github": "https://github.com/flare-foundation"
+  }
+}

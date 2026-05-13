@@ -1,0 +1,10 @@
+{
+  "id": "elliptic",
+  "name": "Elliptic",
+  "description": "Elliptic’s wallet screening solution offers easy and accurate due diligence on crypto wallets before transactions take place, helping organizations prevent money laundering, comply with sanctions and combat fraud. As part of the integration, Elliptic’s monitoring, compliance, and analysis software now supports FLR, the native asset of Flare. Financial institutions, businesses, and regulators can utilize these software tools to identify a full range of illicit activities, from small-scale fraud schemes and money laundering to sanctions evasion and terrorist financing.",
+  "links": {
+    "homepage": "https://www.elliptic.co/",
+    "logo": "https://flare.builders/icons/elliptic.png",
+    "twitter": "https://x.com/elliptic"
+  }
+}
